@@ -21,7 +21,10 @@ Imports:
     Rcpp,
     scam,
     sf,
-    stringr
+    stringr,
+    graphics,
+    stats,
+    base
 LinkingTo: Rcpp
 URL: https://github.com/RafaMMas/IberianFishHSMs
 BugReports: https://github.com/RafaMMas/IberianFishHSMs/issues

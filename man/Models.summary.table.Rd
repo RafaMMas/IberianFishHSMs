@@ -3,8 +3,7 @@
 \docType{data}
 \title{Habitat Suitability Models for Iberian Freshwater Fish Species}
 \description{
-  A data frame listing the compiled habitat suitability models for Iberian freshwater fish species.
-  This dataset also summarises the characteristics of the available models including target species and size class, sample sizes or performance, when available.
+  A data frame listing the compiled habitat suitability models for Iberian freshwater fish species. This dataset also summarises the characteristics of the available models including target species and size class, sample sizes or performance, when available.
 }
 \format{
   A data frame with 21 columns listing the 797 available models. The columns are as follows:
@@ -36,7 +35,6 @@
   Data compiled based on expert knowledge, field studies, and empirical data collected from various river basins across the Iberian Peninsula.
 }
 \usage{
-  data(Models.summary.table)
+  Models.summary.table
 }
 \keywords{datasets}
-
