@@ -1,0 +1,798 @@
+Code	Model	Species	Size	River	Model.type	Default	Sampled.season	Valid.season	Data.origin	N.presences	N.absences	N.interviews.or.studies	True.positive	False.positive	True.negative	False.negative	Sensitivity	Specificity	TSS	Balanced.accuracy
+ABCDF	Achondrostoma.arcasii.FRBS.Large.EKorL.Spring.Summer.Autumn	Achondrostoma arcasii	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDE	Achondrostoma.arcasii.FRBS.Large.EKorL.Autumn.Winter.Spring	Achondrostoma arcasii	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDI	Achondrostoma.arcasii.HSC.Large.EKorL.All	Achondrostoma arcasii	Large	Escabas (Tagus) + Guadiela (Tagus) + Palancia	HSC	TRUE	"Spring; Summer"	"Winter; Spring; Summer; Autumn"	Literature review	133	1052	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDK	Achondrostoma.arcasii.HSC.Large.EKorL.Spring.Summer.Autumn	Achondrostoma arcasii	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDJ	Achondrostoma.arcasii.HSC.Large.EKorL.Autumn.Winter.Spring	Achondrostoma arcasii	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDH	Achondrostoma.arcasii.FRBS.Small.EKorL.Spring.Summer.Autumn	Achondrostoma arcasii	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDG	Achondrostoma.arcasii.FRBS.Small.EKorL.Autumn.Winter.Spring	Achondrostoma arcasii	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDM	Achondrostoma.arcasii.HSC.Small.EKorL.Spring.Summer.Autumn	Achondrostoma arcasii	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDL	Achondrostoma.arcasii.HSC.Small.EKorL.Autumn.Winter.Spring	Achondrostoma arcasii	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDN	Achondrostoma.asturicense.GAM.Large.Curueno.All	Achondrostoma asturicense	Large	Curueño (Douro)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	40	880	NA	36	263	617	4	0.9	0.701	0.601	0.801
+ABCDQ	Achondrostoma.asturicense.HSC.Large.Curueno.All	Achondrostoma asturicense	Large	Curueño (Douro)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	40	880	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDT	Achondrostoma.asturicense.NNET.Large.Curueno.All	Achondrostoma asturicense	Large	Curueño (Douro)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	40	880	NA	39	318	562	1	0.975	0.639	0.614	0.807
+ABCDW	Achondrostoma.asturicense.RF.Large.Curueno.All	Achondrostoma asturicense	Large	Curueño (Douro)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	40	880	NA	39	318	562	1	0.975	0.639	0.614	0.807
+ABCDZ	Achondrostoma.asturicense.SVM.Large.Curueno.All	Achondrostoma asturicense	Large	Curueño (Douro)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	40	880	NA	30	205	675	10	0.75	0.767	0.517	0.759
+ABCDO	Achondrostoma.asturicense.GAM.Medium.Curueno.All	Achondrostoma asturicense	Medium	Curueño (Douro)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	136	784	NA	123	498	286	13	0.904	0.365	0.269	0.635
+ABCDR	Achondrostoma.asturicense.HSC.Medium.Curueno.All	Achondrostoma asturicense	Medium	Curueño (Douro)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	136	784	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDU	Achondrostoma.asturicense.NNET.Medium.Curueno.All	Achondrostoma asturicense	Medium	Curueño (Douro)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	136	784	NA	136	638	146	0	1	0.186	0.186	0.593
+ABCDX	Achondrostoma.asturicense.RF.Medium.Curueno.All	Achondrostoma asturicense	Medium	Curueño (Douro)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	136	784	NA	136	638	146	0	1	0.186	0.186	0.593
+ABCEF	Achondrostoma.asturicense.SVM.Medium.Curueno.All	Achondrostoma asturicense	Medium	Curueño (Douro)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	136	784	NA	98	374	410	38	0.721	0.523	0.244	0.622
+ABCDP	Achondrostoma.asturicense.GAM.Small.Curueno.All	Achondrostoma asturicense	Small	Curueño (Douro)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	219	701	NA	192	404	297	27	0.877	0.424	0.3	0.65
+ABCDS	Achondrostoma.asturicense.HSC.Small.Curueno.All	Achondrostoma asturicense	Small	Curueño (Douro)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	219	701	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCDV	Achondrostoma.asturicense.NNET.Small.Curueno.All	Achondrostoma asturicense	Small	Curueño (Douro)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	219	701	NA	174	319	382	45	0.795	0.545	0.339	0.67
+ABCDY	Achondrostoma.asturicense.RF.Small.Curueno.All	Achondrostoma asturicense	Small	Curueño (Douro)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	219	701	NA	174	319	382	45	0.795	0.545	0.339	0.67
+ABCEG	Achondrostoma.asturicense.SVM.Small.Curueno.All	Achondrostoma asturicense	Small	Curueño (Douro)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	219	701	NA	172	322	379	47	0.785	0.541	0.326	0.663
+ABCEI	Achondrostoma.garzonorum.FRBS.Large.EKorL.Spring.Summer.Autumn	Achondrostoma garzonorum	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEH	Achondrostoma.garzonorum.FRBS.Large.EKorL.Autumn.Winter.Spring	Achondrostoma garzonorum	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEM	Achondrostoma.garzonorum.HSC.Large.EKorL.Spring.Summer.Autumn	Achondrostoma garzonorum	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEL	Achondrostoma.garzonorum.HSC.Large.EKorL.Autumn.Winter.Spring	Achondrostoma garzonorum	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEK	Achondrostoma.garzonorum.FRBS.Small.EKorL.Spring.Summer.Autumn	Achondrostoma garzonorum	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEJ	Achondrostoma.garzonorum.FRBS.Small.EKorL.Autumn.Winter.Spring	Achondrostoma garzonorum	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEO	Achondrostoma.garzonorum.HSC.Small.EKorL.Spring.Summer.Autumn	Achondrostoma garzonorum	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEN	Achondrostoma.garzonorum.HSC.Small.EKorL.Autumn.Winter.Spring	Achondrostoma garzonorum	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEQ	Achondrostoma.salmantinum.FRBS.Large.EKorL.Spring.Summer.Autumn	Achondrostoma salmantinum	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEP	Achondrostoma.salmantinum.FRBS.Large.EKorL.Autumn.Winter.Spring	Achondrostoma salmantinum	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEU	Achondrostoma.salmantinum.HSC.Large.EKorL.Spring.Summer.Autumn	Achondrostoma salmantinum	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCET	Achondrostoma.salmantinum.HSC.Large.EKorL.Autumn.Winter.Spring	Achondrostoma salmantinum	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCES	Achondrostoma.salmantinum.FRBS.Small.EKorL.Spring.Summer.Autumn	Achondrostoma salmantinum	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCER	Achondrostoma.salmantinum.FRBS.Small.EKorL.Autumn.Winter.Spring	Achondrostoma salmantinum	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEW	Achondrostoma.salmantinum.HSC.Small.EKorL.Spring.Summer.Autumn	Achondrostoma salmantinum	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEV	Achondrostoma.salmantinum.HSC.Small.EKorL.Autumn.Winter.Spring	Achondrostoma salmantinum	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCEX	Alburnus.alburnus.GAM.Large.Yeguas.All	Alburnus alburnus	Large	Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	716	NA	10	167	549	0	1	0.767	0.767	0.883
+ABCEZ	Alburnus.alburnus.HSC.Large.Yeguas.All	Alburnus alburnus	Large	Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	717	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFH	Alburnus.alburnus.NNET.Large.Yeguas.All	Alburnus alburnus	Large	Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	716	NA	6	90	626	4	0.6	0.874	0.474	0.737
+ABCFJ	Alburnus.alburnus.RF.Large.Yeguas.All	Alburnus alburnus	Large	Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	716	NA	6	90	626	4	0.6	0.874	0.474	0.737
+ABCFL	Alburnus.alburnus.SVM.Large.Yeguas.All	Alburnus alburnus	Large	Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	716	NA	10	134	582	0	1	0.813	0.813	0.906
+ABCEY	Alburnus.alburnus.GAM.Medium.Yeguas.All	Alburnus alburnus	Medium	Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	14	712	NA	14	180	532	0	1	0.747	0.747	0.874
+ABCFG	Alburnus.alburnus.HSC.Medium.Yeguas.All	Alburnus alburnus	Medium	Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	14	713	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFI	Alburnus.alburnus.NNET.Medium.Yeguas.All	Alburnus alburnus	Medium	Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	14	712	NA	14	139	573	0	1	0.805	0.805	0.902
+ABCFK	Alburnus.alburnus.RF.Medium.Yeguas.All	Alburnus alburnus	Medium	Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	14	712	NA	14	139	573	0	1	0.805	0.805	0.902
+ABCFM	Alburnus.alburnus.SVM.Medium.Yeguas.All	Alburnus alburnus	Medium	Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	14	712	NA	10	194	518	4	0.714	0.728	0.442	0.721
+ABCFO	Anaecypris.hispanica.FRBS.Large.EKorL.Spring.Summer.Autumn	Anaecypris hispanica	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFN	Anaecypris.hispanica.FRBS.Large.EKorL.Autumn.Winter.Spring	Anaecypris hispanica	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFS	Anaecypris.hispanica.HSC.Large.EKorL.Spring.Summer.Autumn	Anaecypris hispanica	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFR	Anaecypris.hispanica.HSC.Large.EKorL.Autumn.Winter.Spring	Anaecypris hispanica	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFQ	Anaecypris.hispanica.FRBS.Small.EKorL.Spring.Summer.Autumn	Anaecypris hispanica	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFP	Anaecypris.hispanica.FRBS.Small.EKorL.Autumn.Winter.Spring	Anaecypris hispanica	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFU	Anaecypris.hispanica.HSC.Small.EKorL.Spring.Summer.Autumn	Anaecypris hispanica	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFT	Anaecypris.hispanica.HSC.Small.EKorL.Autumn.Winter.Spring	Anaecypris hispanica	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFW	Anguilla.anguilla.FRBS.Large.EKorL.Spring.Summer.Autumn	Anguilla anguilla	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFV	Anguilla.anguilla.FRBS.Large.EKorL.Autumn.Winter.Spring	Anguilla anguilla	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGH	Anguilla.anguilla.HSC.Large.EKorL.Spring.Summer.Autumn	Anguilla anguilla	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFZ	Anguilla.anguilla.HSC.Large.EKorL.Autumn.Winter.Spring	Anguilla anguilla	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFY	Anguilla.anguilla.FRBS.Small.EKorL.Spring.Summer.Autumn	Anguilla anguilla	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCFX	Anguilla.anguilla.FRBS.Small.EKorL.Autumn.Winter.Spring	Anguilla anguilla	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGN	Anguilla.anguilla.HSC.Small.EKorL.Spring.Summer.Autumn	Anguilla anguilla	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGM	Anguilla.anguilla.HSC.Small.EKorL.Autumn.Winter.Spring	Anguilla anguilla	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGL	Anguilla.anguilla.HSC.Medium.Serpis.Winter	Anguilla anguilla	Medium	Serpis	HSC	TRUE	Winter	Winter	Field survey	62	280	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGJ	Anguilla.anguilla.HSC.Medium.Serpis.Spring	Anguilla anguilla	Medium	Serpis	HSC	TRUE	Spring	Spring	Field survey	109	366	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGK	Anguilla.anguilla.HSC.Medium.Serpis.Summer	Anguilla anguilla	Medium	Serpis	HSC	TRUE	Summer	Summer	Field survey	166	443	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGI	Anguilla.anguilla.HSC.Medium.Serpis.Autumn	Anguilla anguilla	Medium	Serpis	HSC	TRUE	Autumn	Autumn	Field survey	33	215	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGR	Anguilla.anguilla.HSC.Small.Serpis.Winter	Anguilla anguilla	Small	Serpis	HSC	TRUE	Winter	Winter	Field survey	53	289	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGP	Anguilla.anguilla.HSC.Small.Serpis.Spring	Anguilla anguilla	Small	Serpis	HSC	TRUE	Spring	Spring	Field survey	98	377	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGQ	Anguilla.anguilla.HSC.Small.Serpis.Summer	Anguilla anguilla	Small	Serpis	HSC	TRUE	Summer	Summer	Field survey	129	480	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGO	Anguilla.anguilla.HSC.Small.Serpis.Autumn	Anguilla anguilla	Small	Serpis	HSC	TRUE	Autumn	Autumn	Field survey	42	206	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGW	Barbatula.quignardi.GAM.Large.Ebro.All	Barbatula quignardi	Large	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	823	NA	62	313	510	5	0.925	0.62	0.545	0.773
+ABCGZ	Barbatula.quignardi.HSC.Large.Ebro.All	Barbatula quignardi	Large	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	826	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHO	Barbatula.quignardi.NNET.Large.Ebro.All	Barbatula quignardi	Large	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	823	NA	64	314	509	3	0.955	0.618	0.574	0.787
+ABCHR	Barbatula.quignardi.RF.Large.Ebro.All	Barbatula quignardi	Large	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	823	NA	64	314	509	3	0.955	0.618	0.574	0.787
+ABCHU	Barbatula.quignardi.SVM.Large.Ebro.All	Barbatula quignardi	Large	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	823	NA	58	255	568	9	0.866	0.69	0.556	0.778
+ABCGX	Barbatula.quignardi.GAM.Medium.Ebro.All	Barbatula quignardi	Medium	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	56	834	NA	56	376	458	0	1	0.549	0.549	0.775
+ABCHK	Barbatula.quignardi.HSC.Medium.Ebro.All	Barbatula quignardi	Medium	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	57	836	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHP	Barbatula.quignardi.NNET.Medium.Ebro.All	Barbatula quignardi	Medium	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	56	834	NA	56	349	485	0	1	0.582	0.582	0.791
+ABCHS	Barbatula.quignardi.RF.Medium.Ebro.All	Barbatula quignardi	Medium	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	56	834	NA	56	349	485	0	1	0.582	0.582	0.791
+ABCHV	Barbatula.quignardi.SVM.Medium.Ebro.All	Barbatula quignardi	Medium	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	56	834	NA	52	306	528	4	0.929	0.633	0.562	0.781
+ABCGY	Barbatula.quignardi.GAM.Small.Ebro.All	Barbatula quignardi	Small	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	835	NA	50	225	610	5	0.909	0.731	0.64	0.82
+ABCHL	Barbatula.quignardi.HSC.Small.Ebro.All	Barbatula quignardi	Small	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	838	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHQ	Barbatula.quignardi.NNET.Small.Ebro.All	Barbatula quignardi	Small	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	835	NA	55	177	658	0	1	0.788	0.788	0.894
+ABCHT	Barbatula.quignardi.RF.Small.Ebro.All	Barbatula quignardi	Small	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	835	NA	55	177	658	0	1	0.788	0.788	0.894
+ABCHW	Barbatula.quignardi.SVM.Small.Ebro.All	Barbatula quignardi	Small	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	835	NA	51	185	650	4	0.927	0.778	0.706	0.853
+ABCGT	Barbatula.quignardi.FRBS.Large.EKorL.Spring.Summer.Autumn	Barbatula quignardi	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGS	Barbatula.quignardi.FRBS.Large.EKorL.Autumn.Winter.Spring	Barbatula quignardi	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHJ	Barbatula.quignardi.HSC.Large.EKorL.Spring.Summer.Autumn	Barbatula quignardi	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHI	Barbatula.quignardi.HSC.Large.EKorL.Autumn.Winter.Spring	Barbatula quignardi	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGV	Barbatula.quignardi.FRBS.Small.EKorL.Spring.Summer.Autumn	Barbatula quignardi	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCGU	Barbatula.quignardi.FRBS.Small.EKorL.Autumn.Winter.Spring	Barbatula quignardi	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHN	Barbatula.quignardi.HSC.Small.EKorL.Spring.Summer.Autumn	Barbatula quignardi	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHM	Barbatula.quignardi.HSC.Small.EKorL.Autumn.Winter.Spring	Barbatula quignardi	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHY	Barbus.haasi.FRBS.Large.EKorL.Spring.Summer.Autumn	Barbus haasi	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHX	Barbus.haasi.FRBS.Large.EKorL.Autumn.Winter.Spring	Barbus haasi	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIK	Barbus.haasi.HSC.Large.EKorL.All	Barbus haasi	Large	Mijares	HSC	TRUE	"Spring; Summer"	"Winter; Spring; Summer; Autumn"	Literature review	92	341	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIM	Barbus.haasi.HSC.Large.EKorL.Spring.Summer.Autumn	Barbus haasi	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIL	Barbus.haasi.HSC.Large.EKorL.Autumn.Winter.Spring	Barbus haasi	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIJ	Barbus.haasi.FRBS.Small.EKorL.Spring.Summer.Autumn	Barbus haasi	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCHZ	Barbus.haasi.FRBS.Small.EKorL.Autumn.Winter.Spring	Barbus haasi	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIO	Barbus.haasi.HSC.Small.EKorL.Spring.Summer.Autumn	Barbus haasi	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIN	Barbus.haasi.HSC.Small.EKorL.Autumn.Winter.Spring	Barbus haasi	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIQ	Barbus.meridionalis.FRBS.Large.EKorL.Spring.Summer.Autumn	Barbus meridionalis	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIP	Barbus.meridionalis.FRBS.Large.EKorL.Autumn.Winter.Spring	Barbus meridionalis	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIU	Barbus.meridionalis.HSC.Large.EKorL.Spring.Summer.Autumn	Barbus meridionalis	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIT	Barbus.meridionalis.HSC.Large.EKorL.Autumn.Winter.Spring	Barbus meridionalis	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIS	Barbus.meridionalis.FRBS.Small.EKorL.Spring.Summer.Autumn	Barbus meridionalis	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIR	Barbus.meridionalis.FRBS.Small.EKorL.Autumn.Winter.Spring	Barbus meridionalis	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIW	Barbus.meridionalis.HSC.Small.EKorL.Spring.Summer.Autumn	Barbus meridionalis	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIV	Barbus.meridionalis.HSC.Small.EKorL.Autumn.Winter.Spring	Barbus meridionalis	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCJL	Cobitis.calderoni.GAM.Large.Curueno.All	Cobitis calderoni	Large	Curueño (Douro)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	58	862	NA	57	397	465	1	0.983	0.539	0.522	0.761
+ABCJO	Cobitis.calderoni.HSC.Large.Curueno.All	Cobitis calderoni	Large	Curueño (Douro)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	58	862	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCJV	Cobitis.calderoni.NNET.Large.Curueno.All	Cobitis calderoni	Large	Curueño (Douro)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	58	862	NA	54	310	552	4	0.931	0.64	0.571	0.786
+ABCJY	Cobitis.calderoni.RF.Large.Curueno.All	Cobitis calderoni	Large	Curueño (Douro)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	58	862	NA	54	310	552	4	0.931	0.64	0.571	0.786
+ABCKM	Cobitis.calderoni.SVM.Large.Curueno.All	Cobitis calderoni	Large	Curueño (Douro)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	58	862	NA	47	255	607	11	0.81	0.704	0.515	0.757
+ABCJM	Cobitis.calderoni.GAM.Medium.Curueno.All	Cobitis calderoni	Medium	Curueño (Douro)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	89	831	NA	81	328	503	8	0.91	0.605	0.515	0.758
+ABCJR	Cobitis.calderoni.HSC.Medium.Curueno.All	Cobitis calderoni	Medium	Curueño (Douro)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	89	831	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCJW	Cobitis.calderoni.NNET.Medium.Curueno.All	Cobitis calderoni	Medium	Curueño (Douro)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	89	831	NA	86	315	516	3	0.966	0.621	0.587	0.794
+ABCJZ	Cobitis.calderoni.RF.Medium.Curueno.All	Cobitis calderoni	Medium	Curueño (Douro)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	89	831	NA	86	315	516	3	0.966	0.621	0.587	0.794
+ABCKN	Cobitis.calderoni.SVM.Medium.Curueno.All	Cobitis calderoni	Medium	Curueño (Douro)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	89	831	NA	76	280	551	13	0.854	0.663	0.517	0.758
+ABCJN	Cobitis.calderoni.GAM.Small.Curueno.All	Cobitis calderoni	Small	Curueño (Douro)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	16	904	NA	15	236	668	1	0.938	0.739	0.676	0.838
+ABCJS	Cobitis.calderoni.HSC.Small.Curueno.All	Cobitis calderoni	Small	Curueño (Douro)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	16	904	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCJX	Cobitis.calderoni.NNET.Small.Curueno.All	Cobitis calderoni	Small	Curueño (Douro)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	16	904	NA	13	91	813	3	0.813	0.899	0.712	0.856
+ABCKL	Cobitis.calderoni.RF.Small.Curueno.All	Cobitis calderoni	Small	Curueño (Douro)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	16	904	NA	13	91	813	3	0.813	0.899	0.712	0.856
+ABCKO	Cobitis.calderoni.SVM.Small.Curueno.All	Cobitis calderoni	Small	Curueño (Douro)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	16	904	NA	14	143	761	2	0.875	0.842	0.717	0.858
+ABCIY	Cobitis.calderoni.FRBS.Large.EKorL.Spring.Summer.Autumn	Cobitis calderoni	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIX	Cobitis.calderoni.FRBS.Large.EKorL.Autumn.Winter.Spring	Cobitis calderoni	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABCJQ	Cobitis.calderoni.HSC.Large.EKorL.Spring.Summer.Autumn	Cobitis calderoni	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABCJP	Cobitis.calderoni.HSC.Large.EKorL.Autumn.Winter.Spring	Cobitis calderoni	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABCJK	Cobitis.calderoni.FRBS.Small.EKorL.Spring.Summer.Autumn	Cobitis calderoni	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABCIZ	Cobitis.calderoni.FRBS.Small.EKorL.Autumn.Winter.Spring	Cobitis calderoni	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABCJU	Cobitis.calderoni.HSC.Small.EKorL.Spring.Summer.Autumn	Cobitis calderoni	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABCJT	Cobitis.calderoni.HSC.Small.EKorL.Autumn.Winter.Spring	Cobitis calderoni	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABCKQ	Cobitis.paludica.FRBS.Large.EKorL.Spring.Summer.Autumn	Cobitis paludica	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCKP	Cobitis.paludica.FRBS.Large.EKorL.Autumn.Winter.Spring	Cobitis paludica	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCLO	Cobitis.paludica.HSC.Large.EKorL.Spring.Summer.Autumn	Cobitis paludica	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCLN	Cobitis.paludica.HSC.Large.EKorL.Autumn.Winter.Spring	Cobitis paludica	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCKS	Cobitis.paludica.FRBS.Small.EKorL.Spring.Summer.Autumn	Cobitis paludica	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCKR	Cobitis.paludica.FRBS.Small.EKorL.Autumn.Winter.Spring	Cobitis paludica	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCLW	Cobitis.paludica.HSC.Small.EKorL.Spring.Summer.Autumn	Cobitis paludica	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCLV	Cobitis.paludica.HSC.Small.EKorL.Autumn.Winter.Spring	Cobitis paludica	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABCKT	Cobitis.paludica.GAM.Large.Estena.All	Cobitis paludica	Large	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	1237	NA	27	419	818	3	0.9	0.661	0.561	0.781
+ABCLP	Cobitis.paludica.HSC.Large.Estena.All	Cobitis paludica	Large	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	1239	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCLZ	Cobitis.paludica.NNET.Large.Estena.All	Cobitis paludica	Large	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	1237	NA	27	403	834	3	0.9	0.674	0.574	0.787
+ABCMU	Cobitis.paludica.RF.Large.Estena.All	Cobitis paludica	Large	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	1237	NA	27	403	834	3	0.9	0.674	0.574	0.787
+ABCNQ	Cobitis.paludica.SVM.Large.Estena.All	Cobitis paludica	Large	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	1237	NA	28	435	802	2	0.933	0.648	0.582	0.791
+ABCKW	Cobitis.paludica.GAM.Medium.Estena.All	Cobitis paludica	Medium	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	77	1190	NA	70	478	712	7	0.909	0.598	0.507	0.754
+ABCLS	Cobitis.paludica.HSC.Medium.Estena.All	Cobitis paludica	Medium	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	77	1192	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCMP	Cobitis.paludica.NNET.Medium.Estena.All	Cobitis paludica	Medium	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	77	1190	NA	71	559	631	6	0.922	0.53	0.452	0.726
+ABCMX	Cobitis.paludica.RF.Medium.Estena.All	Cobitis paludica	Medium	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	77	1190	NA	71	559	631	6	0.922	0.53	0.452	0.726
+ABCNT	Cobitis.paludica.SVM.Medium.Estena.All	Cobitis paludica	Medium	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	77	1190	NA	65	377	813	12	0.844	0.683	0.527	0.764
+ABCKZ	Cobitis.paludica.GAM.Small.Estena.All	Cobitis paludica	Small	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	32	1235	NA	32	715	520	0	1	0.421	0.421	0.711
+ABCLX	Cobitis.paludica.HSC.Small.Estena.All	Cobitis paludica	Small	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	32	1237	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCMS	Cobitis.paludica.NNET.Small.Estena.All	Cobitis paludica	Small	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	32	1235	NA	32	644	591	0	1	0.479	0.479	0.739
+ABCNO	Cobitis.paludica.RF.Small.Estena.All	Cobitis paludica	Small	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	32	1235	NA	32	644	591	0	1	0.479	0.479	0.739
+ABCNW	Cobitis.paludica.SVM.Small.Estena.All	Cobitis paludica	Small	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	32	1235	NA	28	502	733	4	0.875	0.594	0.469	0.734
+ABCKU	Cobitis.paludica.GAM.Large.Estena.and.Yeguas.All	Cobitis paludica	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	43	1950	NA	41	918	1032	2	0.953	0.529	0.483	0.741
+ABCLQ	Cobitis.paludica.HSC.Large.Estena.and.Yeguas.All	Cobitis paludica	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	43	1953	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCMN	Cobitis.paludica.NNET.Large.Estena.and.Yeguas.All	Cobitis paludica	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	43	1950	NA	38	959	991	5	0.884	0.508	0.392	0.696
+ABCMV	Cobitis.paludica.RF.Large.Estena.and.Yeguas.All	Cobitis paludica	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	43	1950	NA	38	959	991	5	0.884	0.508	0.392	0.696
+ABCNR	Cobitis.paludica.SVM.Large.Estena.and.Yeguas.All	Cobitis paludica	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	43	1950	NA	36	678	1272	7	0.837	0.652	0.49	0.745
+ABCKX	Cobitis.paludica.GAM.Medium.Estena.and.Yeguas.All	Cobitis paludica	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	1906	NA	78	790	1116	9	0.897	0.586	0.482	0.741
+ABCLT	Cobitis.paludica.HSC.Medium.Estena.and.Yeguas.All	Cobitis paludica	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	1909	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCMQ	Cobitis.paludica.NNET.Medium.Estena.and.Yeguas.All	Cobitis paludica	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	1906	NA	78	845	1061	9	0.897	0.557	0.453	0.727
+ABCMY	Cobitis.paludica.RF.Medium.Estena.and.Yeguas.All	Cobitis paludica	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	1906	NA	78	845	1061	9	0.897	0.557	0.453	0.727
+ABCNU	Cobitis.paludica.SVM.Medium.Estena.and.Yeguas.All	Cobitis paludica	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	1906	NA	67	624	1282	20	0.77	0.673	0.443	0.721
+ABCLM	Cobitis.paludica.GAM.Small.Estena.and.Yeguas.All	Cobitis paludica	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	34	1959	NA	33	897	1062	1	0.971	0.542	0.513	0.756
+ABCLY	Cobitis.paludica.HSC.Small.Estena.and.Yeguas.All	Cobitis paludica	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	34	1962	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCMT	Cobitis.paludica.NNET.Small.Estena.and.Yeguas.All	Cobitis paludica	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	34	1959	NA	34	759	1200	0	1	0.613	0.613	0.806
+ABCNP	Cobitis.paludica.RF.Small.Estena.and.Yeguas.All	Cobitis paludica	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	34	1959	NA	34	759	1200	0	1	0.613	0.613	0.806
+ABCNX	Cobitis.paludica.SVM.Small.Estena.and.Yeguas.All	Cobitis paludica	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	34	1959	NA	31	865	1094	3	0.912	0.558	0.47	0.735
+ABCKV	Cobitis.paludica.GAM.Large.Yeguas.All	Cobitis paludica	Large	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	13	713	NA	13	272	441	0	1	0.619	0.619	0.809
+ABCLR	Cobitis.paludica.HSC.Large.Yeguas.All	Cobitis paludica	Large	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	13	714	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCMO	Cobitis.paludica.NNET.Large.Yeguas.All	Cobitis paludica	Large	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	13	713	NA	13	219	494	0	1	0.693	0.693	0.846
+ABCMW	Cobitis.paludica.RF.Large.Yeguas.All	Cobitis paludica	Large	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	13	713	NA	13	219	494	0	1	0.693	0.693	0.846
+ABCNS	Cobitis.paludica.SVM.Large.Yeguas.All	Cobitis paludica	Large	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	13	713	NA	13	223	490	0	1	0.687	0.687	0.844
+ABCKY	Cobitis.paludica.GAM.Medium.Yeguas.All	Cobitis paludica	Medium	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	716	NA	9	91	625	1	0.9	0.873	0.773	0.886
+ABCLU	Cobitis.paludica.HSC.Medium.Yeguas.All	Cobitis paludica	Medium	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	717	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCMR	Cobitis.paludica.NNET.Medium.Yeguas.All	Cobitis paludica	Medium	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	716	NA	10	212	504	0	1	0.704	0.704	0.852
+ABCMZ	Cobitis.paludica.RF.Medium.Yeguas.All	Cobitis paludica	Medium	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	716	NA	10	212	504	0	1	0.704	0.704	0.852
+ABCNV	Cobitis.paludica.SVM.Medium.Yeguas.All	Cobitis paludica	Medium	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	10	716	NA	10	223	493	0	1	0.689	0.689	0.844
+ABCNZ	Cobitis.vettonica.FRBS.Large.EKorL.Spring.Summer.Autumn	Cobitis vettonica	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCNY	Cobitis.vettonica.FRBS.Large.EKorL.Autumn.Winter.Spring	Cobitis vettonica	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOS	Cobitis.vettonica.HSC.Large.EKorL.Spring.Summer.Autumn	Cobitis vettonica	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOR	Cobitis.vettonica.HSC.Large.EKorL.Autumn.Winter.Spring	Cobitis vettonica	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOQ	Cobitis.vettonica.FRBS.Small.EKorL.Spring.Summer.Autumn	Cobitis vettonica	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOP	Cobitis.vettonica.FRBS.Small.EKorL.Autumn.Winter.Spring	Cobitis vettonica	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOU	Cobitis.vettonica.HSC.Small.EKorL.Spring.Summer.Autumn	Cobitis vettonica	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOT	Cobitis.vettonica.HSC.Small.EKorL.Autumn.Winter.Spring	Cobitis vettonica	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOW	Cottus.aturi.FRBS.Large.EKorL.Spring.Summer.Autumn	Cottus aturi	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOV	Cottus.aturi.FRBS.Large.EKorL.Autumn.Winter.Spring	Cottus aturi	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPQ	Cottus.aturi.HSC.Large.EKorL.Spring.Summer.Autumn	Cottus aturi	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOZ	Cottus.aturi.HSC.Large.EKorL.Autumn.Winter.Spring	Cottus aturi	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOY	Cottus.aturi.FRBS.Small.EKorL.Spring.Summer.Autumn	Cottus aturi	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCOX	Cottus.aturi.FRBS.Small.EKorL.Autumn.Winter.Spring	Cottus aturi	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPS	Cottus.aturi.HSC.Small.EKorL.Spring.Summer.Autumn	Cottus aturi	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPR	Cottus.aturi.HSC.Small.EKorL.Autumn.Winter.Spring	Cottus aturi	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPU	Cottus.hispaniolensis.FRBS.Large.EKorL.Spring.Summer.Autumn	Cottus hispaniolensis	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPT	Cottus.hispaniolensis.FRBS.Large.EKorL.Autumn.Winter.Spring	Cottus hispaniolensis	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPY	Cottus.hispaniolensis.HSC.Large.EKorL.Spring.Summer.Autumn	Cottus hispaniolensis	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPX	Cottus.hispaniolensis.HSC.Large.EKorL.Autumn.Winter.Spring	Cottus hispaniolensis	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPW	Cottus.hispaniolensis.FRBS.Small.EKorL.Spring.Summer.Autumn	Cottus hispaniolensis	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPV	Cottus.hispaniolensis.FRBS.Small.EKorL.Autumn.Winter.Spring	Cottus hispaniolensis	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCQR	Cottus.hispaniolensis.HSC.Small.EKorL.Spring.Summer.Autumn	Cottus hispaniolensis	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCPZ	Cottus.hispaniolensis.HSC.Small.EKorL.Autumn.Winter.Spring	Cottus hispaniolensis	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCQS	Fry.GAM.Very.small.Curueno.All	Fry	Very small	Curueño (Douro)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	165	755	NA	130	228	527	35	0.788	0.698	0.486	0.743
+ABCRU	Fry.NNET.Very.small.Curueno.All	Fry	Very small	Curueño (Douro)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	165	755	NA	137	277	478	28	0.83	0.633	0.463	0.732
+ABCRZ	Fry.RF.Very.small.Curueno.All	Fry	Very small	Curueño (Douro)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	165	755	NA	137	277	478	28	0.83	0.633	0.463	0.732
+ABCSX	Fry.SVM.Very.small.Curueno.All	Fry	Very small	Curueño (Douro)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	165	755	NA	124	228	527	41	0.752	0.698	0.45	0.725
+ABCQT	Fry.GAM.Very.small.Ebro.All	Fry	Very small	Ebro	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	16	874	NA	16	187	687	0	1	0.786	0.786	0.893
+ABCRV	Fry.NNET.Very.small.Ebro.All	Fry	Very small	Ebro	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	16	874	NA	14	109	765	2	0.875	0.875	0.75	0.875
+ABCST	Fry.RF.Very.small.Ebro.All	Fry	Very small	Ebro	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	16	874	NA	14	109	765	2	0.875	0.875	0.75	0.875
+ABCSY	Fry.SVM.Very.small.Ebro.All	Fry	Very small	Ebro	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	16	874	NA	13	144	730	3	0.813	0.835	0.648	0.824
+ABCQU	Fry.GAM.Very.small.Estena.All	Fry	Very small	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	123	1144	NA	108	471	673	15	0.878	0.588	0.466	0.733
+ABCRW	Fry.NNET.Very.small.Estena.All	Fry	Very small	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	123	1144	NA	110	392	752	13	0.894	0.657	0.552	0.776
+ABCSU	Fry.RF.Very.small.Estena.All	Fry	Very small	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	123	1144	NA	110	392	752	13	0.894	0.657	0.552	0.776
+ABCSZ	Fry.SVM.Very.small.Estena.All	Fry	Very small	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	123	1144	NA	109	441	703	14	0.886	0.615	0.501	0.75
+ABCQV	Fry.GAM.Very.small.Estena.and.Yeguas.All	Fry	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	215	1778	NA	168	885	893	47	0.781	0.502	0.284	0.642
+ABCRX	Fry.NNET.Very.small.Estena.and.Yeguas.All	Fry	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	215	1778	NA	187	879	899	28	0.87	0.506	0.375	0.688
+ABCSV	Fry.RF.Very.small.Estena.and.Yeguas.All	Fry	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	215	1778	NA	187	879	899	28	0.87	0.506	0.375	0.688
+ABCTU	Fry.SVM.Very.small.Estena.and.Yeguas.All	Fry	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	215	1778	NA	163	750	1028	52	0.758	0.578	0.336	0.668
+ABCQW	Fry.GAM.Very.small.Yeguas.All	Fry	Very small	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	634	NA	81	274	360	11	0.88	0.568	0.448	0.724
+ABCRY	Fry.NNET.Very.small.Yeguas.All	Fry	Very small	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	634	NA	87	306	328	5	0.946	0.517	0.463	0.732
+ABCSW	Fry.RF.Very.small.Yeguas.All	Fry	Very small	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	634	NA	87	306	328	5	0.946	0.517	0.463	0.732
+ABCTV	Fry.SVM.Very.small.Yeguas.All	Fry	Very small	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	634	NA	76	229	405	16	0.826	0.639	0.465	0.732
+ABCQX	Fry.HSC.Very.small.Curueno.All	Fry 	Very small	Curueño (Douro)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	165	755	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCQY	Fry.HSC.Very.small.Ebro.All	Fry 	Very small	Ebro	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	17	876	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCQZ	Fry.HSC.Very.small.Estena.All	Fry 	Very small	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	125	1152	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCRS	Fry.HSC.Very.small.Estena.and.Yeguas.All	Fry 	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	218	1786	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCRT	Fry.HSC.Very.small.Yeguas.All	Fry 	Very small	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	93	634	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABCTX	Gasterosteus.aculeatus.FRBS.Large.EKorL.Spring.Summer.Autumn	Gasterosteus aculeatus	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCTW	Gasterosteus.aculeatus.FRBS.Large.EKorL.Autumn.Winter.Spring	Gasterosteus aculeatus	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCUW	Gasterosteus.aculeatus.HSC.Large.EKorL.Spring.Summer.Autumn	Gasterosteus aculeatus	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCUV	Gasterosteus.aculeatus.HSC.Large.EKorL.Autumn.Winter.Spring	Gasterosteus aculeatus	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCTZ	Gasterosteus.aculeatus.FRBS.Small.EKorL.Spring.Summer.Autumn	Gasterosteus aculeatus	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCTY	Gasterosteus.aculeatus.FRBS.Small.EKorL.Autumn.Winter.Spring	Gasterosteus aculeatus	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCUY	Gasterosteus.aculeatus.HSC.Small.EKorL.Spring.Summer.Autumn	Gasterosteus aculeatus	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCUX	Gasterosteus.aculeatus.HSC.Small.EKorL.Autumn.Winter.Spring	Gasterosteus aculeatus	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABCVZ	Gobio.lozanoi.GAM.Large.Curueno.All	Gobio lozanoi	Large	Curueño (Douro)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	62	858	NA	55	390	468	7	0.887	0.545	0.433	0.716
+ABDEH	Gobio.lozanoi.HSC.Large.Curueno.All	Gobio lozanoi	Large	Curueño (Douro)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	62	858	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDEU	Gobio.lozanoi.NNET.Large.Curueno.All	Gobio lozanoi	Large	Curueño (Douro)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	62	858	NA	62	364	494	0	1	0.576	0.576	0.788
+ABDFJ	Gobio.lozanoi.RF.Large.Curueno.All	Gobio lozanoi	Large	Curueño (Douro)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	62	858	NA	62	364	494	0	1	0.576	0.576	0.788
+ABDFS	Gobio.lozanoi.SVM.Large.Curueno.All	Gobio lozanoi	Large	Curueño (Douro)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	62	858	NA	55	317	541	7	0.887	0.631	0.518	0.759
+ABCWZ	Gobio.lozanoi.GAM.Medium.Curueno.All	Gobio lozanoi	Medium	Curueño (Douro)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	131	789	NA	124	419	370	7	0.947	0.469	0.416	0.708
+ABDEM	Gobio.lozanoi.HSC.Medium.Curueno.All	Gobio lozanoi	Medium	Curueño (Douro)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	131	789	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDEX	Gobio.lozanoi.NNET.Medium.Curueno.All	Gobio lozanoi	Medium	Curueño (Douro)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	131	789	NA	129	431	358	2	0.985	0.454	0.438	0.719
+ABDFM	Gobio.lozanoi.RF.Medium.Curueno.All	Gobio lozanoi	Medium	Curueño (Douro)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	131	789	NA	129	431	358	2	0.985	0.454	0.438	0.719
+ABDFV	Gobio.lozanoi.SVM.Medium.Curueno.All	Gobio lozanoi	Medium	Curueño (Douro)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	131	789	NA	109	282	507	22	0.832	0.643	0.475	0.737
+ABCYZ	Gobio.lozanoi.GAM.Small.Curueno.All	Gobio lozanoi	Small	Curueño (Douro)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	117	802	NA	100	318	484	17	0.855	0.603	0.458	0.729
+ABDEP	Gobio.lozanoi.HSC.Small.Curueno.All	Gobio lozanoi	Small	Curueño (Douro)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	117	802	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDFG	Gobio.lozanoi.NNET.Small.Curueno.All	Gobio lozanoi	Small	Curueño (Douro)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	117	802	NA	111	405	397	6	0.949	0.495	0.444	0.722
+ABDFP	Gobio.lozanoi.RF.Small.Curueno.All	Gobio lozanoi	Small	Curueño (Douro)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	117	802	NA	111	405	397	6	0.949	0.495	0.444	0.722
+ABDFY	Gobio.lozanoi.SVM.Small.Curueno.All	Gobio lozanoi	Small	Curueño (Douro)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	117	802	NA	82	258	544	35	0.701	0.678	0.379	0.69
+ABCWX	Gobio.lozanoi.GAM.Large.Ebro.All	Gobio lozanoi	Large	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	742	NA	133	419	323	15	0.899	0.435	0.334	0.667
+ABDEI	Gobio.lozanoi.HSC.Large.Ebro.All	Gobio lozanoi	Large	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	745	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDEV	Gobio.lozanoi.NNET.Large.Ebro.All	Gobio lozanoi	Large	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	742	NA	119	337	405	29	0.804	0.546	0.35	0.675
+ABDFK	Gobio.lozanoi.RF.Large.Ebro.All	Gobio lozanoi	Large	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	742	NA	119	337	405	29	0.804	0.546	0.35	0.675
+ABDFT	Gobio.lozanoi.SVM.Large.Ebro.All	Gobio lozanoi	Large	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	742	NA	106	329	413	42	0.716	0.557	0.273	0.636
+ABCXY	Gobio.lozanoi.GAM.Medium.Ebro.All	Gobio lozanoi	Medium	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	249	641	NA	208	382	259	41	0.835	0.404	0.239	0.62
+ABDEN	Gobio.lozanoi.HSC.Medium.Ebro.All	Gobio lozanoi	Medium	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	249	644	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDEY	Gobio.lozanoi.NNET.Medium.Ebro.All	Gobio lozanoi	Medium	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	249	641	NA	219	366	275	30	0.88	0.429	0.309	0.654
+ABDFN	Gobio.lozanoi.RF.Medium.Ebro.All	Gobio lozanoi	Medium	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	249	641	NA	219	366	275	30	0.88	0.429	0.309	0.654
+ABDFW	Gobio.lozanoi.SVM.Medium.Ebro.All	Gobio lozanoi	Medium	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	249	641	NA	168	266	375	81	0.675	0.585	0.26	0.63
+ABDEF	Gobio.lozanoi.GAM.Small.Ebro.All	Gobio lozanoi	Small	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	194	696	NA	149	282	414	45	0.768	0.595	0.363	0.681
+ABDEQ	Gobio.lozanoi.HSC.Small.Ebro.All	Gobio lozanoi	Small	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	194	699	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDFH	Gobio.lozanoi.NNET.Small.Ebro.All	Gobio lozanoi	Small	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	194	696	NA	151	244	452	43	0.778	0.649	0.428	0.714
+ABDFQ	Gobio.lozanoi.RF.Small.Ebro.All	Gobio lozanoi	Small	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	194	696	NA	151	244	452	43	0.778	0.649	0.428	0.714
+ABDFZ	Gobio.lozanoi.SVM.Small.Ebro.All	Gobio lozanoi	Small	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	194	696	NA	140	299	397	54	0.722	0.57	0.292	0.646
+ABCWY	Gobio.lozanoi.GAM.Large.Ebro.and.Curueno.All	Gobio lozanoi	Large	Ebro + Curueño (Douro)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	210	1600	NA	165	773	827	45	0.786	0.517	0.303	0.651
+ABDEJ	Gobio.lozanoi.HSC.Large.Ebro.and.Curueno.All	Gobio lozanoi	Large	Ebro + Curueño (Douro)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	210	1603	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDEW	Gobio.lozanoi.NNET.Large.Ebro.and.Curueno.All	Gobio lozanoi	Large	Ebro + Curueño (Douro)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	210	1600	NA	190	938	662	20	0.905	0.414	0.319	0.659
+ABDFL	Gobio.lozanoi.RF.Large.Ebro.and.Curueno.All	Gobio lozanoi	Large	Ebro + Curueño (Douro)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	210	1600	NA	190	938	662	20	0.905	0.414	0.319	0.659
+ABDFU	Gobio.lozanoi.SVM.Large.Ebro.and.Curueno.All	Gobio lozanoi	Large	Ebro + Curueño (Douro)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	210	1600	NA	141	652	948	69	0.671	0.593	0.264	0.632
+ABCXZ	Gobio.lozanoi.GAM.Medium.Ebro.and.Curueno.All	Gobio lozanoi	Medium	Ebro + Curueño (Douro)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	380	1430	NA	356	958	472	24	0.937	0.33	0.267	0.633
+ABDEO	Gobio.lozanoi.HSC.Medium.Ebro.and.Curueno.All	Gobio lozanoi	Medium	Ebro + Curueño (Douro)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	380	1433	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDEZ	Gobio.lozanoi.NNET.Medium.Ebro.and.Curueno.All	Gobio lozanoi	Medium	Ebro + Curueño (Douro)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	380	1430	NA	312	670	760	68	0.821	0.531	0.353	0.676
+ABDFO	Gobio.lozanoi.RF.Medium.Ebro.and.Curueno.All	Gobio lozanoi	Medium	Ebro + Curueño (Douro)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	380	1430	NA	312	670	760	68	0.821	0.531	0.353	0.676
+ABDFX	Gobio.lozanoi.SVM.Medium.Ebro.and.Curueno.All	Gobio lozanoi	Medium	Ebro + Curueño (Douro)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	380	1430	NA	267	586	844	113	0.703	0.59	0.293	0.646
+ABDEG	Gobio.lozanoi.GAM.Small.Ebro.and.Curueno.All	Gobio lozanoi	Small	Ebro + Curueño (Douro)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	311	1498	NA	263	730	768	48	0.846	0.513	0.358	0.679
+ABDER	Gobio.lozanoi.HSC.Small.Ebro.and.Curueno.All	Gobio lozanoi	Small	Ebro + Curueño (Douro)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	311	1501	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDFI	Gobio.lozanoi.NNET.Small.Ebro.and.Curueno.All	Gobio lozanoi	Small	Ebro + Curueño (Douro)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	311	1498	NA	254	663	835	57	0.817	0.557	0.374	0.687
+ABDFR	Gobio.lozanoi.RF.Small.Ebro.and.Curueno.All	Gobio lozanoi	Small	Ebro + Curueño (Douro)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	311	1498	NA	254	663	835	57	0.817	0.557	0.374	0.687
+ABDGH	Gobio.lozanoi.SVM.Small.Ebro.and.Curueno.All	Gobio lozanoi	Small	Ebro + Curueño (Douro)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	311	1498	NA	223	592	906	88	0.717	0.605	0.322	0.661
+ABCVW	Gobio.lozanoi.FRBS.Large.EKorL.Spring.Summer.Autumn	Gobio lozanoi	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCUZ	Gobio.lozanoi.FRBS.Large.EKorL.Autumn.Winter.Spring	Gobio lozanoi	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABDEL	Gobio.lozanoi.HSC.Large.EKorL.Spring.Summer.Autumn	Gobio lozanoi	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABDEK	Gobio.lozanoi.HSC.Large.EKorL.Autumn.Winter.Spring	Gobio lozanoi	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCVY	Gobio.lozanoi.FRBS.Small.EKorL.Spring.Summer.Autumn	Gobio lozanoi	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABCVX	Gobio.lozanoi.FRBS.Small.EKorL.Autumn.Winter.Spring	Gobio lozanoi	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABDET	Gobio.lozanoi.HSC.Small.EKorL.Spring.Summer.Autumn	Gobio lozanoi	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABDES	Gobio.lozanoi.HSC.Small.EKorL.Autumn.Winter.Spring	Gobio lozanoi	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABDGJ	Iberochondrostoma.lemmingii.FRBS.Large.EKorL.Spring.Summer.Autumn	Iberochondrostoma lemmingii	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDGI	Iberochondrostoma.lemmingii.FRBS.Large.EKorL.Autumn.Winter.Spring	Iberochondrostoma lemmingii	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDGU	Iberochondrostoma.lemmingii.HSC.Large.EKorL.Spring.Summer.Autumn	Iberochondrostoma lemmingii	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDGT	Iberochondrostoma.lemmingii.HSC.Large.EKorL.Autumn.Winter.Spring	Iberochondrostoma lemmingii	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDGL	Iberochondrostoma.lemmingii.FRBS.Small.EKorL.Spring.Summer.Autumn	Iberochondrostoma lemmingii	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDGK	Iberochondrostoma.lemmingii.FRBS.Small.EKorL.Autumn.Winter.Spring	Iberochondrostoma lemmingii	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDHI	Iberochondrostoma.lemmingii.HSC.Small.EKorL.Spring.Summer.Autumn	Iberochondrostoma lemmingii	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDGZ	Iberochondrostoma.lemmingii.HSC.Small.EKorL.Autumn.Winter.Spring	Iberochondrostoma lemmingii	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDGM	Iberochondrostoma.lemmingii.GAM.Large.Estena.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	23	1244	NA	22	382	862	1	0.957	0.693	0.649	0.825
+ABDGV	Iberochondrostoma.lemmingii.HSC.Large.Estena.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	23	1254	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDHM	Iberochondrostoma.lemmingii.NNET.Large.Estena.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	23	1244	NA	22	446	798	1	0.957	0.641	0.598	0.799
+ABDHT	Iberochondrostoma.lemmingii.RF.Large.Estena.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	23	1244	NA	22	446	798	1	0.957	0.641	0.598	0.799
+ABDIJ	Iberochondrostoma.lemmingii.SVM.Large.Estena.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	23	1244	NA	22	439	805	1	0.957	0.647	0.604	0.802
+ABDGO	Iberochondrostoma.lemmingii.GAM.Medium.Estena.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1241	NA	26	382	859	0	1	0.692	0.692	0.846
+ABDGX	Iberochondrostoma.lemmingii.HSC.Medium.Estena.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1251	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDHO	Iberochondrostoma.lemmingii.NNET.Medium.Estena.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1241	NA	26	440	801	0	1	0.645	0.645	0.823
+ABDHV	Iberochondrostoma.lemmingii.RF.Medium.Estena.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1241	NA	26	440	801	0	1	0.645	0.645	0.823
+ABDIL	Iberochondrostoma.lemmingii.SVM.Medium.Estena.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1241	NA	25	426	815	1	0.962	0.657	0.618	0.809
+ABDGQ	Iberochondrostoma.lemmingii.GAM.Small.Estena.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	20	1247	NA	17	503	744	3	0.85	0.597	0.447	0.723
+ABDHJ	Iberochondrostoma.lemmingii.HSC.Small.Estena.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	1256	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDHQ	Iberochondrostoma.lemmingii.NNET.Small.Estena.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	20	1247	NA	17	530	717	3	0.85	0.575	0.425	0.712
+ABDHX	Iberochondrostoma.lemmingii.RF.Small.Estena.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	20	1247	NA	17	530	717	3	0.85	0.575	0.425	0.712
+ABDIN	Iberochondrostoma.lemmingii.SVM.Small.Estena.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	20	1247	NA	15	315	932	5	0.75	0.747	0.497	0.749
+ABDGN	Iberochondrostoma.lemmingii.GAM.Large.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	25	1968	NA	22	398	1570	3	0.88	0.798	0.678	0.839
+ABDGW	Iberochondrostoma.lemmingii.HSC.Large.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	25	1979	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDHN	Iberochondrostoma.lemmingii.NNET.Large.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	25	1968	NA	23	493	1475	2	0.92	0.749	0.669	0.835
+ABDHU	Iberochondrostoma.lemmingii.RF.Large.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	25	1968	NA	23	493	1475	2	0.92	0.749	0.669	0.835
+ABDIK	Iberochondrostoma.lemmingii.SVM.Large.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	25	1968	NA	22	622	1346	3	0.88	0.684	0.564	0.782
+ABDGP	Iberochondrostoma.lemmingii.GAM.Medium.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	29	1964	NA	28	548	1416	1	0.966	0.721	0.686	0.843
+ABDGY	Iberochondrostoma.lemmingii.HSC.Medium.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	29	1975	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDHP	Iberochondrostoma.lemmingii.NNET.Medium.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	29	1964	NA	28	609	1355	1	0.966	0.69	0.655	0.828
+ABDHW	Iberochondrostoma.lemmingii.RF.Medium.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	29	1964	NA	28	609	1355	1	0.966	0.69	0.655	0.828
+ABDIM	Iberochondrostoma.lemmingii.SVM.Medium.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	29	1964	NA	26	543	1421	3	0.897	0.724	0.62	0.81
+ABDGR	Iberochondrostoma.lemmingii.GAM.Small.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	40	1953	NA	38	950	1003	2	0.95	0.514	0.464	0.732
+ABDHK	Iberochondrostoma.lemmingii.HSC.Small.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	41	1963	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDHR	Iberochondrostoma.lemmingii.NNET.Small.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	40	1953	NA	34	805	1148	6	0.85	0.588	0.438	0.719
+ABDHY	Iberochondrostoma.lemmingii.RF.Small.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	40	1953	NA	34	805	1148	6	0.85	0.588	0.438	0.719
+ABDIO	Iberochondrostoma.lemmingii.SVM.Small.Estena.and.Yeguas.All	Iberochondrostoma lemmingii	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	40	1953	NA	28	829	1124	12	0.7	0.576	0.276	0.638
+ABDGS	Iberochondrostoma.lemmingii.GAM.Small.Yeguas.All	Iberochondrostoma lemmingii	Small	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	20	706	NA	20	141	565	0	1	0.8	0.8	0.9
+ABDHL	Iberochondrostoma.lemmingii.HSC.Small.Yeguas.All	Iberochondrostoma lemmingii	Small	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	20	707	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDHS	Iberochondrostoma.lemmingii.NNET.Small.Yeguas.All	Iberochondrostoma lemmingii	Small	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	20	706	NA	18	177	529	2	0.9	0.749	0.649	0.825
+ABDHZ	Iberochondrostoma.lemmingii.RF.Small.Yeguas.All	Iberochondrostoma lemmingii	Small	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	20	706	NA	18	177	529	2	0.9	0.749	0.649	0.825
+ABDIP	Iberochondrostoma.lemmingii.SVM.Small.Yeguas.All	Iberochondrostoma lemmingii	Small	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	20	706	NA	16	90	616	4	0.8	0.873	0.673	0.836
+ABDIR	Iberochondrostoma.oretanum.FRBS.Large.EKorL.Spring.Summer.Autumn	Iberochondrostoma oretanum	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDIQ	Iberochondrostoma.oretanum.FRBS.Large.EKorL.Autumn.Winter.Spring	Iberochondrostoma oretanum	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDIV	Iberochondrostoma.oretanum.HSC.Large.EKorL.Spring.Summer.Autumn	Iberochondrostoma oretanum	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDIU	Iberochondrostoma.oretanum.HSC.Large.EKorL.Autumn.Winter.Spring	Iberochondrostoma oretanum	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDIT	Iberochondrostoma.oretanum.FRBS.Small.EKorL.Spring.Summer.Autumn	Iberochondrostoma oretanum	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDIS	Iberochondrostoma.oretanum.FRBS.Small.EKorL.Autumn.Winter.Spring	Iberochondrostoma oretanum	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDIX	Iberochondrostoma.oretanum.HSC.Small.EKorL.Spring.Summer.Autumn	Iberochondrostoma oretanum	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDIW	Iberochondrostoma.oretanum.HSC.Small.EKorL.Autumn.Winter.Spring	Iberochondrostoma oretanum	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDIY	Lepomis.gibbosus.GAM.Medium.Ebro.All	Lepomis gibbosus	Medium	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	866	NA	24	210	656	0	1	0.758	0.758	0.879
+ABDJK	Lepomis.gibbosus.HSC.Medium.Ebro.All	Lepomis gibbosus	Medium	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	869	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDJM	Lepomis.gibbosus.NNET.Medium.Ebro.All	Lepomis gibbosus	Medium	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	866	NA	24	254	612	0	1	0.707	0.707	0.853
+ABDJO	Lepomis.gibbosus.RF.Medium.Ebro.All	Lepomis gibbosus	Medium	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	866	NA	24	254	612	0	1	0.707	0.707	0.853
+ABDJQ	Lepomis.gibbosus.SVM.Medium.Ebro.All	Lepomis gibbosus	Medium	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	866	NA	24	210	656	0	1	0.758	0.758	0.879
+ABDIZ	Lepomis.gibbosus.GAM.Small.Ebro.All	Lepomis gibbosus	Small	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	803	NA	79	306	497	8	0.908	0.619	0.527	0.763
+ABDJL	Lepomis.gibbosus.HSC.Small.Ebro.All	Lepomis gibbosus	Small	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	89	804	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDJN	Lepomis.gibbosus.NNET.Small.Ebro.All	Lepomis gibbosus	Small	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	803	NA	85	279	524	2	0.977	0.653	0.63	0.815
+ABDJP	Lepomis.gibbosus.RF.Small.Ebro.All	Lepomis gibbosus	Small	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	803	NA	85	279	524	2	0.977	0.653	0.63	0.815
+ABDJR	Lepomis.gibbosus.SVM.Small.Ebro.All	Lepomis gibbosus	Small	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	803	NA	71	257	546	16	0.816	0.68	0.496	0.748
+ABDJT	Luciobarbus.bocagei.FRBS.Large.EKorL.Spring.Summer.Autumn	Luciobarbus bocagei	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDJS	Luciobarbus.bocagei.FRBS.Large.EKorL.Autumn.Winter.Spring	Luciobarbus bocagei	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDKL	Luciobarbus.bocagei.HSC.Large.EKorL.Spring.Summer.Autumn	Luciobarbus bocagei	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDJZ	Luciobarbus.bocagei.HSC.Large.EKorL.Autumn.Winter.Spring	Luciobarbus bocagei	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDJV	Luciobarbus.bocagei.FRBS.Small.EKorL.Spring.Summer.Autumn	Luciobarbus bocagei	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDJU	Luciobarbus.bocagei.FRBS.Small.EKorL.Autumn.Winter.Spring	Luciobarbus bocagei	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDKP	Luciobarbus.bocagei.HSC.Small.EKorL.Spring.Summer.Autumn	Luciobarbus bocagei	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDKO	Luciobarbus.bocagei.HSC.Small.EKorL.Autumn.Winter.Spring	Luciobarbus bocagei	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDJW	Luciobarbus.bocagei.GAM.Large.TRBD.All	Luciobarbus bocagei	Large	Tagus River Basin District	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	86	318	NA	86	70	248	0	1	0.78	0.78	0.89
+ABDKM	Luciobarbus.bocagei.HSC.Large.TRBD.All	Luciobarbus bocagei	Large	Tagus River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	86	318	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDKR	Luciobarbus.bocagei.NNET.Large.TRBD.All	Luciobarbus bocagei	Large	Tagus River Basin District	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	86	318	NA	83	59	259	3	0.965	0.814	0.78	0.89
+ABDKU	Luciobarbus.bocagei.RF.Large.TRBD.All	Luciobarbus bocagei	Large	Tagus River Basin District	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	86	318	NA	83	59	259	3	0.965	0.814	0.78	0.89
+ABDKX	Luciobarbus.bocagei.SVM.Large.TRBD.All	Luciobarbus bocagei	Large	Tagus River Basin District	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	86	318	NA	82	54	264	4	0.953	0.83	0.784	0.892
+ABDJX	Luciobarbus.bocagei.GAM.Medium.TRBD.All	Luciobarbus bocagei	Medium	Tagus River Basin District	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	167	438	NA	148	171	267	19	0.886	0.61	0.496	0.748
+ABDKN	Luciobarbus.bocagei.HSC.Medium.TRBD.All	Luciobarbus bocagei	Medium	Tagus River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	167	438	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDKS	Luciobarbus.bocagei.NNET.Medium.TRBD.All	Luciobarbus bocagei	Medium	Tagus River Basin District	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	167	438	NA	143	136	302	24	0.856	0.689	0.546	0.773
+ABDKV	Luciobarbus.bocagei.RF.Medium.TRBD.All	Luciobarbus bocagei	Medium	Tagus River Basin District	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	167	438	NA	143	136	302	24	0.856	0.689	0.546	0.773
+ABDKY	Luciobarbus.bocagei.SVM.Medium.TRBD.All	Luciobarbus bocagei	Medium	Tagus River Basin District	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	167	438	NA	128	146	292	39	0.766	0.667	0.433	0.717
+ABDJY	Luciobarbus.bocagei.GAM.Small.TRBD.All	Luciobarbus bocagei	Small	Tagus River Basin District	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	362	NA	27	122	240	3	0.9	0.663	0.563	0.781
+ABDKQ	Luciobarbus.bocagei.HSC.Small.TRBD.All	Luciobarbus bocagei	Small	Tagus River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	362	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDKT	Luciobarbus.bocagei.NNET.Small.TRBD.All	Luciobarbus bocagei	Small	Tagus River Basin District	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	362	NA	30	113	249	0	1	0.688	0.688	0.844
+ABDKW	Luciobarbus.bocagei.RF.Small.TRBD.All	Luciobarbus bocagei	Small	Tagus River Basin District	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	362	NA	30	113	249	0	1	0.688	0.688	0.844
+ABDKZ	Luciobarbus.bocagei.SVM.Small.TRBD.All	Luciobarbus bocagei	Small	Tagus River Basin District	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	30	362	NA	28	96	266	2	0.933	0.735	0.668	0.834
+ABDLN	Luciobarbus.comizo.FRBS.Large.EKorL.Spring.Summer.Autumn	Luciobarbus comizo	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLM	Luciobarbus.comizo.FRBS.Large.EKorL.Autumn.Winter.Spring	Luciobarbus comizo	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLR	Luciobarbus.comizo.HSC.Large.EKorL.Spring.Summer.Autumn	Luciobarbus comizo	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLQ	Luciobarbus.comizo.HSC.Large.EKorL.Autumn.Winter.Spring	Luciobarbus comizo	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLP	Luciobarbus.comizo.FRBS.Small.EKorL.Spring.Summer.Autumn	Luciobarbus comizo	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLO	Luciobarbus.comizo.FRBS.Small.EKorL.Autumn.Winter.Spring	Luciobarbus comizo	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLT	Luciobarbus.comizo.HSC.Small.EKorL.Spring.Summer.Autumn	Luciobarbus comizo	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLS	Luciobarbus.comizo.HSC.Small.EKorL.Autumn.Winter.Spring	Luciobarbus comizo	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLY	Luciobarbus.graellsii.GAM.Medium.Ebro.All	Luciobarbus graellsii	Medium	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	835	NA	53	391	444	2	0.964	0.532	0.495	0.748
+ABDMP	Luciobarbus.graellsii.HSC.Medium.Ebro.All	Luciobarbus graellsii	Medium	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	838	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDMT	Luciobarbus.graellsii.NNET.Medium.Ebro.All	Luciobarbus graellsii	Medium	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	835	NA	54	389	446	1	0.982	0.534	0.516	0.758
+ABDMV	Luciobarbus.graellsii.RF.Medium.Ebro.All	Luciobarbus graellsii	Medium	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	835	NA	54	389	446	1	0.982	0.534	0.516	0.758
+ABDMX	Luciobarbus.graellsii.SVM.Medium.Ebro.All	Luciobarbus graellsii	Medium	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	55	835	NA	40	306	529	15	0.727	0.634	0.361	0.68
+ABDLZ	Luciobarbus.graellsii.GAM.Small.Ebro.All	Luciobarbus graellsii	Small	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	84	806	NA	71	308	498	13	0.845	0.618	0.463	0.732
+ABDMQ	Luciobarbus.graellsii.HSC.Small.Ebro.All	Luciobarbus graellsii	Small	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	84	809	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDMU	Luciobarbus.graellsii.NNET.Small.Ebro.All	Luciobarbus graellsii	Small	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	84	806	NA	84	519	287	0	1	0.356	0.356	0.678
+ABDMW	Luciobarbus.graellsii.RF.Small.Ebro.All	Luciobarbus graellsii	Small	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	84	806	NA	84	519	287	0	1	0.356	0.356	0.678
+ABDMY	Luciobarbus.graellsii.SVM.Small.Ebro.All	Luciobarbus graellsii	Small	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	84	806	NA	71	275	531	13	0.845	0.659	0.504	0.752
+ABDLV	Luciobarbus.graellsii.FRBS.Large.EKorL.Spring.Summer.Autumn	Luciobarbus graellsii	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLU	Luciobarbus.graellsii.FRBS.Large.EKorL.Autumn.Winter.Spring	Luciobarbus graellsii	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDMO	Luciobarbus.graellsii.HSC.Large.EKorL.Spring.Summer.Autumn	Luciobarbus graellsii	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDMN	Luciobarbus.graellsii.HSC.Large.EKorL.Autumn.Winter.Spring	Luciobarbus graellsii	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLX	Luciobarbus.graellsii.FRBS.Small.EKorL.Spring.Summer.Autumn	Luciobarbus graellsii	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDLW	Luciobarbus.graellsii.FRBS.Small.EKorL.Autumn.Winter.Spring	Luciobarbus graellsii	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDMS	Luciobarbus.graellsii.HSC.Small.EKorL.Spring.Summer.Autumn	Luciobarbus graellsii	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDMR	Luciobarbus.graellsii.HSC.Small.EKorL.Autumn.Winter.Spring	Luciobarbus graellsii	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNO	Luciobarbus.guiraonis.FRBS.Large.EKorL.Spring.Summer.Autumn	Luciobarbus guiraonis	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDMZ	Luciobarbus.guiraonis.FRBS.Large.EKorL.Autumn.Winter.Spring	Luciobarbus guiraonis	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNR	Luciobarbus.guiraonis.HSC.Large.EKorL.All	Luciobarbus guiraonis	Large	Jucar River Basin District	HSC	TRUE	"Spring; Summer"	"Winter; Spring; Summer; Autumn"	Literature review	6	0	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNT	Luciobarbus.guiraonis.HSC.Large.EKorL.Spring.Summer.Autumn	Luciobarbus guiraonis	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNS	Luciobarbus.guiraonis.HSC.Large.EKorL.Autumn.Winter.Spring	Luciobarbus guiraonis	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNU	Luciobarbus.guiraonis.HSC.Medium.EKorL.All	Luciobarbus guiraonis	Medium	Jucar River Basin District	HSC	TRUE	"Spring; Summer"	"Winter; Spring; Summer; Autumn"	Literature review	30	0	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNQ	Luciobarbus.guiraonis.FRBS.Small.EKorL.Spring.Summer.Autumn	Luciobarbus guiraonis	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNP	Luciobarbus.guiraonis.FRBS.Small.EKorL.Autumn.Winter.Spring	Luciobarbus guiraonis	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNV	Luciobarbus.guiraonis.HSC.Small.EKorL.All	Luciobarbus guiraonis	Small	Jucar River Basin District	HSC	TRUE	"Spring; Summer"	"Winter; Spring; Summer; Autumn"	Literature review	45	0	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNX	Luciobarbus.guiraonis.HSC.Small.EKorL.Spring.Summer.Autumn	Luciobarbus guiraonis	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNW	Luciobarbus.guiraonis.HSC.Small.EKorL.Autumn.Winter.Spring	Luciobarbus guiraonis	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNZ	Luciobarbus.microcephalus.FRBS.Large.EKorL.Spring.Summer.Autumn	Luciobarbus microcephalus	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDNY	Luciobarbus.microcephalus.FRBS.Large.EKorL.Autumn.Winter.Spring	Luciobarbus microcephalus	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDOV	Luciobarbus.microcephalus.HSC.Large.EKorL.Spring.Summer.Autumn	Luciobarbus microcephalus	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDOU	Luciobarbus.microcephalus.HSC.Large.EKorL.Autumn.Winter.Spring	Luciobarbus microcephalus	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDOQ	Luciobarbus.microcephalus.FRBS.Small.EKorL.Spring.Summer.Autumn	Luciobarbus microcephalus	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDOP	Luciobarbus.microcephalus.FRBS.Small.EKorL.Autumn.Winter.Spring	Luciobarbus microcephalus	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDOZ	Luciobarbus.microcephalus.HSC.Small.EKorL.Spring.Summer.Autumn	Luciobarbus microcephalus	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDOY	Luciobarbus.microcephalus.HSC.Small.EKorL.Autumn.Winter.Spring	Luciobarbus microcephalus	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABDOR	Luciobarbus.microcephalus.GAM.Large.Estena.All	Luciobarbus microcephalus	Large	Estena (Guadiana)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	22	1245	NA	20	367	878	2	0.909	0.705	0.614	0.807
+ABDOW	Luciobarbus.microcephalus.HSC.Large.Estena.All	Luciobarbus microcephalus	Large	Estena (Guadiana)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	22	1255	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDPR	Luciobarbus.microcephalus.NNET.Large.Estena.All	Luciobarbus microcephalus	Large	Estena (Guadiana)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	22	1245	NA	20	396	849	2	0.909	0.682	0.591	0.796
+ABDPU	Luciobarbus.microcephalus.RF.Large.Estena.All	Luciobarbus microcephalus	Large	Estena (Guadiana)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	22	1245	NA	20	396	849	2	0.909	0.682	0.591	0.796
+ABDPX	Luciobarbus.microcephalus.SVM.Large.Estena.All	Luciobarbus microcephalus	Large	Estena (Guadiana)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	22	1245	NA	16	247	998	6	0.727	0.802	0.529	0.764
+ABDOS	Luciobarbus.microcephalus.GAM.Medium.Estena.All	Luciobarbus microcephalus	Medium	Estena (Guadiana)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1175	NA	85	428	747	7	0.924	0.636	0.56	0.78
+ABDOX	Luciobarbus.microcephalus.HSC.Medium.Estena.All	Luciobarbus microcephalus	Medium	Estena (Guadiana)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1185	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDPS	Luciobarbus.microcephalus.NNET.Medium.Estena.All	Luciobarbus microcephalus	Medium	Estena (Guadiana)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1175	NA	88	499	676	4	0.957	0.575	0.532	0.766
+ABDPV	Luciobarbus.microcephalus.RF.Medium.Estena.All	Luciobarbus microcephalus	Medium	Estena (Guadiana)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1175	NA	88	499	676	4	0.957	0.575	0.532	0.766
+ABDPY	Luciobarbus.microcephalus.SVM.Medium.Estena.All	Luciobarbus microcephalus	Medium	Estena (Guadiana)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1175	NA	82	368	807	10	0.891	0.687	0.578	0.789
+ABDOT	Luciobarbus.microcephalus.GAM.Small.Estena.All	Luciobarbus microcephalus	Small	Estena (Guadiana)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	71	1196	NA	62	377	819	9	0.873	0.685	0.558	0.779
+ABDPQ	Luciobarbus.microcephalus.HSC.Small.Estena.All	Luciobarbus microcephalus	Small	Estena (Guadiana)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	71	1206	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDPT	Luciobarbus.microcephalus.NNET.Small.Estena.All	Luciobarbus microcephalus	Small	Estena (Guadiana)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	71	1196	NA	71	527	669	0	1	0.559	0.559	0.78
+ABDPW	Luciobarbus.microcephalus.RF.Small.Estena.All	Luciobarbus microcephalus	Small	Estena (Guadiana)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	71	1196	NA	71	527	669	0	1	0.559	0.559	0.78
+ABDPZ	Luciobarbus.microcephalus.SVM.Small.Estena.All	Luciobarbus microcephalus	Small	Estena (Guadiana)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	71	1196	NA	57	353	843	14	0.803	0.705	0.508	0.754
+ABDQS	Luciobarbus.sclateri.FRBS.Large.EKorL.Spring.Summer.Autumn	Luciobarbus sclateri	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABDQR	Luciobarbus.sclateri.FRBS.Large.EKorL.Autumn.Winter.Spring	Luciobarbus sclateri	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABDRS	Luciobarbus.sclateri.HSC.Large.EKorL.Spring.Summer.Autumn	Luciobarbus sclateri	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABDQZ	Luciobarbus.sclateri.HSC.Large.EKorL.Autumn.Winter.Spring	Luciobarbus sclateri	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABDQU	Luciobarbus.sclateri.FRBS.Small.EKorL.Spring.Summer.Autumn	Luciobarbus sclateri	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABDQT	Luciobarbus.sclateri.FRBS.Small.EKorL.Autumn.Winter.Spring	Luciobarbus sclateri	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABDRW	Luciobarbus.sclateri.HSC.Small.EKorL.Spring.Summer.Autumn	Luciobarbus sclateri	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABDRV	Luciobarbus.sclateri.HSC.Small.EKorL.Autumn.Winter.Spring	Luciobarbus sclateri	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABDQV	Luciobarbus.sclateri.GAM.Large.Yeguas.All	Luciobarbus sclateri	Large	Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	702	NA	22	293	409	2	0.917	0.583	0.499	0.75
+ABDRT	Luciobarbus.sclateri.HSC.Large.Yeguas.All	Luciobarbus sclateri	Large	Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	703	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDRZ	Luciobarbus.sclateri.NNET.Large.Yeguas.All	Luciobarbus sclateri	Large	Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	702	NA	24	215	487	0	1	0.694	0.694	0.847
+ABDSW	Luciobarbus.sclateri.RF.Large.Yeguas.All	Luciobarbus sclateri	Large	Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	702	NA	24	215	487	0	1	0.694	0.694	0.847
+ABDTU	Luciobarbus.sclateri.SVM.Large.Yeguas.All	Luciobarbus sclateri	Large	Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	702	NA	18	134	568	6	0.75	0.809	0.559	0.78
+ABDQW	Luciobarbus.sclateri.GAM.Medium.Yeguas.All	Luciobarbus sclateri	Medium	Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	96	630	NA	86	173	457	10	0.896	0.725	0.621	0.811
+ABDRU	Luciobarbus.sclateri.HSC.Medium.Yeguas.All	Luciobarbus sclateri	Medium	Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	96	631	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDST	Luciobarbus.sclateri.NNET.Medium.Yeguas.All	Luciobarbus sclateri	Medium	Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	96	630	NA	89	178	452	7	0.927	0.717	0.645	0.822
+ABDSX	Luciobarbus.sclateri.RF.Medium.Yeguas.All	Luciobarbus sclateri	Medium	Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	96	630	NA	89	178	452	7	0.927	0.717	0.645	0.822
+ABDTV	Luciobarbus.sclateri.SVM.Medium.Yeguas.All	Luciobarbus sclateri	Medium	Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	96	630	NA	78	124	506	18	0.813	0.803	0.616	0.808
+ABDQX	Luciobarbus.sclateri.GAM.Small.Yeguas.All	Luciobarbus sclateri	Small	Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	79	647	NA	68	207	440	11	0.861	0.68	0.541	0.77
+ABDRX	Luciobarbus.sclateri.HSC.Small.Yeguas.All	Luciobarbus sclateri	Small	Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	80	647	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDSU	Luciobarbus.sclateri.NNET.Small.Yeguas.All	Luciobarbus sclateri	Small	Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	79	647	NA	70	178	469	9	0.886	0.725	0.611	0.805
+ABDSY	Luciobarbus.sclateri.RF.Small.Yeguas.All	Luciobarbus sclateri	Small	Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	79	647	NA	70	178	469	9	0.886	0.725	0.611	0.805
+ABDTW	Luciobarbus.sclateri.SVM.Small.Yeguas.All	Luciobarbus sclateri	Small	Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	79	647	NA	58	204	443	21	0.734	0.685	0.419	0.709
+ABDQY	Luciobarbus.sclateri.GAM.Very.small.Yeguas.All	Luciobarbus sclateri	Very small	Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	659	NA	61	343	316	6	0.91	0.48	0.39	0.695
+ABDRY	Luciobarbus.sclateri.HSC.Very.small.Yeguas.All	Luciobarbus sclateri	Very small	Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	660	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDSV	Luciobarbus.sclateri.NNET.Very.small.Yeguas.All	Luciobarbus sclateri	Very small	Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	659	NA	66	268	391	1	0.985	0.593	0.578	0.789
+ABDSZ	Luciobarbus.sclateri.RF.Very.small.Yeguas.All	Luciobarbus sclateri	Very small	Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	659	NA	66	268	391	1	0.985	0.593	0.578	0.789
+ABDTX	Luciobarbus.sclateri.SVM.Very.small.Yeguas.All	Luciobarbus sclateri	Very small	Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	67	659	NA	55	221	438	12	0.821	0.665	0.486	0.743
+ABDTZ	Parachondrostoma.arrigonis.FRBS.Large.EKorL.Spring.Summer.Autumn	Parachondrostoma arrigonis	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDTY	Parachondrostoma.arrigonis.FRBS.Large.EKorL.Autumn.Winter.Spring	Parachondrostoma arrigonis	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDUX	Parachondrostoma.arrigonis.HSC.Large.EKorL.All	Parachondrostoma arrigonis	Large	Cabriel (Jucar)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Literature review	83	0	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDUZ	Parachondrostoma.arrigonis.HSC.Large.EKorL.Spring.Summer.Autumn	Parachondrostoma arrigonis	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDUY	Parachondrostoma.arrigonis.HSC.Large.EKorL.Autumn.Winter.Spring	Parachondrostoma arrigonis	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDUW	Parachondrostoma.arrigonis.FRBS.Small.EKorL.Spring.Summer.Autumn	Parachondrostoma arrigonis	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDUV	Parachondrostoma.arrigonis.FRBS.Small.EKorL.Autumn.Winter.Spring	Parachondrostoma arrigonis	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDVW	Parachondrostoma.arrigonis.HSC.Small.EKorL.All	Parachondrostoma arrigonis	Small	Cabriel (Jucar)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Literature review	44	0	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABDVY	Parachondrostoma.arrigonis.HSC.Small.EKorL.Spring.Summer.Autumn	Parachondrostoma arrigonis	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDVX	Parachondrostoma.arrigonis.HSC.Small.EKorL.Autumn.Winter.Spring	Parachondrostoma arrigonis	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABDXY	Parachondrostoma.miegii.GAM.Large.Ebro.All	Parachondrostoma miegii	Large	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	329	561	NA	259	169	392	70	0.787	0.699	0.486	0.743
+ABEFH	Parachondrostoma.miegii.HSC.Large.Ebro.All	Parachondrostoma miegii	Large	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	330	563	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEFP	Parachondrostoma.miegii.NNET.Large.Ebro.All	Parachondrostoma miegii	Large	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	329	561	NA	284	205	356	45	0.863	0.635	0.498	0.749
+ABEFT	Parachondrostoma.miegii.RF.Large.Ebro.All	Parachondrostoma miegii	Large	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	329	561	NA	284	205	356	45	0.863	0.635	0.498	0.749
+ABEFX	Parachondrostoma.miegii.SVM.Large.Ebro.All	Parachondrostoma miegii	Large	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	329	561	NA	248	158	403	81	0.754	0.718	0.472	0.736
+ABDXZ	Parachondrostoma.miegii.GAM.Medium.Ebro.All	Parachondrostoma miegii	Medium	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	369	521	NA	287	233	288	82	0.778	0.553	0.331	0.665
+ABEFK	Parachondrostoma.miegii.HSC.Medium.Ebro.All	Parachondrostoma miegii	Medium	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	371	522	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEFQ	Parachondrostoma.miegii.NNET.Medium.Ebro.All	Parachondrostoma miegii	Medium	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	369	521	NA	284	199	322	85	0.77	0.618	0.388	0.694
+ABEFU	Parachondrostoma.miegii.RF.Medium.Ebro.All	Parachondrostoma miegii	Medium	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	369	521	NA	284	199	322	85	0.77	0.618	0.388	0.694
+ABEFY	Parachondrostoma.miegii.SVM.Medium.Ebro.All	Parachondrostoma miegii	Medium	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	369	521	NA	261	214	307	108	0.707	0.589	0.297	0.648
+ABDYZ	Parachondrostoma.miegii.GAM.Small.Ebro.All	Parachondrostoma miegii	Small	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	420	470	NA	329	261	209	91	0.783	0.445	0.228	0.614
+ABEFL	Parachondrostoma.miegii.HSC.Small.Ebro.All	Parachondrostoma miegii	Small	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	423	470	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEFR	Parachondrostoma.miegii.NNET.Small.Ebro.All	Parachondrostoma miegii	Small	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	420	470	NA	316	210	260	104	0.752	0.553	0.306	0.653
+ABEFV	Parachondrostoma.miegii.RF.Small.Ebro.All	Parachondrostoma miegii	Small	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	420	470	NA	316	210	260	104	0.752	0.553	0.306	0.653
+ABEFZ	Parachondrostoma.miegii.SVM.Small.Ebro.All	Parachondrostoma miegii	Small	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	420	470	NA	288	206	264	132	0.686	0.562	0.247	0.624
+ABEFG	Parachondrostoma.miegii.GAM.Very.small.Ebro.All	Parachondrostoma miegii	Very small	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	803	NA	77	262	541	10	0.885	0.674	0.559	0.779
+ABEFO	Parachondrostoma.miegii.HSC.Very.small.Ebro.All	Parachondrostoma miegii	Very small	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	806	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEFS	Parachondrostoma.miegii.NNET.Very.small.Ebro.All	Parachondrostoma miegii	Very small	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	803	NA	86	375	428	1	0.989	0.533	0.522	0.761
+ABEFW	Parachondrostoma.miegii.RF.Very.small.Ebro.All	Parachondrostoma miegii	Very small	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	803	NA	86	375	428	1	0.989	0.533	0.522	0.761
+ABEGH	Parachondrostoma.miegii.SVM.Very.small.Ebro.All	Parachondrostoma miegii	Very small	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	87	803	NA	82	203	600	5	0.943	0.747	0.69	0.845
+ABDWX	Parachondrostoma.miegii.FRBS.Large.EKorL.Spring.Summer.Autumn	Parachondrostoma miegii	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDVZ	Parachondrostoma.miegii.FRBS.Large.EKorL.Autumn.Winter.Spring	Parachondrostoma miegii	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABEFJ	Parachondrostoma.miegii.HSC.Large.EKorL.Spring.Summer.Autumn	Parachondrostoma miegii	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABEFI	Parachondrostoma.miegii.HSC.Large.EKorL.Autumn.Winter.Spring	Parachondrostoma miegii	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDWZ	Parachondrostoma.miegii.FRBS.Small.EKorL.Spring.Summer.Autumn	Parachondrostoma miegii	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABDWY	Parachondrostoma.miegii.FRBS.Small.EKorL.Autumn.Winter.Spring	Parachondrostoma miegii	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABEFN	Parachondrostoma.miegii.HSC.Small.EKorL.Spring.Summer.Autumn	Parachondrostoma miegii	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABEFM	Parachondrostoma.miegii.HSC.Small.EKorL.Autumn.Winter.Spring	Parachondrostoma miegii	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGM	Phoxinus.bigerri.GAM.Large.Ebro.All	Phoxinus bigerri	Large	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	174	716	NA	146	335	381	28	0.839	0.532	0.371	0.686
+ABEGQ	Phoxinus.bigerri.HSC.Large.Ebro.All	Phoxinus bigerri	Large	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	174	719	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGY	Phoxinus.bigerri.NNET.Large.Ebro.All	Phoxinus bigerri	Large	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	174	716	NA	142	305	411	32	0.816	0.574	0.39	0.695
+ABEHK	Phoxinus.bigerri.RF.Large.Ebro.All	Phoxinus bigerri	Large	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	174	716	NA	142	305	411	32	0.816	0.574	0.39	0.695
+ABEHO	Phoxinus.bigerri.SVM.Large.Ebro.All	Phoxinus bigerri	Large	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	174	716	NA	142	309	407	32	0.816	0.568	0.385	0.692
+ABEGN	Phoxinus.bigerri.GAM.Medium.Ebro.All	Phoxinus bigerri	Medium	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	326	564	NA	257	215	349	69	0.788	0.619	0.407	0.704
+ABEGT	Phoxinus.bigerri.HSC.Medium.Ebro.All	Phoxinus bigerri	Medium	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	326	567	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGZ	Phoxinus.bigerri.NNET.Medium.Ebro.All	Phoxinus bigerri	Medium	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	326	564	NA	278	228	336	48	0.853	0.596	0.449	0.724
+ABEHL	Phoxinus.bigerri.RF.Medium.Ebro.All	Phoxinus bigerri	Medium	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	326	564	NA	278	228	336	48	0.853	0.596	0.449	0.724
+ABEHP	Phoxinus.bigerri.SVM.Medium.Ebro.All	Phoxinus bigerri	Medium	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	326	564	NA	245	183	381	81	0.752	0.676	0.427	0.714
+ABEGO	Phoxinus.bigerri.GAM.Small.Ebro.All	Phoxinus bigerri	Small	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	284	606	NA	231	233	373	53	0.813	0.616	0.429	0.714
+ABEGU	Phoxinus.bigerri.HSC.Small.Ebro.All	Phoxinus bigerri	Small	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	285	608	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHI	Phoxinus.bigerri.NNET.Small.Ebro.All	Phoxinus bigerri	Small	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	284	606	NA	241	235	371	43	0.849	0.612	0.461	0.73
+ABEHM	Phoxinus.bigerri.RF.Small.Ebro.All	Phoxinus bigerri	Small	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	284	606	NA	241	235	371	43	0.849	0.612	0.461	0.73
+ABEHQ	Phoxinus.bigerri.SVM.Small.Ebro.All	Phoxinus bigerri	Small	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	284	606	NA	222	225	381	62	0.782	0.629	0.41	0.705
+ABEGP	Phoxinus.bigerri.GAM.Very.small.Ebro.All	Phoxinus bigerri	Very small	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	97	793	NA	84	182	611	13	0.866	0.77	0.636	0.818
+ABEGX	Phoxinus.bigerri.HSC.Very.small.Ebro.All	Phoxinus bigerri	Very small	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	98	795	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHJ	Phoxinus.bigerri.NNET.Very.small.Ebro.All	Phoxinus bigerri	Very small	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	97	793	NA	87	198	595	10	0.897	0.75	0.647	0.824
+ABEHN	Phoxinus.bigerri.RF.Very.small.Ebro.All	Phoxinus bigerri	Very small	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	97	793	NA	87	198	595	10	0.897	0.75	0.647	0.824
+ABEHR	Phoxinus.bigerri.SVM.Very.small.Ebro.All	Phoxinus bigerri	Very small	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	97	793	NA	87	157	636	10	0.897	0.802	0.699	0.849
+ABEGJ	Phoxinus.bigerri.FRBS.Large.EKorL.Spring.Summer.Autumn	Phoxinus bigerri	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGI	Phoxinus.bigerri.FRBS.Large.EKorL.Autumn.Winter.Spring	Phoxinus bigerri	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGS	Phoxinus.bigerri.HSC.Large.EKorL.Spring.Summer.Autumn	Phoxinus bigerri	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGR	Phoxinus.bigerri.HSC.Large.EKorL.Autumn.Winter.Spring	Phoxinus bigerri	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGL	Phoxinus.bigerri.FRBS.Small.EKorL.Spring.Summer.Autumn	Phoxinus bigerri	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGK	Phoxinus.bigerri.FRBS.Small.EKorL.Autumn.Winter.Spring	Phoxinus bigerri	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGW	Phoxinus.bigerri.HSC.Small.EKorL.Spring.Summer.Autumn	Phoxinus bigerri	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABEGV	Phoxinus.bigerri.HSC.Small.EKorL.Autumn.Winter.Spring	Phoxinus bigerri	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	5	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHT	Pseudochondrostoma.duriense.FRBS.Large.EKorL.Spring.Summer.Autumn	Pseudochondrostoma duriense	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHS	Pseudochondrostoma.duriense.FRBS.Large.EKorL.Autumn.Winter.Spring	Pseudochondrostoma duriense	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHX	Pseudochondrostoma.duriense.HSC.Large.EKorL.Spring.Summer.Autumn	Pseudochondrostoma duriense	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHW	Pseudochondrostoma.duriense.HSC.Large.EKorL.Autumn.Winter.Spring	Pseudochondrostoma duriense	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHV	Pseudochondrostoma.duriense.FRBS.Small.EKorL.Spring.Summer.Autumn	Pseudochondrostoma duriense	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHU	Pseudochondrostoma.duriense.FRBS.Small.EKorL.Autumn.Winter.Spring	Pseudochondrostoma duriense	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIK	Pseudochondrostoma.duriense.HSC.Small.EKorL.Spring.Summer.Autumn	Pseudochondrostoma duriense	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIJ	Pseudochondrostoma.duriense.HSC.Small.EKorL.Autumn.Winter.Spring	Pseudochondrostoma duriense	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHZ	Pseudochondrostoma.duriense.HSC.Large.Lima.Winter.Spring	Pseudochondrostoma duriense	Large	Lima	HSC	TRUE	"Winter; Spring"	"Winter; Spring"	Field survey	41	113	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEHY	Pseudochondrostoma.duriense.HSC.Large.Lima.Summer.Autumn	Pseudochondrostoma duriense	Large	Lima	HSC	TRUE	"Summer; Autumn"	"Summer; Autumn"	Field survey	42	90	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIM	Pseudochondrostoma.duriense.HSC.Small.Lima.Winter.Spring	Pseudochondrostoma duriense	Small	Lima	HSC	TRUE	"Winter; Spring"	"Winter; Spring"	Field survey	31	113	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIL	Pseudochondrostoma.duriense.HSC.Small.Lima.Summer.Autumn	Pseudochondrostoma duriense	Small	Lima	HSC	TRUE	"Summer; Autumn"	"Summer; Autumn"	Field survey	96	90	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIO	Pseudochondrostoma.polylepis.FRBS.Large.EKorL.Spring.Summer.Autumn	Pseudochondrostoma polylepis	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIN	Pseudochondrostoma.polylepis.FRBS.Large.EKorL.Autumn.Winter.Spring	Pseudochondrostoma polylepis	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIV	Pseudochondrostoma.polylepis.HSC.Large.EKorL.Spring.Summer.Autumn	Pseudochondrostoma polylepis	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIU	Pseudochondrostoma.polylepis.HSC.Large.EKorL.Autumn.Winter.Spring	Pseudochondrostoma polylepis	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIQ	Pseudochondrostoma.polylepis.FRBS.Small.EKorL.Spring.Summer.Autumn	Pseudochondrostoma polylepis	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIP	Pseudochondrostoma.polylepis.FRBS.Small.EKorL.Autumn.Winter.Spring	Pseudochondrostoma polylepis	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIZ	Pseudochondrostoma.polylepis.HSC.Small.EKorL.Spring.Summer.Autumn	Pseudochondrostoma polylepis	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIY	Pseudochondrostoma.polylepis.HSC.Small.EKorL.Autumn.Winter.Spring	Pseudochondrostoma polylepis	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEIR	Pseudochondrostoma.polylepis.GAM.Large.TRBD.All	Pseudochondrostoma polylepis	Large	Tagus River Basin District	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	140	466	NA	124	155	311	16	0.886	0.667	0.553	0.777
+ABEIW	Pseudochondrostoma.polylepis.HSC.Large.TRBD.All	Pseudochondrostoma polylepis	Large	Tagus River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	140	466	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEJL	Pseudochondrostoma.polylepis.NNET.Large.TRBD.All	Pseudochondrostoma polylepis	Large	Tagus River Basin District	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	140	466	NA	133	166	300	7	0.95	0.644	0.594	0.797
+ABEJO	Pseudochondrostoma.polylepis.RF.Large.TRBD.All	Pseudochondrostoma polylepis	Large	Tagus River Basin District	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	140	466	NA	133	166	300	7	0.95	0.644	0.594	0.797
+ABEJR	Pseudochondrostoma.polylepis.SVM.Large.TRBD.All	Pseudochondrostoma polylepis	Large	Tagus River Basin District	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	140	466	NA	111	120	346	29	0.793	0.742	0.535	0.768
+ABEIS	Pseudochondrostoma.polylepis.GAM.Medium.TRBD.All	Pseudochondrostoma polylepis	Medium	Tagus River Basin District	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	123	524	NA	107	213	311	16	0.87	0.594	0.463	0.732
+ABEIX	Pseudochondrostoma.polylepis.HSC.Medium.TRBD.All	Pseudochondrostoma polylepis	Medium	Tagus River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	123	524	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEJM	Pseudochondrostoma.polylepis.NNET.Medium.TRBD.All	Pseudochondrostoma polylepis	Medium	Tagus River Basin District	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	123	524	NA	122	270	254	1	0.992	0.485	0.477	0.738
+ABEJP	Pseudochondrostoma.polylepis.RF.Medium.TRBD.All	Pseudochondrostoma polylepis	Medium	Tagus River Basin District	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	123	524	NA	122	270	254	1	0.992	0.485	0.477	0.738
+ABEJS	Pseudochondrostoma.polylepis.SVM.Medium.TRBD.All	Pseudochondrostoma polylepis	Medium	Tagus River Basin District	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	123	524	NA	101	172	352	22	0.821	0.672	0.493	0.746
+ABEIT	Pseudochondrostoma.polylepis.GAM.Small.TRBD.All	Pseudochondrostoma polylepis	Small	Tagus River Basin District	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	90	423	NA	83	126	297	7	0.922	0.702	0.624	0.812
+ABEJK	Pseudochondrostoma.polylepis.HSC.Small.TRBD.All	Pseudochondrostoma polylepis	Small	Tagus River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	90	423	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEJN	Pseudochondrostoma.polylepis.NNET.Small.TRBD.All	Pseudochondrostoma polylepis	Small	Tagus River Basin District	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	90	423	NA	86	109	314	4	0.956	0.742	0.698	0.849
+ABEJQ	Pseudochondrostoma.polylepis.RF.Small.TRBD.All	Pseudochondrostoma polylepis	Small	Tagus River Basin District	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	90	423	NA	86	109	314	4	0.956	0.742	0.698	0.849
+ABEJT	Pseudochondrostoma.polylepis.SVM.Small.TRBD.All	Pseudochondrostoma polylepis	Small	Tagus River Basin District	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	90	423	NA	80	109	314	10	0.889	0.742	0.631	0.816
+ABEJV	Pseudochondrostoma.willkommii.FRBS.Large.EKorL.Spring.Summer.Autumn	Pseudochondrostoma willkommii	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEJU	Pseudochondrostoma.willkommii.FRBS.Large.EKorL.Autumn.Winter.Spring	Pseudochondrostoma willkommii	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEJZ	Pseudochondrostoma.willkommii.HSC.Large.EKorL.Spring.Summer.Autumn	Pseudochondrostoma willkommii	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEJY	Pseudochondrostoma.willkommii.HSC.Large.EKorL.Autumn.Winter.Spring	Pseudochondrostoma willkommii	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEJX	Pseudochondrostoma.willkommii.FRBS.Small.EKorL.Spring.Summer.Autumn	Pseudochondrostoma willkommii	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEJW	Pseudochondrostoma.willkommii.FRBS.Small.EKorL.Autumn.Winter.Spring	Pseudochondrostoma willkommii	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEKM	Pseudochondrostoma.willkommii.HSC.Small.EKorL.Spring.Summer.Autumn	Pseudochondrostoma willkommii	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEKL	Pseudochondrostoma.willkommii.HSC.Small.EKorL.Autumn.Winter.Spring	Pseudochondrostoma willkommii	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	2	NA	NA	NA	NA	NA	NA	NA	NA
+ABEKR	Salariopsis.fluviatilis.GAM.Large.Ebro.All	Salariopsis fluviatilis	Large	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	31	859	NA	28	206	653	3	0.903	0.76	0.663	0.832
+ABEKU	Salariopsis.fluviatilis.HSC.Large.Ebro.All	Salariopsis fluviatilis	Large	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	31	862	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABELN	Salariopsis.fluviatilis.NNET.Large.Ebro.All	Salariopsis fluviatilis	Large	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	31	859	NA	31	166	693	0	1	0.807	0.807	0.903
+ABELQ	Salariopsis.fluviatilis.RF.Large.Ebro.All	Salariopsis fluviatilis	Large	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	31	859	NA	31	166	693	0	1	0.807	0.807	0.903
+ABELT	Salariopsis.fluviatilis.SVM.Large.Ebro.All	Salariopsis fluviatilis	Large	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	31	859	NA	28	169	690	3	0.903	0.803	0.706	0.853
+ABEKS	Salariopsis.fluviatilis.GAM.Medium.Ebro.All	Salariopsis fluviatilis	Medium	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	69	821	NA	65	313	508	4	0.942	0.619	0.561	0.78
+ABEKX	Salariopsis.fluviatilis.HSC.Medium.Ebro.All	Salariopsis fluviatilis	Medium	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	69	824	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABELO	Salariopsis.fluviatilis.NNET.Medium.Ebro.All	Salariopsis fluviatilis	Medium	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	69	821	NA	55	242	579	14	0.797	0.705	0.502	0.751
+ABELR	Salariopsis.fluviatilis.RF.Medium.Ebro.All	Salariopsis fluviatilis	Medium	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	69	821	NA	55	242	579	14	0.797	0.705	0.502	0.751
+ABELU	Salariopsis.fluviatilis.SVM.Medium.Ebro.All	Salariopsis fluviatilis	Medium	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	69	821	NA	52	197	624	17	0.754	0.76	0.514	0.757
+ABEKT	Salariopsis.fluviatilis.GAM.Small.Ebro.All	Salariopsis fluviatilis	Small	Ebro	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	831	NA	51	208	623	8	0.864	0.75	0.614	0.807
+ABEKY	Salariopsis.fluviatilis.HSC.Small.Ebro.All	Salariopsis fluviatilis	Small	Ebro	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	834	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABELP	Salariopsis.fluviatilis.NNET.Small.Ebro.All	Salariopsis fluviatilis	Small	Ebro	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	831	NA	54	305	526	5	0.915	0.633	0.548	0.774
+ABELS	Salariopsis.fluviatilis.RF.Small.Ebro.All	Salariopsis fluviatilis	Small	Ebro	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	831	NA	54	305	526	5	0.915	0.633	0.548	0.774
+ABELV	Salariopsis.fluviatilis.SVM.Small.Ebro.All	Salariopsis fluviatilis	Small	Ebro	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	831	NA	50	137	694	9	0.847	0.835	0.683	0.841
+ABEKO	Salariopsis.fluviatilis.FRBS.Large.EKorL.Spring.Summer.Autumn	Salariopsis fluviatilis	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABEKN	Salariopsis.fluviatilis.FRBS.Large.EKorL.Autumn.Winter.Spring	Salariopsis fluviatilis	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABEKW	Salariopsis.fluviatilis.HSC.Large.EKorL.Spring.Summer.Autumn	Salariopsis fluviatilis	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABEKV	Salariopsis.fluviatilis.HSC.Large.EKorL.Autumn.Winter.Spring	Salariopsis fluviatilis	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABEKQ	Salariopsis.fluviatilis.FRBS.Small.EKorL.Spring.Summer.Autumn	Salariopsis fluviatilis	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABEKP	Salariopsis.fluviatilis.FRBS.Small.EKorL.Autumn.Winter.Spring	Salariopsis fluviatilis	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABELM	Salariopsis.fluviatilis.HSC.Small.EKorL.Spring.Summer.Autumn	Salariopsis fluviatilis	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABEKZ	Salariopsis.fluviatilis.HSC.Small.EKorL.Autumn.Winter.Spring	Salariopsis fluviatilis	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	7	NA	NA	NA	NA	NA	NA	NA	NA
+ABELW	Salmo.salar.HSC.Small.EKorL.All	Salmo salar	Small		HSC	TRUE		"Winter; Spring; Summer; Autumn"	Literature review	NA	NA	21	NA	NA	NA	NA	NA	NA	NA	NA
+ABELX	Salmo.salar.HSC.Spawning.EKorL.Autumn.Winter.Spring	Salmo salar	Spawning		HSC	TRUE	"Autumn; Winter"	"Autumn; Winter; Spring"	Literature review	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABELY	Salmo.salar.HSC.Very.small.EKorL.Spring.Summer.Autumn	Salmo salar	Very small		HSC	TRUE		"Spring; Summer; Autumn"	Literature review	NA	NA	6	NA	NA	NA	NA	NA	NA	NA	NA
+ABELZ	Salmo.trutta.GAM.Large.Curueno.All	Salmo trutta	Large	Curueño (Douro)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	896	NA	24	191	705	0	1	0.787	0.787	0.893
+ABEMQ	Salmo.trutta.HSC.Large.Curueno.All	Salmo trutta	Large	Curueño (Douro)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	896	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEMV	Salmo.trutta.NNET.Large.Curueno.All	Salmo trutta	Large	Curueño (Douro)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	896	NA	24	106	790	0	1	0.882	0.882	0.941
+ABEMZ	Salmo.trutta.RF.Large.Curueno.All	Salmo trutta	Large	Curueño (Douro)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	896	NA	24	106	790	0	1	0.882	0.882	0.941
+ABENR	Salmo.trutta.SVM.Large.Curueno.All	Salmo trutta	Large	Curueño (Douro)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	24	896	NA	22	157	739	2	0.917	0.825	0.741	0.871
+ABEMN	Salmo.trutta.GAM.Medium.Curueno.All	Salmo trutta	Medium	Curueño (Douro)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	81	839	NA	75	253	586	6	0.926	0.698	0.624	0.812
+ABEMR	Salmo.trutta.HSC.Medium.Curueno.All	Salmo trutta	Medium	Curueño (Douro)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	81	839	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEMW	Salmo.trutta.NNET.Medium.Curueno.All	Salmo trutta	Medium	Curueño (Douro)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	81	839	NA	75	197	642	6	0.926	0.765	0.691	0.846
+ABENO	Salmo.trutta.RF.Medium.Curueno.All	Salmo trutta	Medium	Curueño (Douro)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	81	839	NA	75	197	642	6	0.926	0.765	0.691	0.846
+ABENS	Salmo.trutta.SVM.Medium.Curueno.All	Salmo trutta	Medium	Curueño (Douro)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	81	839	NA	68	200	639	13	0.84	0.762	0.601	0.801
+ABEMO	Salmo.trutta.GAM.Small.Curueno.All	Salmo trutta	Small	Curueño (Douro)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	385	535	NA	278	200	335	107	0.722	0.626	0.348	0.674
+ABEMS	Salmo.trutta.HSC.Small.Curueno.All	Salmo trutta	Small	Curueño (Douro)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	385	535	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEMX	Salmo.trutta.NNET.Small.Curueno.All	Salmo trutta	Small	Curueño (Douro)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	385	535	NA	286	211	324	99	0.743	0.606	0.348	0.674
+ABENP	Salmo.trutta.RF.Small.Curueno.All	Salmo trutta	Small	Curueño (Douro)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	385	535	NA	286	211	324	99	0.743	0.606	0.348	0.674
+ABENT	Salmo.trutta.SVM.Small.Curueno.All	Salmo trutta	Small	Curueño (Douro)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	385	535	NA	262	179	356	123	0.681	0.665	0.346	0.673
+ABEMP	Salmo.trutta.GAM.Small.Ebro.All	Salmo trutta	Small	Ebro	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	38	852	NA	38	327	525	0	1	0.616	0.616	0.808
+ABEMT	Salmo.trutta.HSC.Small.Ebro.All	Salmo trutta	Small	Ebro	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	38	855	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEMY	Salmo.trutta.NNET.Small.Ebro.All	Salmo trutta	Small	Ebro	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	38	852	NA	38	365	487	0	1	0.572	0.572	0.786
+ABENQ	Salmo.trutta.RF.Small.Ebro.All	Salmo trutta	Small	Ebro	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	38	852	NA	38	365	487	0	1	0.572	0.572	0.786
+ABENU	Salmo.trutta.SVM.Small.Ebro.All	Salmo trutta	Small	Ebro	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	38	852	NA	33	254	598	5	0.868	0.702	0.57	0.785
+ABEMU	Salmo.trutta.HSC.Spawning.EKorL.Autumn.Winter.Spring	Salmo trutta	Spawning	Jucar River Basin District	HSC	TRUE	"Autumn; Winter"	"Autumn; Winter; Spring"	Literature review	331	331	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABENW	Squalius.alburnoides.FRBS.Large.EKorL.Spring.Summer.Autumn	Squalius alburnoides	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABENV	Squalius.alburnoides.FRBS.Large.EKorL.Autumn.Winter.Spring	Squalius alburnoides	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABEPR	Squalius.alburnoides.HSC.Large.EKorL.Spring.Summer.Autumn	Squalius alburnoides	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABEPQ	Squalius.alburnoides.HSC.Large.EKorL.Autumn.Winter.Spring	Squalius alburnoides	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABENY	Squalius.alburnoides.FRBS.Small.EKorL.Spring.Summer.Autumn	Squalius alburnoides	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABENX	Squalius.alburnoides.FRBS.Small.EKorL.Autumn.Winter.Spring	Squalius alburnoides	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABEPZ	Squalius.alburnoides.HSC.Small.EKorL.Spring.Summer.Autumn	Squalius alburnoides	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABEPY	Squalius.alburnoides.HSC.Small.EKorL.Autumn.Winter.Spring	Squalius alburnoides	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABENZ	Squalius.alburnoides.GAM.Large.Estena.All	Squalius alburnoides	Large	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	195	1072	NA	167	568	504	28	0.856	0.47	0.327	0.663
+ABEPS	Squalius.alburnoides.HSC.Large.Estena.All	Squalius alburnoides	Large	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	196	1081	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEQX	Squalius.alburnoides.NNET.Large.Estena.All	Squalius alburnoides	Large	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	195	1072	NA	142	351	721	53	0.728	0.673	0.401	0.7
+ABESU	Squalius.alburnoides.RF.Large.Estena.All	Squalius alburnoides	Large	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	195	1072	NA	142	351	721	53	0.728	0.673	0.401	0.7
+ABEUV	Squalius.alburnoides.SVM.Large.Estena.All	Squalius alburnoides	Large	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	195	1072	NA	138	320	752	57	0.708	0.701	0.409	0.705
+ABEOR	Squalius.alburnoides.GAM.Medium.Estena.All	Squalius alburnoides	Medium	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	442	825	NA	341	341	484	101	0.771	0.587	0.358	0.679
+ABEPV	Squalius.alburnoides.HSC.Medium.Estena.All	Squalius alburnoides	Medium	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	445	832	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABERS	Squalius.alburnoides.NNET.Medium.Estena.All	Squalius alburnoides	Medium	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	442	825	NA	327	305	520	115	0.74	0.63	0.37	0.685
+ABESX	Squalius.alburnoides.RF.Medium.Estena.All	Squalius alburnoides	Medium	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	442	825	NA	327	305	520	115	0.74	0.63	0.37	0.685
+ABEUY	Squalius.alburnoides.SVM.Medium.Estena.All	Squalius alburnoides	Medium	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	442	825	NA	307	321	504	135	0.695	0.611	0.305	0.653
+ABEOU	Squalius.alburnoides.GAM.Small.Estena.All	Squalius alburnoides	Small	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	395	872	NA	318	422	450	77	0.805	0.516	0.321	0.661
+ABEQR	Squalius.alburnoides.HSC.Small.Estena.All	Squalius alburnoides	Small	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	398	879	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABERV	Squalius.alburnoides.NNET.Small.Estena.All	Squalius alburnoides	Small	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	395	872	NA	312	373	499	83	0.79	0.572	0.362	0.681
+ABETU	Squalius.alburnoides.RF.Small.Estena.All	Squalius alburnoides	Small	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	395	872	NA	312	373	499	83	0.79	0.572	0.362	0.681
+ABEVX	Squalius.alburnoides.SVM.Small.Estena.All	Squalius alburnoides	Small	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	395	872	NA	287	378	494	108	0.727	0.567	0.293	0.647
+ABEOX	Squalius.alburnoides.GAM.Very.small.Estena.All	Squalius alburnoides	Very small	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1241	NA	26	555	686	0	1	0.553	0.553	0.776
+ABEQU	Squalius.alburnoides.HSC.Very.small.Estena.All	Squalius alburnoides	Very small	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1251	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABERY	Squalius.alburnoides.NNET.Very.small.Estena.All	Squalius alburnoides	Very small	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1241	NA	26	415	826	0	1	0.666	0.666	0.833
+ABETX	Squalius.alburnoides.RF.Very.small.Estena.All	Squalius alburnoides	Very small	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1241	NA	26	415	826	0	1	0.666	0.666	0.833
+ABEWX	Squalius.alburnoides.SVM.Very.small.Estena.All	Squalius alburnoides	Very small	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	26	1241	NA	24	540	701	2	0.923	0.565	0.488	0.744
+ABEOP	Squalius.alburnoides.GAM.Large.Estena.and.Yeguas.All	Squalius alburnoides	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	283	1710	NA	260	980	730	23	0.919	0.427	0.346	0.673
+ABEPT	Squalius.alburnoides.HSC.Large.Estena.and.Yeguas.All	Squalius alburnoides	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	284	1720	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEQY	Squalius.alburnoides.NNET.Large.Estena.and.Yeguas.All	Squalius alburnoides	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	283	1710	NA	233	786	924	50	0.823	0.54	0.364	0.682
+ABESV	Squalius.alburnoides.RF.Large.Estena.and.Yeguas.All	Squalius alburnoides	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	283	1710	NA	233	786	924	50	0.823	0.54	0.364	0.682
+ABEUW	Squalius.alburnoides.SVM.Large.Estena.and.Yeguas.All	Squalius alburnoides	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	283	1710	NA	196	606	1104	87	0.693	0.646	0.338	0.669
+ABEOS	Squalius.alburnoides.GAM.Medium.Estena.and.Yeguas.All	Squalius alburnoides	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	590	1403	NA	452	558	845	138	0.766	0.602	0.368	0.684
+ABEPW	Squalius.alburnoides.HSC.Medium.Estena.and.Yeguas.All	Squalius alburnoides	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	593	1411	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABERT	Squalius.alburnoides.NNET.Medium.Estena.and.Yeguas.All	Squalius alburnoides	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	590	1403	NA	456	517	886	134	0.773	0.632	0.404	0.702
+ABESY	Squalius.alburnoides.RF.Medium.Estena.and.Yeguas.All	Squalius alburnoides	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	590	1403	NA	456	517	886	134	0.773	0.632	0.404	0.702
+ABEUZ	Squalius.alburnoides.SVM.Medium.Estena.and.Yeguas.All	Squalius alburnoides	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	590	1403	NA	405	502	901	185	0.686	0.642	0.329	0.664
+ABEOV	Squalius.alburnoides.GAM.Small.Estena.and.Yeguas.All	Squalius alburnoides	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	582	1411	NA	474	749	662	108	0.814	0.469	0.284	0.642
+ABEQS	Squalius.alburnoides.HSC.Small.Estena.and.Yeguas.All	Squalius alburnoides	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	585	1419	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABERW	Squalius.alburnoides.NNET.Small.Estena.and.Yeguas.All	Squalius alburnoides	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	582	1411	NA	434	610	801	148	0.746	0.568	0.313	0.657
+ABETV	Squalius.alburnoides.RF.Small.Estena.and.Yeguas.All	Squalius alburnoides	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	582	1411	NA	434	610	801	148	0.746	0.568	0.313	0.657
+ABEVY	Squalius.alburnoides.SVM.Small.Estena.and.Yeguas.All	Squalius alburnoides	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	582	1411	NA	410	671	740	172	0.704	0.524	0.229	0.614
+ABEOY	Squalius.alburnoides.GAM.Very.small.Estena.and.Yeguas.All	Squalius alburnoides	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	135	1858	NA	110	899	959	25	0.815	0.516	0.331	0.665
+ABEQV	Squalius.alburnoides.HSC.Very.small.Estena.and.Yeguas.All	Squalius alburnoides	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	135	1861	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABERZ	Squalius.alburnoides.NNET.Very.small.Estena.and.Yeguas.All	Squalius alburnoides	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	135	1858	NA	118	947	911	17	0.874	0.49	0.364	0.682
+ABETY	Squalius.alburnoides.RF.Very.small.Estena.and.Yeguas.All	Squalius alburnoides	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	135	1858	NA	118	947	911	17	0.874	0.49	0.364	0.682
+ABEWY	Squalius.alburnoides.SVM.Very.small.Estena.and.Yeguas.All	Squalius alburnoides	Very small	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	135	1858	NA	90	564	1294	45	0.667	0.696	0.363	0.682
+ABEOQ	Squalius.alburnoides.GAM.Large.Yeguas.All	Squalius alburnoides	Large	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	88	638	NA	86	286	352	2	0.977	0.552	0.529	0.764
+ABEPU	Squalius.alburnoides.HSC.Large.Yeguas.All	Squalius alburnoides	Large	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	88	639	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEQZ	Squalius.alburnoides.NNET.Large.Yeguas.All	Squalius alburnoides	Large	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	88	638	NA	82	235	403	6	0.932	0.632	0.563	0.782
+ABESW	Squalius.alburnoides.RF.Large.Yeguas.All	Squalius alburnoides	Large	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	88	638	NA	82	235	403	6	0.932	0.632	0.563	0.782
+ABEUX	Squalius.alburnoides.SVM.Large.Yeguas.All	Squalius alburnoides	Large	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	88	638	NA	79	174	464	9	0.898	0.727	0.625	0.813
+ABEOT	Squalius.alburnoides.GAM.Medium.Yeguas.All	Squalius alburnoides	Medium	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	578	NA	127	211	367	21	0.858	0.635	0.493	0.747
+ABEPX	Squalius.alburnoides.HSC.Medium.Yeguas.All	Squalius alburnoides	Medium	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	579	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABERU	Squalius.alburnoides.NNET.Medium.Yeguas.All	Squalius alburnoides	Medium	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	578	NA	137	224	354	11	0.926	0.612	0.538	0.769
+ABESZ	Squalius.alburnoides.RF.Medium.Yeguas.All	Squalius alburnoides	Medium	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	578	NA	137	224	354	11	0.926	0.612	0.538	0.769
+ABEVW	Squalius.alburnoides.SVM.Medium.Yeguas.All	Squalius alburnoides	Medium	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	148	578	NA	115	148	430	33	0.777	0.744	0.521	0.76
+ABEOW	Squalius.alburnoides.GAM.Small.Yeguas.All	Squalius alburnoides	Small	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	187	539	NA	160	299	240	27	0.856	0.445	0.301	0.65
+ABEQT	Squalius.alburnoides.HSC.Small.Yeguas.All	Squalius alburnoides	Small	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	187	540	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABERX	Squalius.alburnoides.NNET.Small.Yeguas.All	Squalius alburnoides	Small	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	187	539	NA	147	238	301	40	0.786	0.558	0.345	0.672
+ABETW	Squalius.alburnoides.RF.Small.Yeguas.All	Squalius alburnoides	Small	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	187	539	NA	147	238	301	40	0.786	0.558	0.345	0.672
+ABEVZ	Squalius.alburnoides.SVM.Small.Yeguas.All	Squalius alburnoides	Small	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	187	539	NA	128	230	309	59	0.684	0.573	0.258	0.629
+ABEOZ	Squalius.alburnoides.GAM.Very.small.Yeguas.All	Squalius alburnoides	Very small	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	109	617	NA	81	274	343	28	0.743	0.556	0.299	0.65
+ABEQW	Squalius.alburnoides.HSC.Very.small.Yeguas.All	Squalius alburnoides	Very small	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	109	618	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABEST	Squalius.alburnoides.NNET.Very.small.Yeguas.All	Squalius alburnoides	Very small	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	109	617	NA	98	334	283	11	0.899	0.459	0.358	0.679
+ABETZ	Squalius.alburnoides.RF.Very.small.Yeguas.All	Squalius alburnoides	Very small	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	109	617	NA	98	334	283	11	0.899	0.459	0.358	0.679
+ABEWZ	Squalius.alburnoides.SVM.Very.small.Yeguas.All	Squalius alburnoides	Very small	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	109	617	NA	81	248	369	28	0.743	0.598	0.341	0.671
+ABFGI	Squalius.carolitertii.GAM.Small.Curueno.All	Squalius carolitertii	Small	Curueño (Douro)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	15	905	NA	14	271	634	1	0.933	0.701	0.634	0.817
+ABFGN	Squalius.carolitertii.HSC.Small.Curueno.All	Squalius carolitertii	Small	Curueño (Douro)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	15	905	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGS	Squalius.carolitertii.NNET.Small.Curueno.All	Squalius carolitertii	Small	Curueño (Douro)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	15	905	NA	15	275	630	0	1	0.696	0.696	0.848
+ABFGT	Squalius.carolitertii.RF.Small.Curueno.All	Squalius carolitertii	Small	Curueño (Douro)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	15	905	NA	15	275	630	0	1	0.696	0.696	0.848
+ABFGU	Squalius.carolitertii.SVM.Small.Curueno.All	Squalius carolitertii	Small	Curueño (Douro)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	15	905	NA	11	226	679	4	0.733	0.75	0.484	0.742
+ABEXZ	Squalius.carolitertii.FRBS.Large.EKorL.Spring.Summer.Autumn	Squalius carolitertii	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABEXY	Squalius.carolitertii.FRBS.Large.EKorL.Autumn.Winter.Spring	Squalius carolitertii	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGK	Squalius.carolitertii.HSC.Large.EKorL.Spring.Summer.Autumn	Squalius carolitertii	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGJ	Squalius.carolitertii.HSC.Large.EKorL.Autumn.Winter.Spring	Squalius carolitertii	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGH	Squalius.carolitertii.FRBS.Small.EKorL.Spring.Summer.Autumn	Squalius carolitertii	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABEYZ	Squalius.carolitertii.FRBS.Small.EKorL.Autumn.Winter.Spring	Squalius carolitertii	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGP	Squalius.carolitertii.HSC.Small.EKorL.Spring.Summer.Autumn	Squalius carolitertii	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGO	Squalius.carolitertii.HSC.Small.EKorL.Autumn.Winter.Spring	Squalius carolitertii	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGM	Squalius.carolitertii.HSC.Large.Lima.Winter.Spring	Squalius carolitertii	Large	Lima	HSC	TRUE	"Winter; Spring"	"Winter; Spring"	Field survey	30	113	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGL	Squalius.carolitertii.HSC.Large.Lima.Summer.Autumn	Squalius carolitertii	Large	Lima	HSC	TRUE	"Summer; Autumn"	"Summer; Autumn"	Field survey	32	90	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGR	Squalius.carolitertii.HSC.Small.Lima.Winter.Spring	Squalius carolitertii	Small	Lima	HSC	TRUE	"Winter; Spring"	"Winter; Spring"	Field survey	54	113	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGQ	Squalius.carolitertii.HSC.Small.Lima.Summer.Autumn	Squalius carolitertii	Small	Lima	HSC	TRUE	"Summer; Autumn"	"Summer; Autumn"	Field survey	93	90	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGW	Squalius.laietanus.FRBS.Large.EKorL.Spring.Summer.Autumn	Squalius laietanus	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGV	Squalius.laietanus.FRBS.Large.EKorL.Autumn.Winter.Spring	Squalius laietanus	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHI	Squalius.laietanus.HSC.Large.EKorL.Spring.Summer.Autumn	Squalius laietanus	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGZ	Squalius.laietanus.HSC.Large.EKorL.Autumn.Winter.Spring	Squalius laietanus	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGY	Squalius.laietanus.FRBS.Small.EKorL.Spring.Summer.Autumn	Squalius laietanus	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABFGX	Squalius.laietanus.FRBS.Small.EKorL.Autumn.Winter.Spring	Squalius laietanus	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHK	Squalius.laietanus.HSC.Small.EKorL.Spring.Summer.Autumn	Squalius laietanus	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHJ	Squalius.laietanus.HSC.Small.EKorL.Autumn.Winter.Spring	Squalius laietanus	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	3	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHM	Squalius.malacitanus.FRBS.Large.EKorL.Spring.Summer.Autumn	Squalius malacitanus	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHL	Squalius.malacitanus.FRBS.Large.EKorL.Autumn.Winter.Spring	Squalius malacitanus	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHQ	Squalius.malacitanus.HSC.Large.EKorL.Spring.Summer.Autumn	Squalius malacitanus	Large		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHP	Squalius.malacitanus.HSC.Large.EKorL.Autumn.Winter.Spring	Squalius malacitanus	Large		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHO	Squalius.malacitanus.FRBS.Small.EKorL.Spring.Summer.Autumn	Squalius malacitanus	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHN	Squalius.malacitanus.FRBS.Small.EKorL.Autumn.Winter.Spring	Squalius malacitanus	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHS	Squalius.malacitanus.HSC.Small.EKorL.Spring.Summer.Autumn	Squalius malacitanus	Small		HSC	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHR	Squalius.malacitanus.HSC.Small.EKorL.Autumn.Winter.Spring	Squalius malacitanus	Small		HSC	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHU	Squalius.pyrenaicus.FRBS.Large.EKorL.Spring.Summer.Autumn	Squalius pyrenaicus	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHT	Squalius.pyrenaicus.FRBS.Large.EKorL.Autumn.Winter.Spring	Squalius pyrenaicus	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABFIS	Squalius.pyrenaicus.HSC.Large.EKorL.Spring.Summer.Autumn	Squalius pyrenaicus	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABFIR	Squalius.pyrenaicus.HSC.Large.EKorL.Autumn.Winter.Spring	Squalius pyrenaicus	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHW	Squalius.pyrenaicus.FRBS.Small.EKorL.Spring.Summer.Autumn	Squalius pyrenaicus	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHV	Squalius.pyrenaicus.FRBS.Small.EKorL.Autumn.Winter.Spring	Squalius pyrenaicus	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJL	Squalius.pyrenaicus.HSC.Small.EKorL.Spring.Summer.Autumn	Squalius pyrenaicus	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJK	Squalius.pyrenaicus.HSC.Small.EKorL.Autumn.Winter.Spring	Squalius pyrenaicus	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	4	NA	NA	NA	NA	NA	NA	NA	NA
+ABFHX	Squalius.pyrenaicus.GAM.Large.Estena.All	Squalius pyrenaicus	Large	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1175	NA	88	605	570	4	0.957	0.485	0.442	0.721
+ABFIT	Squalius.pyrenaicus.HSC.Large.Estena.All	Squalius pyrenaicus	Large	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1185	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJQ	Squalius.pyrenaicus.NNET.Large.Estena.All	Squalius pyrenaicus	Large	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1175	NA	79	392	783	13	0.859	0.666	0.525	0.763
+ABFKM	Squalius.pyrenaicus.RF.Large.Estena.All	Squalius pyrenaicus	Large	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1175	NA	79	392	783	13	0.859	0.666	0.525	0.763
+ABFKX	Squalius.pyrenaicus.SVM.Large.Estena.All	Squalius pyrenaicus	Large	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	92	1175	NA	71	338	837	21	0.772	0.712	0.484	0.742
+ABFIJ	Squalius.pyrenaicus.GAM.Medium.Estena.All	Squalius pyrenaicus	Medium	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	190	1077	NA	170	640	437	20	0.895	0.406	0.3	0.65
+ABFIW	Squalius.pyrenaicus.HSC.Medium.Estena.All	Squalius pyrenaicus	Medium	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	191	1086	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJT	Squalius.pyrenaicus.NNET.Medium.Estena.All	Squalius pyrenaicus	Medium	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	190	1077	NA	173	601	476	17	0.911	0.442	0.352	0.676
+ABFKP	Squalius.pyrenaicus.RF.Medium.Estena.All	Squalius pyrenaicus	Medium	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	190	1077	NA	173	601	476	17	0.911	0.442	0.352	0.676
+ABFLM	Squalius.pyrenaicus.SVM.Medium.Estena.All	Squalius pyrenaicus	Medium	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	190	1077	NA	135	369	708	55	0.711	0.657	0.368	0.684
+ABFIN	Squalius.pyrenaicus.GAM.Small.Estena.All	Squalius pyrenaicus	Small	Estena (Guadiana)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	185	1082	NA	146	455	627	39	0.789	0.579	0.369	0.684
+ABFJM	Squalius.pyrenaicus.HSC.Small.Estena.All	Squalius pyrenaicus	Small	Estena (Guadiana)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	185	1092	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJX	Squalius.pyrenaicus.NNET.Small.Estena.All	Squalius pyrenaicus	Small	Estena (Guadiana)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	185	1082	NA	160	537	545	25	0.865	0.504	0.369	0.684
+ABFKT	Squalius.pyrenaicus.RF.Small.Estena.All	Squalius pyrenaicus	Small	Estena (Guadiana)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	185	1082	NA	160	537	545	25	0.865	0.504	0.369	0.684
+ABFLQ	Squalius.pyrenaicus.SVM.Small.Estena.All	Squalius pyrenaicus	Small	Estena (Guadiana)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	185	1082	NA	129	373	709	56	0.697	0.655	0.353	0.676
+ABFHY	Squalius.pyrenaicus.GAM.Large.Estena.and.Yeguas.All	Squalius pyrenaicus	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	94	1899	NA	87	827	1072	7	0.926	0.565	0.49	0.745
+ABFIU	Squalius.pyrenaicus.HSC.Large.Estena.and.Yeguas.All	Squalius pyrenaicus	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	94	1910	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJR	Squalius.pyrenaicus.NNET.Large.Estena.and.Yeguas.All	Squalius pyrenaicus	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	94	1899	NA	79	703	1196	15	0.84	0.63	0.47	0.735
+ABFKN	Squalius.pyrenaicus.RF.Large.Estena.and.Yeguas.All	Squalius pyrenaicus	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	94	1899	NA	79	703	1196	15	0.84	0.63	0.47	0.735
+ABFKY	Squalius.pyrenaicus.SVM.Large.Estena.and.Yeguas.All	Squalius pyrenaicus	Large	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	94	1899	NA	71	584	1315	23	0.755	0.692	0.448	0.724
+ABFIK	Squalius.pyrenaicus.GAM.Medium.Estena.and.Yeguas.All	Squalius pyrenaicus	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	202	1791	NA	166	768	1023	36	0.822	0.571	0.393	0.696
+ABFIX	Squalius.pyrenaicus.HSC.Medium.Estena.and.Yeguas.All	Squalius pyrenaicus	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	203	1801	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJU	Squalius.pyrenaicus.NNET.Medium.Estena.and.Yeguas.All	Squalius pyrenaicus	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	202	1791	NA	181	900	891	21	0.896	0.497	0.394	0.697
+ABFKQ	Squalius.pyrenaicus.RF.Medium.Estena.and.Yeguas.All	Squalius pyrenaicus	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	202	1791	NA	181	900	891	21	0.896	0.497	0.394	0.697
+ABFLN	Squalius.pyrenaicus.SVM.Medium.Estena.and.Yeguas.All	Squalius pyrenaicus	Medium	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	202	1791	NA	135	565	1226	67	0.668	0.685	0.353	0.676
+ABFIO	Squalius.pyrenaicus.GAM.Small.Estena.and.Yeguas.All	Squalius pyrenaicus	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	207	1786	NA	173	841	945	34	0.836	0.529	0.365	0.682
+ABFJN	Squalius.pyrenaicus.HSC.Small.Estena.and.Yeguas.All	Squalius pyrenaicus	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	207	1797	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJY	Squalius.pyrenaicus.NNET.Small.Estena.and.Yeguas.All	Squalius pyrenaicus	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	207	1786	NA	174	880	906	33	0.841	0.507	0.348	0.674
+ABFKU	Squalius.pyrenaicus.RF.Small.Estena.and.Yeguas.All	Squalius pyrenaicus	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	207	1786	NA	174	880	906	33	0.841	0.507	0.348	0.674
+ABFLR	Squalius.pyrenaicus.SVM.Small.Estena.and.Yeguas.All	Squalius pyrenaicus	Small	Estena (Guadiana) + Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	207	1786	NA	139	606	1180	68	0.671	0.661	0.332	0.666
+ABFHZ	Squalius.pyrenaicus.GAM.Large.TRBD.All	Squalius pyrenaicus	Large	Tagus River Basin District	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	226	NA	21	88	138	0	1	0.611	0.611	0.805
+ABFIV	Squalius.pyrenaicus.HSC.Large.TRBD.All	Squalius pyrenaicus	Large	Tagus River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	226	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJS	Squalius.pyrenaicus.NNET.Large.TRBD.All	Squalius pyrenaicus	Large	Tagus River Basin District	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	226	NA	21	55	171	0	1	0.757	0.757	0.878
+ABFKO	Squalius.pyrenaicus.RF.Large.TRBD.All	Squalius pyrenaicus	Large	Tagus River Basin District	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	226	NA	21	55	171	0	1	0.757	0.757	0.878
+ABFKZ	Squalius.pyrenaicus.SVM.Large.TRBD.All	Squalius pyrenaicus	Large	Tagus River Basin District	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	226	NA	18	44	182	3	0.857	0.805	0.662	0.831
+ABFIL	Squalius.pyrenaicus.GAM.Medium.TRBD.All	Squalius pyrenaicus	Medium	Tagus River Basin District	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	80	264	NA	73	71	193	7	0.913	0.731	0.644	0.822
+ABFIY	Squalius.pyrenaicus.HSC.Medium.TRBD.All	Squalius pyrenaicus	Medium	Tagus River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	80	264	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJV	Squalius.pyrenaicus.NNET.Medium.TRBD.All	Squalius pyrenaicus	Medium	Tagus River Basin District	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	80	264	NA	79	85	179	1	0.988	0.678	0.666	0.833
+ABFKR	Squalius.pyrenaicus.RF.Medium.TRBD.All	Squalius pyrenaicus	Medium	Tagus River Basin District	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	80	264	NA	79	85	179	1	0.988	0.678	0.666	0.833
+ABFLO	Squalius.pyrenaicus.SVM.Medium.TRBD.All	Squalius pyrenaicus	Medium	Tagus River Basin District	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	80	264	NA	67	74	190	13	0.838	0.72	0.557	0.779
+ABFIP	Squalius.pyrenaicus.GAM.Small.TRBD.All	Squalius pyrenaicus	Small	Tagus River Basin District	GAM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	250	NA	56	99	151	3	0.949	0.604	0.553	0.777
+ABFJO	Squalius.pyrenaicus.HSC.Small.TRBD.All	Squalius pyrenaicus	Small	Tagus River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	250	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJZ	Squalius.pyrenaicus.NNET.Small.TRBD.All	Squalius pyrenaicus	Small	Tagus River Basin District	NNET	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	250	NA	59	84	166	0	1	0.664	0.664	0.832
+ABFKV	Squalius.pyrenaicus.RF.Small.TRBD.All	Squalius pyrenaicus	Small	Tagus River Basin District	RF	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	250	NA	59	84	166	0	1	0.664	0.664	0.832
+ABFLS	Squalius.pyrenaicus.SVM.Small.TRBD.All	Squalius pyrenaicus	Small	Tagus River Basin District	SVM	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	59	250	NA	52	83	167	7	0.881	0.668	0.549	0.775
+ABFIM	Squalius.pyrenaicus.GAM.Medium.Yeguas.All	Squalius pyrenaicus	Medium	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	12	714	NA	10	55	659	2	0.833	0.923	0.756	0.878
+ABFIZ	Squalius.pyrenaicus.HSC.Medium.Yeguas.All	Squalius pyrenaicus	Medium	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	12	715	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFJW	Squalius.pyrenaicus.NNET.Medium.Yeguas.All	Squalius pyrenaicus	Medium	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	12	714	NA	12	186	528	0	1	0.739	0.739	0.87
+ABFKS	Squalius.pyrenaicus.RF.Medium.Yeguas.All	Squalius pyrenaicus	Medium	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	12	714	NA	12	186	528	0	1	0.739	0.739	0.87
+ABFLP	Squalius.pyrenaicus.SVM.Medium.Yeguas.All	Squalius pyrenaicus	Medium	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	12	714	NA	11	108	606	1	0.917	0.849	0.765	0.883
+ABFIQ	Squalius.pyrenaicus.GAM.Small.Yeguas.All	Squalius pyrenaicus	Small	Yeguas (Guadalquivir)	GAM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	705	NA	20	346	359	1	0.952	0.509	0.462	0.731
+ABFJP	Squalius.pyrenaicus.HSC.Small.Yeguas.All	Squalius pyrenaicus	Small	Yeguas (Guadalquivir)	HSC	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	706	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFKL	Squalius.pyrenaicus.NNET.Small.Yeguas.All	Squalius pyrenaicus	Small	Yeguas (Guadalquivir)	NNET	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	705	NA	21	380	325	0	1	0.461	0.461	0.73
+ABFKW	Squalius.pyrenaicus.RF.Small.Yeguas.All	Squalius pyrenaicus	Small	Yeguas (Guadalquivir)	RF	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	705	NA	21	380	325	0	1	0.461	0.461	0.73
+ABFLT	Squalius.pyrenaicus.SVM.Small.Yeguas.All	Squalius pyrenaicus	Small	Yeguas (Guadalquivir)	SVM	FALSE	Summer	"Winter; Spring; Summer; Autumn"	Field survey	21	705	NA	15	216	489	6	0.714	0.694	0.408	0.704
+ABFLV	Squalius.valentinus.FRBS.Large.EKorL.Spring.Summer.Autumn	Squalius valentinus	Large		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFLU	Squalius.valentinus.FRBS.Large.EKorL.Autumn.Winter.Spring	Squalius valentinus	Large		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFLY	Squalius.valentinus.HSC.Large.EKorL.All	Squalius valentinus	Large	Jucar River Basin District	HSC	TRUE	"Spring; Summer"	"Winter; Spring; Summer; Autumn"	Literature review	101	991	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFMN	Squalius.valentinus.HSC.Large.EKorL.Spring.Summer.Autumn	Squalius valentinus	Large		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFLZ	Squalius.valentinus.HSC.Large.EKorL.Autumn.Winter.Spring	Squalius valentinus	Large		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFLX	Squalius.valentinus.FRBS.Small.EKorL.Spring.Summer.Autumn	Squalius valentinus	Small		FRBS	TRUE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFLW	Squalius.valentinus.FRBS.Small.EKorL.Autumn.Winter.Spring	Squalius valentinus	Small		FRBS	TRUE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFMO	Squalius.valentinus.HSC.Small.EKorL.All	Squalius valentinus	Small	Jucar River Basin District	HSC	TRUE	Summer	"Winter; Spring; Summer; Autumn"	Literature review	19	0	NA	NA	NA	NA	NA	NA	NA	NA	NA
+ABFMQ	Squalius.valentinus.HSC.Small.EKorL.Spring.Summer.Autumn	Squalius valentinus	Small		HSC	FALSE		"Spring; Summer; Autumn"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA
+ABFMP	Squalius.valentinus.HSC.Small.EKorL.Autumn.Winter.Spring	Squalius valentinus	Small		HSC	FALSE		"Autumn; Winter; Spring"	Expert knowledge	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA

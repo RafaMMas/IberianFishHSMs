@@ -9,6 +9,7 @@
 \format{
   A data frame with 20 columns listing the 797 available models. The columns are as follows:
   \describe{
+    \item{Code}{Alphanumeric code of the model. Used internally for calling the selected model(s).}
     \item{Model}{The name of the model. It combined the main charactristics of the model.}
     \item{Species}{Scientific name of the target freswater fish species}
     \item{Size}{The size of the fish species (i.e., Very small, Small, Medium, Large and Spawning).}
