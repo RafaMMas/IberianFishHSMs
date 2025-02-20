@@ -1,3 +1,21 @@
+#' Title
+#'
+#' @param Species
+#' @param Size
+#' @param River
+#' @param Model.type
+#' @param Sampled.season
+#' @param Valid.season
+#' @param Data.origin
+#' @param Default
+#' @param verbose
+#' @param Only.models
+#'
+#' @returns
+#' @export
+#'
+#' @examples
+#'
 ListModels <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = NULL,	Sampled.season = NULL,	Valid.season = NULL,	Data.origin = NULL, Default = TRUE, verbose = TRUE, Only.models = FALSE)
 {
     # Initialize an empty list to store conditions
