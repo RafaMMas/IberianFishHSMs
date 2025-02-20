@@ -7,7 +7,7 @@
   This dataset also summarises the characteristics of the available models including target species and size class, sample sizes or performance, when available.
 }
 \format{
-  A data frame with 20 columns listing the 797 available models. The columns are as follows:
+  A data frame with 21 columns listing the 797 available models. The columns are as follows:
   \describe{
     \item{Code}{Alphanumeric code of the model. Used internally for calling the selected model(s).}
     \item{Model}{The name of the model. It combined the main charactristics of the model.}

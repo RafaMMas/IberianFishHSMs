@@ -10,7 +10,7 @@ ListModels <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = N
     if (!is.null(Model.type)) conditions <- c(conditions, list(Models.summary.table$Model.type == Model.type))
     if (!is.null(Sampled.season)) conditions <- c(conditions, list(Models.summary.table$Sampled.season == Sampled.season))
     if (!is.null(Valid.season)) conditions <- c(conditions, list(Models.summary.table$Valid.season == Valid.season))
-    if (!is.null(Data.origin)) conditions <- c(conditions, list(Models.summary.table$Models.summary.table.origin == Models.summary.table.origin))
+    if (!is.null(Data.origin)) conditions <- c(conditions, list(Models.summary.table$Data.origin == Data.origin))
     if (!is.null(Default)) conditions <- c(conditions, list(Models.summary.table$Default == Default))
 
     # Apply all conditions dynamically
