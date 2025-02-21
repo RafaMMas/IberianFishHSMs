@@ -15,7 +15,6 @@
 #' @export
 #'
 #' @examples
-
 ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = NULL,	Sampled.season = NULL,	Valid.season = NULL,	Data.origin = NULL, Default = TRUE, verbose = TRUE, Only.models = FALSE)
 {
   # Initialize an empty list to store conditions

@@ -69,27 +69,3 @@ SubstrateIndex <- function(Substrate = NULL,
   }
   return(data.frame(Substrate.index = Substrate.index))
 }
-#
-# Substrate = NULL
-# Vegetation = NULL
-# Silt = NULL
-# Sand = NULL
-# Fine.gravel = NULL
-# Gravel = 25
-# Cobbles = NULL
-# Boulders = NULL
-# Bed.rock = 75
-# check.completeness = TRUE
-#
-# SubstrateIndex(
-#   Substrate = NULL,
-#   Vegetation = NULL,
-#   Silt = NULL,
-#   Sand = NULL,
-#   Fine.gravel = NULL,
-#   Gravel = 25,
-#   Cobbles = NULL,
-#   Boulders = NULL,
-#   Bed.rock = 75,
-#   check.completeness = TRUE
-# )

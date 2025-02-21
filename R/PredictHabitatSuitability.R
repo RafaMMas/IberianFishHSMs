@@ -69,6 +69,16 @@ Habitat.assessment
 
 }
 
+#' Title
+#'
+#' @param Selected.model
+#' @param data
+#' @param HSC.aggregation
+#'
+#' @returns
+#' @export
+#'
+#' @examples
 PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggregation = "geometric"){
 
   Habitat.assessment <- sapply(Selected.model, function(current.model){
