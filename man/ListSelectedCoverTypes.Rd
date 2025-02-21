@@ -2,7 +2,7 @@
 % Please edit documentation in R/ListSelectedCoverTypes.R
 \name{ListSelectedCoverTypes}
 \alias{ListSelectedCoverTypes}
-\title{Title}
+\title{List selected model types in each habitat suitability model.}
 \usage{
 ListSelectedCoverTypes(
   Species = NULL,
@@ -12,14 +12,43 @@ ListSelectedCoverTypes(
   Sampled.season = NULL,
   Valid.season = NULL,
   Data.origin = NULL,
-  Default = TRUE,
-  verbose = TRUE,
-  Only.models = FALSE
+  Default = TRUE
 )
 }
 \arguments{
-\item{Only.models}{}
+\item{Species}{A string specifying the selected species (e.g., "Salmo trutta").}
+
+\item{Size}{A string specifying the selected size class (e.g., "Very small", "Small", "Medium", "Large", "Spawning").}
+
+\item{River}{A string specifying the selected river. Since rivers vary, it is recommended to first filter by species before selecting a specific river.}
+
+\item{Model.type}{A string specifying the selected model type (i.e., "FRBS", "GAM", "HSC", "NNET", "RF", "SVM").
+\describe{
+  \item{FRBS: Fuzzy Rule-Based System.}
+  \item{GAM: Generalized Additive Model.}
+  \item{HSC: Habitat Suitability Curve/Criteria.}
+  \item{NNET: Artificial Neural Network (Multilayer Perceptron).}
+  \item{RF: Random Forest.}
+  \item{SVM: Support Vector Machine.}
+}}
+
+\item{Sampled.season}{The sampling period during which data was collected on one or multiple occasions.}
+
+\item{Valid.season}{The time period during which the developed models remain applicable before requiring new models.}
+
+\item{Data.origin}{The source of the data used to develop the habitat suitability model.}
+
+\item{Default}{Logical (`TRUE`/`FALSE`). If `TRUE`, only the recommended models are listed.}
+}
+\value{
+data frame with Codes, Models and the selected cover types for each model.
 }
 \description{
-Title
+The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin.
+}
+\examples{
+
+ListSelectedCoverTypes(Species = "Salmo trutta")
+ListSelectedCoverTypes(Species = "Squalius alburnoides")
+
 }

@@ -1,10 +1,27 @@
-#' Title
+#' Function to determine the microhabitat suitability with the selected models
 #'
-#' @param Selected.models
-#' @param data
-#' @param HSC.aggregation
+#'This function uses the output of \code{ListModels} to load the selected models and evaluate a dataset with the
 #'
-#' @returns
+#' @param Selected.models output of \code{ListModels}
+#' @param data A data frame with the velocity, depth, substrate and cover to be evaluated. \code{data} must contain the following colums to work properly:
+#' \describe{
+#'   \item{\code{Depth}}{A numeric vector representing water depth (i.e., in meters).}
+#'   \item{\code{Velocity}}{A numeric vector representing mean flow velocity (i.e., in m/s).}
+#'   \item{\code{Substrate.index}}{A numeric vector obtained from \code{SubstrateIndex} sumarising the microhabitat granulometry. See \code{SubstrateIndex} for further details.}
+#'   \item{\code{Leaves}}{A dichotomous indicator (0 for absence, 1 for presence) of leaf cover availability.}
+#'   \item{\code{Algae}}{A dichotomous indicator (0 for absence, 1 for presence) of algae cover availability.}
+#'   \item{\code{Root}}{A dichotomous indicator (0 for absence, 1 for presence) of root cover availability.}
+#'   \item{\code{Aquatic.vegetation}}{A dichotomous indicator (0 for absence, 1 for presence) of aquatic vegetation cover availability.}
+#'   \item{\code{Reed}}{A dichotomous indicator (0 for absence, 1 for presence) of reed cover availability.}
+#'   \item{\code{Wood}}{A dichotomous indicator (0 for absence, 1 for presence) of woody debris cover availability.}
+#'   \item{\code{Sand}}{A dichotomous indicator (0 for absence, 1 for presence) of sandy substrate cover availability.}
+#'   \item{\code{Rock}}{A dichotomous indicator (0 for absence, 1 for presence) of rocky substrate cover availability.}
+#'   \item{\code{Cave}}{A dichotomous indicator (0 for absence, 1 for presence) of cave features availability.}
+#'   \item{\code{Shade}}{A dichotomous indicator (0 for absence, 1 for presence) of shade availability.}
+#' }
+#' @param HSC.aggregation for HSCs the aggregation method between the partial suitability obtained from each independent curve/criteria (i.e., "prod", "min", "geometric", "arithmetic"). The default is \code{"geometric"}.
+#'
+#' @returns data frame with the habitat assessment. It contained one column per selected model
 #' @export
 #'
 #' @examples

@@ -25,12 +25,14 @@ ListModels(
 \item{River}{A string specifying the selected river. Since rivers vary, it is recommended to first filter by species before selecting a specific river.}
 
 \item{Model.type}{A string specifying the selected model type (i.e., "FRBS", "GAM", "HSC", "NNET", "RF", "SVM").
-- **FRBS**: Fuzzy Rule-Based System
-- **GAM**: Generalized Additive Model
-- **HSC**: Habitat Suitability Curve/Criteria
-- **NNET**: Artificial Neural Network (Multilayer Perceptron)
-- **RF**: Random Forest
-- **SVM**: Support Vector Machine}
+\describe{
+  \item{FRBS: Fuzzy Rule-Based System.}
+  \item{GAM: Generalized Additive Model.}
+  \item{HSC: Habitat Suitability Curve/Criteria.}
+  \item{NNET: Artificial Neural Network (Multilayer Perceptron).}
+  \item{RF: Random Forest.}
+  \item{SVM: Support Vector Machine.}
+}}
 
 \item{Sampled.season}{The sampling period during which data was collected on one or multiple occasions.}
 
@@ -45,13 +47,22 @@ ListModels(
 \item{Only.models}{Logical. If `TRUE`, the output is limited to the model codes, which are internally used to call the corresponding habitat suitability model.}
 }
 \value{
-A list containing the characteristics of the selected models. The structure of the list depends on the value of `Only.models`:
-- **If `Only.models = FALSE`** (default): The function returns a list with three elements:
-  - `$Current.summary.table`: A data frame containing the available models and their characteristics.
-  - `$Models`: name of the models. Long version summarising the main characteristics.
-  - `$Codes`: model codes, which are internally used to call the corresponding habitat suitability model.
-- **If `Only.models = TRUE`**: The function returns a list with a single element:
-  - `$Codes`: model codes, which are internally used to call the corresponding habitat suitability model.
+A list containing the characteristics of the selected models. The structure of the list depends on the value of
+\code{Only.models}:
+\describe{
+  \item{If \code{Only.models = FALSE} (default):}{The function returns a list with three elements:
+    \describe{
+      \item{\code{\$Current.summary.table}}{A data frame containing the available models and their characteristics.}
+      \item{\code{\$Models}}{A character vector containing the names of the models along with a summary of their main characteristics.}
+      \item{\code{\$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
+    }
+  }
+  \item{If \code{Only.models = TRUE}:}{The function returns a list with a single element:
+    \describe{
+      \item{\code{\$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
+    }
+  }
+}
 }
 \description{
 The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin.

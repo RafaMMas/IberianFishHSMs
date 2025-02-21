@@ -1,21 +1,33 @@
-#' Title
+#' List selected model types in each habitat suitability model.
 #'
-#' @param Species
-#' @param Size
-#' @param River
-#' @param Model.type
-#' @param Sampled.season
-#' @param Valid.season
-#' @param Data.origin
-#' @param Default
-#' @param verbose
-#' @param Only.models
+#' The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin.
 #'
-#' @returns
+#' @param Species A string specifying the selected species (e.g., "Salmo trutta").
+#' @param Size A string specifying the selected size class (e.g., "Very small", "Small", "Medium", "Large", "Spawning").
+#' @param River A string specifying the selected river. Since rivers vary, it is recommended to first filter by species before selecting a specific river.
+#' @param Model.type A string specifying the selected model type (i.e., "FRBS", "GAM", "HSC", "NNET", "RF", "SVM").
+#' \describe{
+#'   \item{FRBS: Fuzzy Rule-Based System.}
+#'   \item{GAM: Generalized Additive Model.}
+#'   \item{HSC: Habitat Suitability Curve/Criteria.}
+#'   \item{NNET: Artificial Neural Network (Multilayer Perceptron).}
+#'   \item{RF: Random Forest.}
+#'   \item{SVM: Support Vector Machine.}
+#' }
+#' @param Sampled.season The sampling period during which data was collected on one or multiple occasions.
+#' @param Valid.season The time period during which the developed models remain applicable before requiring new models.
+#' @param Data.origin The source of the data used to develop the habitat suitability model.
+#' @param Default Logical (`TRUE`/`FALSE`). If `TRUE`, only the recommended models are listed.
+#'
+#' @returns data frame with Codes, Models and the selected cover types for each model.
 #' @export
 #'
 #' @examples
-ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = NULL,	Sampled.season = NULL,	Valid.season = NULL,	Data.origin = NULL, Default = TRUE, verbose = TRUE, Only.models = FALSE)
+#'
+#' ListSelectedCoverTypes(Species = "Salmo trutta")
+#' ListSelectedCoverTypes(Species = "Squalius alburnoides")
+#'
+ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = NULL,	Sampled.season = NULL,	Valid.season = NULL,	Data.origin = NULL, Default = TRUE)
 {
   # Initialize an empty list to store conditions
   conditions <- list()
@@ -40,13 +52,13 @@ ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Mo
 
   Codes <- Current.summary.table$Code
 
-  sapply(Codes, function(current.model){
+  data.frame(Current.summary.table[,1:2, drop = FALSE], t(sapply(Codes, function(current.model){
 
-    file_path <- system.file("extradata", current.model, package = "IberianFishHSMs")
+    file_path <- system.file("extradata", paste0(current.model, ".rds"), package = "IberianFishHSMs")
 
-    c.model <- readRDS(paste0(file_path, ".rds"))
+    c.model <- readRDS(file_path)
 
     c.model$Selected.cover.types
-  })
+  })))
 }
 
