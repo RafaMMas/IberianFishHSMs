@@ -42,9 +42,9 @@ ListModels <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = N
     if(verbose) print(Current.summary.table)
 
     if(Only.models){
-      return(list(Models = Current.summary.table$Model))
+      return(list(Code = Current.summary.table$Code))
     }else{
-      return(list(Current.summary.table = Current.summary.table, Models = Current.summary.table$Model))
+      return(list(Current.summary.table = Current.summary.table, Models = Current.summary.table$Model, Code = Current.summary.table$Code))
     }
   }
 
