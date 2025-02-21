@@ -1,3 +1,16 @@
+#' Title
+#'
+#' @param Selected.model
+#' @param data
+#' @param n.points
+#' @param Quantiles
+#' @param Layout
+#' @param HSC.aggregation
+#'
+#' @returns
+#' @export
+#'
+#' @examples
 PlotHabitatSuitabilityModels <- function(Selected.model = NULL, data = NULL, n.points = 50, Quantiles = TRUE, Layout = c(2, 2), HSC.aggregation = "geometric"){
 
   if(is.null(data))
