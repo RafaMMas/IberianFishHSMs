@@ -12,7 +12,9 @@ PredictHabitatSuitability <- function(Selected.models = NULL, data = NULL, HSC.a
 
 Habitat.assessment <- sapply(Selected.models$Models, function(current.model){
 
-  c.model <- readRDS(paste0("./Models/", current.model, ".rds")) ## açò haurà de canviar
+  file_path <- system.file("extradata", current.model, package = "IberianFishHSMs")
+
+  c.model <- readRDS(paste0(file_path, ".rds"))
 
   Cover <- rowSums(data[,names(c.model$Selected.cover.types)][,c.model$Selected.cover.types, drop=F])
 
