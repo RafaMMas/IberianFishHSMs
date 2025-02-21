@@ -15,6 +15,7 @@
 #' @export
 #'
 #' @examples
+
 ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = NULL,	Sampled.season = NULL,	Valid.season = NULL,	Data.origin = NULL, Default = TRUE, verbose = TRUE, Only.models = FALSE)
 {
   # Initialize an empty list to store conditions
@@ -38,12 +39,15 @@ ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Mo
   if(nrow(Current.summary.table) == 0)
     stop("There are no models with the selected characteristics.")
 
-  if(verbose) print(Current.summary.table)
+  Codes <- Current.summary.table$Code
 
-  if(Only.models){
-    return(list(Code = Current.summary.table$Code))
-  }else{
-    return(list(Current.summary.table = Current.summary.table, Models = Current.summary.table$Model, Code = Current.summary.table$Code))
-  }
+  sapply(Codes, function(current.model){
+
+    file_path <- system.file("extradata", current.model, package = "IberianFishHSMs")
+
+    c.model <- readRDS(paste0(file_path, ".rds"))
+
+    c.model$Selected.cover.types
+  })
 }
 
