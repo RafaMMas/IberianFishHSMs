@@ -18,7 +18,10 @@ also compiles sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) based on
 expert knowledge, which was gathered through online forms. Functions for
 evaluating habitat suitability from hydraulic simulations and for
 plotting the modelled suitability are also included. An thorough example
-of the capabilitites of the packages appears below.
+of the capabilitites of the packages appears below. The package includes
+797 habitat suitability models for 43 species and up to 4 size classes
+(Large, Medium, Small, Very small) and spawning (for **Salmo trutta**
+and **Salmo salar**).
 
 ## Authors
 
@@ -26,13 +29,15 @@ This package was developed by:
 
 - **Rafael Muñoz-Mas** (Author, Creator and Maintainer) -
   <rafa.m.mas@gmail.com>
-- **Javier María Gortázar Rubial** (Contributor)
+- **Carlos Alonso** (Contributor)
 - **Enric Aparicio Manau** (Contributor)
 - **Fernando Cobo Gradín** (Contributor)
-- **Francisco J. Oliva Paterna** (Contributor)
-- **Francisco Martínez-Capel** (Contributor)
 - **Gustavo González Fernández** (Contributor)
+- **Javier Gortázar** (Contributor)
+- **Francisco Martínez-Capel** (Contributor)
+- **Francisco J. Oliva-Paterna** (Contributor)
 - **Jose Prenda** (Contributor)
+- **Jose Maria Santos** (Contributor)
 - **Rafael Miranda Ferreiro** (Contributor)
 
 ## Installation
@@ -47,18 +52,19 @@ devtools::install_github("RafaMMas/IberianFishHSMs")
 
 ## Example
 
-IberianFishHSMs includes some examples to ilustrate the capabilities of
-the package and the general workflow to predict the habitat suitability
-from the outputs of hydraulic simulations and field surveys to colect
-data on substrate and cover (shelter) distribution across the study
-site.
+IberianFishHSMs includes examples that illustrate the package’s
+capabilities and the general workflow for predicting habitat suitability
+using outputs from hydraulic simulations and field data. Fiel data
+includes the substrate and cover (shelter) distribution across the study
+site, by pattch, pixel or cell.
 
 ``` r
 library(IberianFishHSMs)
-## basic example code
 ```
 
-`ListModels` allows inpecting the vailable models. The queries can be
+### ListModels - List available models and their key characteristics.
+
+`ListModels` allows inpecting the available models. The queries can be
 categorized by Species, Size, River, Model.type, Sampled.season,
 Valid.season, and/or Data.origin. This function also provides de Codes
 to internally call the habitat suitability models during the habitat
@@ -188,6 +194,87 @@ ListModels(Species = "Salmo trutta", verbose = F)
 #> [10] "ABENS" "ABEMO" "ABEMS" "ABEMX" "ABENP" "ABENT"
 ```
 
+There exist an interaction between the training data and the modelling
+technique, which can vary variable effects and importance (Eugster,
+Leisch, and Strobl 2014). By means of cross-validation, during the
+development of the habitat suitbility models we carried out a variable
+selection approach discarding those cover types that not improved model
+performance. This approach lead to a different sets of relevant cover
+types in each model. The function `ListSelectedCoverTypes` allows
+inspecting the selcted cover types for each model. The queries can be
+categorized by Species, Size, River, Model.type, Sampled.season,
+Valid.season, and/or Data.origin. When evaluating the habitat
+suitability `PredictHabitatSuitability` selects and aggregates the
+appropriate cover types internally and this functions does not need to
+be called.
+
+``` r
+
+ListSelectedCoverTypes(Species = "Salmo trutta")
+#>      Code                                Model Leaves Algae  Root
+#> 603 ABELZ   Salmo.trutta.GAM.Large.Curueno.All   TRUE FALSE  TRUE
+#> 604 ABEMQ   Salmo.trutta.HSC.Large.Curueno.All  FALSE FALSE  TRUE
+#> 605 ABEMV  Salmo.trutta.NNET.Large.Curueno.All   TRUE FALSE  TRUE
+#> 606 ABEMZ    Salmo.trutta.RF.Large.Curueno.All  FALSE FALSE  TRUE
+#> 607 ABENR   Salmo.trutta.SVM.Large.Curueno.All   TRUE FALSE  TRUE
+#> 608 ABEMN  Salmo.trutta.GAM.Medium.Curueno.All   TRUE FALSE FALSE
+#> 609 ABEMR  Salmo.trutta.HSC.Medium.Curueno.All  FALSE FALSE  TRUE
+#> 610 ABEMW Salmo.trutta.NNET.Medium.Curueno.All  FALSE FALSE FALSE
+#> 611 ABENO   Salmo.trutta.RF.Medium.Curueno.All  FALSE FALSE FALSE
+#> 612 ABENS  Salmo.trutta.SVM.Medium.Curueno.All  FALSE  TRUE FALSE
+#> 613 ABEMO   Salmo.trutta.GAM.Small.Curueno.All  FALSE FALSE FALSE
+#> 614 ABEMS   Salmo.trutta.HSC.Small.Curueno.All  FALSE FALSE  TRUE
+#> 615 ABEMX  Salmo.trutta.NNET.Small.Curueno.All  FALSE FALSE  TRUE
+#> 616 ABENP    Salmo.trutta.RF.Small.Curueno.All   TRUE FALSE  TRUE
+#> 617 ABENT   Salmo.trutta.SVM.Small.Curueno.All   TRUE  TRUE FALSE
+#>     Aquatic.vegetation  Reed  Wood  Sand  Rock  Cave Shade
+#> 603               TRUE FALSE FALSE FALSE  TRUE  TRUE  TRUE
+#> 604               TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE
+#> 605               TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE
+#> 606               TRUE FALSE FALSE FALSE FALSE FALSE  TRUE
+#> 607              FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE
+#> 608               TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
+#> 609               TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE
+#> 610               TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE
+#> 611              FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE
+#> 612              FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
+#> 613               TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE
+#> 614               TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE
+#> 615               TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE
+#> 616               TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
+#> 617              FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
+```
+
+### Sensitivity analysis
+
+The package includes a number of models (i.e., 797) and species (i.e.,
+43) several size classes and activities. Among other things, the
+available models vary by modelling technique, sampling site and the
+aggregation of data from different sites. The variable `Default`
+indicates which models are recommended becuase it was considered they
+generalised better but users can select other models when they consider
+it adequate. For example, when they are going to evalaute the habitat
+suitability in the basin where data for an alternative models was
+colected. In adiition to `ListSelectedCoverTypes`, users can carry out
+sensitivity analyses to compare the predictions of the different
+alternatives before selecting any particular set of models. The
+sensitivity analysis can be carried out employing function
+`Plot Habitat Suitability Models` as follows:
+
+``` r
+
+## Pseudochondrostoma.polylepis, large, FRBS for Spring, Summer, and Autumn
+
+(Selected.model <- ListModels(Species = "Pseudochondrostoma polylepis", verbose = FALSE)$Codes[1])
+#> [1] "ABEIO"
+
+PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
+```
+
+<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+
+### Habitat ruitability prediction
+
 Habitat suitability predictions are carried out based on mean flow
 velocity (m/s), water depth (m) substrate index (-) and the sum of the
 number of relevant types of cover in the evaluate microhabitats
@@ -199,9 +286,9 @@ aggregation of the percentage of different granulometry classes (%). The
 substrate classes originally used corresponded to a simplification of
 the the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm),
 sand (62 µm \> Ø ≤ 2 mm), fine gravel (2 \> Ø ≤ 8 mm), gravel (8 \> Ø ≤
-64 mm), cobbles (64 \> Ø ≤ 256 mm), boulders (Ø \> 256 mm) and bedrock.
-The package includes som examples to ilustrate the structure of the
-input files.
+64 mm), cobbles (64 \> Ø ≤ 256 mm), boulders (Ø \> 256 mm) and bedrock
+Muñoz-Mas et al. (2017). The package includes som examples to ilustrate
+the structure of the input files.
 
 ``` r
 data(Substrate.index.example.df)
@@ -239,5 +326,43 @@ head(SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)) # c
 #> 6               3
 ```
 
-In that case, don’t forget to commit and push the resulting figure
-files, so they display on GitHub and CRAN.
+## Bibliography
+
+<div id="refs" class="references csl-bib-body hanging-indent"
+entry-spacing="0">
+
+<div id="ref-Eugster2014" class="csl-entry">
+
+Eugster, Manuel J. A., Friedrich Leisch, and Carolin Strobl. 2014.
+“<span class="nocase">(Psycho-)analysis of benchmark experiments: a
+formal framework for investigating the relationship between data sets
+and learning algorithms</span>.” *Computational Statistics & Data
+Analysis* 71 (March): 986–1000.
+<https://doi.org/10.1016/j.csda.2013.08.007>.
+
+</div>
+
+<div id="ref-Munoz-Mas2017" class="csl-entry">
+
+Muñoz-Mas, R, Rui Manuel Soares Costa, Francisco Martínez-Capel, and
+Juan Diego Alcaraz-Hernández. 2017. “<span class="nocase">Microhabitat
+competition between Iberian fish species and the endangered
+J<span class="nocase">ú</span>car nase (Parachondrostoma arrigonis
+Steindachner, 1866)</span>.” *Journal of Ecohydraulics* 0 (0): 1–23.
+<https://doi.org/10.1080/24705357.2016.1276417>.
+
+</div>
+
+<div id="ref-Munoz-Mas2018" class="csl-entry">
+
+Muñoz-Mas, R, P Marcos-Garcia, A Lopez-Nicolas, F J Martínez-García, M
+Pulido-Velazquez, and F Martínez-Capel. 2018.
+“<span class="nocase">Combining literature-based and data-driven fuzzy
+models to predict brown trout (\<i\>Salmo trutta\</i\> L.) spawning
+habitat degradation induced by climate change</span>.” *Ecological
+Modelling* 386: 98–114.
+<https://doi.org/10.1016/j.ecolmodel.2018.08.012>.
+
+</div>
+
+</div>

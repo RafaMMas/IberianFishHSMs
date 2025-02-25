@@ -20,13 +20,13 @@
 #' @param Default Logical (`TRUE`/`FALSE`). If `TRUE`, only the recommended models are listed.
 #'
 #' @returns data frame with Codes, Models and the selected cover types for each model.
-#' @export
 #'
 #' @examples
 #'
 #' ListSelectedCoverTypes(Species = "Salmo trutta")
 #' ListSelectedCoverTypes(Species = "Squalius alburnoides")
 #'
+#' @export
 ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = NULL,	Sampled.season = NULL,	Valid.season = NULL,	Data.origin = NULL, Default = TRUE)
 {
   # Initialize an empty list to store conditions
@@ -50,7 +50,7 @@ ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Mo
   if(nrow(Current.summary.table) == 0)
     stop("There are no models with the selected characteristics.")
 
-  Codes <- Current.summary.table$Codes
+  Codes <- Current.summary.table$Code
 
   data.frame(Current.summary.table[,1:2, drop = FALSE], t(sapply(Codes, function(current.model){
 

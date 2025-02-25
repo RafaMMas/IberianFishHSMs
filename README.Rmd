@@ -1,5 +1,7 @@
 ---
 output: github_document
+
+bibliography: references.bib
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -18,20 +20,22 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-IberianFishHSMs: Compilation of models and tools to evaluate the habitat suitability at the microhabitat scale for Iberian freshwater fish species. The modelling approaches include sets of Habitat Suitability Curves (HSCs), Artificial Neural Networks (Multilayer Perceptrons, ANN-MLPs), Random Forests (RFs), Generalised Additive Models (GAMs), and Support Vector Machines (SVMs), all based on empirical data collected across several river basins in the Iberian Peninsula. The HSCs have been reviewed by an expert panel, which coauthored the package. The package also compiles sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) based on expert knowledge, which was gathered through online forms. Functions for evaluating habitat suitability from hydraulic simulations and for plotting the modelled suitability are also included. An thorough example of the capabilitites of the packages appears below.
+IberianFishHSMs: Compilation of models and tools to evaluate the habitat suitability at the microhabitat scale for Iberian freshwater fish species. The modelling approaches include sets of Habitat Suitability Curves (HSCs), Artificial Neural Networks (Multilayer Perceptrons, ANN-MLPs), Random Forests (RFs), Generalised Additive Models (GAMs), and Support Vector Machines (SVMs), all based on empirical data collected across several river basins in the Iberian Peninsula. The HSCs have been reviewed by an expert panel, which coauthored the package. The package also compiles sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) based on expert knowledge, which was gathered through online forms. Functions for evaluating habitat suitability from hydraulic simulations and for plotting the modelled suitability are also included. An thorough example of the capabilitites of the packages appears below. The package includes 797 habitat suitability models for 43 species and up to 4 size classes (Large, Medium, Small, Very small) and spawning (for **Salmo trutta** and **Salmo salar**).
 
 ## Authors
 
 This package was developed by:
 
 - **Rafael Muñoz-Mas** (Author, Creator and Maintainer) - rafa.m.mas@gmail.com
-- **Javier María Gortázar Rubial** (Contributor)
+- **Carlos Alonso** (Contributor)
 - **Enric Aparicio Manau** (Contributor)
 - **Fernando Cobo Gradín** (Contributor)
-- **Francisco J. Oliva Paterna** (Contributor)
-- **Francisco Martínez-Capel** (Contributor)
 - **Gustavo González Fernández** (Contributor)
+- **Javier Gortázar** (Contributor)
+- **Francisco Martínez-Capel** (Contributor)
+- **Francisco J. Oliva-Paterna** (Contributor)
 - **Jose Prenda** (Contributor)
+- **Jose Maria Santos** (Contributor)
 - **Rafael Miranda Ferreiro** (Contributor)
 
 ## Installation
@@ -42,27 +46,50 @@ IberianFishHSMs can be installed from [GitHub](https://github.com/) with:
 # install.packages("devtools")
 devtools::install_github("RafaMMas/IberianFishHSMs")
 ```
-
 ## Example
 
-IberianFishHSMs includes some examples to ilustrate the capabilities of the package and the general workflow to predict the habitat suitability from the outputs of hydraulic simulations and field surveys to colect data on substrate and cover (shelter) distribution across the study site.
+IberianFishHSMs includes examples that illustrate the package's capabilities and the general workflow for predicting habitat suitability using outputs from hydraulic simulations and field data. Fiel data includes the substrate and cover (shelter) distribution across the study site, by pattch, pixel or cell.
 
-```{r example}
+```{r load package, echo = TRUE}
 library(IberianFishHSMs)
-## basic example code
 ```
 
-`ListModels` allows inpecting the vailable models. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. This function also provides de Codes to internally call the habitat suitability models during the habitat evaluation. The output of this function also renders a summary of their main characteristics, including sample sizes, and serveal perfomrance criteria.   
+### ListModels - List available models and their key characteristics.
 
-```{r ListModels}
+`ListModels` allows inpecting the available models. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. This function also provides de Codes to internally call the habitat suitability models during the habitat evaluation. The output of this function also renders a summary of their main characteristics, including sample sizes, and serveal perfomrance criteria.   
+
+```{r ListModels, echo = TRUE}
 ListModels(Species = "Salmo trutta", verbose = F)
 ```
 
+There exist an interaction between the training data and the modelling technique, which can vary variable effects and importance [@Eugster2014]. By means of cross-validation, during the development of the habitat suitbility models we carried out a variable selection approach discarding those cover types that not improved model performance. This approach lead to a different sets of relevant cover types in each model. The function `ListSelectedCoverTypes` allows inspecting the selcted cover types for each model. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. When evaluating the habitat suitability `PredictHabitatSuitability` selects and aggregates the appropriate cover types internally and this functions does not need to be called.
+
+```{r ListSelectedCoverTypes, echo = TRUE}
+
+ListSelectedCoverTypes(Species = "Salmo trutta")
+
+```
+### Sensitivity analysis
+
+The package includes a number of models (i.e., 797) and species (i.e., 43) several size classes and activities. Among other things, the available models vary by modelling technique, sampling site and the aggregation of data from different sites. The variable `Default` indicates which models are recommended becuase it was considered they generalised better but users can select other models when they consider it adequate. For example, when they are going to evalaute the habitat suitability in the basin where data for an alternative models was colected. In adiition to `ListSelectedCoverTypes`, users can carry out sensitivity analyses to compare the predictions of the different alternatives before selecting any particular set of models. The sensitivity analysis can be carried out employing function `Plot Habitat Suitability Models` as follows:
+
+```{r }
+
+## Pseudochondrostoma.polylepis, large, FRBS for Spring, Summer, and Autumn
+
+(Selected.model <- ListModels(Species = "Pseudochondrostoma polylepis", verbose = FALSE)$Codes[1])
+
+PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
+
+```
+
+### Habitat ruitability prediction
+
 Habitat suitability predictions are carried out based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluate microhabitats (i.e. pixels or cells from the hydraulic simulation). The package includes function to prepare the input data.
 
-The function `SubstrateIndex` computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%). The substrate classes originally used corresponded to a simplification of the the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand (62 µm > Ø ≤ 2 mm), fine gravel (2 > Ø ≤ 8 mm), gravel (8 > Ø ≤ 64 mm), cobbles (64 > Ø ≤ 256 mm), boulders (Ø > 256 mm) and bedrock. The package includes som examples to ilustrate the structure of the input files.
+The function `SubstrateIndex` computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%). The substrate classes originally used corresponded to a simplification of the the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand (62 µm > Ø ≤ 2 mm), fine gravel (2 > Ø ≤ 8 mm), gravel (8 > Ø ≤ 64 mm), cobbles (64 > Ø ≤ 256 mm), boulders (Ø > 256 mm) and bedrock [see e.g., @Munoz-Mas2018 or @Munoz-Mas2017]. The package includes som examples to ilustrate the structure of the input files.
 
-```{r SubstrateIndex}
+```{r SubstrateIndex, echo = TRUE}
 data(Substrate.index.example.df)
 
 summary(Substrate.index.example.df)
@@ -71,4 +98,6 @@ head(SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)) # c
 
 ```
 
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+
+
+## Bibliography
