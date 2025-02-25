@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of IberianFishHSMs is to ...
+IberianFishHSMs: Compilation of models and tools to evaluate the habitat suitability at the microhabitat scale for Iberian freshwater fish species. The modelling approaches include sets of Habitat Suitability Curves (HSCs), Artificial Neural Networks (Multilayer Perceptrons, ANN-MLPs), Random Forests (RFs), Generalised Additive Models (GAMs), and Support Vector Machines (SVMs), all based on empirical data collected across several river basins in the Iberian Peninsula. The HSCs have been reviewed by an expert panel which coauthored the package. The package also compiles sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) based on expert knowledge, which was gathered through online forms. Functions for evaluating habitat suitability from hydraulic simulations and for plotting the modelled suitability are also included. An thorough example of the capabilitites of the packages appears below.
 
 ## Installation
 

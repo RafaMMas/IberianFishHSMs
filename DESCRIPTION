@@ -2,12 +2,43 @@ Package: IberianFishHSMs
 Type: Package
 Title: Compilation of models and tools to evaluate the habitat suitability at the microhabitat scale for Iberian freshwater fish species
 Version: 0.1.0
-Authors@R: c(
-    person(
-      "Muñoz-Mas", "Rafael",
-      email = "jane@example.com",
-      role = c("aut", "cre")
-    )
+Authors@R: c(c(person(given = "Rafael",
+           family = "Muñoz-Mas",
+           role = c("aut", "cre"),
+           email = "rafa.m.mas@gmail.com",
+           comment = c(ORCID = "0000-0002-7263-5799")),
+    person(given = "Javier",
+           family = "Gortázar",
+           role = "ctb",
+           comment = c(ORCID = "0009-0005-3028-6921")),
+    person(given = "Enric",
+           family = "Aparicio",
+           role = "ctb",
+           comment = c(ORCID = "0000-0001-8810-0783")),
+    person(given = "Fernando",
+           family = "Cobo",
+           role = "ctb",
+           comment = c(ORCID = "0000-0001-5684-266X")),
+    person(given = "Francisco J.",
+           family = "Oliva-Paterna",
+           role = "ctb",
+           comment = c(ORCID = "0000-0001-8288-5321")),
+    person(given = "Francisco",
+           family = "Martínez-Capel",
+           role = "ctb",
+           comment = c(ORCID = "0000-0003-4991-0251")),       
+    person(given = "Gustavo",
+           family = "González Fernández",
+           role = "ctb"),        
+    person(given = "José",
+           family = "Prenda",
+           role = "ctb",
+           comment = c(ORCID = "0000-0002-1505-8331")),      
+    person(given = "Rafael",
+           family = "Miranda",
+           role = "ctb",
+           comment = c(ORCID = "0000-0003-4798-314X"))      
+           )
   )
 Description: The modelling approaches include sets of Habitat Suitability Curves (HSCs), Artificial Neural Networks (Multilayer Perceptrons, ANN-MLPs), Random Forests (RFs), Generalised Additive Models (GAMs), and Support Vector Machines (SVMs), all based on empirical data collected across several river basins in the Iberian Peninsula. The HSCs have been reviewed by an expert panel. The package also compiles sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) based on expert knowledge, which was gathered through online forms. Functions for evaluating habitat suitability from hydraulic simulations and for plotting the modelled suitability are also included.
 License: GPL (>= 3)

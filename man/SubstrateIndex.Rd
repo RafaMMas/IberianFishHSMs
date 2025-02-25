@@ -26,9 +26,11 @@ The function aggregates the substrate cover percentages using a weighted formula
   to coarser substrates.
 }
 \examples{
-
+data(Substrate.index.example.df)
 summary(Substrate.index.example.df)
+\dontrun{
 SubstrateIndex(Substrate.index.example.df)
+}
 SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)
 
 }
