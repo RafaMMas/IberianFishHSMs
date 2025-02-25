@@ -219,38 +219,22 @@ be called.
 ``` r
 
 ListSelectedCoverTypes(Species = "Salmo trutta")
-#>      Code                                Model Leaves Algae  Root
-#> 603 ABELZ   Salmo.trutta.GAM.Large.Curueno.All   TRUE FALSE  TRUE
-#> 604 ABEMQ   Salmo.trutta.HSC.Large.Curueno.All  FALSE FALSE  TRUE
-#> 605 ABEMV  Salmo.trutta.NNET.Large.Curueno.All   TRUE FALSE  TRUE
-#> 606 ABEMZ    Salmo.trutta.RF.Large.Curueno.All  FALSE FALSE  TRUE
-#> 607 ABENR   Salmo.trutta.SVM.Large.Curueno.All   TRUE FALSE  TRUE
-#> 608 ABEMN  Salmo.trutta.GAM.Medium.Curueno.All   TRUE FALSE FALSE
-#> 609 ABEMR  Salmo.trutta.HSC.Medium.Curueno.All  FALSE FALSE  TRUE
-#> 610 ABEMW Salmo.trutta.NNET.Medium.Curueno.All  FALSE FALSE FALSE
-#> 611 ABENO   Salmo.trutta.RF.Medium.Curueno.All  FALSE FALSE FALSE
-#> 612 ABENS  Salmo.trutta.SVM.Medium.Curueno.All  FALSE  TRUE FALSE
-#> 613 ABEMO   Salmo.trutta.GAM.Small.Curueno.All  FALSE FALSE FALSE
-#> 614 ABEMS   Salmo.trutta.HSC.Small.Curueno.All  FALSE FALSE  TRUE
-#> 615 ABEMX  Salmo.trutta.NNET.Small.Curueno.All  FALSE FALSE  TRUE
-#> 616 ABENP    Salmo.trutta.RF.Small.Curueno.All   TRUE FALSE  TRUE
-#> 617 ABENT   Salmo.trutta.SVM.Small.Curueno.All   TRUE  TRUE FALSE
-#>     Aquatic.vegetation  Reed  Wood  Sand  Rock  Cave Shade
-#> 603               TRUE FALSE FALSE FALSE  TRUE  TRUE  TRUE
-#> 604               TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE
-#> 605               TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE
-#> 606               TRUE FALSE FALSE FALSE FALSE FALSE  TRUE
-#> 607              FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE
-#> 608               TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
-#> 609               TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE
-#> 610               TRUE FALSE  TRUE FALSE FALSE  TRUE  TRUE
-#> 611              FALSE FALSE  TRUE FALSE FALSE  TRUE  TRUE
-#> 612              FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
-#> 613               TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE
-#> 614               TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE
-#> 615               TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE
-#> 616               TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
-#> 617              FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
+#>      Code                                Model
+#> 603 ABELZ   Salmo.trutta.GAM.Large.Curueno.All
+#> 604 ABEMQ   Salmo.trutta.HSC.Large.Curueno.All
+#> 605 ABEMV  Salmo.trutta.NNET.Large.Curueno.All
+#> 606 ABEMZ    Salmo.trutta.RF.Large.Curueno.All
+#> 607 ABENR   Salmo.trutta.SVM.Large.Curueno.All
+#> 608 ABEMN  Salmo.trutta.GAM.Medium.Curueno.All
+#> 609 ABEMR  Salmo.trutta.HSC.Medium.Curueno.All
+#> 610 ABEMW Salmo.trutta.NNET.Medium.Curueno.All
+#> 611 ABENO   Salmo.trutta.RF.Medium.Curueno.All
+#> 612 ABENS  Salmo.trutta.SVM.Medium.Curueno.All
+#> 613 ABEMO   Salmo.trutta.GAM.Small.Curueno.All
+#> 614 ABEMS   Salmo.trutta.HSC.Small.Curueno.All
+#> 615 ABEMX  Salmo.trutta.NNET.Small.Curueno.All
+#> 616 ABENP    Salmo.trutta.RF.Small.Curueno.All
+#> 617 ABENT   Salmo.trutta.SVM.Small.Curueno.All
 ```
 
 <br/>
