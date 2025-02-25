@@ -7,18 +7,18 @@
 \format{
 A data frame with 10 columns:
 \describe{
-  \item{x}{X coordinate of the study site}
-  \item{y}{Y coordinate of the study site}
-  \item{\emph{Leaves}}{Presence (1) or absence (0) of leaves as cover in each pixel/microhabitat }
-  \item{\emph{Algae}}{Presence (1) or absence (0) of algae as cover in each pixel/microhabitat }
-  \item{\emph{Root}}{Presence (1) or absence (0) of roots as cover in each pixel/microhabitat }
-  \item{\emph{Aquatic.vegetation}}{Presence (1) or absence (0) of aquatic vegetation in each pixel/microhabitat }
-  \item{\emph{Reed}}{Presence (1) or absence (0) of reeds and emergent vegetation in each pixel/microhabitat }
-  \item{\emph{Wood}}{Presence (1) or absence (0) of woody debris and logs as cover in each pixel/microhabitat }
-  \item{\emph{Sand}}{Presence (1) or absence (0) of sand in each pixel/microhabitat }
-  \item{\emph{Rock}}{Presence (1) or absence (0) of rocks in each pixel/microhabitat }
-  \item{\emph{Cave}}{Presence (1) or absence (0) of caves cover in each pixel/microhabitat }
-  \item{\emph{Shade}}{Presence (1) or absence (0) of shade in each pixel/microhabitat }
+\item{x}{X coordinate of the study site}
+\item{y}{Y coordinate of the study site}
+\item{\emph{Leaves}}{Presence (1) or absence (0) of leaves as cover in each pixel/microhabitat }
+\item{\emph{Algae}}{Presence (1) or absence (0) of algae as cover in each pixel/microhabitat }
+\item{\emph{Root}}{Presence (1) or absence (0) of roots as cover in each pixel/microhabitat }
+\item{\emph{Aquatic.vegetation}}{Presence (1) or absence (0) of aquatic vegetation in each pixel/microhabitat }
+\item{\emph{Reed}}{Presence (1) or absence (0) of reeds and emergent vegetation in each pixel/microhabitat }
+\item{\emph{Wood}}{Presence (1) or absence (0) of woody debris and logs as cover in each pixel/microhabitat }
+\item{\emph{Sand}}{Presence (1) or absence (0) of sand in each pixel/microhabitat }
+\item{\emph{Rock}}{Presence (1) or absence (0) of rocks in each pixel/microhabitat }
+\item{\emph{Cave}}{Presence (1) or absence (0) of caves cover in each pixel/microhabitat }
+\item{\emph{Shade}}{Presence (1) or absence (0) of shade in each pixel/microhabitat }
 }
 }
 \usage{

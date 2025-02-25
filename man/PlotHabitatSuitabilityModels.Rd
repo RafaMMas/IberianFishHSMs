@@ -14,17 +14,17 @@ PlotHabitatSuitabilityModels(
 )
 }
 \arguments{
-\item{Selected.model}{A character string or object representing the selected habitat suitability model. It should be among the `Codes` obtained with `ListModels` Default is `NULL`.}
+\item{Selected.model}{A character string or object representing the selected habitat suitability model. It should be among the \code{Codes} obtained with \code{ListModels} Default is \code{NULL}.}
 
-\item{data}{A data frame containing the data to be used for plotting the habitat suitability models. Default is `NULL`. This dataset must contain: "Velocity", "Depth", "Substrate.index" and "Cover".}
+\item{data}{A data frame containing the data to be used for plotting the habitat suitability models. Default is \code{NULL}. This dataset must contain: "Velocity", "Depth", "Substrate.index" and "Cover".}
 
 \item{n.points}{Integer specifying the grid resolution used to evaluate the suitability model (e.g., for a range of conditions). Default is 50.}
 
-\item{Quantiles}{Logical value indicating whether quantiles should be used for the plot. Default is `TRUE`.}
+\item{Quantiles}{Logical value indicating whether quantiles should be used for the plot. Default is \code{TRUE}.}
 
-\item{Layout}{A numeric vector of length 2 indicating the layout of the plots (e.g., `c(2, 2)` for 2 rows and 2 columns). Default is `c(2, 2)`.}
+\item{Layout}{A numeric vector of length 2 indicating the layout of the plots (e.g., \code{c(2, 2)} for 2 rows and 2 columns). Default is \code{c(2, 2)}.}
 
-\item{HSC.aggregation}{A string specifying the aggregation method for habitat suitability model data. Options are `"prod"`, `"min"`, `"geometric"`, `"arithmetic"`. Default is `"geometric"`.}
+\item{HSC.aggregation}{A string specifying the aggregation method for habitat suitability model data. Options are \code{"prod"}, \code{"min"}, \code{"geometric"}, \code{"arithmetic"}. Default is \code{"geometric"}.}
 }
 \description{
 This function generates partial dependence-like plots for habitat suitability models based on the provided data and selected model.
@@ -32,7 +32,7 @@ This function generates partial dependence-like plots for habitat suitability mo
 \details{
 This function is designed to carry out sensitivity analyses of the available habitat suitability models.
 
-`data` allows specifiying the studied variable ranges and combinations of elements, although in this case Cover is provided aggregated into one single variable because the developed models do not make disctinction among cover/shelter types once they are aggregated.
+\code{data} allows specifiying the studied variable ranges and combinations of elements, although in this case Cover is provided aggregated into one single variable because the developed models do not make disctinction among cover/shelter types once they are aggregated.
 }
 \examples{
 

@@ -24,12 +24,12 @@ ListSelectedCoverTypes(
 
 \item{Model.type}{A string specifying the selected model type (i.e., "FRBS", "GAM", "HSC", "NNET", "RF", "SVM").
 \describe{
-  \item{FRBS: Fuzzy Rule-Based System.}
-  \item{GAM: Generalized Additive Model.}
-  \item{HSC: Habitat Suitability Curve/Criteria.}
-  \item{NNET: Artificial Neural Network (Multilayer Perceptron).}
-  \item{RF: Random Forest.}
-  \item{SVM: Support Vector Machine.}
+\item{FRBS: Fuzzy Rule-Based System.}
+\item{GAM: Generalized Additive Model.}
+\item{HSC: Habitat Suitability Curve/Criteria.}
+\item{NNET: Artificial Neural Network (Multilayer Perceptron).}
+\item{RF: Random Forest.}
+\item{SVM: Support Vector Machine.}
 }}
 
 \item{Sampled.season}{The sampling period during which data was collected on one or multiple occasions.}
@@ -38,7 +38,7 @@ ListSelectedCoverTypes(
 
 \item{Data.origin}{The source of the data used to develop the habitat suitability model.}
 
-\item{Default}{Logical (`TRUE`/`FALSE`). If `TRUE`, only the recommended models are listed.}
+\item{Default}{Logical (\code{TRUE}/\code{FALSE}). If \code{TRUE}, only the recommended models are listed.}
 }
 \value{
 data frame with Codes, Models and the selected cover types for each model.

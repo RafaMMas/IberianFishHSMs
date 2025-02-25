@@ -7,10 +7,10 @@
 Load.and.print.model(Selected.model = NULL)
 }
 \arguments{
-\item{Selected.model}{A character string or object representing the selected habitat suitability model. It should be among the `Codes` obtained with `ListModels` Default is `NULL`.}
+\item{Selected.model}{A character string or object representing the selected habitat suitability model. It should be among the \code{Codes} obtained with \code{ListModels} Default is \code{NULL}.}
 }
 \value{
-List containing the selected cover types (`Selected.cover.types`), the model type (`Model.type`) and the model itself (`Model`).
+List containing the selected cover types (\code{Selected.cover.types}), the model type (\code{Model.type}) and the model itself (\code{Model}).
 }
 \description{
 Load and prints the selected model

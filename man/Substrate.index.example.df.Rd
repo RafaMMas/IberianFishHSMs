@@ -5,7 +5,19 @@
 \alias{Substrate.index.example.df}
 \title{Substrate Index Dataset}
 \format{
-
+A data frame with nine columns:
+\describe{
+\item{x}{X coordinate of the study site}
+\item{y}{Y coordinate of the study site}
+\item{\emph{Vegetation}}{Percentage of vegetation in each pixel/microhabitat (\%)}
+\item{\emph{Silt}}{Percentage of silt  in each pixel/microhabitat (\%)}
+\item{\emph{Sand}}{Percentage of sand  in each pixel/microhabitat (\%)}
+\item{\emph{Fine.gravel}}{Percentage of fine gravel  in each pixel/microhabitat (\%)}
+\item{\emph{Gravel}}{Percentage of gravel  in each pixel/microhabitat (\%)}
+\item{\emph{Cobbles}}{Percentage of cobbles  in each pixel/microhabitat (\%)}
+\item{\emph{Boulders}}{Percentage of boulders  in each pixel/microhabitat (\%)}
+\item{\emph{Bed.rock}}{Percentage of bedrock  in each pixel/microhabitat (\%)}
+}
 }
 \usage{
 Substrate.index.example.df

@@ -26,12 +26,12 @@ ListModels(
 
 \item{Model.type}{A string specifying the selected model type (i.e., "FRBS", "GAM", "HSC", "NNET", "RF", "SVM").
 \describe{
-  \item{FRBS: Fuzzy Rule-Based System.}
-  \item{GAM: Generalized Additive Model.}
-  \item{HSC: Habitat Suitability Curve/Criteria.}
-  \item{NNET: Artificial Neural Network (Multilayer Perceptron).}
-  \item{RF: Random Forest.}
-  \item{SVM: Support Vector Machine.}
+\item{FRBS: Fuzzy Rule-Based System.}
+\item{GAM: Generalized Additive Model.}
+\item{HSC: Habitat Suitability Curve/Criteria.}
+\item{NNET: Artificial Neural Network (Multilayer Perceptron).}
+\item{RF: Random Forest.}
+\item{SVM: Support Vector Machine.}
 }}
 
 \item{Sampled.season}{The sampling period during which data was collected on one or multiple occasions.}
@@ -40,28 +40,28 @@ ListModels(
 
 \item{Data.origin}{The source of the data used to develop the habitat suitability model.}
 
-\item{Default}{Logical (`TRUE`/`FALSE`). If `TRUE`, only the recommended models are listed.}
+\item{Default}{Logical (\code{TRUE}/\code{FALSE}). If \code{TRUE}, only the recommended models are listed.}
 
-\item{verbose}{Logical. If `TRUE`, the table of available models is printed.}
+\item{verbose}{Logical. If \code{TRUE}, the table of available models is printed.}
 
-\item{Only.models}{Logical. If `TRUE`, the output is limited to the model codes, which are internally used to call the corresponding habitat suitability model.}
+\item{Only.models}{Logical. If \code{TRUE}, the output is limited to the model codes, which are internally used to call the corresponding habitat suitability model.}
 }
 \value{
 A list containing the characteristics of the selected models. The structure of the list depends on the value of
 \code{Only.models}:
 \describe{
-  \item{If \code{Only.models = FALSE} (default):}{The function returns a list with three elements:
-    \describe{
-      \item{\code{$Current.summary.table}}{A data frame containing the available models and their characteristics.}
-      \item{\code{$Models}}{A character vector containing the names of the models along with a summary of their main characteristics.}
-      \item{\code{$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
-    }
-  }
-  \item{If \code{Only.models = TRUE}:}{The function returns a list with a single element:
-    \describe{
-      \item{\code{$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
-    }
-  }
+\item{If \code{Only.models = FALSE} (default):}{The function returns a list with three elements:
+\describe{
+\item{\code{$Current.summary.table}}{A data frame containing the available models and their characteristics.}
+\item{\code{$Models}}{A character vector containing the names of the models along with a summary of their main characteristics.}
+\item{\code{$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
+}
+}
+\item{If \code{Only.models = TRUE}:}{The function returns a list with a single element:
+\describe{
+\item{\code{$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
+}
+}
 }
 }
 \description{

@@ -7,13 +7,13 @@
 \format{
 A data frame with 41 columns:
 \describe{
-  \item{x}{X coordinate in the hydraulic simulation}
-  \item{y}{Y coordinate in the hydraulic simulation}
-  \item{Depth.0.05}{Simulation with 0.05 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s), depth values in meters (m)}
-  \item{Depth.0.1}{Simulation with 0.1 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s), depth values in meters (m)}
-  \item{Depth.0.2}{Simulation with 0.2 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s), depth values in meters (m)}
-  \item{...}{Additional depth columns for increasing flow scenarios up to 21 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s)}
-  \item{Depth.21}{Simulation with 21 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s), depth values in meters (m)}
+\item{x}{X coordinate in the hydraulic simulation}
+\item{y}{Y coordinate in the hydraulic simulation}
+\item{Depth.0.05}{Simulation with 0.05 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s), depth values in meters (m)}
+\item{Depth.0.1}{Simulation with 0.1 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s), depth values in meters (m)}
+\item{Depth.0.2}{Simulation with 0.2 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s), depth values in meters (m)}
+\item{...}{Additional depth columns for increasing flow scenarios up to 21 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s)}
+\item{Depth.21}{Simulation with 21 cubic meters per second (\ifelse{html}{\out{m<sup>3</sup>}}{\eqn{m^3}}/s), depth values in meters (m)}
 }
 }
 \usage{
