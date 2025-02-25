@@ -1,71 +1,48 @@
-#' Title
+#' Calculate Substrate Index
 #'
-#' @param Substrate
-#' @param Vegetation
-#' @param Silt
-#' @param Sand
-#' @param Fine.gravel
-#' @param Gravel
-#' @param Cobbles
-#' @param Boulders
-#' @param Bed.rock
-#' @param check.completeness
+#' Computes the substrate index as a weighted aggregation of the percentage
+#' of different granulometry classes (%).
 #'
-#' @returns
-#' @export
+#' @param Substrate A data frame containing at least the following columns:
+#'   "Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", and "Bed.rock". Column names must coincide.
+#'   Values should be between 0 and 100, representing the percentage of each class.
+#' @param check.completeness Logical, if TRUE (default), checks whether the percentages in each pixel/microhabitat sum up to 100.
+#'
+#' @return A numeric index ranging from 0 (fine substrate, e.g., silt) to 8 (bedrock).
+#'
+#' @details The function aggregates the substrate cover percentages using a weighted formula
+#'   to derive an index representing substrate composition, where higher values correspond
+#'   to coarser substrates.
 #'
 #' @examples
-SubstrateIndex <- function(Substrate = NULL,
-                           Vegetation = NULL,
-                           Silt = NULL,
-                           Sand = NULL,
-                           Fine.gravel = NULL,
-                           Gravel = NULL,
-                           Cobbles = NULL,
-                           Boulders = NULL,
-                           Bed.rock = NULL, check.completeness = TRUE) {
-  if (!is.null(Substrate) &
-    any(
-      !is.null(Vegetation),
-      !is.null(Silt),
-      !is.null(Sand),
-      !is.null(Fine.gravel),
-      !is.null(Gravel),
-      !is.null(Cobbles),
-      !is.null(Boulders),
-      !is.null(Bed.rock)
-    )) {
-    stop("Data may be duplicated")
-  }
+#'
+#' summary(Substrate.index.example.df)
+#' SubstrateIndex(Substrate.index.example.df)
+#' SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)
+#'
+#' @export
+SubstrateIndex <- function(Substrate, check.completeness = TRUE) {
 
-  if (!is.null(Substrate)) {
-    if(check.completeness)
+  if(any(!c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock") %in% colnames(Substrate)))
     {
-      if(any(apply(Substrate,1,function(x){sum(x, na.rm=T)})!=100))
-        stop("Some records do not sum up to 100")
+      stop("Substrate does not contain the expected columns and/or names are misspelled")
     }
 
-    Substrate.index <- apply(Substrate[, c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock")], 1, function(x) {
-      sum((x / 100) * c(3:8), NULL.rm = T)
+  if(check.completeness)
+  {
+    Substrate.index <- apply(Substrate[,c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock")], 1, function(x){
+      sum(x)
     })
 
-  } else {
-    Substrate <- data.frame(ifelse(is.null(Sand), NA, Sand),
-                            ifelse(is.null(Fine.gravel), NA, Fine.gravel),
-                            ifelse(is.null(Gravel), NA, Gravel),
-                            ifelse(is.null(Cobbles), NA, Cobbles),
-                            ifelse(is.null(Boulders), NA, Boulders),
-                            ifelse(is.null(Bed.rock), NA, Bed.rock))
-
-    if(check.completeness)
+    if(any(Substrate.index != 100) | any(is.na(Substrate.index)))
     {
-      if(any(apply(Substrate, 1, function(x){sum(x, na.rm=T)})!=100))
-        stop("Some records do not sum up to 100")
+      stop("Please, check data. There could be errors.")
     }
-
-    Substrate.index <- apply(Substrate, 1, function(x) {
-      sum((x / 100) * c(3:8), na.rm = T)
-    })
   }
+
+  Substrate.index <- apply(Substrate[,c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock")], 1, function(x){
+      sum(x*c(3:8))
+  })/100
+
   return(data.frame(Substrate.index = Substrate.index))
 }

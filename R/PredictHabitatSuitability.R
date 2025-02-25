@@ -22,16 +22,18 @@
 #' @param HSC.aggregation for HSCs the aggregation method between the partial suitability obtained from each independent curve/criteria (i.e., "prod", "min", "geometric", "arithmetic"). The default is \code{"geometric"}.
 #'
 #' @returns data frame with the habitat assessment. It contained one column per selected model
+#'
 #' @export
 #'
 #' @examples
+#'
 PredictHabitatSuitability <- function(Selected.models = NULL, data = NULL, HSC.aggregation = "geometric"){ # , probability = TRUE
 
-Habitat.assessment <- sapply(Selected.models$Models, function(current.model){
+Habitat.assessment <- sapply(Selected.models$Codes, function(current.model){
 
-  file_path <- system.file("extradata", current.model, package = "IberianFishHSMs")
+  file_path <- system.file("extradata", paste0(current.model, ".rds"), package = "IberianFishHSMs")
 
-  c.model <- readRDS(paste0(file_path, ".rds"))
+  c.model <- readRDS(file_path)
 
   Cover <- rowSums(data[,names(c.model$Selected.cover.types)][,c.model$Selected.cover.types, drop=F])
 
@@ -100,7 +102,9 @@ PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggre
 
   Habitat.assessment <- sapply(Selected.model, function(current.model){
 
-    c.model <- readRDS(paste0("./Models/", current.model, ".rds")) ## açò haurà de canviar
+    file_path <- system.file("extradata", paste0(current.model, ".rds"), package = "IberianFishHSMs")
+
+    c.model <- readRDS(file_path)
 
     microhabitat.characteristics <- data.frame(data[,c("Velocity", "Depth", "Substrate.index", "Cover")])
 
@@ -152,4 +156,31 @@ PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggre
   Habitat.assessment
 
 }
+
+#' Load and prints the selected model
+#'
+#' @param Selected.model A character string or object representing the selected habitat suitability model. It should be among the `Codes` obtained with `ListModels` Default is `NULL`.
+#'
+#' @returns List containing the selected cover types (`Selected.cover.types`), the model type (`Model.type`) and the model itself (`Model`).
+#' @export
+#'
+#' @examples
+#'
+#' (Selected.model <- ListModels(Species = "Salmo trutta", verbose = FALSE)$Codes[1])
+#'
+#' Load.and.print.model(Selected.model = Selected.model)
+#'
+Load.and.print.model <- function(Selected.model = NULL){
+      file_path <- system.file("extradata", paste0(Selected.model, ".rds"), package = "IberianFishHSMs")
+      c.model <- readRDS(file_path)
+      print(c.model)
+      c.model
+}
+
+
+
+
+
+
+
 

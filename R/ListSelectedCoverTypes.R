@@ -1,4 +1,4 @@
-#' List selected model types in each habitat suitability model.
+#' List selected cover types in each habitat suitability model.
 #'
 #' The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin.
 #'
@@ -50,7 +50,7 @@ ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Mo
   if(nrow(Current.summary.table) == 0)
     stop("There are no models with the selected characteristics.")
 
-  Codes <- Current.summary.table$Code
+  Codes <- Current.summary.table$Codes
 
   data.frame(Current.summary.table[,1:2, drop = FALSE], t(sapply(Codes, function(current.model){
 

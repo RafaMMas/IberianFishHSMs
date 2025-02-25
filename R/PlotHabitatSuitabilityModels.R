@@ -1,16 +1,29 @@
-#' Title
+#' Plot Habitat Suitability Models
 #'
-#' @param Selected.model
-#' @param data
-#' @param n.points
-#' @param Quantiles
-#' @param Layout
-#' @param HSC.aggregation
+#' This function generates partial dependence-like plots for habitat suitability models based on the provided data and selected model.
 #'
-#' @returns
-#' @export
+#' @param Selected.model A character string or object representing the selected habitat suitability model. It should be among the `Codes` obtained with `ListModels` Default is `NULL`.
+#' @param data A data frame containing the data to be used for plotting the habitat suitability models. Default is `NULL`. This dataset must contain: "Velocity", "Depth", "Substrate.index" and "Cover".
+#' @param n.points Integer specifying the grid resolution used to evaluate the suitability model (e.g., for a range of conditions). Default is 50.
+#' @param Quantiles Logical value indicating whether quantiles should be used for the plot. Default is `TRUE`.
+#' @param Layout A numeric vector of length 2 indicating the layout of the plots (e.g., `c(2, 2)` for 2 rows and 2 columns). Default is `c(2, 2)`.
+#' @param HSC.aggregation A string specifying the aggregation method for habitat suitability model data. Options are `"prod"`, `"min"`, `"geometric"`, `"arithmetic"`. Default is `"geometric"`.
+#'
+#' @details
+#' This function is designed to carry out sensitivity analyses of the available habitat suitability models.
+#'
+#' `data` allows specifiying the studied variable ranges and combinations of elements, although in this case Cover is provided aggregated into one single variable because the developed models do not make disctinction among cover/shelter types once they are aggregated.
 #'
 #' @examples
+#'
+#' (Selected.model <- ListModels(Species = "Salariopsis fluviatilis", verbose = FALSE)$Codes[1])
+#'
+#' PlotHabitatSuitabilityModels(Selected.model = Selected.model)
+#'
+#' PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = FALSE)
+#'
+#' @export
+#'
 PlotHabitatSuitabilityModels <- function(Selected.model = NULL, data = NULL, n.points = 50, Quantiles = TRUE, Layout = c(2, 2), HSC.aggregation = "geometric"){
 
   if(is.null(data))
@@ -34,7 +47,7 @@ PlotHabitatSuitabilityModels <- function(Selected.model = NULL, data = NULL, n.p
     {
       c.data[,c.variable] <- c.value
       c.prediction <- PredictSuitabilityPlot(Selected.model = Selected.model, data = c.data, HSC.aggregation = HSC.aggregation)
-      PDP.predictions <- rbind(PDP.predictions, c(mean(c.prediction), quantile(c.prediction, prob = seq(0, 1, by=0.05))))
+      PDP.predictions <- rbind(PDP.predictions, c(mean(c.prediction), quantile(c.prediction, prob = seq(0, 1, by = 0.05))))
     }
 
     PDP.predictions <- setNames(data.frame(Sequence, PDP.predictions), c(c.variable, "mean", paste0("q.", seq(0, 1, by=0.05))))

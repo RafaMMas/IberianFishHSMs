@@ -52,14 +52,14 @@ A list containing the characteristics of the selected models. The structure of t
 \describe{
   \item{If \code{Only.models = FALSE} (default):}{The function returns a list with three elements:
     \describe{
-      \item{\code{\$Current.summary.table}}{A data frame containing the available models and their characteristics.}
-      \item{\code{\$Models}}{A character vector containing the names of the models along with a summary of their main characteristics.}
-      \item{\code{\$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
+      \item{\code{$Current.summary.table}}{A data frame containing the available models and their characteristics.}
+      \item{\code{$Models}}{A character vector containing the names of the models along with a summary of their main characteristics.}
+      \item{\code{$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
     }
   }
   \item{If \code{Only.models = TRUE}:}{The function returns a list with a single element:
     \describe{
-      \item{\code{\$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
+      \item{\code{$Codes}}{A character vector of model codes, which are internally used to call the corresponding habitat suitability model.}
     }
   }
 }
@@ -71,5 +71,6 @@ The queries can be categorized by Species, Size, River, Model.type, Sampled.seas
 
 ListModels(Species = "Salmo trutta")
 ListModels(Species = "Salmo trutta", Only.models = TRUE)
+ListModels(Species = "Salmo trutta", verbose = FALSE, Only.models = TRUE)
 
 }

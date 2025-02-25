@@ -2,7 +2,7 @@
 % Please edit documentation in R/PlotHabitatSuitabilityModels.R
 \name{PlotHabitatSuitabilityModels}
 \alias{PlotHabitatSuitabilityModels}
-\title{Title}
+\title{Plot Habitat Suitability Models}
 \usage{
 PlotHabitatSuitabilityModels(
   Selected.model = NULL,
@@ -14,8 +14,32 @@ PlotHabitatSuitabilityModels(
 )
 }
 \arguments{
-\item{HSC.aggregation}{}
+\item{Selected.model}{A character string or object representing the selected habitat suitability model. It should be among the `Codes` obtained with `ListModels` Default is `NULL`.}
+
+\item{data}{A data frame containing the data to be used for plotting the habitat suitability models. Default is `NULL`. This dataset must contain: "Velocity", "Depth", "Substrate.index" and "Cover".}
+
+\item{n.points}{Integer specifying the grid resolution used to evaluate the suitability model (e.g., for a range of conditions). Default is 50.}
+
+\item{Quantiles}{Logical value indicating whether quantiles should be used for the plot. Default is `TRUE`.}
+
+\item{Layout}{A numeric vector of length 2 indicating the layout of the plots (e.g., `c(2, 2)` for 2 rows and 2 columns). Default is `c(2, 2)`.}
+
+\item{HSC.aggregation}{A string specifying the aggregation method for habitat suitability model data. Options are `"prod"`, `"min"`, `"geometric"`, `"arithmetic"`. Default is `"geometric"`.}
 }
 \description{
-Title
+This function generates partial dependence-like plots for habitat suitability models based on the provided data and selected model.
+}
+\details{
+This function is designed to carry out sensitivity analyses of the available habitat suitability models.
+
+`data` allows specifiying the studied variable ranges and combinations of elements, although in this case Cover is provided aggregated into one single variable because the developed models do not make disctinction among cover/shelter types once they are aggregated.
+}
+\examples{
+
+(Selected.model <- ListModels(Species = "Salariopsis fluviatilis", verbose = FALSE)$Codes[1])
+
+PlotHabitatSuitabilityModels(Selected.model = Selected.model)
+
+PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = FALSE)
+
 }

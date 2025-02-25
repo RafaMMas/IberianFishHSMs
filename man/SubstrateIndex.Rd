@@ -2,24 +2,33 @@
 % Please edit documentation in R/SubstrateIndex.R
 \name{SubstrateIndex}
 \alias{SubstrateIndex}
-\title{Title}
+\title{Calculate Substrate Index}
 \usage{
-SubstrateIndex(
-  Substrate = NULL,
-  Vegetation = NULL,
-  Silt = NULL,
-  Sand = NULL,
-  Fine.gravel = NULL,
-  Gravel = NULL,
-  Cobbles = NULL,
-  Boulders = NULL,
-  Bed.rock = NULL,
-  check.completeness = TRUE
-)
+SubstrateIndex(Substrate, check.completeness = TRUE)
 }
 \arguments{
-\item{check.completeness}{}
+\item{Substrate}{A data frame containing at least the following columns:
+"Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", and "Bed.rock". Column names must coincide.
+Values should be between 0 and 100, representing the percentage of each class.}
+
+\item{check.completeness}{Logical, if TRUE (default), checks whether the percentages in each pixel/microhabitat sum up to 100.}
+}
+\value{
+A numeric index ranging from 0 (fine substrate, e.g., silt) to 8 (bedrock).
 }
 \description{
-Title
+Computes the substrate index as a weighted aggregation of the percentage
+of different granulometry classes (%).
+}
+\details{
+The function aggregates the substrate cover percentages using a weighted formula
+  to derive an index representing substrate composition, where higher values correspond
+  to coarser substrates.
+}
+\examples{
+
+summary(Substrate.index.example.df)
+SubstrateIndex(Substrate.index.example.df)
+SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)
+
 }

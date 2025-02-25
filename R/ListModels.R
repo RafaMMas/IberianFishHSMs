@@ -43,6 +43,7 @@
 #'
 #' ListModels(Species = "Salmo trutta")
 #' ListModels(Species = "Salmo trutta", Only.models = TRUE)
+#' ListModels(Species = "Salmo trutta", verbose = FALSE, Only.models = TRUE)
 #'
 ListModels <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = NULL,	Sampled.season = NULL,	Valid.season = NULL,	Data.origin = NULL, Default = TRUE, verbose = TRUE, Only.models = FALSE)
 {
@@ -70,9 +71,9 @@ ListModels <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = N
     if(verbose) print(Current.summary.table)
 
     if(Only.models){
-      return(list(Code = Current.summary.table$Code))
+      return(list(Codes = Current.summary.table$Code))
     }else{
-      return(list(Current.summary.table = Current.summary.table, Models = Current.summary.table$Model, Code = Current.summary.table$Code))
+      return(list(Current.summary.table = Current.summary.table, Models = Current.summary.table$Model, Codes = Current.summary.table$Code))
     }
   }
 
