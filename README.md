@@ -20,6 +20,21 @@ evaluating habitat suitability from hydraulic simulations and for
 plotting the modelled suitability are also included. An thorough example
 of the capabilitites of the packages appears below.
 
+## Authors
+
+This package was developed by:
+
+- **Rafael Muñoz-Mas** (Author, Creator and Maintainer) -
+  <rafa.m.mas@gmail.com>
+- **Javier María Gortázar Rubial** (Contributor)
+- **Enric Aparicio Manau** (Contributor)
+- **Fernando Cobo Gradín** (Contributor)
+- **Francisco J. Oliva Paterna** (Contributor)
+- **Francisco Martínez-Capel** (Contributor)
+- **Gustavo González Fernández** (Contributor)
+- **Jose Prenda** (Contributor)
+- **Rafael Miranda Ferreiro** (Contributor)
+
 ## Installation
 
 IberianFishHSMs can be installed from [GitHub](https://github.com/)

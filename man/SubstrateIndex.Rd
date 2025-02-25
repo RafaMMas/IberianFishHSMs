@@ -17,8 +17,7 @@ Values should be between 0 and 100, representing the percentage of each class.}
 A numeric index ranging from 0 (fine substrate, e.g., silt) to 8 (bedrock).
 }
 \description{
-Computes the substrate index as a weighted aggregation of the percentage
-of different granulometry classes (%).
+Computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%).
 }
 \details{
 The function aggregates the substrate cover percentages using a weighted formula
