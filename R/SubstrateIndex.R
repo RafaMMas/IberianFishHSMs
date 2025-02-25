@@ -1,7 +1,6 @@
 #' Calculate Substrate Index
 #'
-#' Computes the substrate index as a weighted aggregation of the percentage
-#' of different granulometry classes (%).
+#' Computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%).
 #'
 #' @param Substrate A data frame containing at least the following columns:
 #'   "Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", and "Bed.rock". Column names must coincide.
