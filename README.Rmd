@@ -22,7 +22,7 @@ IberianFishHSMs: Compilation of models and tools to evaluate the habitat suitabi
 
 ## Installation
 
-You can install the development version of IberianFishHSMs from [GitHub](https://github.com/) with:
+IberianFishHSMs can be installed from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -31,17 +31,17 @@ devtools::install_github("RafaMMas/IberianFishHSMs")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+IberianFishHSMs includes some examples to ilustrate the capabilities of the package and the general workflow to predict the habitat suitability from the outputs of hydraulic simulations and field surveys to colect data on substrate and cover (shelter) distribution across the study site.
 
 ```{r example}
 library(IberianFishHSMs)
 ## basic example code
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+`ListModels` allows inpecting the vailable models. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. This function also provides de Codes to internally call the habitat suitability models during the habitat evaluation. The output of this function also renders a summary of their main characteristics, including sample sizes, and serveal perfomrance criteria.   
 
 ```{r cars}
-summary(cars)
+ListModels(Species = "Salmo trutta")
 ```
 
 You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
