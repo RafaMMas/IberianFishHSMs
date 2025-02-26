@@ -90,7 +90,7 @@ library(IberianFishHSMs)
 
 <br/>
 
-### ListModels - List available models and their key characteristics.
+### ListModels - List available models and their key characteristics
 
 `ListModels` allows inspecting the available models. The queries can be
 categorized by Species, Size, River, Model.type, Sampled.season,
@@ -239,7 +239,7 @@ microhabitat suitability models.
 
 <br/>
 
-### ListSelectedCoverTypes - List selected cover types in each microhabitat suitability model.
+### ListSelectedCoverTypes - List selected cover types in each microhabitat suitability model
 
 There exist an interaction between training data and the selected
 modelling technique, which can vary variable effects and importance
@@ -342,6 +342,155 @@ predictions over all the other features. This method isolates the effect
 of that single variable on the outcome and thus determining the overall
 effect. The function allows employing a user defined dataset to test
 especific combinations of variable values.
+
+<br/>
+
+### Load.and.print.model - Load and/or print a specific model
+
+``` r
+(Selected.model <- ListModels(Species = "Salmo trutta", Model.type = "GAM", verbose = FALSE))
+#> $Current.summary.table
+#>      Code                               Model           River River.short
+#> 603 ABELZ  Salmo.trutta.GAM.Large.Curueno.All Curueño (Douro)     Curueno
+#> 608 ABEMN Salmo.trutta.GAM.Medium.Curueno.All Curueño (Douro)     Curueno
+#> 613 ABEMO  Salmo.trutta.GAM.Small.Curueno.All Curueño (Douro)     Curueno
+#>     Model.type Default      Species   Size Sampled.season
+#> 603        GAM    TRUE Salmo trutta  Large         Summer
+#> 608        GAM    TRUE Salmo trutta Medium         Summer
+#> 613        GAM    TRUE Salmo trutta  Small         Summer
+#>                       Valid.season Valid.seasons.short  Data.origin N.presences
+#> 603 Winter; Spring; Summer; Autumn                 All Field survey          24
+#> 608 Winter; Spring; Summer; Autumn                 All Field survey          81
+#> 613 Winter; Spring; Summer; Autumn                 All Field survey         385
+#>     N.absences N.interviews.or.studies True.positive False.positive
+#> 603        896                      NA            24            215
+#> 608        839                      NA            70            218
+#> 613        535                      NA           275            210
+#>     True.negative False.negative Sensitivity Specificity   TSS
+#> 603           681              0       1.000       0.760 0.760
+#> 608           621             11       0.864       0.740 0.604
+#> 613           325            110       0.714       0.607 0.322
+#>     Balanced.accuracy
+#> 603             0.880
+#> 608             0.802
+#> 613             0.661
+#> 
+#> $Models
+#> [1] "Salmo.trutta.GAM.Large.Curueno.All"  "Salmo.trutta.GAM.Medium.Curueno.All"
+#> [3] "Salmo.trutta.GAM.Small.Curueno.All" 
+#> 
+#> $Codes
+#> [1] "ABELZ" "ABEMN" "ABEMO"
+
+(Selected.model <- Load.and.print.model(Selected.model = Selected.model$Codes[1]))
+#> $Selected.cover.types
+#>             Leaves              Algae               Root Aquatic.vegetation 
+#>               TRUE              FALSE               TRUE               TRUE 
+#>               Reed               Wood               Sand               Rock 
+#>              FALSE              FALSE              FALSE               TRUE 
+#>               Cave              Shade 
+#>               TRUE               TRUE 
+#> 
+#> $Model.type
+#> [1] "GAM"
+#> 
+#> $Model
+#> 
+#> Call:  mgcv:::bam(formula = as.formula(paste(Selected.species, "~", 
+#>     C.terms)), family = binomial(), data = C.sample.dataset, 
+#>     weights = ifelse(C.sample.dataset[, Selected.species] == 
+#>         1, Chromosome[-c(1:length(Cover.types.complete.list))][1], 
+#>         100 - Chromosome[-c(1:length(Cover.types.complete.list))][1]), 
+#>     method = "fREML", gamma = 1.2, discrete = TRUE)
+#> 
+#> Coefficients:
+#>          (Intercept)            s(Depth).1            s(Depth).2  
+#>              1.28199               5.31493              12.54161  
+#>           s(Depth).3         s(Velocity).1         s(Velocity).2  
+#>             12.44123               0.08129               1.14827  
+#>        s(Velocity).3  s(Substrate.index).1  s(Substrate.index).2  
+#>              2.00335              -1.70746              -2.38911  
+#> s(Substrate.index).3            s(Cover).1            s(Cover).2  
+#>             -9.81859               2.96345               5.10960  
+#>           s(Cover).3  
+#>              4.24585  
+#> 
+#> Degrees of Freedom: 939 Total (i.e. Null);  928.0187 Residual
+#> Null Deviance:       3891 
+#> Residual Deviance: 1617  AIC: 1639
+#> $Selected.cover.types
+#>             Leaves              Algae               Root Aquatic.vegetation 
+#>               TRUE              FALSE               TRUE               TRUE 
+#>               Reed               Wood               Sand               Rock 
+#>              FALSE              FALSE              FALSE               TRUE 
+#>               Cave              Shade 
+#>               TRUE               TRUE 
+#> 
+#> $Model.type
+#> [1] "GAM"
+#> 
+#> $Model
+#> 
+#> Call:  mgcv:::bam(formula = as.formula(paste(Selected.species, "~", 
+#>     C.terms)), family = binomial(), data = C.sample.dataset, 
+#>     weights = ifelse(C.sample.dataset[, Selected.species] == 
+#>         1, Chromosome[-c(1:length(Cover.types.complete.list))][1], 
+#>         100 - Chromosome[-c(1:length(Cover.types.complete.list))][1]), 
+#>     method = "fREML", gamma = 1.2, discrete = TRUE)
+#> 
+#> Coefficients:
+#>          (Intercept)            s(Depth).1            s(Depth).2  
+#>              1.28199               5.31493              12.54161  
+#>           s(Depth).3         s(Velocity).1         s(Velocity).2  
+#>             12.44123               0.08129               1.14827  
+#>        s(Velocity).3  s(Substrate.index).1  s(Substrate.index).2  
+#>              2.00335              -1.70746              -2.38911  
+#> s(Substrate.index).3            s(Cover).1            s(Cover).2  
+#>             -9.81859               2.96345               5.10960  
+#>           s(Cover).3  
+#>              4.24585  
+#> 
+#> Degrees of Freedom: 939 Total (i.e. Null);  928.0187 Residual
+#> Null Deviance:       3891 
+#> Residual Deviance: 1617  AIC: 1639
+```
+
+<br/>
+
+Each group of models was developed employing specific *R* packages:
+
+- Artificial Neural Networks (Multilayer Perceptrons, ANN-MLPs) were
+  developed with the R package `nnet`
+- Random Forests (RFs) with `ranger`
+- Generalised Additive Models (GAMs) with `mgcv`
+- Support Vector Machines (SVMs) with `e1071`
+- Habitat Suitability Curves (HSCs) with `FuzzyFishHS`
+  (<https://github.com/RafaMMas/FuzzyFishHS>)
+- Fuzzy Rule-Based Systems (FRBSs) with `FuzzyFishHS`
+  (<https://github.com/RafaMMas/FuzzyFishHS>)
+
+Therefore, once a specific model has been loaded it is possible to
+harness the capabilites of each specific package to, for example, plot
+directly the selected model.
+
+``` r
+library(mgcv)
+#> Warning: package 'mgcv' was built under R version 4.1.3
+#> Loading required package: nlme
+#> This is mgcv 1.8-42. For overview type 'help("mgcv-package")'.
+par(mar = c(4,4,1,1), bty = "n")
+plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
+```
+
+<img src="man/figures/README-plot with specific package capabilitites-1.png" width="100%" />
+**Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta*
+Large obtained with data collected in the Curueño River (Douro) and
+valid all year round.
+
+The different option to, for example, plot each models depend on each
+specific package and in some cases suchs the SVMs obtained with `e1071`
+require indirect approaches for plotting. For instance, using the *R*
+package `pdp` (Greenwell 2017).
 
 <br/>
 
@@ -852,6 +1001,14 @@ Analysis* 71 (March): 986–1000.
 Friedman, J H. 2001. “<span class="nocase">Greedy function
 approximation: A gradient boosting machine</span>.” *Annals of
 Statistics* 29 (5): 1189–1232. <https://doi.org/10.1214/aos/1013203451>.
+
+</div>
+
+<div id="ref-RJ-2017-016" class="csl-entry">
+
+Greenwell, Brandon M. 2017. “<span class="nocase">pdp: An R Package for
+Constructing Partial Dependence Plots</span>.” *The R Journal* 9 (1):
+421–36. <https://doi.org/10.32614/RJ-2017-016>.
 
 </div>
 

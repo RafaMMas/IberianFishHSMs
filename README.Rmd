@@ -76,7 +76,7 @@ library(IberianFishHSMs)
 
 <br/>
 
-### ListModels - List available models and their key characteristics.
+### ListModels - List available models and their key characteristics
 
 `ListModels` allows inspecting the available models. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. This function also provides de Codes to internally call the microhabitat suitability models during the habitat evaluation. The output of this function also renders a summary of their main characteristics, including sample sizes, and several performance criteria for those models optimised through cross-validation.    
 
@@ -100,7 +100,7 @@ Selected.models[2:3]
 
 <br/>
 
-### ListSelectedCoverTypes - List selected cover types in each microhabitat suitability model.
+### ListSelectedCoverTypes - List selected cover types in each microhabitat suitability model
 
 There exist an interaction between training data and the selected modelling technique, which can vary variable effects and importance [@Eugster2014]. By means of cross-validation, during the development of the microhabitat suitability models we carried out a variable selection approach discarding those cover types that not improved model performance for Machine Learning (i.e., ANN-MLPs, RFs, SVMs) and statistical approaches (i.e., GAMs) and an analogous approach during the development of the Habitat Suitability Curves/Criteria (HSCs) and Fuzzy Rule-based Systems (FRBSs).  This approach lead to different sets of relevant cover types in each model, although the core of relevant cover types is expected to coincide. The function `ListSelectedCoverTypes` allows inspecting the selected cover types for each model. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. When evaluating the microhabitat suitability, `PredictHabitatSuitability` selects and aggregates the appropriate cover types internally. Therefore, this function does not need to be called explicitly.
 
@@ -129,6 +129,38 @@ PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 **Figure 1** - Sensitivity analysis (i.e., partial dependence plots) for *Pseudochondrostoma polylepis* large. The figure shows the results for the Fuzzy Rule-Based System (FRBS) to evaluate the microhabitat suitability during Spring, Summer, and Autumn.
 
 This function generates partial dependence-like plots for microhabitat suitability models based on the provided data and selected model [@Friedman2001]. Partial dependence plots are created by varying one variable over its range of values while averaging the model's predictions over all the other features. This method isolates the effect of that single variable on the outcome and thus determining the overall effect. The function allows employing a user defined dataset to test especific combinations of variable values.
+
+<br/>
+
+### Load.and.print.model - Load and/or print a specific model
+
+```{r Load.and.print.model}
+(Selected.model <- ListModels(Species = "Salmo trutta", Model.type = "GAM", verbose = FALSE))
+
+(Selected.model <- Load.and.print.model(Selected.model = Selected.model$Codes[1]))
+```
+
+<br/>
+
+Each group of models was developed employing specific *R* packages:
+
+- Artificial Neural Networks (Multilayer Perceptrons, ANN-MLPs) were developed with the R package `nnet`
+- Random Forests (RFs) with `ranger`
+- Generalised Additive Models (GAMs) with `mgcv`
+- Support Vector Machines (SVMs) with `e1071`
+- Habitat Suitability Curves (HSCs) with `FuzzyFishHS` (https://github.com/RafaMMas/FuzzyFishHS)
+- Fuzzy Rule-Based Systems (FRBSs) with `FuzzyFishHS` (https://github.com/RafaMMas/FuzzyFishHS)
+
+Therefore, once a specific model has been loaded it is possible to harness the capabilites of each specific package to, for example, plot directly the selected model.  
+
+```{r plot with specific package capabilitites, fig.width = 8, fig.height = 5, dpi=800}
+library(mgcv)
+par(mar = c(4,4,1,1), bty = "n")
+plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
+```
+**Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta* Large obtained with data collected in the Curueño River (Douro) and valid all year round.
+
+The different option to, for example, plot each models depend on each specific package and in some cases suchs the SVMs obtained with `e1071` require indirect approaches for plotting. For instance, using the *R* package `pdp` [@RJ-2017-016].
 
 <br/>
 
