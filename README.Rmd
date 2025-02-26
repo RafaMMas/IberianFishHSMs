@@ -174,10 +174,10 @@ data("Depth.example.df")
 data("Substrate.index.example.df")
 data("Cover.example.df")
 
-summary(Velocity.example.df)
-summary(Depth.example.df)
-summary(Substrate.index.example.df)
-summary(Cover.example.df)
+summary(Velocity.example.df[,1:6])
+summary(Depth.example.df[,1:6])
+summary(Substrate.index.example.df[,-c(1:2)])
+summary(Cover.example.df[,-c(1:2)])
 
 ```
 
@@ -215,7 +215,7 @@ Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data
 
 ```{r}
 
-head(Predictions)
+summary(Predictions)
 
 ```
 

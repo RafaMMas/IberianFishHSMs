@@ -21,11 +21,30 @@
 #' }
 #' @param HSC.aggregation for HSCs the aggregation method between the partial suitability obtained from each independent curve/criteria (i.e., "prod", "min", "geometric", "arithmetic"). The default is \code{"geometric"}.
 #'
-#' @returns data frame with the habitat assessment. It contained one column per selected model
+#' @returns data frame with the habitat assessment. It contains one column per selected model
 #'
 #' @export
 #'
-#' @examples
+#' @examples#'
+#' data("Velocity.example.df")
+#' data("Depth.example.df")
+#' data("Substrate.index.example.df")
+#' data("Cover.example.df")
+#'
+#' Substrate.index <- SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)
+#'
+#' Selected.species <- "Cobitis paludica"#'
+#' Selected.size <- "Large"
+#' (Selected.models <- ListModels(Species = Selected.species, Size = Selected.size))
+#'
+#'Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.05,
+#'Depth = Depth.example.df$Depth.0.05,
+#'Substrate.index = Substrate.index,
+#'Cover.example.df[,-c(1:2)])
+#'
+#'Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data = Hydraulics, HSC.aggregation = "geometric")
+#'
+#'summary(Predictions)
 #'
 PredictHabitatSuitability <- function(Selected.models = NULL, data = NULL, HSC.aggregation = "geometric"){ # , probability = TRUE
 
@@ -84,76 +103,7 @@ Habitat.assessment <- sapply(Selected.models$Codes, function(current.model){
   }
 })
 
-setNames(Habitat.assessment, Selected.models$Models)
-
-}
-
-#' Title
-#'
-#' @param Selected.model
-#' @param data
-#' @param HSC.aggregation
-#'
-#' @returns
-#' @export
-#'
-#' @examples
-PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggregation = "geometric"){
-
-  Habitat.assessment <- sapply(Selected.model, function(current.model){
-
-    file_path <- system.file("extradata", paste0(current.model, ".rds"), package = "IberianFishHSMs")
-
-    c.model <- readRDS(file_path)
-
-    microhabitat.characteristics <- data.frame(data[,c("Velocity", "Depth", "Substrate.index", "Cover")])
-
-    if(c.model$Model.type == "FRBS"){
-
-      PREDICT.FRBS(FRBS = c.model$Model, Data = microhabitat.characteristics)
-
-    } else if(c.model$Model.type == "GAM"){
-
-      mgcv::predict.gam(object = c.model$Model, newdata = microhabitat.characteristics, type = "response")
-
-    } else if(c.model$Model.type == "HSC"){
-
-      Partial.suitabilities <- sapply(1:4, function(i){
-        PIMF.NA(pattern = microhabitat.characteristics[,c.model$Model$Variable][,i], parameters = unlist(c.model$Model[i,letters[1:4]]))
-      })
-
-      apply(Partial.suitabilities, 1, function(x){
-        if(HSC.aggregation == "geometric"){
-          prod(x)^(1/4) ## default
-        } else if(HSC.aggregation == "prod"){
-          prod(x)
-        } else if(HSC.aggregation == "min"){
-          min(x)
-        } else if(HSC.aggregation == "arithmetic"){
-          mean(x)
-        }
-      })
-
-    } else if(c.model$Model.type == "NNET"){
-
-      as.vector(nnet:::predict.nnet(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
-
-    } else if(c.model$Model.type == "RF"){
-
-      Predictions <- rep(NA,nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
-      Predictions[complete.cases(microhabitat.characteristics)] <- ranger:::predict.ranger(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics),])$predictions[,2]
-      Predictions
-
-    } else {
-
-      Predictions <- rep(NA, nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
-      Predictions[complete.cases(microhabitat.characteristics)] <- PredictSVMensemble.mean.votes(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),]) # PredictSVMensemble(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),], probability = FALSE)
-      Predictions
-
-    }
-  })
-
-  Habitat.assessment
+setNames(as.data.frame(Habitat.assessment), Selected.models$Models)
 
 }
 

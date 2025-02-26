@@ -66,6 +66,76 @@ PlotHabitatSuitabilityModels <- function(Selected.model = NULL, data = NULL, n.p
   par(op)
 }
 
+#' Function to determine the microhabitat suitability within PlotHabitatSuitabilityModels
+#'
+#' @param Selected.model A character string or object representing the selected habitat suitability model. It should be among the `Codes` obtained with `ListModels` Default is `NULL`.
+#' @param data A data frame containing the data to be used for plotting the habitat suitability models. Default is `NULL`. This dataset must contain: "Velocity", "Depth", "Substrate.index" and "Cover".
+#' @param HSC.aggregation A string specifying the aggregation method for habitat suitability model data. Options are `"prod"`, `"min"`, `"geometric"`, `"arithmetic"`. Default is `"geometric"`.
+#'
+#' @details
+#' This function is internally called.
+#'
+#' @returns suitability betwen 0 and 1.
+#'
+#' @export
+PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggregation = "geometric"){
+
+  Habitat.assessment <- sapply(Selected.model, function(current.model){
+
+    file_path <- system.file("extradata", paste0(current.model, ".rds"), package = "IberianFishHSMs")
+
+    c.model <- readRDS(file_path)
+
+    microhabitat.characteristics <- data.frame(data[,c("Velocity", "Depth", "Substrate.index", "Cover")])
+
+    if(c.model$Model.type == "FRBS"){
+
+      PREDICT.FRBS(FRBS = c.model$Model, Data = microhabitat.characteristics)
+
+    } else if(c.model$Model.type == "GAM"){
+
+      mgcv::predict.gam(object = c.model$Model, newdata = microhabitat.characteristics, type = "response")
+
+    } else if(c.model$Model.type == "HSC"){
+
+      Partial.suitabilities <- sapply(1:4, function(i){
+        PIMF.NA(pattern = microhabitat.characteristics[,c.model$Model$Variable][,i], parameters = unlist(c.model$Model[i,letters[1:4]]))
+      })
+
+      apply(Partial.suitabilities, 1, function(x){
+        if(HSC.aggregation == "geometric"){
+          prod(x)^(1/4) ## default
+        } else if(HSC.aggregation == "prod"){
+          prod(x)
+        } else if(HSC.aggregation == "min"){
+          min(x)
+        } else if(HSC.aggregation == "arithmetic"){
+          mean(x)
+        }
+      })
+
+    } else if(c.model$Model.type == "NNET"){
+
+      as.vector(nnet:::predict.nnet(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
+
+    } else if(c.model$Model.type == "RF"){
+
+      Predictions <- rep(NA,nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
+      Predictions[complete.cases(microhabitat.characteristics)] <- ranger:::predict.ranger(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics),])$predictions[,2]
+      Predictions
+
+    } else {
+
+      Predictions <- rep(NA, nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
+      Predictions[complete.cases(microhabitat.characteristics)] <- PredictSVMensemble.mean.votes(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),]) # PredictSVMensemble(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),], probability = FALSE)
+      Predictions
+
+    }
+  })
+
+  Habitat.assessment
+
+}
 
 
 

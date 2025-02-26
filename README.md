@@ -513,7 +513,7 @@ data("Depth.example.df")
 data("Substrate.index.example.df")
 data("Cover.example.df")
 
-summary(Velocity.example.df)
+summary(Velocity.example.df[,1:6])
 #>        x                y           Velocity.0.05      Velocity.0.1     
 #>  Min.   :732536   Min.   :4302306   Min.   :0.00000   Min.   :0.000000  
 #>  1st Qu.:732596   1st Qu.:4302440   1st Qu.:0.00000   1st Qu.:0.000000  
@@ -521,77 +521,14 @@ summary(Velocity.example.df)
 #>  Mean   :732615   Mean   :4302545   Mean   :0.00439   Mean   :0.009547  
 #>  3rd Qu.:732638   3rd Qu.:4302660   3rd Qu.:0.00480   3rd Qu.:0.010900  
 #>  Max.   :732686   Max.   :4302710   Max.   :0.15973   Max.   :0.235300  
-#>   Velocity.0.2      Velocity.0.3      Velocity.0.4        Velocity.0.5      
-#>  Min.   :0.00000   Min.   :0.00000   Min.   :0.0000000   Min.   :0.0000000  
-#>  1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.0000000   1st Qu.:0.0000000  
-#>  Median :0.00000   Median :0.00020   Median :0.0005417   Median :0.0009875  
-#>  Mean   :0.02132   Mean   :0.03182   Mean   :0.0409337   Mean   :0.0490286  
-#>  3rd Qu.:0.02330   3rd Qu.:0.03495   3rd Qu.:0.0456458   3rd Qu.:0.0570938  
-#>  Max.   :0.46400   Max.   :1.10900   Max.   :0.9499000   Max.   :0.9249000  
-#>   Velocity.0.6       Velocity.0.7       Velocity.0.8       Velocity.0.9     
-#>  Min.   :0.000000   Min.   :0.000000   Min.   :0.000000   Min.   :0.000000  
-#>  1st Qu.:0.000000   1st Qu.:0.000000   1st Qu.:0.000000   1st Qu.:0.000000  
-#>  Median :0.001829   Median :0.002842   Median :0.004575   Median :0.006317  
-#>  Mean   :0.056653   Mean   :0.063327   Mean   :0.069818   Mean   :0.076080  
-#>  3rd Qu.:0.067975   3rd Qu.:0.078525   3rd Qu.:0.088050   3rd Qu.:0.098337  
-#>  Max.   :1.129450   Max.   :1.108475   Max.   :1.126450   Max.   :1.150800  
-#>    Velocity.1        Velocity.1.1      Velocity.1.2      Velocity.1.3    
-#>  Min.   :0.000000   Min.   :0.00000   Min.   :0.00000   Min.   :0.00000  
-#>  1st Qu.:0.000000   1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000  
-#>  Median :0.008683   Median :0.01137   Median :0.01483   Median :0.01817  
-#>  Mean   :0.082039   Mean   :0.08771   Mean   :0.09346   Mean   :0.09886  
-#>  3rd Qu.:0.107563   3rd Qu.:0.11629   3rd Qu.:0.12534   3rd Qu.:0.13383  
-#>  Max.   :1.172300   Max.   :1.19100   Max.   :1.20873   Max.   :1.22618  
-#>   Velocity.1.4      Velocity.1.5      Velocity.1.6      Velocity.1.7    
-#>  Min.   :0.00000   Min.   :0.00000   Min.   :0.00000   Min.   :0.00000  
-#>  1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000  
-#>  Median :0.02123   Median :0.02622   Median :0.03292   Median :0.03658  
-#>  Mean   :0.10394   Mean   :0.10918   Mean   :0.11446   Mean   :0.11946  
-#>  3rd Qu.:0.14185   3rd Qu.:0.15036   3rd Qu.:0.15794   3rd Qu.:0.16599  
-#>  Max.   :1.24295   Max.   :1.25937   Max.   :1.26780   Max.   :1.28395  
-#>   Velocity.1.8      Velocity.1.9       Velocity.2       Velocity.2.1    
-#>  Min.   :0.00000   Min.   :0.00000   Min.   :0.00000   Min.   :0.00000  
-#>  1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000  
-#>  Median :0.04162   Median :0.04521   Median :0.04945   Median :0.05523  
-#>  Mean   :0.12415   Mean   :0.12914   Mean   :0.13384   Mean   :0.13813  
-#>  3rd Qu.:0.17359   3rd Qu.:0.18294   3rd Qu.:0.19030   3rd Qu.:0.19733  
-#>  Max.   :1.29995   Max.   :1.31590   Max.   :1.33078   Max.   :1.34385  
-#>   Velocity.2.2      Velocity.2.3      Velocity.2.4      Velocity.2.5    
-#>  Min.   :0.00000   Min.   :0.00000   Min.   :0.00000   Min.   :0.00000  
-#>  1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000  
-#>  Median :0.06072   Median :0.06641   Median :0.07333   Median :0.07972  
-#>  Mean   :0.14257   Mean   :0.14741   Mean   :0.15204   Mean   :0.15641  
-#>  3rd Qu.:0.20422   3rd Qu.:0.21264   3rd Qu.:0.21995   3rd Qu.:0.22650  
-#>  Max.   :1.35532   Max.   :1.36563   Max.   :1.37525   Max.   :1.38437  
-#>   Velocity.2.6      Velocity.2.7     Velocity.2.8      Velocity.2.9   
-#>  Min.   :0.00000   Min.   :0.0000   Min.   :0.00000   Min.   :0.0000  
-#>  1st Qu.:0.00000   1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.0000  
-#>  Median :0.08704   Median :0.0912   Median :0.09732   Median :0.1032  
-#>  Mean   :0.16067   Mean   :0.1650   Mean   :0.16927   Mean   :0.1733  
-#>  3rd Qu.:0.23405   3rd Qu.:0.2421   3rd Qu.:0.24957   3rd Qu.:0.2559  
-#>  Max.   :1.39285   Max.   :1.4009   Max.   :1.40843   Max.   :1.4154  
-#>    Velocity.3       Velocity.5       Velocity.7       Velocity.9     
-#>  Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.00000  
-#>  1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0032   1st Qu.:0.01614  
-#>  Median :0.1080   Median :0.1949   Median :0.2735   Median :0.34360  
-#>  Mean   :0.1775   Mean   :0.2504   Mean   :0.3125   Mean   :0.36909  
-#>  3rd Qu.:0.2629   3rd Qu.:0.3878   3rd Qu.:0.4968   3rd Qu.:0.59137  
-#>  Max.   :1.4217   Max.   :1.4897   Max.   :1.5100   Max.   :1.55310  
-#>   Velocity.11       Velocity.13       Velocity.15      Velocity.17    
-#>  Min.   :0.00000   Min.   :0.00000   Min.   :0.0000   Min.   :0.0000  
-#>  1st Qu.:0.03517   1st Qu.:0.06429   1st Qu.:0.1017   1st Qu.:0.1398  
-#>  Median :0.40469   Median :0.46118   Median :0.5171   Median :0.5676  
-#>  Mean   :0.42151   Mean   :0.46931   Mean   :0.5156   Mean   :0.5597  
-#>  3rd Qu.:0.67469   3rd Qu.:0.75199   3rd Qu.:0.8214   3rd Qu.:0.8857  
-#>  Max.   :1.79490   Max.   :1.64750   Max.   :1.6997   Max.   :1.7449  
-#>   Velocity.19      Velocity.21    
-#>  Min.   :0.0000   Min.   :0.0000  
-#>  1st Qu.:0.1717   1st Qu.:0.2085  
-#>  Median :0.6102   Median :0.6633  
-#>  Mean   :0.6002   Mean   :0.6423  
-#>  3rd Qu.:0.9499   3rd Qu.:1.0084  
-#>  Max.   :1.7885   Max.   :1.8313
-summary(Depth.example.df)
+#>   Velocity.0.2      Velocity.0.3    
+#>  Min.   :0.00000   Min.   :0.00000  
+#>  1st Qu.:0.00000   1st Qu.:0.00000  
+#>  Median :0.00000   Median :0.00020  
+#>  Mean   :0.02132   Mean   :0.03182  
+#>  3rd Qu.:0.02330   3rd Qu.:0.03495  
+#>  Max.   :0.46400   Max.   :1.10900
+summary(Depth.example.df[,1:6])
 #>        x                y             Depth.0.05       Depth.0.1     
 #>  Min.   :732536   Min.   :4302306   Min.   :0.0001   Min.   :0.0001  
 #>  1st Qu.:732596   1st Qu.:4302440   1st Qu.:0.1022   1st Qu.:0.0986  
@@ -600,130 +537,44 @@ summary(Depth.example.df)
 #>  3rd Qu.:732638   3rd Qu.:4302660   3rd Qu.:0.4631   3rd Qu.:0.4587  
 #>  Max.   :732686   Max.   :4302710   Max.   :1.2471   Max.   :1.2837  
 #>                                     NA's   :1917     NA's   :1712    
-#>    Depth.0.2        Depth.0.3        Depth.0.4        Depth.0.5     
-#>  Min.   :0.0002   Min.   :0.0002   Min.   :0.0000   Min.   :0.0001  
-#>  1st Qu.:0.1005   1st Qu.:0.1087   1st Qu.:0.1217   1st Qu.:0.1349  
-#>  Median :0.2808   Median :0.2960   Median :0.3078   Median :0.3239  
-#>  Mean   :0.3147   Mean   :0.3321   Mean   :0.3469   Mean   :0.3607  
-#>  3rd Qu.:0.4729   3rd Qu.:0.4987   3rd Qu.:0.5166   3rd Qu.:0.5362  
-#>  Max.   :1.3332   Max.   :1.3676   Max.   :1.3948   Max.   :1.4174  
-#>  NA's   :1548     NA's   :1482     NA's   :1437     NA's   :1407    
-#>    Depth.0.6        Depth.0.7        Depth.0.8        Depth.0.9     
-#>  Min.   :0.0001   Min.   :0.0000   Min.   :0.0001   Min.   :0.0001  
-#>  1st Qu.:0.1425   1st Qu.:0.1497   1st Qu.:0.1542   1st Qu.:0.1592  
-#>  Median :0.3365   Median :0.3486   Median :0.3584   Median :0.3685  
-#>  Mean   :0.3718   Mean   :0.3825   Mean   :0.3911   Mean   :0.3985  
-#>  3rd Qu.:0.5500   3rd Qu.:0.5625   3rd Qu.:0.5733   3rd Qu.:0.5860  
-#>  Max.   :1.4380   Max.   :1.4566   Max.   :1.4733   Max.   :1.4890  
-#>  NA's   :1374     NA's   :1349     NA's   :1322     NA's   :1295    
-#>     Depth.1         Depth.1.1        Depth.1.2        Depth.1.3     
-#>  Min.   :0.0005   Min.   :0.0004   Min.   :0.0001   Min.   :0.0002  
-#>  1st Qu.:0.1645   1st Qu.:0.1697   1st Qu.:0.1744   1st Qu.:0.1818  
-#>  Median :0.3774   Median :0.3838   Median :0.3926   Median :0.4007  
-#>  Mean   :0.4057   Mean   :0.4130   Mean   :0.4207   Mean   :0.4279  
-#>  3rd Qu.:0.5975   3rd Qu.:0.6048   3rd Qu.:0.6130   3rd Qu.:0.6231  
-#>  Max.   :1.5037   Max.   :1.5174   Max.   :1.5301   Max.   :1.5427  
-#>  NA's   :1271     NA's   :1252     NA's   :1238     NA's   :1223    
-#>    Depth.1.4        Depth.1.5        Depth.1.6        Depth.1.7     
-#>  Min.   :0.0000   Min.   :0.0001   Min.   :0.0001   Min.   :0.0004  
-#>  1st Qu.:0.1850   1st Qu.:0.1886   1st Qu.:0.1887   1st Qu.:0.1938  
-#>  Median :0.4060   Median :0.4115   Median :0.4157   Median :0.4235  
-#>  Mean   :0.4328   Mean   :0.4378   Mean   :0.4403   Mean   :0.4467  
-#>  3rd Qu.:0.6306   3rd Qu.:0.6380   3rd Qu.:0.6431   3rd Qu.:0.6500  
-#>  Max.   :1.5545   Max.   :1.5653   Max.   :1.5768   Max.   :1.5865  
-#>  NA's   :1201     NA's   :1182     NA's   :1149     NA's   :1140    
-#>    Depth.1.8        Depth.1.9         Depth.2         Depth.2.1     
-#>  Min.   :0.0004   Min.   :0.0001   Min.   :0.0000   Min.   :0.0001  
-#>  1st Qu.:0.1958   1st Qu.:0.2003   1st Qu.:0.1988   1st Qu.:0.2009  
-#>  Median :0.4306   Median :0.4374   Median :0.4422   Median :0.4473  
-#>  Mean   :0.4520   Mean   :0.4561   Mean   :0.4600   Mean   :0.4643  
-#>  3rd Qu.:0.6585   3rd Qu.:0.6645   3rd Qu.:0.6720   3rd Qu.:0.6790  
-#>  Max.   :1.5970   Max.   :1.6067   Max.   :1.6164   Max.   :1.6258  
-#>  NA's   :1125     NA's   :1107     NA's   :1089     NA's   :1073    
-#>    Depth.2.2        Depth.2.3        Depth.2.4        Depth.2.5     
-#>  Min.   :0.0003   Min.   :0.0000   Min.   :0.0000   Min.   :0.0001  
-#>  1st Qu.:0.2057   1st Qu.:0.2057   1st Qu.:0.2047   1st Qu.:0.2073  
-#>  Median :0.4518   Median :0.4568   Median :0.4584   Median :0.4606  
-#>  Mean   :0.4684   Mean   :0.4723   Mean   :0.4747   Mean   :0.4782  
-#>  3rd Qu.:0.6850   3rd Qu.:0.6909   3rd Qu.:0.6949   3rd Qu.:0.7010  
-#>  Max.   :1.6345   Max.   :1.6432   Max.   :1.6518   Max.   :1.6602  
-#>  NA's   :1059     NA's   :1044     NA's   :1023     NA's   :1007    
-#>    Depth.2.6        Depth.2.7        Depth.2.8        Depth.2.9     
-#>  Min.   :0.0002   Min.   :0.0001   Min.   :0.0001   Min.   :0.0003  
-#>  1st Qu.:0.2125   1st Qu.:0.2136   1st Qu.:0.2165   1st Qu.:0.2162  
-#>  Median :0.4658   Median :0.4704   Median :0.4740   Median :0.4797  
-#>  Mean   :0.4834   Mean   :0.4869   Mean   :0.4909   Mean   :0.4954  
-#>  3rd Qu.:0.7081   3rd Qu.:0.7128   3rd Qu.:0.7190   3rd Qu.:0.7257  
-#>  Max.   :1.6686   Max.   :1.6763   Max.   :1.6845   Max.   :1.6919  
-#>  NA's   :1000     NA's   :987      NA's   :975      NA's   :968     
-#>     Depth.3          Depth.5          Depth.7          Depth.9      
-#>  Min.   :0.0007   Min.   :0.0004   Min.   :0.0000   Min.   :0.0007  
-#>  1st Qu.:0.2207   1st Qu.:0.2477   1st Qu.:0.2692   1st Qu.:0.2971  
-#>  Median :0.4859   Median :0.5563   Median :0.6065   Median :0.6490  
-#>  Mean   :0.4999   Mean   :0.5594   Mean   :0.6065   Mean   :0.6471  
-#>  3rd Qu.:0.7317   3rd Qu.:0.8241   3rd Qu.:0.8959   3rd Qu.:0.9541  
-#>  Max.   :1.6994   Max.   :1.8265   Max.   :1.9270   Max.   :2.0114  
-#>  NA's   :961      NA's   :769      NA's   :624      NA's   :505     
-#>     Depth.11         Depth.13         Depth.15          Depth.17     
-#>  Min.   :0.0001   Min.   :0.0008   Min.   :0.00017   Min.   :0.0005  
-#>  1st Qu.:0.3157   1st Qu.:0.3330   1st Qu.:0.34998   1st Qu.:0.3639  
-#>  Median :0.6896   Median :0.7278   Median :0.76386   Median :0.7847  
-#>  Mean   :0.6842   Mean   :0.7169   Mean   :0.74752   Mean   :0.7736  
-#>  3rd Qu.:1.0131   3rd Qu.:1.0678   3rd Qu.:1.11799   3rd Qu.:1.1590  
-#>  Max.   :2.0861   Max.   :2.1529   Max.   :2.21460   Max.   :2.2719  
-#>  NA's   :406      NA's   :317      NA's   :238       NA's   :154     
-#>     Depth.19         Depth.21     
-#>  Min.   :0.0004   Min.   :0.0003  
-#>  1st Qu.:0.3685   1st Qu.:0.3804  
-#>  Median :0.8087   Median :0.8290  
-#>  Mean   :0.7973   Mean   :0.8210  
-#>  3rd Qu.:1.1973   3rd Qu.:1.2297  
-#>  Max.   :2.3255   Max.   :2.3757  
-#>  NA's   :71
-summary(Substrate.index.example.df)
-#>        x                y             Vegetation      Silt             Sand  
-#>  Min.   :732536   Min.   :4302306   Min.   :0    Min.   :  0.00   Min.   :0  
-#>  1st Qu.:732596   1st Qu.:4302440   1st Qu.:0    1st Qu.:  0.00   1st Qu.:0  
-#>  Median :732614   Median :4302560   Median :0    Median : 15.00   Median :0  
-#>  Mean   :732615   Mean   :4302545   Mean   :0    Mean   : 20.59   Mean   :0  
-#>  3rd Qu.:732638   3rd Qu.:4302660   3rd Qu.:0    3rd Qu.: 50.00   3rd Qu.:0  
-#>  Max.   :732686   Max.   :4302710   Max.   :0    Max.   :100.00   Max.   :0  
-#>   Fine.gravel         Gravel          Cobbles          Boulders     
-#>  Min.   :  0.00   Min.   :  0.00   Min.   :  0.00   Min.   :  0.00  
-#>  1st Qu.:  0.00   1st Qu.:  0.00   1st Qu.:  0.00   1st Qu.:  0.00  
-#>  Median :  0.00   Median :  0.00   Median : 50.00   Median :  0.00  
-#>  Mean   : 10.49   Mean   : 15.61   Mean   : 38.49   Mean   : 10.25  
-#>  3rd Qu.:  0.00   3rd Qu.: 20.00   3rd Qu.: 50.00   3rd Qu.:  0.00  
-#>  Max.   :100.00   Max.   :100.00   Max.   :100.00   Max.   :100.00  
-#>     Bed.rock      
-#>  Min.   :  0.000  
-#>  1st Qu.:  0.000  
-#>  Median :  0.000  
-#>  Mean   :  4.571  
-#>  3rd Qu.:  0.000  
-#>  Max.   :100.000
-summary(Cover.example.df)
-#>        x                y               Leaves      Algae        Root  
-#>  Min.   :732536   Min.   :4302306   Min.   :0   Min.   :0   Min.   :0  
-#>  1st Qu.:732596   1st Qu.:4302440   1st Qu.:0   1st Qu.:0   1st Qu.:0  
-#>  Median :732614   Median :4302560   Median :0   Median :0   Median :0  
-#>  Mean   :732615   Mean   :4302545   Mean   :0   Mean   :0   Mean   :0  
-#>  3rd Qu.:732638   3rd Qu.:4302660   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0  
-#>  Max.   :732686   Max.   :4302710   Max.   :0   Max.   :0   Max.   :0  
-#>  Aquatic.vegetation      Reed              Wood             Sand  
-#>  Min.   :0.00000    Min.   :0.00000   Min.   :0.0000   Min.   :0  
-#>  1st Qu.:0.00000    1st Qu.:0.00000   1st Qu.:0.0000   1st Qu.:0  
-#>  Median :0.00000    Median :0.00000   Median :0.0000   Median :0  
-#>  Mean   :0.01703    Mean   :0.01136   Mean   :0.4767   Mean   :0  
-#>  3rd Qu.:0.00000    3rd Qu.:0.00000   3rd Qu.:1.0000   3rd Qu.:0  
-#>  Max.   :1.00000    Max.   :1.00000   Max.   :1.0000   Max.   :0  
-#>       Rock             Cave             Shade     
-#>  Min.   :0.0000   Min.   :0.00000   Min.   :0.00  
-#>  1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.00  
-#>  Median :0.0000   Median :0.00000   Median :1.00  
-#>  Mean   :0.1612   Mean   :0.02177   Mean   :0.53  
-#>  3rd Qu.:0.0000   3rd Qu.:0.00000   3rd Qu.:1.00  
-#>  Max.   :1.0000   Max.   :1.00000   Max.   :1.00
+#>    Depth.0.2        Depth.0.3     
+#>  Min.   :0.0002   Min.   :0.0002  
+#>  1st Qu.:0.1005   1st Qu.:0.1087  
+#>  Median :0.2808   Median :0.2960  
+#>  Mean   :0.3147   Mean   :0.3321  
+#>  3rd Qu.:0.4729   3rd Qu.:0.4987  
+#>  Max.   :1.3332   Max.   :1.3676  
+#>  NA's   :1548     NA's   :1482
+summary(Substrate.index.example.df[,-c(1:2)])
+#>    Vegetation      Silt             Sand    Fine.gravel         Gravel      
+#>  Min.   :0    Min.   :  0.00   Min.   :0   Min.   :  0.00   Min.   :  0.00  
+#>  1st Qu.:0    1st Qu.:  0.00   1st Qu.:0   1st Qu.:  0.00   1st Qu.:  0.00  
+#>  Median :0    Median : 15.00   Median :0   Median :  0.00   Median :  0.00  
+#>  Mean   :0    Mean   : 20.59   Mean   :0   Mean   : 10.49   Mean   : 15.61  
+#>  3rd Qu.:0    3rd Qu.: 50.00   3rd Qu.:0   3rd Qu.:  0.00   3rd Qu.: 20.00  
+#>  Max.   :0    Max.   :100.00   Max.   :0   Max.   :100.00   Max.   :100.00  
+#>     Cobbles          Boulders         Bed.rock      
+#>  Min.   :  0.00   Min.   :  0.00   Min.   :  0.000  
+#>  1st Qu.:  0.00   1st Qu.:  0.00   1st Qu.:  0.000  
+#>  Median : 50.00   Median :  0.00   Median :  0.000  
+#>  Mean   : 38.49   Mean   : 10.25   Mean   :  4.571  
+#>  3rd Qu.: 50.00   3rd Qu.:  0.00   3rd Qu.:  0.000  
+#>  Max.   :100.00   Max.   :100.00   Max.   :100.000
+summary(Cover.example.df[,-c(1:2)])
+#>      Leaves      Algae        Root   Aquatic.vegetation      Reed        
+#>  Min.   :0   Min.   :0   Min.   :0   Min.   :0.00000    Min.   :0.00000  
+#>  1st Qu.:0   1st Qu.:0   1st Qu.:0   1st Qu.:0.00000    1st Qu.:0.00000  
+#>  Median :0   Median :0   Median :0   Median :0.00000    Median :0.00000  
+#>  Mean   :0   Mean   :0   Mean   :0   Mean   :0.01703    Mean   :0.01136  
+#>  3rd Qu.:0   3rd Qu.:0   3rd Qu.:0   3rd Qu.:0.00000    3rd Qu.:0.00000  
+#>  Max.   :0   Max.   :0   Max.   :0   Max.   :1.00000    Max.   :1.00000  
+#>       Wood             Sand        Rock             Cave             Shade     
+#>  Min.   :0.0000   Min.   :0   Min.   :0.0000   Min.   :0.00000   Min.   :0.00  
+#>  1st Qu.:0.0000   1st Qu.:0   1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.00  
+#>  Median :0.0000   Median :0   Median :0.0000   Median :0.00000   Median :1.00  
+#>  Mean   :0.4767   Mean   :0   Mean   :0.1612   Mean   :0.02177   Mean   :0.53  
+#>  3rd Qu.:1.0000   3rd Qu.:0   3rd Qu.:0.0000   3rd Qu.:0.00000   3rd Qu.:1.00  
+#>  Max.   :1.0000   Max.   :0   Max.   :1.0000   Max.   :1.00000   Max.   :1.00
 ```
 
 The function `SubstrateIndex` computes the substrate index as a weighted
@@ -918,14 +769,23 @@ Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data
 
 ``` r
 
-head(Predictions)
-#>      ABCKQ ABCKP ABCKU ABCLQ ABCMN ABCMV ABCNR
-#> [1,]    NA    NA    NA    NA    NA    NA    NA
-#> [2,]    NA    NA    NA    NA    NA    NA    NA
-#> [3,]    NA    NA    NA    NA    NA    NA    NA
-#> [4,]    NA    NA    NA    NA    NA    NA    NA
-#> [5,]    NA    NA    NA    NA    NA    NA    NA
-#> [6,]    NA    NA    NA    NA    NA    NA    NA
+summary(Predictions)
+#>      ABCKQ            ABCKP            ABCKU            ABCLQ       
+#>  Min.   :0.0000   Min.   :0.0000   Min.   :0.1682   Min.   :0.0164  
+#>  1st Qu.:0.2603   1st Qu.:0.0663   1st Qu.:0.3933   1st Qu.:0.4832  
+#>  Median :0.7912   Median :0.4358   Median :0.5730   Median :0.6517  
+#>  Mean   :0.5840   Mean   :0.4268   Mean   :0.5380   Mean   :0.5834  
+#>  3rd Qu.:0.8149   3rd Qu.:0.7942   3rd Qu.:0.6585   3rd Qu.:0.6684  
+#>  Max.   :0.9403   Max.   :0.9420   Max.   :0.9192   Max.   :0.9749  
+#>  NA's   :1917     NA's   :1917     NA's   :1917     NA's   :1917    
+#>      ABCMN            ABCMV            ABCNR       
+#>  Min.   :0.0434   Min.   :0.0000   Min.   :0.0000  
+#>  1st Qu.:0.3367   1st Qu.:0.1098   1st Qu.:0.0000  
+#>  Median :0.5309   Median :0.3065   Median :0.6000  
+#>  Mean   :0.4648   Mean   :0.3356   Mean   :0.5188  
+#>  3rd Qu.:0.6013   3rd Qu.:0.5514   3rd Qu.:1.0000  
+#>  Max.   :0.9868   Max.   :0.9271   Max.   :1.0000  
+#>  NA's   :1917     NA's   :1917     NA's   :1917
 ```
 
 ``` r
