@@ -298,7 +298,7 @@ ListSelectedCoverTypes(Species = "Salmo trutta")
 
 <br/>
 
-### Sensitivity analysis
+### PlotHabitatSuitabilityModels - Carry out sensitivity analyses
 
 The package includes a number of models (i.e., 797) and species (i.e.,
 43) of several size classes and activities. Among other things, the
@@ -769,13 +769,6 @@ Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data
 
 ``` r
 
-pairs(Predictions)
-```
-
-<img src="man/figures/README-plot and compare predicted microhabitat suitability-1.png" width="100%" />
-
-``` r
-
 head(Predictions)
 #>      ABCKQ ABCKP ABCKU ABCLQ ABCMN ABCMV ABCNR
 #> [1,]    NA    NA    NA    NA    NA    NA    NA
@@ -784,6 +777,15 @@ head(Predictions)
 #> [4,]    NA    NA    NA    NA    NA    NA    NA
 #> [5,]    NA    NA    NA    NA    NA    NA    NA
 #> [6,]    NA    NA    NA    NA    NA    NA    NA
+```
+
+``` r
+pairs(Predictions)
+```
+
+<img src="man/figures/README-plot different predictions-1.png" width="100%" />
+
+``` r
 
 library(sf)
 #> Warning: package 'sf' was built under R version 4.1.3
@@ -820,7 +822,7 @@ Size <- paste0(" - ", Selected.size)
 title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, adj = 0.05, cex.main = 2)
 ```
 
-<img src="man/figures/README-plot and compare predicted microhabitat suitability-2.png" width="100%" />
+<img src="man/figures/README-plot and compare predicted microhabitat suitability-1.png" width="100%" />
 
 ``` r
 

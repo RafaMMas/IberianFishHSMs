@@ -84,7 +84,7 @@ Habitat.assessment <- sapply(Selected.models$Codes, function(current.model){
   }
 })
 
-Habitat.assessment
+setNames(Habitat.assessment, Selected.models$Models)
 
 }
 

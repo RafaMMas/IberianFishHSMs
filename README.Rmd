@@ -112,7 +112,7 @@ ListSelectedCoverTypes(Species = "Salmo trutta")
 
 <br/>
 
-### Sensitivity analysis
+### PlotHabitatSuitabilityModels - Carry out sensitivity analyses
 
 The package includes a number of models (i.e., 797) and species (i.e., 43) of several size classes and activities. Among other things, the available models vary by modelling technique, sampling site and the aggregation of data from different sites. The variable `Default` obtained with `ListModels` indicates which models are recommended because it was considered they performed and generalised better and/or were developed with data covering a large range of the microhabitat variables. Nevertheless, users can select other models when they consider it preferable. For example, when they are going to evaluate the microhabitat suitability in the basin where data for an alternative model was collected. In addition to `ListSelectedCoverTypes`, users can carry out sensitivity analyses to compare the predictions of the different available models. This allows inspecting their performance before selecting any alternative model or set of models. The sensitivity analysis can be carried out employing the function `PlotHabitatSuitabilityModels` as follows:
 
@@ -181,11 +181,17 @@ Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data
 
 ```
 
-```{r plot and compare predicted microhabitat suitability, fig.width = 8, fig.height = 14, dpi=800}
-
-pairs(Predictions)
+```{r}
 
 head(Predictions)
+
+```
+
+```{r plot different predictions, fig.width = 14, fig.height = 14, dpi=800}
+pairs(Predictions)
+```
+
+```{r plot and compare predicted microhabitat suitability, fig.width = 8, fig.height = 14, dpi=800}
 
 library(sf)
 
