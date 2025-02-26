@@ -25,7 +25,7 @@
 #'
 #' @export
 #'
-#' @examples#'
+#' @examples
 #' data("Velocity.example.df")
 #' data("Depth.example.df")
 #' data("Substrate.index.example.df")
@@ -47,6 +47,9 @@
 #'
 #'summary(Predictions)
 #'
+#' @import nnet
+#' @import e1071
+#' @import ranger
 PredictHabitatSuitability <- function(Selected.models = NULL, data = NULL, HSC.aggregation = "geometric"){ # , probability = TRUE
 
 Habitat.assessment <- sapply(Selected.models$Codes, function(current.model){
@@ -87,12 +90,12 @@ Habitat.assessment <- sapply(Selected.models$Codes, function(current.model){
 
   } else if(c.model$Model.type == "NNET"){
 
-    as.vector(nnet:::predict.nnet(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
+    as.vector(predict(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
 
   } else if(c.model$Model.type == "RF"){
 
     Predictions <- rep(NA,nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
-    Predictions[complete.cases(microhabitat.characteristics)] <- ranger:::predict.ranger(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics),])$predictions[,2]
+    Predictions[complete.cases(microhabitat.characteristics)] <- predict(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics),])$predictions[,2]
     Predictions
 
   } else {

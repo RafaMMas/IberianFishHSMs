@@ -219,6 +219,13 @@ summary(Predictions)
 
 ```
 
+```{r pairplot names, echo = FALSE}
+
+colnames(Predictions) <- gsub(x = colnames(Predictions), pattern = "\\.", replacement = "\n")
+
+```
+
+
 ```{r pairplot, fig.width = 14, fig.height = 14, dpi=800}
 pairs(Predictions)
 ```

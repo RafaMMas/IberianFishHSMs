@@ -39,7 +39,6 @@ data frame with the habitat assessment. It contains one column per selected mode
 This function uses the output of \code{ListModels} to load the selected models and evaluate a dataset with the
 }
 \examples{
-#'
 data("Velocity.example.df")
 data("Depth.example.df")
 data("Substrate.index.example.df")
@@ -56,7 +55,8 @@ Depth = Depth.example.df$Depth.0.05,
 Substrate.index = Substrate.index,
 Cover.example.df[,-c(1:2)])
 
-Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data = Hydraulics, HSC.aggregation = "geometric")
+Predictions <- PredictHabitatSuitability(Selected.models = Selected.models,
+data = Hydraulics, HSC.aggregation = "geometric")
 
 summary(Predictions)
 

@@ -24,6 +24,8 @@
 #'
 #' @export
 #'
+#' @import nnet
+#' @import ranger
 PlotHabitatSuitabilityModels <- function(Selected.model = NULL, data = NULL, n.points = 50, Quantiles = TRUE, Layout = c(2, 2), HSC.aggregation = "geometric"){
 
   if(is.null(data))
@@ -78,6 +80,9 @@ PlotHabitatSuitabilityModels <- function(Selected.model = NULL, data = NULL, n.p
 #' @returns suitability betwen 0 and 1.
 #'
 #' @export
+#'
+#' @import nnet
+#' @import ranger
 PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggregation = "geometric"){
 
   Habitat.assessment <- sapply(Selected.model, function(current.model){
@@ -116,12 +121,12 @@ PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggre
 
     } else if(c.model$Model.type == "NNET"){
 
-      as.vector(nnet:::predict.nnet(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
+      as.vector(predict(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
 
     } else if(c.model$Model.type == "RF"){
 
       Predictions <- rep(NA,nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
-      Predictions[complete.cases(microhabitat.characteristics)] <- ranger:::predict.ranger(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics),])$predictions[,2]
+      Predictions[complete.cases(microhabitat.characteristics)] <- predict(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics),])$predictions[,2]
       Predictions
 
     } else {
