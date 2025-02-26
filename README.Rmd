@@ -15,15 +15,13 @@ knitr::opts_chunk$set(
 )
 ```
 
-# IberianFishHSMs 
-
 <!-- badges: start -->
-
-`r lifecycle::badge("experimental")`
-
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
 
-IberianFishHSMs: Compilation of models and tools to evaluate the habitat suitability at the microhabitat scale for Iberian freshwater fish species. The modelling approaches include sets of Habitat Suitability Curves (HSCs), Artificial Neural Networks (Multilayer Perceptrons, ANN-MLPs), Random Forests (RFs), Generalised Additive Models (GAMs), and Support Vector Machines (SVMs), all based on empirical data collected across several river basins in the Iberian Peninsula. The HSCs have been reviewed by an expert panel, which coauthored the package. The package also compiles sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) based on expert knowledge, which was gathered through online forms. Functions for evaluating habitat suitability from hydraulic simulations and for plotting the modelled suitability are also included. An thorough example of the capabilitites of the packages appears below. The package includes 797 habitat suitability models for 43 species and up to 4 size classes (Large, Medium, Small, Very small) and spawning (for *Salmo trutta* and *Salmo salar*).
+# IberianFishHSMs 
+
+IberianFishHSMs: Compilation of models and tools to evaluate the habitat suitability at the microhabitat scale for Iberian freshwater fish species. The modelling approaches include sets of Habitat Suitability Curves (HSCs), Artificial Neural Networks (Multilayer Perceptrons, ANN-MLPs), Random Forests (RFs), Generalised Additive Models (GAMs), and Support Vector Machines (SVMs), all based on empirical data collected across several river basins in the Iberian Peninsula. The HSCs have been reviewed by an expert panel, which co-authored the package. The package also compiles sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) based on expert knowledge, which was gathered through on-line forms. Functions for evaluating the habitat suitability from hydraulic simulations and for plotting the modelled suitability are also included. A thorough example of the capabilities of the packages appears below. The package includes 797 microhabitat suitability models for 43 species and up to 4 size classes (Large, Medium, Small, Very small) and spawning suitability (only for *Salmo trutta* and *Salmo salar*).
 
 <br/>
 
@@ -31,17 +29,29 @@ IberianFishHSMs: Compilation of models and tools to evaluate the habitat suitabi
 
 This package was developed by:
 
-- **Rafael Muñoz-Mas** (Author, Creator and Maintainer) - rafa.m.mas@gmail.com
-- **Carlos Alonso** (Contributor)
-- **Enric Aparicio Manau** (Contributor)
-- **Fernando Cobo Gradín** (Contributor)
-- **Gustavo González Fernández** (Contributor)
-- **Javier Gortázar** (Contributor)
-- **Francisco Martínez-Capel** (Contributor)
-- **Francisco J. Oliva-Paterna** (Contributor)
-- **Jose Prenda** (Contributor)
-- **Jose Maria Santos** (Contributor)
-- **Rafael Miranda Ferreiro** (Contributor)
+- **Rafael Muñoz-Mas**<sup>1</sup> (Author, Creator and Maintainer) - rafa.m.mas@gmail.com
+- **Carlos Alonso**<sup>2</sup> (Contributor)
+- **Enric Aparicio Manau**<sup>3</sup> (Contributor)
+- **Fernando Cobo Gradín**<sup>4</sup> (Contributor)
+- **Gustavo González Fernández**<sup>5</sup> (Contributor)
+- **Javier Gortázar**<sup>6</sup> (Contributor)
+- **Francisco Martínez-Capel**<sup>7</sup> (Contributor)
+- **Francisco J. Oliva-Paterna**<sup>8</sup> (Contributor)
+- **Jose Prenda**<sup>9</sup> (Contributor)
+- **Jose Maria Santos**<sup>10</sup> (Contributor)
+- **Rafael Miranda Ferreiro**<sup>11</sup> (Contributor)
+
+<sup>1</sup> Tragsatec, Carrer Ramon Gordillo 7 - 46010 València, Spain.
+<sup>2</sup>
+<sup>3</sup> GRECO, Institute of Aquatic Ecology, University of Girona, E-17071 Girona.
+<sup>4</sup> Laboratorio de Hidrobiologia, Departamento de Zoología, Genetica y Antropología Física. Facultad de Biología. Universidad de Santiago de Compostela, 15782 Santiago de Compostela, Spain.
+<sup>5</sup> Icthios Gestión Ambiental SL. info@icthios.es.
+<sup>6</sup> ECOHIDRÁULICA, S.L. C/ Villamanín 16, Madrid 28011.
+<sup>7</sup> Institut d'Investigació per a la Gestió Integrada de Zones Costaneres (IGIC), Universitat Politècnica de València, C/Paranimf, 1, 46730 Gandia, València, Spain.
+<sup>8</sup> Departamento de Zoología y Antropología Física. 30100. Universidad de Murcia. Murcia.
+<sup>9</sup> Dpto. de Ciencias Integradas. Universidad de Huelva.
+<sup>10</sup> Forest Research Centre, Associate Laboratory TERRA, School of Agriculture, University of Lisbon.
+<sup>11</sup> Universidad de Navarra, Instituto de Biodiversidad y Medioambiente (BIOMA), 31008 Pamplona, Navarra, Spain.
 
 <br/>
 
@@ -58,7 +68,7 @@ devtools::install_github("RafaMMas/IberianFishHSMs")
 
 ## Example
 
-IberianFishHSMs includes examples that illustrate the package's capabilities and the general workflow for predicting habitat suitability using outputs from hydraulic simulations and field data. Fiel data includes the substrate and cover (shelter) distribution across the study site, by pattch, pixel or cell.
+The following example illustrates the capabilities of IberianFishHSMs and the general workflow for predicting microhabitat suitability using outputs from hydraulic simulations and field data. Field data includes the substrate and cover (shelter) distribution across the study site, by patch, pixel or cell. The data used in this example is available from the package.
 
 ```{r load package, echo = TRUE}
 library(IberianFishHSMs)
@@ -68,13 +78,19 @@ library(IberianFishHSMs)
 
 ### ListModels - List available models and their key characteristics.
 
-`ListModels` allows inpecting the available models. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. This function also provides de Codes to internally call the habitat suitability models during the habitat evaluation. The output of this function also renders a summary of their main characteristics, including sample sizes, and serveal perfomrance criteria.   
+`ListModels` allows inspecting the available models. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. This function also provides de Codes to internally call the microhabitat suitability models during the habitat evaluation. The output of this function also renders a summary of their main characteristics, including sample sizes, and several performance criteria for those models optimised through cross-validation.    
 
 ```{r ListModels, echo = TRUE}
 ListModels(Species = "Salmo trutta", verbose = F)
 ```
 
-There exist an interaction between the training data and the modelling technique, which can vary variable effects and importance [@Eugster2014]. By means of cross-validation, during the development of the habitat suitbility models we carried out a variable selection approach discarding those cover types that not improved model performance. This approach lead to a different sets of relevant cover types in each model. The function `ListSelectedCoverTypes` allows inspecting the selcted cover types for each model. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. When evaluating the habitat suitability `PredictHabitatSuitability` selects and aggregates the appropriate cover types internally and this functions does not need to be called.
+`ListModels` output values can be use directly within to carry out habitat evaluations. In particula, `$Codes` are the names used to store internally the available microhabitat suitability models.  
+
+<br/>
+
+### ListSelectedCoverTypes - List selected cover types in each microhabitat suitability model.
+
+There exist an interaction between the training data and the modelling technique, which can vary variable effects and importance [@Eugster2014]. By means of cross-validation, during the development of the microhabitat suitability models we carried out a variable selection approach discarding those cover types that not improved model performance. This approach lead to different sets of relevant cover types in each model. The function `ListSelectedCoverTypes` allows inspecting the selected cover types for each model. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. When evaluating the microhabitat suitability, `PredictHabitatSuitability` selects and aggregates the appropriate cover types internally. This function does not need to be called explicitly.
 
 ```{r ListSelectedCoverTypes, echo = TRUE}
 
@@ -86,7 +102,7 @@ ListSelectedCoverTypes(Species = "Salmo trutta")
 
 ### Sensitivity analysis
 
-The package includes a number of models (i.e., 797) and species (i.e., 43) several size classes and activities. Among other things, the available models vary by modelling technique, sampling site and the aggregation of data from different sites. The variable `Default` indicates which models are recommended becuase it was considered they generalised better but users can select other models when they consider it adequate. For example, when they are going to evalaute the habitat suitability in the basin where data for an alternative models was colected. In adiition to `ListSelectedCoverTypes`, users can carry out sensitivity analyses to compare the predictions of the different alternatives before selecting any particular set of models. The sensitivity analysis can be carried out employing function `Plot Habitat Suitability Models` as follows:
+The package includes a number of models (i.e., 797) and species (i.e., 43) of several size classes and activities. Among other things, the available models vary by modelling technique, sampling site and the aggregation of data from different sites. The variable `Default` obtained with `ListModels` indicates which models are recommended because it was considered they generalised better. Nevertheless, users can select other models when they consider it preferable. For example, when they are going to evaluate the microhabitat suitability in the basin where data for an alternative model was collected. In addition to `ListSelectedCoverTypes`, users can carry out sensitivity analyses to compare the predictions of the different available models to inspect their performance before selecting any alternative model or set of models. The sensitivity analysis can be carried out employing the function `Plot Habitat Suitability Models` as follows:
 
 ```{r, fig.width = 8, fig.height = 5, dpi=800}
 
@@ -100,11 +116,13 @@ PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 
 **Figure 1** - Sensitivity analysis (i.e., partial dependence plots) for *Pseudochondrostoma polylepis* large. The figure shows the results for for the Fuzzy Rule-Based System to evaluate the microhabitat suitability during Spring, Summer, and Autumn.
 
+This function generates partial dependence-like plots for microhabitat suitability models based on the provided data and selected model [@Friedman2001]. Partial dependence plots are created by varying one variable over a range of values while averaging the model's predictions over all the other features. This method isolates the effect of that single variable on the outcome, helping you see its overall effect.
+
 <br/>
 
 ### Habitat suitability prediction
 
-Habitat suitability predictions are carried out based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluate microhabitats (i.e. pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data.
+Habitat suitability predictions are carried out based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluated microhabitats (i.e. pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data.
 
 ``` {r Habitat assessment}
 data("Velocity.example.df")
@@ -119,7 +137,7 @@ summary(Cover.example.df)
 
 ```
 
-The function `SubstrateIndex` computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%). The substrate classes originally used corresponded to a simplification of the the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand (62 µm > Ø ≤ 2 mm), fine gravel (2 > Ø ≤ 8 mm), gravel (8 > Ø ≤ 64 mm), cobbles (64 > Ø ≤ 256 mm), boulders (Ø > 256 mm) and bedrock [see e.g., @Munoz-Mas2018 or @Munoz-Mas2017]. The package includes som examples to ilustrate the structure of the input files.
+The function `SubstrateIndex` computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%). The substrate classes originally used corresponded to a simplification of the the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand (62 µm > Ø ≤ 2 mm), fine gravel (2 > Ø ≤ 8 mm), gravel (8 > Ø ≤ 64 mm), cobbles (64 > Ø ≤ 256 mm), boulders (Ø > 256 mm) and bedrock [see e.g., @Munoz-Mas2018 or @Munoz-Mas2017]. The package includes some examples to illustrate the structure of the input files.
 
 ```{r SubstrateIndex, echo = TRUE}
 data(Substrate.index.example.df)
@@ -151,11 +169,11 @@ Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data
 
 ```
 
-```{r plot anc compare predicted microhabitat suitability}
+```{r plot and compare predicted microhabitat suitability, fig.width = 8, fig.height = 14, dpi=800}
 
 pairs(Predictions)
 
-Predictions
+head(Predictions)
 
 library(sf)
 

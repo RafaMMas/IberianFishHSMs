@@ -1,4 +1,4 @@
-#' List selected cover types in each habitat suitability model.
+#' List selected cover types in each microhabitat suitability model.
 #'
 #' The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin.
 #'

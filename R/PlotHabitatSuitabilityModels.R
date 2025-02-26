@@ -1,6 +1,6 @@
 #' Plot Habitat Suitability Models
 #'
-#' This function generates partial dependence-like plots for habitat suitability models based on the provided data and selected model.
+#' This function generates partial dependence-like plots for microhabitat suitability models based on the provided data and selected model.
 #'
 #' @param Selected.model A character string or object representing the selected habitat suitability model. It should be among the `Codes` obtained with `ListModels` Default is `NULL`.
 #' @param data A data frame containing the data to be used for plotting the habitat suitability models. Default is `NULL`. This dataset must contain: "Velocity", "Depth", "Substrate.index" and "Cover".

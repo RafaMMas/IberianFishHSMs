@@ -2,6 +2,23 @@
 #'
 #' @param object
 #' @param newdata
+#'
+#' @returns
+#' @export
+#'
+#' @examples
+PredictSVMensemble.mean.votes <- function(object, newdata)
+{
+  Predictions <- sapply(object, function(c.svm){
+    return(as.numeric(e1071:::predict.svm(c.svm, newdata, probability = FALSE))-1)
+  })
+  rowMeans(Predictions)
+}
+
+#' Title
+#'
+#' @param object
+#' @param newdata
 #' @param probability
 #'
 #' @returns
@@ -40,22 +57,4 @@ PredictSVMensemble.probability <- function(object, newdata)
   })
   rowMeans(Predictions)
 }
-
-#' Title
-#'
-#' @param object
-#' @param newdata
-#'
-#' @returns
-#' @export
-#'
-#' @examples
-PredictSVMensemble.mean.votes <- function(object, newdata)
-{
-  Predictions <- sapply(object, function(c.svm){
-    return(as.numeric(e1071:::predict.svm(c.svm, newdata, probability = FALSE))-1)
-  })
-  rowMeans(Predictions)
-}
-
 
