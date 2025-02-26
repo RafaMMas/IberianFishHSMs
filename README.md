@@ -102,8 +102,10 @@ performance criteria for those models optimised through
 cross-validation.
 
 ``` r
-ListModels(Species = "Salmo trutta", verbose = F)
-#> $Current.summary.table
+Selected.models <- ListModels(Species = "Salmo trutta", verbose = F)
+
+## General characteristics
+Selected.models$Current.summary.table[,1:15]
 #>      Code                                Model           River River.short
 #> 603 ABELZ   Salmo.trutta.GAM.Large.Curueno.All Curueño (Douro)     Curueno
 #> 604 ABEMQ   Salmo.trutta.HSC.Large.Curueno.All Curueño (Douro)     Curueno
@@ -152,55 +154,62 @@ ListModels(Species = "Salmo trutta", verbose = F)
 #> 615 Winter; Spring; Summer; Autumn                 All Field survey         385
 #> 616 Winter; Spring; Summer; Autumn                 All Field survey         385
 #> 617 Winter; Spring; Summer; Autumn                 All Field survey         385
-#>     N.absences N.interviews.or.studies True.positive False.positive
-#> 603        896                      NA            24            215
-#> 604        896                      NA            NA             NA
-#> 605        896                      NA            24            106
-#> 606        896                      NA            24            106
-#> 607        896                      NA            22            157
-#> 608        839                      NA            70            218
-#> 609        839                      NA            NA             NA
-#> 610        839                      NA            75            197
-#> 611        839                      NA            75            197
-#> 612        839                      NA            68            200
-#> 613        535                      NA           275            210
-#> 614        535                      NA            NA             NA
-#> 615        535                      NA           286            211
-#> 616        535                      NA           286            211
-#> 617        535                      NA           262            179
-#>     True.negative False.negative Sensitivity Specificity   TSS
-#> 603           681              0       1.000       0.760 0.760
-#> 604            NA             NA          NA          NA    NA
-#> 605           790              0       1.000       0.882 0.882
-#> 606           790              0       1.000       0.882 0.882
-#> 607           739              2       0.917       0.825 0.741
-#> 608           621             11       0.864       0.740 0.604
-#> 609            NA             NA          NA          NA    NA
-#> 610           642              6       0.926       0.765 0.691
-#> 611           642              6       0.926       0.765 0.691
-#> 612           639             13       0.840       0.762 0.601
-#> 613           325            110       0.714       0.607 0.322
-#> 614            NA             NA          NA          NA    NA
-#> 615           324             99       0.743       0.606 0.348
-#> 616           324             99       0.743       0.606 0.348
-#> 617           356            123       0.681       0.665 0.346
-#>     Balanced.accuracy
-#> 603             0.880
-#> 604                NA
-#> 605             0.941
-#> 606             0.941
-#> 607             0.871
-#> 608             0.802
-#> 609                NA
-#> 610             0.846
-#> 611             0.846
-#> 612             0.801
-#> 613             0.661
-#> 614                NA
-#> 615             0.674
-#> 616             0.674
-#> 617             0.673
-#> 
+#>     N.absences N.interviews.or.studies
+#> 603        896                      NA
+#> 604        896                      NA
+#> 605        896                      NA
+#> 606        896                      NA
+#> 607        896                      NA
+#> 608        839                      NA
+#> 609        839                      NA
+#> 610        839                      NA
+#> 611        839                      NA
+#> 612        839                      NA
+#> 613        535                      NA
+#> 614        535                      NA
+#> 615        535                      NA
+#> 616        535                      NA
+#> 617        535                      NA
+
+## Performance
+
+Selected.models$Current.summary.table[,16:23]
+#>     True.positive False.positive True.negative False.negative Sensitivity
+#> 603            24            215           681              0       1.000
+#> 604            NA             NA            NA             NA          NA
+#> 605            24            106           790              0       1.000
+#> 606            24            106           790              0       1.000
+#> 607            22            157           739              2       0.917
+#> 608            70            218           621             11       0.864
+#> 609            NA             NA            NA             NA          NA
+#> 610            75            197           642              6       0.926
+#> 611            75            197           642              6       0.926
+#> 612            68            200           639             13       0.840
+#> 613           275            210           325            110       0.714
+#> 614            NA             NA            NA             NA          NA
+#> 615           286            211           324             99       0.743
+#> 616           286            211           324             99       0.743
+#> 617           262            179           356            123       0.681
+#>     Specificity   TSS Balanced.accuracy
+#> 603       0.760 0.760             0.880
+#> 604          NA    NA                NA
+#> 605       0.882 0.882             0.941
+#> 606       0.882 0.882             0.941
+#> 607       0.825 0.741             0.871
+#> 608       0.740 0.604             0.802
+#> 609          NA    NA                NA
+#> 610       0.765 0.691             0.846
+#> 611       0.765 0.691             0.846
+#> 612       0.762 0.601             0.801
+#> 613       0.607 0.322             0.661
+#> 614          NA    NA                NA
+#> 615       0.606 0.348             0.674
+#> 616       0.606 0.348             0.674
+#> 617       0.665 0.346             0.673
+
+## Models and Codes
+
+Selected.models[2:3]
 #> $Models
 #>  [1] "Salmo.trutta.GAM.Large.Curueno.All"  
 #>  [2] "Salmo.trutta.HSC.Large.Curueno.All"  

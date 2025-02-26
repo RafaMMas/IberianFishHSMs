@@ -81,10 +81,22 @@ library(IberianFishHSMs)
 `ListModels` allows inspecting the available models. The queries can be categorized by Species, Size, River, Model.type, Sampled.season, Valid.season, and/or Data.origin. This function also provides de Codes to internally call the microhabitat suitability models during the habitat evaluation. The output of this function also renders a summary of their main characteristics, including sample sizes, and several performance criteria for those models optimised through cross-validation.    
 
 ```{r ListModels, echo = TRUE}
-ListModels(Species = "Salmo trutta", verbose = F)
+Selected.models <- ListModels(Species = "Salmo trutta", verbose = F)
+
+## General characteristics
+Selected.models$Current.summary.table[,1:15]
+
+## Performance
+
+Selected.models$Current.summary.table[,16:23]
+
+## Models and Codes
+
+Selected.models[2:3]
+
 ```
 
-`ListModels` output values can be use directly within to carry out habitat evaluations. In particula, `$Codes` are the names used to store internally the available microhabitat suitability models.  
+`ListModels` output values can be use directly within  to carry out habitat evaluations. In particula, `$Codes` are the names used to store internally the available microhabitat suitability models.  
 
 <br/>
 
