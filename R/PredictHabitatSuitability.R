@@ -42,7 +42,8 @@
 #'Substrate.index = Substrate.index,
 #'Cover.example.df[,-c(1:2)])
 #'
-#'Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data = Hydraulics, HSC.aggregation = "geometric")
+#'Predictions <- PredictHabitatSuitability(Selected.models = Selected.models,
+#'data = Hydraulics, HSC.aggregation = "geometric")
 #'
 #'summary(Predictions)
 #'

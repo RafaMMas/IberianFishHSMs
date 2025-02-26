@@ -482,10 +482,10 @@ par(mar = c(4,4,1,1), bty = "n")
 plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
 ```
 
-<img src="man/figures/README-plot with specific package capabilitites-1.png" width="100%" />
-**Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta*
-Large obtained with data collected in the Curueño River (Douro) and
-valid all year round.
+<img src="man/figures/README-GAMplot-1.png" width="100%" /> **Figure
+2** - Plot of the Generalised Additive Model for *Salmo trutta* Large
+obtained with data collected in the Curueño River (Douro) and valid all
+year round.
 
 The different option to, for example, plot each models depend on each
 specific package and in some cases suchs the SVMs obtained with `e1071`
@@ -770,29 +770,69 @@ Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data
 ``` r
 
 summary(Predictions)
-#>      ABCKQ            ABCKP            ABCKU            ABCLQ       
-#>  Min.   :0.0000   Min.   :0.0000   Min.   :0.1682   Min.   :0.0164  
-#>  1st Qu.:0.2603   1st Qu.:0.0663   1st Qu.:0.3933   1st Qu.:0.4832  
-#>  Median :0.7912   Median :0.4358   Median :0.5730   Median :0.6517  
-#>  Mean   :0.5840   Mean   :0.4268   Mean   :0.5380   Mean   :0.5834  
-#>  3rd Qu.:0.8149   3rd Qu.:0.7942   3rd Qu.:0.6585   3rd Qu.:0.6684  
-#>  Max.   :0.9403   Max.   :0.9420   Max.   :0.9192   Max.   :0.9749  
-#>  NA's   :1917     NA's   :1917     NA's   :1917     NA's   :1917    
-#>      ABCMN            ABCMV            ABCNR       
-#>  Min.   :0.0434   Min.   :0.0000   Min.   :0.0000  
-#>  1st Qu.:0.3367   1st Qu.:0.1098   1st Qu.:0.0000  
-#>  Median :0.5309   Median :0.3065   Median :0.6000  
-#>  Mean   :0.4648   Mean   :0.3356   Mean   :0.5188  
-#>  3rd Qu.:0.6013   3rd Qu.:0.5514   3rd Qu.:1.0000  
-#>  Max.   :0.9868   Max.   :0.9271   Max.   :1.0000  
-#>  NA's   :1917     NA's   :1917     NA's   :1917
+#>  Cobitis.paludica.FRBS.Large.EKorL.Spring.Summer.Autumn
+#>  Min.   :0.0000                                        
+#>  1st Qu.:0.2603                                        
+#>  Median :0.7912                                        
+#>  Mean   :0.5840                                        
+#>  3rd Qu.:0.8149                                        
+#>  Max.   :0.9403                                        
+#>  NA's   :1917                                          
+#>  Cobitis.paludica.FRBS.Large.EKorL.Autumn.Winter.Spring
+#>  Min.   :0.0000                                        
+#>  1st Qu.:0.0663                                        
+#>  Median :0.4358                                        
+#>  Mean   :0.4268                                        
+#>  3rd Qu.:0.7942                                        
+#>  Max.   :0.9420                                        
+#>  NA's   :1917                                          
+#>  Cobitis.paludica.GAM.Large.Estena.and.Yeguas.All
+#>  Min.   :0.1682                                  
+#>  1st Qu.:0.3933                                  
+#>  Median :0.5730                                  
+#>  Mean   :0.5380                                  
+#>  3rd Qu.:0.6585                                  
+#>  Max.   :0.9192                                  
+#>  NA's   :1917                                    
+#>  Cobitis.paludica.HSC.Large.Estena.and.Yeguas.All
+#>  Min.   :0.0164                                  
+#>  1st Qu.:0.4832                                  
+#>  Median :0.6517                                  
+#>  Mean   :0.5834                                  
+#>  3rd Qu.:0.6684                                  
+#>  Max.   :0.9749                                  
+#>  NA's   :1917                                    
+#>  Cobitis.paludica.NNET.Large.Estena.and.Yeguas.All
+#>  Min.   :0.0434                                   
+#>  1st Qu.:0.3367                                   
+#>  Median :0.5309                                   
+#>  Mean   :0.4648                                   
+#>  3rd Qu.:0.6013                                   
+#>  Max.   :0.9868                                   
+#>  NA's   :1917                                     
+#>  Cobitis.paludica.RF.Large.Estena.and.Yeguas.All
+#>  Min.   :0.0000                                 
+#>  1st Qu.:0.1098                                 
+#>  Median :0.3065                                 
+#>  Mean   :0.3356                                 
+#>  3rd Qu.:0.5514                                 
+#>  Max.   :0.9271                                 
+#>  NA's   :1917                                   
+#>  Cobitis.paludica.SVM.Large.Estena.and.Yeguas.All
+#>  Min.   :0.0000                                  
+#>  1st Qu.:0.0000                                  
+#>  Median :0.6000                                  
+#>  Mean   :0.5188                                  
+#>  3rd Qu.:1.0000                                  
+#>  Max.   :1.0000                                  
+#>  NA's   :1917
 ```
 
 ``` r
 pairs(Predictions)
 ```
 
-<img src="man/figures/README-plot different predictions-1.png" width="100%" />
+<img src="man/figures/README-pairplot-1.png" width="100%" />
 
 ``` r
 
@@ -831,7 +871,7 @@ Size <- paste0(" - ", Selected.size)
 title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, adj = 0.05, cex.main = 2)
 ```
 
-<img src="man/figures/README-plot and compare predicted microhabitat suitability-1.png" width="100%" />
+<img src="man/figures/README-compareplot-1.png" width="100%" />
 
 ``` r
 

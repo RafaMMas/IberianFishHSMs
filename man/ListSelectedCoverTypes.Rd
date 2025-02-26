@@ -2,7 +2,7 @@
 % Please edit documentation in R/ListSelectedCoverTypes.R
 \name{ListSelectedCoverTypes}
 \alias{ListSelectedCoverTypes}
-\title{List selected cover types in each habitat suitability model.}
+\title{List selected cover types in each microhabitat suitability model.}
 \usage{
 ListSelectedCoverTypes(
   Species = NULL,

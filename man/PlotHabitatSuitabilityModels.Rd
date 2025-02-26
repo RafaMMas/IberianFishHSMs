@@ -27,7 +27,7 @@ PlotHabitatSuitabilityModels(
 \item{HSC.aggregation}{A string specifying the aggregation method for habitat suitability model data. Options are \code{"prod"}, \code{"min"}, \code{"geometric"}, \code{"arithmetic"}. Default is \code{"geometric"}.}
 }
 \description{
-This function generates partial dependence-like plots for habitat suitability models based on the provided data and selected model.
+This function generates partial dependence-like plots for microhabitat suitability models based on the provided data and selected model.
 }
 \details{
 This function is designed to carry out sensitivity analyses of the available habitat suitability models.

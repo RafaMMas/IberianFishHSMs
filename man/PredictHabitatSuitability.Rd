@@ -33,8 +33,31 @@ PredictHabitatSuitability(
 \item{HSC.aggregation}{for HSCs the aggregation method between the partial suitability obtained from each independent curve/criteria (i.e., "prod", "min", "geometric", "arithmetic"). The default is \code{"geometric"}.}
 }
 \value{
-data frame with the habitat assessment. It contained one column per selected model
+data frame with the habitat assessment. It contains one column per selected model
 }
 \description{
 This function uses the output of \code{ListModels} to load the selected models and evaluate a dataset with the
+}
+\examples{
+#'
+data("Velocity.example.df")
+data("Depth.example.df")
+data("Substrate.index.example.df")
+data("Cover.example.df")
+
+Substrate.index <- SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)
+
+Selected.species <- "Cobitis paludica"#'
+Selected.size <- "Large"
+(Selected.models <- ListModels(Species = Selected.species, Size = Selected.size))
+
+Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.05,
+Depth = Depth.example.df$Depth.0.05,
+Substrate.index = Substrate.index,
+Cover.example.df[,-c(1:2)])
+
+Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data = Hydraulics, HSC.aggregation = "geometric")
+
+summary(Predictions)
+
 }

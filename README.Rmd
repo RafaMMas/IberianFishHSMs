@@ -153,7 +153,7 @@ Each group of models was developed employing specific *R* packages:
 
 Therefore, once a specific model has been loaded it is possible to harness the capabilites of each specific package to, for example, plot directly the selected model.  
 
-```{r plot with specific package capabilitites, fig.width = 8, fig.height = 5, dpi=800}
+```{r GAMplot, fig.width = 8, fig.height = 5, dpi=800}
 library(mgcv)
 par(mar = c(4,4,1,1), bty = "n")
 plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
@@ -219,11 +219,11 @@ summary(Predictions)
 
 ```
 
-```{r plot different predictions, fig.width = 14, fig.height = 14, dpi=800}
+```{r pairplot, fig.width = 14, fig.height = 14, dpi=800}
 pairs(Predictions)
 ```
 
-```{r plot and compare predicted microhabitat suitability, fig.width = 8, fig.height = 14, dpi=800}
+```{r compareplot, fig.width = 8, fig.height = 14, dpi=800}
 
 library(sf)
 
