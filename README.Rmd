@@ -18,7 +18,9 @@ knitr::opts_chunk$set(
 # IberianFishHSMs 
 
 <!-- badges: start -->
+
 `r lifecycle::badge("experimental")`
+
 <!-- badges: end -->
 
 IberianFishHSMs: Compilation of models and tools to evaluate the habitat suitability at the microhabitat scale for Iberian freshwater fish species. The modelling approaches include sets of Habitat Suitability Curves (HSCs), Artificial Neural Networks (Multilayer Perceptrons, ANN-MLPs), Random Forests (RFs), Generalised Additive Models (GAMs), and Support Vector Machines (SVMs), all based on empirical data collected across several river basins in the Iberian Peninsula. The HSCs have been reviewed by an expert panel, which coauthored the package. The package also compiles sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) based on expert knowledge, which was gathered through online forms. Functions for evaluating habitat suitability from hydraulic simulations and for plotting the modelled suitability are also included. An thorough example of the capabilitites of the packages appears below. The package includes 797 habitat suitability models for 43 species and up to 4 size classes (Large, Medium, Small, Very small) and spawning (for *Salmo trutta* and *Salmo salar*).
@@ -95,13 +97,27 @@ The package includes a number of models (i.e., 797) and species (i.e., 43) sever
 PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 
 ```
+
 **Figure 1** - Sensitivity analysis (i.e., partial dependence plots) for *Pseudochondrostoma polylepis* large. The figure shows the results for for the Fuzzy Rule-Based System to evaluate the microhabitat suitability during Spring, Summer, and Autumn.
 
 <br/>
 
-### Habitat ruitability prediction
+### Habitat suitability prediction
 
-Habitat suitability predictions are carried out based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluate microhabitats (i.e. pixels or cells from the hydraulic simulation). The package includes function to prepare the input data.
+Habitat suitability predictions are carried out based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluate microhabitats (i.e. pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data.
+
+``` {r Habitat assessment}
+data("Velocity.example.df")
+data("Depth.example.df")
+data("Substrate.index.example.df")
+data("Cover.example.df")
+
+summary(Velocity.example.df)
+summary(Depth.example.df)
+summary(Substrate.index.example.df)
+summary(Cover.example.df)
+
+```
 
 The function `SubstrateIndex` computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%). The substrate classes originally used corresponded to a simplification of the the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand (62 µm > Ø ≤ 2 mm), fine gravel (2 > Ø ≤ 8 mm), gravel (8 > Ø ≤ 64 mm), cobbles (64 > Ø ≤ 256 mm), boulders (Ø > 256 mm) and bedrock [see e.g., @Munoz-Mas2018 or @Munoz-Mas2017]. The package includes som examples to ilustrate the structure of the input files.
 
@@ -112,8 +128,71 @@ summary(Substrate.index.example.df)
 
 head(SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)) # check.completeness allows inspecting whether names and percentages are correct.
 
+Substrate.index <- SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)
+
 ```
 
+```{r select model for evaluation}
 
+Selected.species <- "Cobitis paludica"
+
+Selected.size <- "Large"
+  
+(Selected.models <- ListModels(Species = Selected.species, Size = Selected.size)) ## example determining the selected models 
+```
+
+```{r}
+Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.05,
+                         Depth = Depth.example.df$Depth.0.05,
+                         Substrate.index = Substrate.index,
+                         Cover.example.df[,-c(1:2)])
+
+Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data = Hydraulics, HSC.aggregation = "geometric")
+
+```
+
+```{r plot anc compare predicted microhabitat suitability}
+
+pairs(Predictions)
+
+Predictions
+
+library(sf)
+
+Coordinates <- st_as_sf(Velocity.example.df[,c("x", "y")], coords = c("x", "y"))
+
+Colors.suitability <- colorRampPalette(c("red2", "darkorange", "gold", "green2", "dodgerblue"))(100)
+
+# sf_points <- st_as_sf(data.frame(Example.hydrulic.simulation.depth[,c("x", "y")], Predictions), coords = c("x", "y"), crs = 32630)
+
+Model.names <- sapply(colnames(Predictions), function(x){
+  x <- gsub(x = x, pattern = paste0(gsub(Selected.species, pattern = " ", replacement = "."), "."), replacement = "")
+  x <- gsub(x = x, pattern = paste0(Selected.size, "."), replacement = "")
+  x
+})
+
+op <- par(mfrow = c(ceiling(length(Selected.models$Models)^0.5), ceiling(length(Selected.models$Models)^0.5)), oma = c(0.5,0.5,2.5,0.5), mar = c(4,4,2,0.5))
+
+for(i in 1:ncol(Predictions))
+{
+  plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
+     col = Colors.suitability[cut(Predictions[,i], breaks = seq(0, 1, length = 101), labels = 1:100, include.lowest = T)], 
+     xlab = "X", ylab = "Y")
+  Axis(side = 1, cex.axis = 0.5)
+  Axis(side = 2, cex.axis = 0.5) 
+  title(Model.names[i], font.main = 1, cex.main = 0.9)
+}
+
+par(op)
+
+Species <- Selected.species
+Size <- paste0(" - ", Selected.size)
+title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, adj = 0.05, cex.main = 2)
+
+par(op)
+
+```
+
+<br/>
 
 ## Bibliography
