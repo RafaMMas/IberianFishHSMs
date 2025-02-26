@@ -232,27 +232,32 @@ Selected.models[2:3]
 #> [10] "ABENS" "ABEMO" "ABEMS" "ABEMX" "ABENP" "ABENT"
 ```
 
-`ListModels` output values can be use directly within to carry out
-habitat evaluations. In particula, `$Codes` are the names used to store
-internally the available microhabitat suitability models.
+`ListModels` output values can be use directly within
+`PredictHabitatSuitability` to carry out habitat evaluations. In
+particula, `$Codes` are the names used to store internally the available
+microhabitat suitability models.
 
 <br/>
 
 ### ListSelectedCoverTypes - List selected cover types in each microhabitat suitability model.
 
-There exist an interaction between the training data and the modelling
-technique, which can vary variable effects and importance (Eugster,
-Leisch, and Strobl 2014). By means of cross-validation, during the
-development of the microhabitat suitability models we carried out a
+There exist an interaction between training data and the selected
+modelling technique, which can vary variable effects and importance
+(Eugster, Leisch, and Strobl 2014). By means of cross-validation, during
+the development of the microhabitat suitability models we carried out a
 variable selection approach discarding those cover types that not
-improved model performance. This approach lead to different sets of
-relevant cover types in each model. The function
+improved model performance for Machine Learning (i.e., ANN-MLPs, RFs,
+SVMs) and statistical approaches (i.e., GAMs) and an analogous approach
+during the development of the Habitat Suitability Curves/Criteria (HSCs)
+and Fuzzy Rule-based Systems (FRBSs). This approach lead to different
+sets of relevant cover types in each model, although the core of
+relevant cover types is expected to coincide. The function
 `ListSelectedCoverTypes` allows inspecting the selected cover types for
 each model. The queries can be categorized by Species, Size, River,
 Model.type, Sampled.season, Valid.season, and/or Data.origin. When
 evaluating the microhabitat suitability, `PredictHabitatSuitability`
-selects and aggregates the appropriate cover types internally. This
-function does not need to be called explicitly.
+selects and aggregates the appropriate cover types internally.
+Therefore, this function does not need to be called explicitly.
 
 ``` r
 
@@ -300,15 +305,17 @@ The package includes a number of models (i.e., 797) and species (i.e.,
 available models vary by modelling technique, sampling site and the
 aggregation of data from different sites. The variable `Default`
 obtained with `ListModels` indicates which models are recommended
-because it was considered they generalised better. Nevertheless, users
-can select other models when they consider it preferable. For example,
-when they are going to evaluate the microhabitat suitability in the
-basin where data for an alternative model was collected. In addition to
-`ListSelectedCoverTypes`, users can carry out sensitivity analyses to
-compare the predictions of the different available models to inspect
-their performance before selecting any alternative model or set of
-models. The sensitivity analysis can be carried out employing the
-function `Plot Habitat Suitability Models` as follows:
+because it was considered they performed and generalised better and/or
+were developed with data covering a large range of the microhabitat
+variables. Nevertheless, users can select other models when they
+consider it preferable. For example, when they are going to evaluate the
+microhabitat suitability in the basin where data for an alternative
+model was collected. In addition to `ListSelectedCoverTypes`, users can
+carry out sensitivity analyses to compare the predictions of the
+different available models. This allows inspecting their performance
+before selecting any alternative model or set of models. The sensitivity
+analysis can be carried out employing the function
+`PlotHabitatSuitabilityModels` as follows:
 
 ``` r
 
@@ -324,15 +331,17 @@ PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 
 **Figure 1** - Sensitivity analysis (i.e., partial dependence plots) for
 *Pseudochondrostoma polylepis* large. The figure shows the results for
-for the Fuzzy Rule-Based System to evaluate the microhabitat suitability
-during Spring, Summer, and Autumn.
+the Fuzzy Rule-Based System (FRBS) to evaluate the microhabitat
+suitability during Spring, Summer, and Autumn.
 
 This function generates partial dependence-like plots for microhabitat
 suitability models based on the provided data and selected model
 (Friedman 2001). Partial dependence plots are created by varying one
-variable over a range of values while averaging the model’s predictions
-over all the other features. This method isolates the effect of that
-single variable on the outcome, helping you see its overall effect.
+variable over its range of values while averaging the model’s
+predictions over all the other features. This method isolates the effect
+of that single variable on the outcome and thus determining the overall
+effect. The function allows employing a user defined dataset to test
+especific combinations of variable values.
 
 <br/>
 
@@ -342,7 +351,12 @@ Habitat suitability predictions are carried out based on mean flow
 velocity (m/s), water depth (m) substrate index (-) and the sum of the
 number of relevant types of cover in the evaluated microhabitats
 (i.e. pixels or cells from the hydraulic simulation). The package
-includes functions to prepare the input data.
+includes functions to prepare the input data. Additionally, the package
+includes data on a typical output from a hydraulic simulation and field
+survey. In particular, it includes data on velocity and depth for 40
+simulated flows and the substrate composition and cover availability in
+the site of the Serpis River Basin (Eastern Iberian Peninsula) studied
+by Muñoz-Mas et all (2024).
 
 ``` r
 data("Velocity.example.df")
@@ -847,6 +861,18 @@ competition between Iberian fish species and the endangered
 J<span class="nocase">ú</span>car nase (Parachondrostoma arrigonis
 Steindachner, 1866)</span>.” *Journal of Ecohydraulics* 0 (0): 1–23.
 <https://doi.org/10.1080/24705357.2016.1276417>.
+
+</div>
+
+<div id="ref-Munoz-Mas2024" class="csl-entry">
+
+Muñoz-Mas, R, H Macian-Sorribes, F J Oliva-Paterna, L Sangelantoni, D
+Peano, M Pulido-Velazquez, and F Martínez-Capel. 2024.
+“<span class="nocase">Adaptation measures to global change in the Serpis
+River Basin (Spain): An evaluation considering agricultural benefits,
+environmental flows, and invasive fishes</span>.” *Ecological
+Indicators* 161: 111979.
+https://doi.org/<https://doi.org/10.1016/j.ecolind.2024.111979>.
 
 </div>
 
