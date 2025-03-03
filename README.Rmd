@@ -204,8 +204,8 @@ Selected.size <- "Large"
 ```
 
 ```{r}
-Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.05,
-                         Depth = Depth.example.df$Depth.0.05,
+Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.5,
+                         Depth = Depth.example.df$Depth.0.5,
                          Substrate.index = Substrate.index,
                          Cover.example.df[,-c(1:2)])
 
@@ -262,7 +262,7 @@ par(op)
 
 Species <- Selected.species
 Size <- paste0(" - ", Selected.size)
-title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, adj = 0.05, cex.main = 2)
+title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, adj = 0.5, cex.main = 2)
 
 par(op)
 

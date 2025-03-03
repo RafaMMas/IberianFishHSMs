@@ -759,8 +759,8 @@ Selected.size <- "Large"
 ```
 
 ``` r
-Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.05,
-                         Depth = Depth.example.df$Depth.0.05,
+Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.5,
+                         Depth = Depth.example.df$Depth.0.5,
                          Substrate.index = Substrate.index,
                          Cover.example.df[,-c(1:2)])
 
@@ -770,22 +770,62 @@ Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data
 ``` r
 
 summary(Predictions)
-#>      ABCKQ            ABCKP            ABCKU            ABCLQ       
-#>  Min.   :0.0000   Min.   :0.0000   Min.   :0.1682   Min.   :0.0164  
-#>  1st Qu.:0.2603   1st Qu.:0.0663   1st Qu.:0.3933   1st Qu.:0.4832  
-#>  Median :0.7912   Median :0.4358   Median :0.5730   Median :0.6517  
-#>  Mean   :0.5840   Mean   :0.4268   Mean   :0.5380   Mean   :0.5834  
-#>  3rd Qu.:0.8149   3rd Qu.:0.7942   3rd Qu.:0.6585   3rd Qu.:0.6684  
-#>  Max.   :0.9403   Max.   :0.9420   Max.   :0.9192   Max.   :0.9749  
-#>  NA's   :1917     NA's   :1917     NA's   :1917     NA's   :1917    
-#>      ABCMN            ABCMV            ABCNR       
-#>  Min.   :0.0434   Min.   :0.0000   Min.   :0.0000  
-#>  1st Qu.:0.3367   1st Qu.:0.1098   1st Qu.:0.0000  
-#>  Median :0.5309   Median :0.3065   Median :0.6000  
-#>  Mean   :0.4648   Mean   :0.3356   Mean   :0.5188  
-#>  3rd Qu.:0.6013   3rd Qu.:0.5514   3rd Qu.:1.0000  
-#>  Max.   :0.9868   Max.   :0.9271   Max.   :1.0000  
-#>  NA's   :1917     NA's   :1917     NA's   :1917
+#>  Cobitis.paludica.FRBS.Large.EKorL.Spring.Summer.Autumn
+#>  Min.   :0.0000                                        
+#>  1st Qu.:0.4267                                        
+#>  Median :0.8084                                        
+#>  Mean   :0.6277                                        
+#>  3rd Qu.:0.8393                                        
+#>  Max.   :0.9661                                        
+#>  NA's   :1407                                          
+#>  Cobitis.paludica.FRBS.Large.EKorL.Autumn.Winter.Spring
+#>  Min.   :0.0000                                        
+#>  1st Qu.:0.1114                                        
+#>  Median :0.6042                                        
+#>  Mean   :0.4913                                        
+#>  3rd Qu.:0.8210                                        
+#>  Max.   :0.9518                                        
+#>  NA's   :1407                                          
+#>  Cobitis.paludica.GAM.Large.Estena.and.Yeguas.All
+#>  Min.   :0.0000                                  
+#>  1st Qu.:0.3664                                  
+#>  Median :0.6294                                  
+#>  Mean   :0.5358                                  
+#>  3rd Qu.:0.6976                                  
+#>  Max.   :0.9327                                  
+#>  NA's   :1407                                    
+#>  Cobitis.paludica.HSC.Large.Estena.and.Yeguas.All
+#>  Min.   :0.0216                                  
+#>  1st Qu.:0.5712                                  
+#>  Median :0.6740                                  
+#>  Mean   :0.6323                                  
+#>  3rd Qu.:0.6819                                  
+#>  Max.   :0.9939                                  
+#>  NA's   :1407                                    
+#>  Cobitis.paludica.NNET.Large.Estena.and.Yeguas.All
+#>  Min.   :0.0000                                   
+#>  1st Qu.:0.1107                                   
+#>  Median :0.4074                                   
+#>  Mean   :0.3620                                   
+#>  3rd Qu.:0.5315                                   
+#>  Max.   :0.9797                                   
+#>  NA's   :1407                                     
+#>  Cobitis.paludica.RF.Large.Estena.and.Yeguas.All
+#>  Min.   :0.0000                                 
+#>  1st Qu.:0.1097                                 
+#>  Median :0.3420                                 
+#>  Mean   :0.3500                                 
+#>  3rd Qu.:0.5733                                 
+#>  Max.   :0.9598                                 
+#>  NA's   :1407                                   
+#>  Cobitis.paludica.SVM.Large.Estena.and.Yeguas.All
+#>  Min.   :0.0000                                  
+#>  1st Qu.:0.0000                                  
+#>  Median :0.6000                                  
+#>  Mean   :0.5174                                  
+#>  3rd Qu.:1.0000                                  
+#>  Max.   :1.0000                                  
+#>  NA's   :1407
 ```
 
 ``` r
@@ -828,7 +868,7 @@ par(op)
 
 Species <- Selected.species
 Size <- paste0(" - ", Selected.size)
-title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, adj = 0.05, cex.main = 2)
+title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, adj = 0.5, cex.main = 2)
 ```
 
 <img src="man/figures/README-compareplot-1.png" width="100%" />
