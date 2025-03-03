@@ -829,30 +829,38 @@ summary(Predictions)
 ```
 
 ``` r
-pairs(Predictions)
+
+pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 8, 2.5), cex.labels = 0.75, lwd = 0.5)
+
+title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -2, adj = 0.5, cex.main = 1.75)
 ```
 
 <img src="man/figures/README-pairplot-1.png" width="100%" />
 
+<br/>
+
+<br/>
+
+The coordinates included in the data included in `IberianFishHSMs`
+allows plotting the microhabitat suitability predicted with each
+selected model employing functions from `sf`. First, it is necessary to
+create a point object with the coordinates and the desired colour
+sequence. In this case ranging from to . Then, a loop iterativelly
+plotting thedifferent maps is carried out and the figure tile is added.
+
+<br/>
+
 ``` r
 
 library(sf)
-#> Warning: package 'sf' was built under R version 4.1.3
-#> Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 7.2.1; sf_use_s2() is TRUE
 
 Coordinates <- st_as_sf(Velocity.example.df[,c("x", "y")], coords = c("x", "y"))
 
 Colors.suitability <- colorRampPalette(c("red2", "darkorange", "gold", "green2", "dodgerblue"))(100)
 
-# sf_points <- st_as_sf(data.frame(Example.hydrulic.simulation.depth[,c("x", "y")], Predictions), coords = c("x", "y"), crs = 32630)
-
-Model.names <- sapply(colnames(Predictions), function(x){
-  x <- gsub(x = x, pattern = paste0(gsub(Selected.species, pattern = " ", replacement = "."), "."), replacement = "")
-  x <- gsub(x = x, pattern = paste0(Selected.size, "."), replacement = "")
-  x
-})
-
-op <- par(mfrow = c(ceiling(length(Selected.models$Models)^0.5), ceiling(length(Selected.models$Models)^0.5)), oma = c(0.5,0.5,2.5,0.5), mar = c(4,4,2,0.5))
+op <- par(mfrow = c(2, 4),
+          oma = c(0.25, 0.25, 4, 0.25),
+          mar = c(4, 4, 1, 0.25))
 
 for(i in 1:ncol(Predictions))
 {
@@ -861,22 +869,47 @@ for(i in 1:ncol(Predictions))
      xlab = "X", ylab = "Y")
   Axis(side = 1, cex.axis = 0.5)
   Axis(side = 2, cex.axis = 0.5) 
-  title(Model.names[i], font.main = 1, cex.main = 0.9)
+  title(colnames(Predictions)[i], font.main = 1, line = -0.5, cex.main = 1, adj = 0.7)
 }
 
 par(op)
 
 Species <- Selected.species
 Size <- paste0(" - ", Selected.size)
-title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, adj = 0.5, cex.main = 2)
-```
-
-<img src="man/figures/README-compareplot-1.png" width="100%" />
-
-``` r
+title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -1, adj = 0.5, cex.main = 2)
 
 par(op)
 ```
+
+<br/>
+
+The different models assign the highest suitability to the downstream
+pool (upper part of the map). However, the maps developed employing the
+preceding code reveal the differences among the microhabitat suitability
+models. The Fuzzy Rule-Based Systems (FRBSs) assign large suitability to
+the deeper areas and the shores of the pools comprised within the
+hydraulic model. Both of them predicted as unsuitable the rapids
+connecting them but the FRBSs for Winter is more restrictive than the
+one for Summer and predicts as suitable only the deeper parts of these
+pools. The Generalised Additive Model (GAM) and the Habitat Suitability
+Curves (HSCs) predicted high suitability in the deeper part of the
+upstream pool and particularly to the shores, but the upstream smaller
+pools were unsuitable with the GAM and largely suitable with the HSCs.
+The latter highlights the compensatory nature of the geometric mean used
+to aggregate the suitability obtained from each independent microhabitat
+suitability curve. The Artificial Neural Network (NNET) only considered
+suitable a fringe along the right margin and some specific spots in the
+opposite margin. The Random forest model (RF) only predicted as suitable
+the deeper parts and, based on this model predictions, both margins were
+evaluated as unsuitable. The predictions of the Support Vector Machine
+(SVM) were similar but, this technique evalauted the deeper parts of the
+pool with the highest suitability (i.e. 1).
+
+<br/>
+
+    #> Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 7.2.1; sf_use_s2() is TRUE
+
+<img src="man/figures/README-compareplot figure-1.png" width="100%" height="110%" />
 
 <br/>
 
