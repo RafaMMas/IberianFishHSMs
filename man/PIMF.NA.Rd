@@ -2,13 +2,26 @@
 % Please edit documentation in R/PREDICT.FRBS.R
 \name{PIMF.NA}
 \alias{PIMF.NA}
-\title{Title}
+\title{Pi membership functions}
 \usage{
 PIMF.NA(pattern, parameters)
 }
 \arguments{
-\item{parameters}{}
+\item{pattern}{the values of the input variable for whom the membership is calculated}
+
+\item{parameters}{the parameters of the membership function}
+}
+\value{
+membership of the evaluated values
 }
 \description{
-Title
+Pi membership functions
+}
+\examples{
+plot(PIMF(pattern = seq(0, 100, by = 1), parameters = c(10, 60, 75, 90)),
+type = "l", xlab = "Value", ylab = "Membership", bty = "n", las = 1, col = "orangered")
+
+plot(PIMF(pattern = seq(0, 100, by = 1), parameters = c(10, 40, 50, 80)),
+type = "l", xlab = "Value", ylab = "Membership", bty = "n", las = 1, col = "orangered")
+
 }

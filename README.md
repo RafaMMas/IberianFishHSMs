@@ -475,9 +475,8 @@ directly the selected model.
 
 ``` r
 library(mgcv)
-#> Warning: package 'mgcv' was built under R version 4.1.3
 #> Loading required package: nlme
-#> This is mgcv 1.8-42. For overview type 'help("mgcv-package")'.
+#> This is mgcv 1.9-0. For overview type 'help("mgcv-package")'.
 par(mar = c(4,4,1,1), bty = "n")
 plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
 ```
@@ -907,7 +906,7 @@ pool with the highest suitability (i.e. 1).
 
 <br/>
 
-    #> Linking to GEOS 3.10.2, GDAL 3.4.1, PROJ 7.2.1; sf_use_s2() is TRUE
+    #> Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE
 
 <img src="man/figures/README-compareplot figure-1.png" width="100%" height="110%" />
 

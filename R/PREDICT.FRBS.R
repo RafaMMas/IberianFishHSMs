@@ -52,15 +52,16 @@ PIMF.NA <- function (pattern, parameters)
   return(Membership)
 }
 
-#' Title
+#' Function to carry out predictions with zero-order Takagi–Sugeno–Kang fuzzy rule-based systems for fish habitat evaluation.
 #'
-#' @param Data
-#' @param FRBS
+#' @param Data the evaluated dataset in data.frame format
+#' @param FRBS the list compiling the elements describing a zero-order Takagi–Sugeno–Kang fuzzy rule-based system
 #'
-#' @returns
+#' @return matrix with the membership of each datum to each fuzzy rule obtained using the function FUZZIFY.FRBS.Fast and the predicted habitat suitability in the last column
 #' @export
 #'
 #' @examples
+#'
 PREDICT.FRBS <- function (Data, FRBS)
 {
   Data <- sapply(colnames(FRBS$Range), function(i) {

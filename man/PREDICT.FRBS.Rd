@@ -2,13 +2,18 @@
 % Please edit documentation in R/PREDICT.FRBS.R
 \name{PREDICT.FRBS}
 \alias{PREDICT.FRBS}
-\title{Title}
+\title{Function to carry out predictions with zero-order Takagi–Sugeno–Kang fuzzy rule-based systems for fish habitat evaluation.}
 \usage{
 PREDICT.FRBS(Data, FRBS)
 }
 \arguments{
-\item{FRBS}{}
+\item{Data}{the evaluated dataset in data.frame format}
+
+\item{FRBS}{the list compiling the elements describing a zero-order Takagi–Sugeno–Kang fuzzy rule-based system}
+}
+\value{
+matrix with the membership of each datum to each fuzzy rule obtained using the function FUZZIFY.FRBS.Fast and the predicted habitat suitability in the last column
 }
 \description{
-Title
+Function to carry out predictions with zero-order Takagi–Sugeno–Kang fuzzy rule-based systems for fish habitat evaluation.
 }
