@@ -1,12 +1,19 @@
-#' Title
+#' Pi membership functions
 #'
-#' @param pattern
-#' @param parameters
+#' @param pattern the values of the input variable for whom the membership is calculated
+#' @param parameters the parameters of the membership function
 #'
-#' @returns
+#' @return membership of the evaluated values
+#' @importFrom stats approx
 #' @export
 #'
 #' @examples
+#' plot(PIMF(pattern = seq(0, 100, by = 1), parameters = c(10, 60, 75, 90)),
+#' type = "l", xlab = "Value", ylab = "Membership", bty = "n", las = 1, col = "orangered")
+#'
+#' plot(PIMF(pattern = seq(0, 100, by = 1), parameters = c(10, 40, 50, 80)),
+#' type = "l", xlab = "Value", ylab = "Membership", bty = "n", las = 1, col = "orangered")
+#'
 PIMF.NA <- function (pattern, parameters)
 {
   Membership <- c()
