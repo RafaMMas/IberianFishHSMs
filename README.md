@@ -1,5 +1,28 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+<br/>
+
+<div style="float: left; vertical-align: bottom;">
+
+<img src="man/figures/logo_tragsatec_SEPI.png" alt="Banner" style="max-height: 50px;"/>
+
+</div>
+
+<div style="float: right; vertical-align: top">
+
+<img src="man/figures/logo.png" alt="Banner" style="max-height: 50px;"/>
+
+</div>
+
+<div style="clear: both;">
+
+</div>
+
+<br/>
+
+<br/>
+
 <!-- badges: start -->
 
 [![Lifecycle:
@@ -11,19 +34,39 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 IberianFishHSMs: Compilation of models and tools to evaluate the habitat
 suitability at the microhabitat scale for Iberian freshwater fish
 species. The modelling approaches include sets of Habitat Suitability
-Curves (HSCs), Artificial Neural Networks (Multilayer Perceptrons,
-ANN-MLPs), Random Forests (RFs), Generalised Additive Models (GAMs), and
-Support Vector Machines (SVMs), all based on empirical data collected
-across several river basins in the Iberian Peninsula. The HSCs have been
-reviewed by an expert panel, which co-authored the package. The package
-also compiles sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) based on
-expert knowledge, which was gathered through on-line forms. Functions
-for evaluating the habitat suitability from hydraulic simulations and
-for plotting the modelled suitability are also included. A thorough
-example of the capabilities of the packages appears below. The package
-includes 797 microhabitat suitability models for 43 species and up to 4
-size classes (Large, Medium, Small, Very small) and spawning suitability
-(only for *Salmo trutta* and *Salmo salar*).
+Curves (HSCs) (Waters 1976), Artificial Neural Networks (Multilayer
+Perceptron ensembles, ANN-MLPs) (Hansen and Salamon 1990), Random
+Forests (RFs)(Breiman 2001), Generalised Additive Models (GAMs) (Hastie
+and Tibshirani 1990), and Support Vector Machines (SVMs) (Vapnik 1995;
+Cortes and Vapnik 1995), all based on empirical data collected across
+several river basins in the Iberian Peninsula. The HSCs have been
+reviewed by an expert panel, who co-authored the package. The package
+also compiles additional sets of HSCs and Fuzzy Rule-Based Systems
+(FRBSs) (Zadeh 1965; Takagi and Sugeno 1985) developed from literature
+and expert knowledge, which was gathered through on-line forms.
+Functions for evaluating the habitat suitability from hydraulic
+simulations and for plotting the modelled microhabitat preferences and
+suitability are also included. A thorough example of the capabilities of
+the packages appears in this manual. The package includes 797
+microhabitat suitability models for 43 species and up to 4 size classes
+(Large, Medium, Small, Very small) and spawning/nesting suitability
+(only for *Salmo trutta* and *Salmo salar*). To develop the microhabitat
+suitability models we harnessed the functions and capabilities of the
+following packages:
+
+- Habitat Suitability Curves (HSCs): `FuzzyFishHS` [github
+  link](https://github.com/RafaMMas/FuzzyFishHS)
+- Artificial Neural Networks (Multilayer Perceptron ensembles,
+  ANN-MLPs): `nnet` [CRAN
+  link](https://cran.r-project.org/web/packages/nnet/index.html)
+- Random Forests (RFs): `ranger` [CRAN
+  link](https://cran.r-project.org/web/packages/ranger/index.html)
+- Generalised Additive Models (GAMs): `mgcv` [CRAN
+  link](https://cran.r-project.org/web/packages/mgcv/index.html)
+- Support Vector Machines (SVMs): `e1071` [CRAN
+  link](https://cran.r-project.org/web/packages/e1071/index.html)
+- Fuzzy Rule-Based Systems (FRBSs): `FuzzyFishHS` [github
+  link](https://github.com/RafaMMas/FuzzyFishHS)
 
 <br/>
 
@@ -63,6 +106,20 @@ Universidad de Navarra, Instituto de Biodiversidad y Medioambiente
 
 <br/>
 
+## Funding
+
+`IberianFishHSMs` was funded by the Ministry for the Ecological
+Transition and the Demographic Challenge (MITECO) of the Spanish
+Government. The data collection and development of the package were
+carried out as part of the project titled *Actualización y/o creación de
+curvas de idoneidad del hábitat físico para diversas especies acuáticas
+y ribereñas*, which was conducted under the framework of the *Servicio
+técnico para el desarrollo de modelos numéricos integrados e impulso a
+la restauración fluvial en las distintas demarcaciones hidrográficas
+intercomunitarias* (21.804-0047/0411).
+
+<br/>
+
 ## Installation
 
 IberianFishHSMs can be installed from [GitHub](https://github.com/)
@@ -82,7 +139,7 @@ and the general workflow for predicting microhabitat suitability using
 outputs from hydraulic simulations and field data. Field data includes
 the substrate and cover (shelter) distribution across the study site, by
 patch, pixel or cell. The data used in this example is available from
-the package.
+the package and was published by Muñoz-Mas et al. (2024).
 
 ``` r
 library(IberianFishHSMs)
@@ -93,13 +150,21 @@ library(IberianFishHSMs)
 ### ListModels - List available models and their key characteristics
 
 `ListModels` allows inspecting the available models. The queries can be
-categorized by Species, Size, River, Model.type, Sampled.season,
-Valid.season, and/or Data.origin. This function also provides de Codes
-to internally call the microhabitat suitability models during the
-habitat evaluation. The output of this function also renders a summary
-of their main characteristics, including sample sizes, and several
-performance criteria for those models optimised through
-cross-validation.
+categorized by *Species*, *Size*, *River*, *Model.type*,
+*Sampled.season*, *Valid.season*, and/or *Data.origin*. This function
+also provides de *Codes* to internally call the microhabitat suitability
+models during the habitat evaluation. The output of this function also
+renders a summary of their main characteristics, including sample sizes,
+and several performance criteria for those models optimised through
+cross-validation. The argument *Default* = *TRUE* renders those models
+recommended by the expert panel who co-authored the package. These
+models are consequently the best option among the available models. The
+following example shows the default output for brown trout (*Salmo
+trutta*). From columns \#1 to \#15 the general general characteristics
+are described. Columns \#16 to \#23 include the aforementioned
+performance indices. The output of this function is a 3-elements list.
+The last two elements are names and codes. The former summarises the
+characteristics of each model in the table.
 
 ``` r
 Selected.models <- ListModels(Species = "Salmo trutta", verbose = F)
@@ -234,30 +299,33 @@ Selected.models[2:3]
 
 `ListModels` output values can be use directly within
 `PredictHabitatSuitability` to carry out habitat evaluations. In
-particula, `$Codes` are the names used to store internally the available
-microhabitat suitability models.
+particular, `$Codes` are the names used to store and call internally the
+available microhabitat suitability models.
 
 <br/>
 
 ### ListSelectedCoverTypes - List selected cover types in each microhabitat suitability model
 
 There exist an interaction between training data and the selected
-modelling technique, which can vary variable effects and importance
-(Eugster, Leisch, and Strobl 2014). By means of cross-validation, during
-the development of the microhabitat suitability models we carried out a
-variable selection approach discarding those cover types that not
-improved model performance for Machine Learning (i.e., ANN-MLPs, RFs,
-SVMs) and statistical approaches (i.e., GAMs) and an analogous approach
-during the development of the Habitat Suitability Curves/Criteria (HSCs)
-and Fuzzy Rule-based Systems (FRBSs). This approach lead to different
-sets of relevant cover types in each model, although the core of
-relevant cover types is expected to coincide. The function
-`ListSelectedCoverTypes` allows inspecting the selected cover types for
-each model. The queries can be categorized by Species, Size, River,
-Model.type, Sampled.season, Valid.season, and/or Data.origin. When
-evaluating the microhabitat suitability, `PredictHabitatSuitability`
-selects and aggregates the appropriate cover types internally.
-Therefore, this function does not need to be called explicitly.
+modelling technique, which can vary the effect of the predictor
+variables and/or their importance (Eugster, Leisch, and Strobl 2014). By
+means of cross-validation, during the development of the microhabitat
+suitability models, we carried out a variable selection approach
+discarding those cover types that not improved model performance for
+Machine Learning (i.e., ANN-MLPs, RFs, SVMs) and statistical approaches
+(i.e., GAMs) and an analogous approach was followed during the
+development of the Habitat Suitability Curves/Criteria (HSCs) and Fuzzy
+Rule-based Systems (FRBSs). This approach lead to different sets of
+relevant cover types in each model, although the core of relevant cover
+types is expected to coincide. The function `ListSelectedCoverTypes`
+allows inspecting the selected cover types for each model. This will
+allow practitioner to discards some models when they are deemed
+inadequate. Likewise, the queries can be categorized by *Species*,
+*Size*, *River*, *Model.type*, *Sampled.season*, *Valid.season*, and/or
+*Data.origin*. When evaluating the microhabitat suitability,
+`PredictHabitatSuitability` selects and aggregates the appropriate cover
+types internally. Therefore, this function does not need to be called
+explicitly.
 
 ``` r
 
@@ -327,7 +395,7 @@ analysis can be carried out employing the function
 PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 ```
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
 **Figure 1** - Sensitivity analysis (i.e., partial dependence plots) for
 *Pseudochondrostoma polylepis* large. The figure shows the results for
@@ -503,8 +571,13 @@ includes functions to prepare the input data. Additionally, the package
 includes data on a typical output from a hydraulic simulation and field
 survey. In particular, it includes data on velocity and depth for 40
 simulated flows and the substrate composition and cover availability in
-the site of the Serpis River Basin (Eastern Iberian Peninsula) studied
-by Muñoz-Mas et all (2024).
+the 400-m reach of the Serpis River Basin (Eastern Iberian Peninsula)
+studied by Muñoz-Mas et all (2024). The data and subsequent analyses are
+intended to show the capabilities of the package and do not imply the
+species are present in this reach of the Serpis River or along its water
+course.
+
+<br/>
 
 ``` r
 data("Velocity.example.df")
@@ -575,6 +648,31 @@ summary(Cover.example.df[,-c(1:2)])
 #>  3rd Qu.:1.0000   3rd Qu.:0   3rd Qu.:0.0000   3rd Qu.:0.00000   3rd Qu.:1.00  
 #>  Max.   :1.0000   Max.   :0   Max.   :1.0000   Max.   :1.00000   Max.   :1.00
 ```
+
+<br/>
+
+Most of the considered cover type were present in the study site. Among
+the ten types only, leaves, algae, roots, and sand were absent. The most
+abundant cove types were woody debris and logs and shade which covered
+most of the margins. Rock were the most abundan instream cover,
+especialy in the transition zone sbetween pools, whereas the remianing
+cover types were only present in small patches.
+
+<br/>
+
+    #> Warning: package 'sf' was built under R version 4.3.3
+    #> Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE
+
+<img src="man/figures/README-plot cover-1.png" width="100%" />
+
+**Figure 3** - Distribution of each cover type along the reach of the
+Serpis River (Jucar River Basin District). The models were developed
+considering ten types of cover (refuge/shelter): Leaves, Algae, Roots,
+Aquatic vegetation, Reeds (emerging vegetation), Woody debris and logs,
+Sand, Rocks, Caves, and Shade, which are included (but no necessarily
+present) in the `Cover.example.df`.
+
+<br/>
 
 The function `SubstrateIndex` computes the substrate index as a weighted
 aggregation of the percentage of different granulometry classes (%). The
@@ -902,13 +1000,23 @@ opposite margin. The Random forest model (RF) only predicted as suitable
 the deeper parts and, based on this model predictions, both margins were
 evaluated as unsuitable. The predictions of the Support Vector Machine
 (SVM) were similar but, this technique evalauted the deeper parts of the
-pool with the highest suitability (i.e. 1).
+pool with the highest suitability (i.e. 1). These models are base
 
 <br/>
 
-    #> Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE
-
 <img src="man/figures/README-compareplot figure-1.png" width="100%" height="110%" />
+
+**Figure 2** - Maps depicting the predicted microhabitat suitability for
+*Cobitis paludica* small in a reach of the Serpis River (Jucar River
+Basin District). The maps show the predictions for 0.5 m<sup>3</sup>/s.
+The figure depicts the predictions from seven different models: Fuzzy
+Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature
+(EKorL) for Summer and Winter. It also depcits the predictions carried
+out with the Generalised Additive Model (GAM), Habitat Suitability
+Curves (HSCs), Artificial Neural Network (NNET), Random forests (RF) and
+Support Vector Machine (SVM). All these models were developed pooling
+data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers.
+Currently, these models are valid for every season (*All*).
 
 <br/>
 
@@ -916,6 +1024,21 @@ pool with the highest suitability (i.e. 1).
 
 <div id="refs" class="references csl-bib-body hanging-indent"
 entry-spacing="0">
+
+<div id="ref-Breiman2001" class="csl-entry">
+
+Breiman, L. 2001. “<span class="nocase">Random forests</span>.” *Machine
+Learning* 45 (1): 5–32. <https://doi.org/10.1023/A:1010933404324>.
+
+</div>
+
+<div id="ref-Cortes1995" class="csl-entry">
+
+Cortes, C, and V Vapnik. 1995. “<span class="nocase">Support-vector
+networks</span>.” *Machine Learning* 20 (3): 273–97.
+<https://doi.org/10.1007/BF00994018>.
+
+</div>
 
 <div id="ref-Eugster2014" class="csl-entry">
 
@@ -941,6 +1064,22 @@ Statistics* 29 (5): 1189–1232. <https://doi.org/10.1214/aos/1013203451>.
 Greenwell, Brandon M. 2017. “<span class="nocase">pdp: An R Package for
 Constructing Partial Dependence Plots</span>.” *The R Journal* 9 (1):
 421–36. <https://doi.org/10.32614/RJ-2017-016>.
+
+</div>
+
+<div id="ref-Hansen1990" class="csl-entry">
+
+Hansen, Lars Kai, and Peter Salamon. 1990. “<span class="nocase">Neural
+network ensembles</span>.” *IEEE Transactions on Pattern Analysis and
+Machine Intelligence* 12 (10): 993–1001.
+<https://doi.org/10.1109/34.58871>.
+
+</div>
+
+<div id="ref-Hastie1990" class="csl-entry">
+
+Hastie, T J, and R J Tibshirani. 1990. *Generalized Additive Models*.
+Edited by Chapman and Hall/CRC. London, (UK): Chapman & Hall/CRC.
 
 </div>
 
@@ -976,6 +1115,40 @@ models to predict brown trout (\<i\>Salmo trutta\</i\> L.) spawning
 habitat degradation induced by climate change</span>.” *Ecological
 Modelling* 386: 98–114.
 <https://doi.org/10.1016/j.ecolmodel.2018.08.012>.
+
+</div>
+
+<div id="ref-Takagi1985" class="csl-entry">
+
+Takagi, T, and M Sugeno. 1985. “<span class="nocase">Fuzzy
+identification of systems and its applications to modeling and
+control</span>.” *IEEE Transactions on Systems, Man and Cybernetics* 15
+(1): 116–32. <https://doi.org/10.1109/TSMC.1985.6313399>.
+
+</div>
+
+<div id="ref-Vapnik1995" class="csl-entry">
+
+Vapnik, V. 1995. *<span class="nocase">The nature of statistical
+learning theory</span>*. New York, NY (USA): Springer-Verlag New York.
+<https://doi.org/10.1007/978-1-4757-3264-1>.
+
+</div>
+
+<div id="ref-Waters1976" class="csl-entry">
+
+Waters, B F. 1976. “<span class="nocase">A methodology for evaluating
+the effects of different streamflows on salmonid habitat</span>.” In
+*Proceedings of the Symposium and Specialty Conference on Instream Flow
+Needs*, 13. Bethesda, MD (USA): American Fisheries Society.
+
+</div>
+
+<div id="ref-Zadeh1965" class="csl-entry">
+
+Zadeh, L A. 1965. “<span class="nocase">Fuzzy sets</span>.” *Information
+and Control* 8 (3): 338–53.
+<https://doi.org/10.1016/S0019-9958(65)90241-X>.
 
 </div>
 

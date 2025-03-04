@@ -4,7 +4,7 @@
 \alias{Load.and.print.model}
 \title{Load and prints the selected model}
 \usage{
-Load.and.print.model(Selected.model = NULL)
+Load.and.print.model(Selected.model = NULL, verbose = TRUE)
 }
 \arguments{
 \item{Selected.model}{A character string or object representing the selected habitat suitability model. It should be among the \code{Codes} obtained with \code{ListModels} Default is \code{NULL}.}

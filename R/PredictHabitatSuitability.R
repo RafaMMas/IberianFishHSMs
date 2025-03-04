@@ -124,10 +124,13 @@ setNames(as.data.frame(Habitat.assessment), Selected.models$Models)
 #'
 #' Load.and.print.model(Selected.model = Selected.model)
 #'
-Load.and.print.model <- function(Selected.model = NULL){
+Load.and.print.model <- function(Selected.model = NULL, verbose = TRUE){
       file_path <- system.file("extradata", paste0(Selected.model, ".rds"), package = "IberianFishHSMs")
       c.model <- readRDS(file_path)
-      print(c.model)
+      if(verbose)
+        {
+          print(c.model)
+        }
       c.model
 }
 
