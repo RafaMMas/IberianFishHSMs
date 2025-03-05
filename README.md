@@ -5,13 +5,13 @@
 
 <div style="float: left; vertical-align: bottom;">
 
-<img src="man/figures/logo_tragsatec_SEPI.png" alt="Banner" width="100" height="30"/>
+<img src="man/figures/logo_tragsatec_SEPI.png" alt="Banner" style="max-height: 40px;"/>
 
 </div>
 
-<div style="float: right; vertical-align: top;">
+<div style="float: right; vertical-align: top">
 
-<img src="man/figures/logo.png" alt="Banner" width="100" height="30"/>
+<img src="man/figures/logo.png" alt="Banner" style="max-height: 40px;"/>
 
 </div>
 
