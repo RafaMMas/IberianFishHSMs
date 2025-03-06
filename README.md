@@ -721,7 +721,7 @@ summary(Cover.example.df[,-c(1:2)])
 
     #> Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE
 
-<img src="man/figures/README-plot example velocity and depth-1.png" width="100%" />
+<img src="man/figures/README-plot example velocity and depth-1.png" width="100%" height="110%" />
 
 **Figure 3** - Velocity (m/s) and depth (m) distribution in the Serpis
 River (Jucar River Basin District) for four different modelled flow
@@ -741,7 +741,7 @@ cover types were only present in small patches.
 
 <br/>
 
-<img src="man/figures/README-plot cover-1.png" width="100%" />
+<img src="man/figures/README-plot cover-1.png" width="100%" height="110%" />
 
 **Figure 4** - Distribution of each cover type along the reach of the
 Serpis River (Jucar River Basin District). The models were developed

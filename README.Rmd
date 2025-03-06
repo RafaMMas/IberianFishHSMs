@@ -251,7 +251,7 @@ summary(Cover.example.df[,-c(1:2)])
 
 <br/>
 
-``` {r plot example velocity and depth, warning=FALSE, echo = FALSE, dpi=800}
+``` {r plot example velocity and depth, warning=FALSE, echo = FALSE, fig.width = 8, fig.height = 14, out.height = "110%", dpi=800}
 
 library(sf)
 
@@ -303,7 +303,7 @@ Among the ten types used to develop the microhabitat suitability models, in this
 
 <br/>
 
-``` {r plot cover, echo = FALSE, warning=FALSE, dpi=800}
+``` {r plot cover, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 14, out.height = "110%", dpi=800}
 
 library(sf)
 
@@ -458,14 +458,6 @@ library(sf)
 Coordinates <- st_as_sf(Velocity.example.df[,c("x", "y")], coords = c("x", "y"))
 
 Colors.suitability <- colorRampPalette(c("red2", "darkorange", "gold", "green2", "dodgerblue"))(100)
- 
-# # sf_points <- st_as_sf(data.frame(Example.hydrulic.simulation.depth[,c("x", "y")], Predictions), coords = c("x", "y"), crs = 32630)
-# 
-# Model.names <- sapply(colnames(Predictions), function(x){
-#   x <- gsub(x = x, pattern = paste0(gsub(Selected.species, pattern = " ", replacement = "."), "."), replacement = "")
-#   x <- gsub(x = x, pattern = paste0(Selected.size, "."), replacement = "")
-#   x
-# })
 
 op <- par(mfrow = c(2, 4),
           oma = c(0.25, 0.25, 4, 0.25),
