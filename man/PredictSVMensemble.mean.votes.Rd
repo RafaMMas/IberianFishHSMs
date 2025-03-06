@@ -2,13 +2,18 @@
 % Please edit documentation in R/PredictSVMensemble.R
 \name{PredictSVMensemble.mean.votes}
 \alias{PredictSVMensemble.mean.votes}
-\title{Title}
+\title{Predict suitability from SVM ensembles employing mean votes}
 \usage{
 PredictSVMensemble.mean.votes(object, newdata)
 }
 \arguments{
-\item{newdata}{}
+\item{object}{Ensemble of Support Vector Machines (SVMs) as a list}
+
+\item{newdata}{data frame with four columns: Velocity, Depth, Substrate.index and Cover}
+}
+\value{
+predicted suitability
 }
 \description{
-Title
+Predict suitability from SVM ensembles employing mean votes
 }

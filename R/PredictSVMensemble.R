@@ -1,12 +1,11 @@
-#' Title
+#' Predict suitability from SVM ensembles employing mean votes
 #'
-#' @param object
-#' @param newdata
+#' @param object Ensemble of Support Vector Machines (SVMs) as a list
+#' @param newdata data frame with four columns: Velocity, Depth, Substrate.index and Cover
 #'
-#' @returns
+#' @returns predicted suitability
 #' @export
 #'
-#' @examples
 #' @import e1071
 PredictSVMensemble.mean.votes <- function(object, newdata)
 {
@@ -16,16 +15,15 @@ PredictSVMensemble.mean.votes <- function(object, newdata)
   rowMeans(Predictions)
 }
 
-#' Title
+#' Predict suitability from SVM ensembles employing
 #'
-#' @param object
-#' @param newdata
-#' @param probability
+#' @param object Ensemble of Support Vector Machines (SVMs) as a list
+#' @param newdata data frame with four columns: Velocity, Depth, Substrate.index and Cover
+#' @param probability Logical. If `TRUE`, the SVM probability is used. Defaul = FALSE.
 #'
-#' @returns
+#' @returns predicted presence/absence or predicted suitability when probability = FALSE
+#'
 #' @export
-#'
-#' @examples
 #'
 #' @import e1071
 PredictSVMensemble <- function(object, newdata, probability = FALSE)
@@ -44,21 +42,20 @@ PredictSVMensemble <- function(object, newdata, probability = FALSE)
   }
 }
 
-#' Title
+#' Predict suitability from SVM ensembles employing the SVM probability
 #'
-#' @param object
-#' @param newdata
+#' @param object Ensemble of Support Vector Machines (SVMs) as a list
+#' @param newdata data frame with four columns: Velocity, Depth, Substrate.index and Cover
 #'
-#' @returns
+#' @returns predicted suitability
+#'
 #' @export
-#'
-#' @examples
 #'
 #' @import e1071
 PredictSVMensemble.probability <- function(object, newdata)
 {
   Predictions <- sapply(object, function(c.svm){
-    return(attr(predict(c.svm, newdata, probability = probability),"probabilities")[,2])
+    return(attr(predict(c.svm, newdata, probability = TRUE),"probabilities")[,2])
   })
   rowMeans(Predictions)
 }

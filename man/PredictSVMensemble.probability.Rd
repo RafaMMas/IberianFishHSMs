@@ -2,13 +2,18 @@
 % Please edit documentation in R/PredictSVMensemble.R
 \name{PredictSVMensemble.probability}
 \alias{PredictSVMensemble.probability}
-\title{Title}
+\title{Predict suitability from SVM ensembles employing the SVM probability}
 \usage{
 PredictSVMensemble.probability(object, newdata)
 }
 \arguments{
-\item{newdata}{}
+\item{object}{Ensemble of Support Vector Machines (SVMs) as a list}
+
+\item{newdata}{data frame with four columns: Velocity, Depth, Substrate.index and Cover}
+}
+\value{
+predicted suitability
 }
 \description{
-Title
+Predict suitability from SVM ensembles employing the SVM probability
 }

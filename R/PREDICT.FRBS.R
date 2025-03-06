@@ -8,10 +8,10 @@
 #' @export
 #'
 #' @examples
-#' plot(PIMF(pattern = seq(0, 100, by = 1), parameters = c(10, 60, 75, 90)),
+#' plot(PIMF.NA(pattern = seq(0, 100, by = 1), parameters = c(10, 60, 75, 90)),
 #' type = "l", xlab = "Value", ylab = "Membership", bty = "n", las = 1, col = "orangered")
 #'
-#' plot(PIMF(pattern = seq(0, 100, by = 1), parameters = c(10, 40, 50, 80)),
+#' plot(PIMF.NA(pattern = seq(0, 100, by = 1), parameters = c(10, 40, 50, 80)),
 #' type = "l", xlab = "Value", ylab = "Membership", bty = "n", las = 1, col = "orangered")
 #'
 PIMF.NA <- function (pattern, parameters)
@@ -59,8 +59,6 @@ PIMF.NA <- function (pattern, parameters)
 #'
 #' @return matrix with the membership of each datum to each fuzzy rule obtained using the function FUZZIFY.FRBS.Fast and the predicted habitat suitability in the last column
 #' @export
-#'
-#' @examples
 #'
 PREDICT.FRBS <- function (Data, FRBS)
 {

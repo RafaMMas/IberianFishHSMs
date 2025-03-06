@@ -190,14 +190,14 @@ This function generates partial dependence-like plots for microhabitat suitabili
 
 <br/>
 
-### Load.and.print.model - Load and/or print a specific model
+### LoadAndPrintModel - Load and/or print a specific model
 
-`Load.and.print.model` allows selecting any specific model and assigning it to an *R* object, as well as printing this model.  
+`LoadAndPrintModel` allows selecting any specific model and assigning it to an *R* object, as well as printing this model.  
 
 ```{r Load.and.print.model}
 (Selected.model <- ListModels(Species = "Salmo trutta", Model.type = "GAM", verbose = FALSE))
 
-(Selected.model <- Load.and.print.model(Selected.model = Selected.model$Codes[1]))
+(Selected.model <- LoadAndPrintModel(Selected.model = Selected.model$Codes[1]))
 ```
 
 <br/>
@@ -251,7 +251,7 @@ summary(Cover.example.df[,-c(1:2)])
 
 <br/>
 
-```{r depth and velocity figure, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 14, out.height = "110%", dpi=800}
+```{r depth and velocity figure, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
 
 library(sf)
 
@@ -303,7 +303,7 @@ Among the ten types used to develop the microhabitat suitability models, in this
 
 <br/>
 
-``` {r plot cover, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 14, out.height = "110%", dpi=800}
+``` {r plot cover, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
 
 library(sf)
 

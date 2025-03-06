@@ -18,10 +18,10 @@ membership of the evaluated values
 Pi membership functions
 }
 \examples{
-plot(PIMF(pattern = seq(0, 100, by = 1), parameters = c(10, 60, 75, 90)),
+plot(PIMF.NA(pattern = seq(0, 100, by = 1), parameters = c(10, 60, 75, 90)),
 type = "l", xlab = "Value", ylab = "Membership", bty = "n", las = 1, col = "orangered")
 
-plot(PIMF(pattern = seq(0, 100, by = 1), parameters = c(10, 40, 50, 80)),
+plot(PIMF.NA(pattern = seq(0, 100, by = 1), parameters = c(10, 40, 50, 80)),
 type = "l", xlab = "Value", ylab = "Membership", bty = "n", las = 1, col = "orangered")
 
 }

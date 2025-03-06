@@ -2,13 +2,20 @@
 % Please edit documentation in R/PredictSVMensemble.R
 \name{PredictSVMensemble}
 \alias{PredictSVMensemble}
-\title{Title}
+\title{Predict suitability from SVM ensembles employing}
 \usage{
 PredictSVMensemble(object, newdata, probability = FALSE)
 }
 \arguments{
-\item{probability}{}
+\item{object}{Ensemble of Support Vector Machines (SVMs) as a list}
+
+\item{newdata}{data frame with four columns: Velocity, Depth, Substrate.index and Cover}
+
+\item{probability}{Logical. If \code{TRUE}, the SVM probability is used. Defaul = FALSE.}
+}
+\value{
+predicted presence/absence or predicted suitability when probability = FALSE
 }
 \description{
-Title
+Predict suitability from SVM ensembles employing
 }

@@ -454,10 +454,10 @@ effect by setting `Quantiles` to `FALSE`.
 
 <br/>
 
-### Load.and.print.model - Load and/or print a specific model
+### LoadAndPrintModel - Load and/or print a specific model
 
-`Load.and.print.model` allows selecting any specific model and assigning
-it to an *R* object, as well as printing this model.
+`LoadAndPrintModel` allows selecting any specific model and assigning it
+to an *R* object, as well as printing this model.
 
 ``` r
 (Selected.model <- ListModels(Species = "Salmo trutta", Model.type = "GAM", verbose = FALSE))
@@ -494,7 +494,7 @@ it to an *R* object, as well as printing this model.
 #> $Codes
 #> [1] "ABELZ" "ABEMN" "ABEMO"
 
-(Selected.model <- Load.and.print.model(Selected.model = Selected.model$Codes[1]))
+(Selected.model <- LoadAndPrintModel(Selected.model = Selected.model$Codes[1]))
 #> $Selected.cover.types
 #>             Leaves              Algae               Root Aquatic.vegetation 
 #>               TRUE              FALSE               TRUE               TRUE 
@@ -721,7 +721,7 @@ summary(Cover.example.df[,-c(1:2)])
 
     #> Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE
 
-<img src="man/figures/README-depth and velocity figure-1.png" width="100%" height="110%" />
+<img src="man/figures/README-depth and velocity figure-1.png" width="100%" height="100%" />
 
 **Figure 3** - Velocity (m/s) and depth (m) distribution in the Serpis
 River (Jucar River Basin District) for four different modelled flow
@@ -741,7 +741,7 @@ cover types were only present in small patches.
 
 <br/>
 
-<img src="man/figures/README-plot cover-1.png" width="100%" height="110%" />
+<img src="man/figures/README-plot cover-1.png" width="100%" height="100%" />
 
 **Figure 4** - Distribution of each cover type along the reach of the
 Serpis River (Jucar River Basin District). The models were developed

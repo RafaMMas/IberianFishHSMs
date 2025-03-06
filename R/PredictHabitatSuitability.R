@@ -115,6 +115,8 @@ setNames(as.data.frame(Habitat.assessment), Selected.models$Models)
 #'
 #' @param Selected.model A character string or object representing the selected habitat suitability model. It should be among the `Codes` obtained with `ListModels` Default is `NULL`.
 #'
+#' @param verbose Logical. If `TRUE`, the model is printed. Defaul = FALSE.
+#'
 #' @returns List containing the selected cover types (`Selected.cover.types`), the model type (`Model.type`) and the model itself (`Model`).
 #' @export
 #'
@@ -122,9 +124,9 @@ setNames(as.data.frame(Habitat.assessment), Selected.models$Models)
 #'
 #' (Selected.model <- ListModels(Species = "Salmo trutta", verbose = FALSE)$Codes[1])
 #'
-#' Load.and.print.model(Selected.model = Selected.model)
+#' LoadAndPrintModel(Selected.model = Selected.model)
 #'
-Load.and.print.model <- function(Selected.model = NULL, verbose = TRUE){
+LoadAndPrintModel <- function(Selected.model = NULL, verbose = TRUE){
       file_path <- system.file("extradata", paste0(Selected.model, ".rds"), package = "IberianFishHSMs")
       c.model <- readRDS(file_path)
       if(verbose)
