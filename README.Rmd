@@ -286,6 +286,7 @@ for(i in c(8, 25, 30, 42))
 
 for(i in c(8, 25, 30, 42))
 {
+  c.flow <- gsub(x = colnames(Velocity.example.df)[i], pattern = "Depth.", replacement = "")
   plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
      col = Colors.depth[cut(Depth.example.df[,i], breaks = Seq.depth, labels = 1:100, include.lowest = T)],
      xlab = "X", ylab = "Y")
