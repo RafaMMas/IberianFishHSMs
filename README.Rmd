@@ -327,7 +327,7 @@ for(i in 1:ncol(Cover.example.df[,-c(1:2)]))
 
 par(op)
 
-title("Available cover in the Serpis River reach (JRBD)", outer = T, line = -2, adj = 0.5, cex.main = 1)
+title("Available cover in the Serpis River reach (JRBD)", outer = T, line = -3, adj = 0.5, cex.main = 1)
 
 par(op)
 
