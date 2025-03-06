@@ -365,17 +365,18 @@ The substrate index ranges from 0 fines/silt to 8 bedrock. In the example site i
 </div>
 <br/>
 
-```{r substrate index map, eval = FALSE, fig.width = 8, fig.height = 14, out.height = "110%", dpi=800}
+```{r substrate index map, echo = FALSE, eval = TRUE, fig.width = 8, fig.height = 5, out.height = "110%", dpi=800}
 
 library(sf)
 
 Coordinates <- st_as_sf(Velocity.example.df[,c("x", "y")], coords = c("x", "y"))
 
-Colors.suitability <- colorRampPalette(c("red2", "darkorange", "gold", "green2", "dodgerblue"))(100)
+Colors.substrate.index <- viridis::turbo(100)
 
 op <- par(mfrow = c(1, 4),
-          oma = c(0.25, 0.25, 4, 0.25),
-          mar = c(4, 4, 1, 0.25))
+          oma = c(0.25, 0.25, 4, 0.25))
+
+op1 <- par(mar = c(4, 4, 1, 0.25))
 
 plot.new()
 
@@ -386,13 +387,11 @@ Axis(side = 2, cex.axis = 0.5)
 
 par(op1)
 
-op1 <- par(mar = c(4, 0, 8, 2))
+op1 <- par(mar = c(4, 2, 8, 2))
 
 plot(rep(0,100), seq(0, 8, length=100), pch = 15, cex=2, col = Colors.substrate.index, ann = F, bty = "n", axes = FALSE, xaxs = "i", yaxs = "i")
 Axis(side = 4, las = 1)
 mtext(side=4, "Substrate index (-)", las = 0, line = 2.5)
-
-par(op1)
 
 plot.new()
 
@@ -465,7 +464,7 @@ The coordinates included in the data included in `IberianFishHSMs` allows plotti
 
 <br/>
 
-```{r compareplot code, eval = FALSE, fig.width = 8, fig.height = 14, out.height = "110%", dpi=800}
+```{r compareplot code, eval = FALSE, fig.width = 8, fig.height = 10, out.height = "110%", dpi=800}
 
 library(sf)
 

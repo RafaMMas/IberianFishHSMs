@@ -814,43 +814,7 @@ example site in the Serpis River
 
 <br/>
 
-``` r
-
-library(sf)
-
-Coordinates <- st_as_sf(Velocity.example.df[,c("x", "y")], coords = c("x", "y"))
-
-Colors.suitability <- colorRampPalette(c("red2", "darkorange", "gold", "green2", "dodgerblue"))(100)
-
-op <- par(mfrow = c(1, 4),
-          oma = c(0.25, 0.25, 4, 0.25),
-          mar = c(4, 4, 1, 0.25))
-
-plot.new()
-
-plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
-col = Colors.substrate.index[cut(Substrate.index$Substrate.index, seq(0, 8, length = 101), labels = 1:100, include.lowest = FALSE)],      xlab = "X", ylab = "Y")
-Axis(side = 1, cex.axis = 0.5)
-Axis(side = 2, cex.axis = 0.5) 
-
-par(op1)
-
-op1 <- par(mar = c(4, 0, 8, 2))
-
-plot(rep(0,100), seq(0, 8, length=100), pch = 15, cex=2, col = Colors.substrate.index, ann = F, bty = "n", axes = FALSE, xaxs = "i", yaxs = "i")
-Axis(side = 4, las = 1)
-mtext(side=4, "Substrate index (-)", las = 0, line = 2.5)
-
-par(op1)
-
-plot.new()
-
-par(op)
-
-title("Substrate index in the Serpis River reach (JRBD)", outer = T, line = -2, adj = 0.5, cex.main = 1.5)
-
-par(op)
-```
+<img src="man/figures/README-substrate index map-1.png" width="100%" height="110%" />
 
 **Figure 5** - Substrate composition (substrate index) along the reach
 of the Serpis River (Jucar River Basin District). The percentages (%) of
