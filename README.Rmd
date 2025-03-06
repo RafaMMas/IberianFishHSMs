@@ -231,7 +231,7 @@ The different option to, for example, plot each models depend on each specific p
 ### PredictHabitatSuitability - Habitat suitability predictions
 
 <div style="text-align: justify;">
-Habitat suitability predictions are carried out with `PredictHabitatSuitability` and are based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluated microhabitats (i.e., pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data (i.e., `SubstrateIndex`). Additionally, the package includes data on a typical output from a hydraulic simulation and field survey. In particular, it includes data on velocity and depth for 40 simulated flows and the substrate composition and cover availability in the 400-m reach of the Serpis River (Eastern Iberian Peninsula) studied by Muñoz-Mas et all. [-@Munoz-Mas2024]. The data and subsequent analyses are intended to show the capabilities of the package and do not imply the species are present in this reach of the Serpis River or along its water course. For simplicity the data are stored in for separated files that can be loaded to the workspace using the `data` function as follows:
+Habitat suitability predictions are carried out with `PredictHabitatSuitability` and are based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluated microhabitats (i.e., pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data (i.e., `SubstrateIndex`). Additionally, the package includes data on a typical output from a hydraulic simulation and the data on substrate and cover distribution and availability from the field survey carried out in concert of the bathymetry. In particular, it includes data on velocity and depth for 40 simulated flows and the substrate composition and cover availability in the 400-m reach of the Serpis River (Eastern Iberian Peninsula) studied by Muñoz-Mas et all. [-@Munoz-Mas2024]. The data and subsequent analyses are intended to show the capabilities of the package and do not imply the species are present in this reach of the Serpis River or along its water course. For simplicity the data are stored in four separated files that can be loaded to the workspace using the function `data` as follows:
 </div>
 
 <br/>
@@ -251,6 +251,10 @@ summary(Substrate.index.example.df[,-c(1:2)])
 
 <br/>
 
+In this reach of the Serpis River the water flows northward (upwards). The reach presents a series of small and relatively shallow pools connected throw rapid waters (i.e., rapid/runs). The bigger pool is located at the downstream part of the reach. 
+
+<br/>
+
 ```{r depth and velocity figure, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
 
 library(sf)
@@ -267,7 +271,7 @@ op <- par(mfrow = c(2, 4),
           oma = c(0.25, 0.25, 4, 0.25),
           mar = c(4, 4, 1, 0.25))
 
-for(i in c(5, 10, 25, 40))
+for(i in c(8, 25, 30, 42))
 {
   c.flow <- gsub(x = colnames(Velocity.example.df)[i], pattern = "Velocity.", replacement = "")
   plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
@@ -280,7 +284,7 @@ for(i in c(5, 10, 25, 40))
         line = -30, cex.main = 1, adj = 0.2)
 }
 
-for(i in c(5,10,25,40))
+for(i in c(8, 25, 30, 42))
 {
   plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
      col = Colors.depth[cut(Depth.example.df[,i], breaks = Seq.depth, labels = 1:100, include.lowest = T)],

@@ -633,15 +633,16 @@ relevant types of cover in the evaluated microhabitats (i.e., pixels or
 cells from the hydraulic simulation). The package includes functions to
 prepare the input data (i.e., `SubstrateIndex`). Additionally, the
 package includes data on a typical output from a hydraulic simulation
-and field survey. In particular, it includes data on velocity and depth
-for 40 simulated flows and the substrate composition and cover
-availability in the 400-m reach of the Serpis River (Eastern Iberian
-Peninsula) studied by Muñoz-Mas et all. (2024). The data and subsequent
-analyses are intended to show the capabilities of the package and do not
-imply the species are present in this reach of the Serpis River or along
-its water course. For simplicity the data are stored in for separated
-files that can be loaded to the workspace using the `data` function as
-follows:
+and the data on substrate and cover distribution and availability from
+the field survey carried out in concert of the bathymetry. In
+particular, it includes data on velocity and depth for 40 simulated
+flows and the substrate composition and cover availability in the 400-m
+reach of the Serpis River (Eastern Iberian Peninsula) studied by
+Muñoz-Mas et all. (2024). The data and subsequent analyses are intended
+to show the capabilities of the package and do not imply the species are
+present in this reach of the Serpis River or along its water course. For
+simplicity the data are stored in four separated files that can be
+loaded to the workspace using the function `data` as follows:
 
 </div>
 
@@ -716,6 +717,13 @@ summary(Substrate.index.example.df[,-c(1:2)])
 #>  3rd Qu.: 50.00   3rd Qu.:  0.00   3rd Qu.:  0.000  
 #>  Max.   :100.00   Max.   :100.00   Max.   :100.000
 ```
+
+<br/>
+
+In this reach of the Serpis River the water flows northward (upwards).
+The reach presents a series of small and relatively shallow pools
+connected throw rapid waters (i.e., rapid/runs). The bigger pool is
+located at the downstream part of the reach.
 
 <br/>
 
