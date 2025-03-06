@@ -365,25 +365,35 @@ The substrate index ranges from 0 fines/silt to 8 bedrock. In the example site i
 </div>
 <br/>
 
-``` {r plot substrate, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 5, out.height = "100%", dpi=800}
+``` {r plot substrate, echo = FALSE, warning=FALSE, fig.width = 5, fig.height = 5, out.height = "100%", dpi=800}
 
 library(sf)
 
 Coordinates <- st_as_sf(Velocity.example.df[,c("x", "y")], coords = c("x", "y"))
 
-Colors.substrate.index <- terrain.colors(100)
+Colors.substrate.index <- viridis::turbo(100)
 
-op <- par(mfrow = c(1, 1),
-          oma = c(0.25, 0.25, 4, 0.25),
-          mar = c(4, 4, 2.5, 0.25))
+op <- par(# mfrow = c(1, 1),
+          oma = c(0.25, 0.25, 4, 0.25))
 
-for(i in 1:ncol(Cover.example.df[,-c(1:2)]))
-{
-  plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
-     col = Colors.substrate.index[cut(Substrate.index$Substrate.index, seq(0, 8, length = 101), labels = 1:100, include.lowest = FALSE)],      xlab = "X", ylab = "Y")
-  Axis(side = 1, cex.axis = 0.5)
-  Axis(side = 2, cex.axis = 0.5) 
-}
+layout(matrix(1:2, ncol = 2), widths = c(1, 0.3))
+
+op1 <- par(mar = c(4, 4, 2.5, 0.25))
+
+plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
+col = Colors.substrate.index[cut(Substrate.index$Substrate.index, seq(0, 8, length = 101), labels = 1:100, include.lowest = FALSE)],      xlab = "X", ylab = "Y")
+Axis(side = 1, cex.axis = 0.5)
+Axis(side = 2, cex.axis = 0.5) 
+
+par(op1)
+
+op1 <- par(mar = c(4, 0, 8, 5))
+
+plot(rep(0,100), seq(0, 8, length=100), pch = 15, col = Colors.substrate.index, ann = F, bty = "n", axes = FALSE, xaxs = "i", yaxs = "i")
+Axis(side = 4, las = 1)
+mtext(side=4, "Substrate index (-)", las = 0, line = 2.5)
+
+par(op1)
 
 par(op)
 
