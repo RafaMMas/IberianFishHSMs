@@ -251,7 +251,7 @@ summary(Cover.example.df[,-c(1:2)])
 
 <br/>
 
-``` {r plot example velocity and depth, warning=FALSE, echo = FALSE, fig.width = 8, fig.height = 14, out.height = "110%", dpi=800}
+```{r depth and velocity figure, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 14, out.height = "110%", dpi=800}
 
 library(sf)
 
@@ -265,9 +265,9 @@ Seq.depth <- seq(0, max(Depth.example.df[,-c(1:2)], na.rm = T), length = 101)
 
 op <- par(mfrow = c(2, 4),
           oma = c(0.25, 0.25, 4, 0.25),
-          mar = c(4, 4, 2.5, 0.25))
+          mar = c(4, 4, 1, 0.25))
 
-for(i in c(5,10,25,40))
+for(i in c(5, 10, 25, 40))
 {
   plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
      col = Colors.velocity[cut(Velocity.example.df[,i], breaks = Seq.velocity, labels = 1:100, include.lowest = T)], 
