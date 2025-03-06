@@ -387,7 +387,7 @@ Axis(side = 2, cex.axis = 0.5)
 
 par(op1)
 
-op1 <- par(mar = c(4, 2, 8, 2))
+op1 <- par(mar = c(4, 3, 9, 5))
 
 plot(rep(0,100), seq(0, 8, length=100), pch = 15, cex=2, col = Colors.substrate.index, ann = F, bty = "n", axes = FALSE, xaxs = "i", yaxs = "i")
 Axis(side = 4, las = 1)
@@ -397,7 +397,7 @@ plot.new()
 
 par(op)
 
-title("Substrate index in the Serpis River reach (JRBD)", outer = T, line = -2, adj = 0.5, cex.main = 1.5)
+title("Substrate index in the Serpis River reach (JRBD)", outer = T, line = -3, adj = 0.5, cex.main = 1)
 
 par(op)
 
