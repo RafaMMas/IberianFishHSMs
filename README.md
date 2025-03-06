@@ -719,7 +719,6 @@ summary(Cover.example.df[,-c(1:2)])
 
 <br/>
 
-    #> Warning: package 'sf' was built under R version 4.3.3
     #> Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE
 
 <img src="man/figures/README-plot example velocity and depth-1.png" width="100%" />

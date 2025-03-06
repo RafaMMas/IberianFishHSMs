@@ -251,7 +251,7 @@ summary(Cover.example.df[,-c(1:2)])
 
 <br/>
 
-``` {r plot example velocity and depth, echo = FALSE}
+``` {r plot example velocity and depth, warning=FALSE, echo = FALSE, dpi=800}
 
 library(sf)
 
@@ -301,7 +301,7 @@ Among the ten types used to develop the microhabitat suitability models, in this
 
 <br/>
 
-``` {r plot cover, echo = FALSE}
+``` {r plot cover, echo = FALSE, warning=FALSE, dpi=800}
 
 library(sf)
 
