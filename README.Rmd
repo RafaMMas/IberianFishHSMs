@@ -74,7 +74,7 @@ This package was developed by:
 - **Jose Maria Santos**<sup>10</sup> (Contributor)
 - **Rafael Miranda Ferreiro**<sup>11</sup> (Contributor)
 
-<span style="font-size:12px;">
+<span style="font-size:11px;">
 <div style="text-align: justify;">
 <sup>1</sup> Tragsatec, Carrer Ramon Gordillo 7 - 46010 València, Spain.
 <sup>2</sup>
@@ -231,7 +231,7 @@ The different option to, for example, plot each models depend on each specific p
 ### Habitat suitability prediction
 
 <div style="text-align: justify;">
-Habitat suitability predictions are carried out based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluated microhabitats (i.e. pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data. Additionally, the package includes data on a typical output from a hydraulic simulation and field survey. In particular, it includes data on velocity and depth for 40 simulated flows and the substrate composition and cover availability in the 400-m reach of the Serpis River Basin (Eastern Iberian Peninsula) studied by Muñoz-Mas et all [-@Munoz-Mas2024]. The data and subsequent analyses are intended to show the capabilities of the package and do not imply the species are present in this reach of the Serpis River or along its water course. 
+Habitat suitability predictions are carried out based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluated microhabitats (i.e., pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data. Additionally, the package includes data on a typical output from a hydraulic simulation and field survey. In particular, it includes data on velocity and depth for 40 simulated flows and the substrate composition and cover availability in the 400-m reach of the Serpis River Basin (Eastern Iberian Peninsula) studied by Muñoz-Mas et all [-@Munoz-Mas2024]. The data and subsequent analyses are intended to show the capabilities of the package and do not imply the species are present in this reach of the Serpis River or along its water course. 
 </div>
 
 <br/>
@@ -403,7 +403,7 @@ par(op)
 <br/>
 
 <div style="text-align: justify;">
-The different models assign the highest suitability to the downstream pool (upper part of the map). However, the maps developed employing the preceding code reveal the differences among the microhabitat suitability models. The Fuzzy Rule-Based Systems (FRBSs) assign large suitability to the deeper areas and the shores of the pools comprised within the hydraulic model. Both of them predicted as unsuitable the rapids connecting them but the FRBSs for Winter is more restrictive than the one for Summer and predicts as suitable only the deeper parts of these pools. The Generalised Additive Model (GAM) and the Habitat Suitability Curves (HSCs) predicted high suitability in the deeper part of the upstream pool and particularly to the shores, but the upstream smaller pools were unsuitable with the GAM and largely suitable with the HSCs. The latter highlights the compensatory nature of the geometric mean used to aggregate the suitability obtained from each independent microhabitat suitability curve. The Artificial Neural Network (NNET) only considered suitable a fringe along the right margin and some specific spots in the opposite margin. The Random forest model (RF) only predicted as suitable the deeper parts and, based on this model predictions, both margins were evaluated as unsuitable. The predictions of the Support Vector Machine (SVM) were similar but, this technique evalauted the deeper parts of the pool with the highest suitability (i.e. 1). These models are base
+The different models assign the highest suitability to the downstream pool (upper part of the map). However, the maps developed employing the preceding code reveal the differences among the microhabitat suitability models. The Fuzzy Rule-Based Systems (FRBSs) assign large suitability to the deeper areas and the shores of the pools comprised within the hydraulic model. Both of them predicted as unsuitable the rapids connecting them but the FRBSs for Winter is more restrictive than the one for Summer and predicts as suitable only the deeper parts of these pools. The Generalised Additive Model (GAM) and the Habitat Suitability Curves (HSCs) predicted high suitability in the deeper part of the upstream pool and particularly to the shores, but the upstream smaller pools were unsuitable with the GAM and largely suitable with the HSCs. The latter highlights the compensatory nature of the geometric mean used to aggregate the suitability obtained from each independent microhabitat suitability curve. The Artificial Neural Network (NNET) only considered suitable a fringe along the right margin and some specific spots in the opposite margin. The Random forest model (RF) only predicted as suitable the deeper parts and, based on this model predictions, both margins were evaluated as unsuitable. The predictions of the Support Vector Machine (SVM) were similar but, this technique evalauted the deeper parts of the pool with the highest suitability (i.e., 1). These models are base
 </div>
 
 <br/>

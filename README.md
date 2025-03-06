@@ -85,7 +85,7 @@ This package was developed by:
 - **Jose Maria Santos**<sup>10</sup> (Contributor)
 - **Rafael Miranda Ferreiro**<sup>11</sup> (Contributor)
 
-<span style="font-size:12px;">
+<span style="font-size:11px;">
 
 <div style="text-align: justify;">
 
@@ -620,17 +620,16 @@ package `pdp` (Greenwell 2017).
 
 Habitat suitability predictions are carried out based on mean flow
 velocity (m/s), water depth (m) substrate index (-) and the sum of the
-number of relevant types of cover in the evaluated microhabitats
-(i.e. pixels or cells from the hydraulic simulation). The package
-includes functions to prepare the input data. Additionally, the package
-includes data on a typical output from a hydraulic simulation and field
-survey. In particular, it includes data on velocity and depth for 40
-simulated flows and the substrate composition and cover availability in
-the 400-m reach of the Serpis River Basin (Eastern Iberian Peninsula)
-studied by Muñoz-Mas et all (2024). The data and subsequent analyses are
-intended to show the capabilities of the package and do not imply the
-species are present in this reach of the Serpis River or along its water
-course.
+number of relevant types of cover in the evaluated microhabitats (i.e.,
+pixels or cells from the hydraulic simulation). The package includes
+functions to prepare the input data. Additionally, the package includes
+data on a typical output from a hydraulic simulation and field survey.
+In particular, it includes data on velocity and depth for 40 simulated
+flows and the substrate composition and cover availability in the 400-m
+reach of the Serpis River Basin (Eastern Iberian Peninsula) studied by
+Muñoz-Mas et all (2024). The data and subsequent analyses are intended
+to show the capabilities of the package and do not imply the species are
+present in this reach of the Serpis River or along its water course.
 
 </div>
 
@@ -1071,7 +1070,7 @@ opposite margin. The Random forest model (RF) only predicted as suitable
 the deeper parts and, based on this model predictions, both margins were
 evaluated as unsuitable. The predictions of the Support Vector Machine
 (SVM) were similar but, this technique evalauted the deeper parts of the
-pool with the highest suitability (i.e. 1). These models are base
+pool with the highest suitability (i.e., 1). These models are base
 
 </div>
 
