@@ -85,9 +85,7 @@ This package was developed by:
 - **Jose Maria Santos**<sup>10</sup> (Contributor)
 - **Rafael Miranda Ferreiro**<sup>11</sup> (Contributor)
 
-<span style="font-size:11px;">
-
-<div style="text-align: justify;">
+<div style="text-align: justify; font-size: 11px;">
 
 <sup>1</sup> Tragsatec, Carrer Ramon Gordillo 7 - 46010 València, Spain.
 <sup>2</sup> <sup>3</sup> GRECO, Institute of Aquatic Ecology,
