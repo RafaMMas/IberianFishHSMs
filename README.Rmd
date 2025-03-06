@@ -212,7 +212,7 @@ As indicated at the beginning of this manual, each group of models was developed
 - Fuzzy Rule-Based Systems (FRBSs): `FuzzyFishHS` [github link](https://github.com/RafaMMas/FuzzyFishHS)
 
 <div style="text-align: justify;">
-Therefore, once a specific model has been loaded, it is possible to harness the capabilities of each specific package to, for example, plot directly the selected model. The following code shows an example using the function plot from `mgcv` to plot the effects of the smooth spline functions of a Generalised Additive Model (GAM) for brown trout (*Salmo trutta*) large obtained with data collected in the Curueño River (Douro) and valid all year round.  
+Therefore, once a specific model has been loaded, it is possible to harness the capabilities of each specific package to, for example, plot directly the selected model. The following code shows an example using the function `plot` from `mgcv` to visualise the effects of the smooth spline functions of a Generalised Additive Model (GAM) for brown trout (*Salmo trutta*) large obtained with data collected in the Curueño River (Douro) and valid all year round.  
 </div>
 
 ```{r GAMplot, fig.width = 8, fig.height = 5, dpi=800}
@@ -239,13 +239,13 @@ Habitat suitability predictions are carried out with `PredictHabitatSuitability`
 ``` {r Habitat assessment}
 data("Velocity.example.df")
 data("Depth.example.df")
-data("Substrate.index.example.df")
 data("Cover.example.df")
+data("Substrate.index.example.df")
 
 summary(Velocity.example.df[,1:6])
 summary(Depth.example.df[,1:6])
-summary(Substrate.index.example.df[,-c(1:2)])
 summary(Cover.example.df[,-c(1:2)])
+summary(Substrate.index.example.df[,-c(1:2)])
 
 ```
 
@@ -351,6 +351,44 @@ head(SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)) # c
 Substrate.index <- SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)
 
 ```
+
+<br/>
+
+<div style="text-align: justify;">
+The substrate index ranges from 0 fines/silt to 8 bedrock. In the example site in the Serpis River
+
+</div>
+<br/>
+
+``` {r plot substrate, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 5, out.height = "100%", dpi=800}
+
+library(sf)
+
+Coordinates <- st_as_sf(Velocity.example.df[,c("x", "y")], coords = c("x", "y"))
+
+Colors.substrate.index <- terrain.colors(100)
+
+op <- par(mfrow = c(1, 1),
+          oma = c(0.25, 0.25, 4, 0.25),
+          mar = c(4, 4, 2.5, 0.25))
+
+for(i in 1:ncol(Cover.example.df[,-c(1:2)]))
+{
+  plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
+     col = Colors.substrate.index[cut(Substrate.index$Substrate.index, seq(0, 8, length = 101), labels = 1:100, include.lowest = FALSE)],      xlab = "X", ylab = "Y")
+  Axis(side = 1, cex.axis = 0.5)
+  Axis(side = 2, cex.axis = 0.5) 
+}
+
+par(op)
+
+title("Substrate index in the Serpis River reach (JRBD)", outer = T, line = -2, adj = 0.5, cex.main = 1)
+
+par(op)
+
+```
+
+**Figure 5** - Substrate composition (substrate index) along the reach of the Serpis River (Jucar River Basin District). The percentages (%) of the different substrate types are stored in `Cover.example.df`.
 
 ```{r select model for evaluation}
 
@@ -483,7 +521,7 @@ par(op)
 
 ```
 
-**Figure 5** - Maps depicting the predicted microhabitat suitability for *Cobitis paludica* small in a reach of the Serpis River (Jucar River Basin District - JRBD). The maps show the predictions for 0.5 m<sup>3</sup>/s. The figure depicts the predictions from seven different models. The Fuzzy Rule-Based Systems (FRBSs) were obtained from expert-knowledge and literature (EKorL) and they are valid for Summer (warm period) and Winter (cold period) respectively. The figure also depicts the predictions carried out with the Generalised Additive Model (GAM), Habitat Suitability Curves (HSCs), Artificial Neural Network (NNET), Random forests (RF) and Support Vector Machine (SVM). All these models were developed pooling data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers. Currently, these models are valid for every season (*All*).
+**Figure 6** - Maps depicting the predicted microhabitat suitability for *Cobitis paludica* small in a reach of the Serpis River (Jucar River Basin District - JRBD). The maps show the predictions for 0.5 m<sup>3</sup>/s. The figure depicts the predictions from seven different models. The Fuzzy Rule-Based Systems (FRBSs) were obtained from expert-knowledge and literature (EKorL) and they are valid for Summer (warm period) and Winter (cold period) respectively. The figure also depicts the predictions carried out with the Generalised Additive Model (GAM), Habitat Suitability Curves (HSCs), Artificial Neural Network (NNET), Random forests (RF) and Support Vector Machine (SVM). All these models were developed pooling data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers. Currently, these models are valid for every season (*All*).
 
 <br/>
 

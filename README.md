@@ -591,10 +591,10 @@ developed employing specific *R* packages:
 Therefore, once a specific model has been loaded, it is possible to
 harness the capabilities of each specific package to, for example, plot
 directly the selected model. The following code shows an example using
-the function plot from `mgcv` to plot the effects of the smooth spline
-functions of a Generalised Additive Model (GAM) for brown trout (*Salmo
-trutta*) large obtained with data collected in the Curueño River (Douro)
-and valid all year round.
+the function `plot` from `mgcv` to visualise the effects of the smooth
+spline functions of a Generalised Additive Model (GAM) for brown trout
+(*Salmo trutta*) large obtained with data collected in the Curueño River
+(Douro) and valid all year round.
 
 </div>
 
@@ -650,8 +650,8 @@ follows:
 ``` r
 data("Velocity.example.df")
 data("Depth.example.df")
-data("Substrate.index.example.df")
 data("Cover.example.df")
+data("Substrate.index.example.df")
 
 summary(Velocity.example.df[,1:6])
 #>        x                y           Velocity.0.05      Velocity.0.1     
@@ -685,21 +685,6 @@ summary(Depth.example.df[,1:6])
 #>  3rd Qu.:0.4729   3rd Qu.:0.4987  
 #>  Max.   :1.3332   Max.   :1.3676  
 #>  NA's   :1548     NA's   :1482
-summary(Substrate.index.example.df[,-c(1:2)])
-#>    Vegetation      Silt             Sand    Fine.gravel         Gravel      
-#>  Min.   :0    Min.   :  0.00   Min.   :0   Min.   :  0.00   Min.   :  0.00  
-#>  1st Qu.:0    1st Qu.:  0.00   1st Qu.:0   1st Qu.:  0.00   1st Qu.:  0.00  
-#>  Median :0    Median : 15.00   Median :0   Median :  0.00   Median :  0.00  
-#>  Mean   :0    Mean   : 20.59   Mean   :0   Mean   : 10.49   Mean   : 15.61  
-#>  3rd Qu.:0    3rd Qu.: 50.00   3rd Qu.:0   3rd Qu.:  0.00   3rd Qu.: 20.00  
-#>  Max.   :0    Max.   :100.00   Max.   :0   Max.   :100.00   Max.   :100.00  
-#>     Cobbles          Boulders         Bed.rock      
-#>  Min.   :  0.00   Min.   :  0.00   Min.   :  0.000  
-#>  1st Qu.:  0.00   1st Qu.:  0.00   1st Qu.:  0.000  
-#>  Median : 50.00   Median :  0.00   Median :  0.000  
-#>  Mean   : 38.49   Mean   : 10.25   Mean   :  4.571  
-#>  3rd Qu.: 50.00   3rd Qu.:  0.00   3rd Qu.:  0.000  
-#>  Max.   :100.00   Max.   :100.00   Max.   :100.000
 summary(Cover.example.df[,-c(1:2)])
 #>      Leaves      Algae        Root   Aquatic.vegetation      Reed        
 #>  Min.   :0   Min.   :0   Min.   :0   Min.   :0.00000    Min.   :0.00000  
@@ -715,6 +700,21 @@ summary(Cover.example.df[,-c(1:2)])
 #>  Mean   :0.4767   Mean   :0   Mean   :0.1612   Mean   :0.02177   Mean   :0.53  
 #>  3rd Qu.:1.0000   3rd Qu.:0   3rd Qu.:0.0000   3rd Qu.:0.00000   3rd Qu.:1.00  
 #>  Max.   :1.0000   Max.   :0   Max.   :1.0000   Max.   :1.00000   Max.   :1.00
+summary(Substrate.index.example.df[,-c(1:2)])
+#>    Vegetation      Silt             Sand    Fine.gravel         Gravel      
+#>  Min.   :0    Min.   :  0.00   Min.   :0   Min.   :  0.00   Min.   :  0.00  
+#>  1st Qu.:0    1st Qu.:  0.00   1st Qu.:0   1st Qu.:  0.00   1st Qu.:  0.00  
+#>  Median :0    Median : 15.00   Median :0   Median :  0.00   Median :  0.00  
+#>  Mean   :0    Mean   : 20.59   Mean   :0   Mean   : 10.49   Mean   : 15.61  
+#>  3rd Qu.:0    3rd Qu.: 50.00   3rd Qu.:0   3rd Qu.:  0.00   3rd Qu.: 20.00  
+#>  Max.   :0    Max.   :100.00   Max.   :0   Max.   :100.00   Max.   :100.00  
+#>     Cobbles          Boulders         Bed.rock      
+#>  Min.   :  0.00   Min.   :  0.00   Min.   :  0.000  
+#>  1st Qu.:  0.00   1st Qu.:  0.00   1st Qu.:  0.000  
+#>  Median : 50.00   Median :  0.00   Median :  0.000  
+#>  Mean   : 38.49   Mean   : 10.25   Mean   :  4.571  
+#>  3rd Qu.: 50.00   3rd Qu.:  0.00   3rd Qu.:  0.000  
+#>  Max.   :100.00   Max.   :100.00   Max.   :100.000
 ```
 
 <br/>
@@ -802,6 +802,23 @@ head(SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)) # c
 
 Substrate.index <- SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)
 ```
+
+<br/>
+
+<div style="text-align: justify;">
+
+The substrate index ranges from 0 fines/silt to 8 bedrock. In the
+example site in the Serpis River
+
+</div>
+
+<br/>
+
+<img src="man/figures/README-plot substrate-1.png" width="100%" height="100%" />
+
+**Figure 5** - Substrate composition (substrate index) along the reach
+of the Serpis River (Jucar River Basin District). The percentages (%) of
+the different substrate types are stored in `Cover.example.df`.
 
 ``` r
 
@@ -1096,7 +1113,7 @@ pool with the highest suitability (i.e., 1). These models are base
 
 <img src="man/figures/README-compareplot figure-1.png" width="100%" height="110%" />
 
-**Figure 5** - Maps depicting the predicted microhabitat suitability for
+**Figure 6** - Maps depicting the predicted microhabitat suitability for
 *Cobitis paludica* small in a reach of the Serpis River (Jucar River
 Basin District - JRBD). The maps show the predictions for 0.5
 m<sup>3</sup>/s. The figure depicts the predictions from seven different
