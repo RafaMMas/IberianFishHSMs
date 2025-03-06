@@ -85,30 +85,25 @@ This package was developed by:
 - **Jose Maria Santos**<sup>10</sup> (Contributor)
 - **Rafael Miranda Ferreiro**<sup>11</sup> (Contributor)
 
-<font size="10">
-
+<style type="text/css">
+  body{
+  font-size: 12pt;
+  text-align: justify;
+}
 <div style="text-align: justify;">
-
 <sup>1</sup> Tragsatec, Carrer Ramon Gordillo 7 - 46010 València, Spain.
-<sup>2</sup> <sup>3</sup> GRECO, Institute of Aquatic Ecology,
-University of Girona, E-17071 Girona. <sup>4</sup> Laboratorio de
-Hidrobiologia, Departamento de Zoología, Genetica y Antropología Física.
-Facultad de Biología. Universidad de Santiago de Compostela, 15782
-Santiago de Compostela, Spain. <sup>5</sup> Icthios Gestión Ambiental
-SL. <info@icthios.es>. <sup>6</sup> ECOHIDRÁULICA, S.L. C/ Villamanín
-16, Madrid 28011. <sup>7</sup> Institut d’Investigació per a la Gestió
-Integrada de Zones Costaneres (IGIC), Universitat Politècnica de
-València, C/Paranimf, 1, 46730 Gandia, València, Spain. <sup>8</sup>
-Departamento de Zoología y Antropología Física. 30100. Universidad de
-Murcia. Murcia. <sup>9</sup> Dpto. de Ciencias Integradas. Universidad
-de Huelva. <sup>10</sup> Forest Research Centre, Associate Laboratory
-TERRA, School of Agriculture, University of Lisbon. <sup>11</sup>
-Universidad de Navarra, Instituto de Biodiversidad y Medioambiente
-(BIOMA), 31008 Pamplona, Navarra, Spain.
-
+<sup>2</sup>
+<sup>3</sup> GRECO, Institute of Aquatic Ecology, University of Girona, E-17071 Girona.
+<sup>4</sup> Laboratorio de Hidrobiologia, Departamento de Zoología, Genetica y Antropología Física. Facultad de Biología. Universidad de Santiago de Compostela, 15782 Santiago de Compostela, Spain.
+<sup>5</sup> Icthios Gestión Ambiental SL. info@icthios.es.
+<sup>6</sup> ECOHIDRÁULICA, S.L. C/ Villamanín 16, Madrid 28011.
+<sup>7</sup> Institut d'Investigació per a la Gestió Integrada de Zones Costaneres (IGIC), Universitat Politècnica de València, C/Paranimf, 1, 46730 Gandia, València, Spain.
+<sup>8</sup> Departamento de Zoología y Antropología Física. 30100. Universidad de Murcia. Murcia.
+<sup>9</sup> Dpto. de Ciencias Integradas. Universidad de Huelva.
+<sup>10</sup> Forest Research Centre, Associate Laboratory TERRA, School of Agriculture, University of Lisbon.
+<sup>11</sup> Universidad de Navarra, Instituto de Biodiversidad y Medioambiente (BIOMA), 31008 Pamplona, Navarra, Spain.
 </div>
-
-</span>
+</style>
 
 <br/>
 
