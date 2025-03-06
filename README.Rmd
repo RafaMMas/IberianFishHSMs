@@ -269,12 +269,15 @@ op <- par(mfrow = c(2, 4),
 
 for(i in c(5, 10, 25, 40))
 {
+  c.flow <- gsub(x = colnames(Velocity.example.df)[i], pattern = "Velocity.", replacement = "")
   plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
      col = Colors.velocity[cut(Velocity.example.df[,i], breaks = Seq.velocity, labels = 1:100, include.lowest = T)], 
      xlab = "X", ylab = "Y")
   Axis(side = 1, cex.axis = 0.5)
   Axis(side = 2, cex.axis = 0.5) 
-  # title(colnames(Cover.example.df[,-c(1:2)])[i], font.main = 1, line = 0.5, cex.main = 1, adj = 0.7)
+  title(substitute(paste("Q: ", c.flow, " ", m^3/s),  env = list(c.flow = c.flow)), font.main = 1, line = -0.5, cex.main = 1, adj = 0.5)
+  title(substitute(paste("max. vel. = ", max.vel, " m/s"), env = list(max.vel = round(max(Velocity.example.df[,i], na.rm = T), 1))), font.main = 1,
+        line = -30, cex.main = 1, adj = 0.2)
 }
 
 for(i in c(5,10,25,40))
@@ -284,7 +287,9 @@ for(i in c(5,10,25,40))
      xlab = "X", ylab = "Y")
   Axis(side = 1, cex.axis = 0.5)
   Axis(side = 2, cex.axis = 0.5) 
-  # title(colnames(Cover.example.df[,-c(1:2)])[i], font.main = 1, line = 0.5, cex.main = 1, adj = 0.7)
+  title(substitute(paste("Q: ", c.flow, " ", m^3/s),  env = list(c.flow = c.flow)), font.main = 1, line = -0.5, cex.main = 1, adj = 0.5)
+  title(substitute(paste("max. depth = ", max.vel, " m"), env = list(max.vel = round(max(Depth.example.df[,i], na.rm = T), 1))), font.main = 1,
+        line = -30, cex.main = 1, adj = 0.2)
 }
 
 par(op)
@@ -322,7 +327,7 @@ for(i in 1:ncol(Cover.example.df[,-c(1:2)]))
      xlab = "X", ylab = "Y")
   Axis(side = 1, cex.axis = 0.5)
   Axis(side = 2, cex.axis = 0.5) 
-  title(colnames(Cover.example.df[,-c(1:2)])[i], font.main = 1, line = 0.5, cex.main = 1, adj = 0.7)
+  title(colnames(Cover.example.df[,-c(1:2)])[i], font.main = 1, line = -0.5, cex.main = 1, adj = 0.7)
 }
 
 par(op)
@@ -429,7 +434,7 @@ Size <- paste0(" - ", Selected.size)
 
 pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.75, lwd = 0.5, cex = 0.75, cex.axis = 0.85)
 
-title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -2, adj = 0.5, cex.main = 1.5)
+title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -3, adj = 0.5, cex.main = 1.5)
 
 ```
 

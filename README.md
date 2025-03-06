@@ -1028,7 +1028,7 @@ summary(Predictions)
 
 pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.75, lwd = 0.5, cex = 0.75, cex.axis = 0.85)
 
-title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -2, adj = 0.5, cex.main = 1.5)
+title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -3, adj = 0.5, cex.main = 1.5)
 ```
 
 <img src="man/figures/README-pairplot-1.png" width="100%" />
