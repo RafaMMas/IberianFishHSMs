@@ -85,25 +85,26 @@ This package was developed by:
 - **Jose Maria Santos**<sup>10</sup> (Contributor)
 - **Rafael Miranda Ferreiro**<sup>11</sup> (Contributor)
 
-<style type="text/css">
-  body{
-  font-size: 12pt;
-  text-align: justify;
-}
 <div style="text-align: justify;">
+
 <sup>1</sup> Tragsatec, Carrer Ramon Gordillo 7 - 46010 València, Spain.
-<sup>2</sup>
-<sup>3</sup> GRECO, Institute of Aquatic Ecology, University of Girona, E-17071 Girona.
-<sup>4</sup> Laboratorio de Hidrobiologia, Departamento de Zoología, Genetica y Antropología Física. Facultad de Biología. Universidad de Santiago de Compostela, 15782 Santiago de Compostela, Spain.
-<sup>5</sup> Icthios Gestión Ambiental SL. info@icthios.es.
-<sup>6</sup> ECOHIDRÁULICA, S.L. C/ Villamanín 16, Madrid 28011.
-<sup>7</sup> Institut d'Investigació per a la Gestió Integrada de Zones Costaneres (IGIC), Universitat Politècnica de València, C/Paranimf, 1, 46730 Gandia, València, Spain.
-<sup>8</sup> Departamento de Zoología y Antropología Física. 30100. Universidad de Murcia. Murcia.
-<sup>9</sup> Dpto. de Ciencias Integradas. Universidad de Huelva.
-<sup>10</sup> Forest Research Centre, Associate Laboratory TERRA, School of Agriculture, University of Lisbon.
-<sup>11</sup> Universidad de Navarra, Instituto de Biodiversidad y Medioambiente (BIOMA), 31008 Pamplona, Navarra, Spain.
+<sup>2</sup> <sup>3</sup> GRECO, Institute of Aquatic Ecology,
+University of Girona, E-17071 Girona. <sup>4</sup> Laboratorio de
+Hidrobiologia, Departamento de Zoología, Genetica y Antropología Física.
+Facultad de Biología. Universidad de Santiago de Compostela, 15782
+Santiago de Compostela, Spain. <sup>5</sup> Icthios Gestión Ambiental
+SL. <info@icthios.es>. <sup>6</sup> ECOHIDRÁULICA, S.L. C/ Villamanín
+16, Madrid 28011. <sup>7</sup> Institut d’Investigació per a la Gestió
+Integrada de Zones Costaneres (IGIC), Universitat Politècnica de
+València, C/Paranimf, 1, 46730 Gandia, València, Spain. <sup>8</sup>
+Departamento de Zoología y Antropología Física. 30100. Universidad de
+Murcia. Murcia. <sup>9</sup> Dpto. de Ciencias Integradas. Universidad
+de Huelva. <sup>10</sup> Forest Research Centre, Associate Laboratory
+TERRA, School of Agriculture, University of Lisbon. <sup>11</sup>
+Universidad de Navarra, Instituto de Biodiversidad y Medioambiente
+(BIOMA), 31008 Pamplona, Navarra, Spain.
+
 </div>
-</style>
 
 <br/>
 
@@ -111,15 +112,16 @@ This package was developed by:
 
 <div style="text-align: justify;">
 
-`IberianFishHSMs` was funded by the Ministry for the Ecological
-Transition and the Demographic Challenge (MITECO) (Spanish Government).
-The data collection and development of the package were carried out as
-part of the project titled *Actualización y/o creación de curvas de
-idoneidad del hábitat físico para diversas especies acuáticas y
-ribereñas*, which was conducted under the framework of the *Servicio
-técnico para el desarrollo de modelos numéricos integrados e impulso a
-la restauración fluvial en las distintas demarcaciones hidrográficas
-intercomunitarias* (21.804-0047/0411).
+`IberianFishHSMs` was funded and commissioned to TRAGSATEC - SEPI by the
+Ministry for the Ecological Transition and the Demographic Challenge
+(MITECO) (Spanish Government). The data collection and development of
+the package were carried out as part of the project titled
+*Actualización y/o creación de curvas de idoneidad del hábitat físico
+para diversas especies acuáticas y ribereñas*, which was conducted under
+the framework of the *Servicio técnico para el desarrollo de modelos
+numéricos integrados e impulso a la restauración fluvial en las
+distintas demarcaciones hidrográficas intercomunitarias*
+(21.804-0047/0411).
 
 </div>
 
@@ -399,19 +401,20 @@ ListSelectedCoverTypes(Species = "Salmo trutta")
 The package includes a number of models (i.e., 797) and species (i.e.,
 43) of several size classes and activities. Among other things, the
 available models vary by modelling technique, sampling site and the
-aggregation of data from different sites. The variable `Default`
-obtained with `ListModels` indicates which models are recommended
-because it was considered they performed and generalised better and/or
-were developed with data covering a large range of the microhabitat
-variables. Nevertheless, users can select other models when they
-consider it preferable. For example, when they are going to evaluate the
-microhabitat suitability in the basin where data for an alternative
-model was collected. In addition to `ListSelectedCoverTypes`, users can
-carry out sensitivity analyses to compare the predictions of the
-different available models. This allows inspecting their performance
-before selecting any alternative model or set of models. The sensitivity
-analysis can be carried out employing the function
-`PlotHabitatSuitabilityModels` as follows:
+aggregation of data from different sites and rivers. The variable
+`Default` obtained with `ListModels` indicates which models are
+recommended because it was considered they performed and generalised
+better and/or were developed with data covering a large range of the
+microhabitat variables. Nevertheless, users can select other models when
+they consider it preferable. For example, when they are going to
+evaluate the microhabitat suitability in the basin where data for an
+alternative model were collected. In addition to
+`ListSelectedCoverTypes`, users can carry out sensitivity analyses to
+compare the predictions of the different available models and select the
+one that better adjust to their interests and specific knowledge. This
+allows inspecting their performance before selecting any alternative
+model or set of models. The sensitivity analysis can be carried out
+employing the function `PlotHabitatSuitabilityModels` as follows:
 
 </div>
 
@@ -427,10 +430,12 @@ PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 
 <img src="man/figures/README-unnamed-chunk-4-1.png" width="100%" />
 
-**Figure 1** - Sensitivity analysis (i.e., partial dependence plots) for
-*Pseudochondrostoma polylepis* large. The figure shows the results for
-the Fuzzy Rule-Based System (FRBS) to evaluate the microhabitat
-suitability during Spring, Summer, and Autumn.
+**Figure 1** - Sensitivity analysis (i.e., partial dependence-like
+plots) for *Pseudochondrostoma polylepis* large. The figure shows the
+results for the Fuzzy Rule-Based System (FRBS) to evaluate the
+microhabitat suitability during Spring, Summer, and Autumn. The
+different coloured lines depict the quantiles of the predictions along
+the range of the studied variable.
 
 <div style="text-align: justify;">
 
@@ -438,16 +443,21 @@ This function generates partial dependence-like plots for microhabitat
 suitability models based on the provided data and selected model
 (Friedman 2001). Partial dependence plots are created by varying one
 variable over its range of values while averaging the model’s
-predictions over all the other features. This method isolates the effect
-of that single variable on the outcome and thus determining the overall
-effect. The function allows employing a user defined dataset to test
-especific combinations of variable values.
+predictions over all the other features. In this case, the quantiles of
+these predictions are plotted. This method isolates the effect of that
+single variable on the outcome and thus determining the overall effect.
+The function allows employing a user defined dataset to test specific
+combinations of variable values. The function allows plotting the mean
+effect by setting `Quantiles` to `FALSE`.
 
 </div>
 
 <br/>
 
 ### Load.and.print.model - Load and/or print a specific model
+
+`Load.and.print.model` allows selecting any specific model and assigning
+it to an *R* object, as well as printing this model.
 
 ``` r
 (Selected.model <- ListModels(Species = "Salmo trutta", Model.type = "GAM", verbose = FALSE))
@@ -578,10 +588,13 @@ developed employing specific *R* packages:
 
 <div style="text-align: justify;">
 
-Therefore, once a specific model has been loaded it is possible to
+Therefore, once a specific model has been loaded, it is possible to
 harness the capabilities of each specific package to, for example, plot
-directly the selected model. The follwong code shows an example using
-the function plot from `mgcv`.
+directly the selected model. The following code shows an example using
+the function plot from `mgcv` to plot the effects of the smooth spline
+functions of a Generalised Additive Model (GAM) for brown trout (*Salmo
+trutta*) large obtained with data collected in the Curueño River (Douro)
+and valid all year round.
 
 </div>
 
@@ -609,22 +622,26 @@ package `pdp` (Greenwell 2017).
 
 <br/>
 
-### Habitat suitability prediction
+### PredictHabitatSuitability - Habitat suitability predictions
 
 <div style="text-align: justify;">
 
-Habitat suitability predictions are carried out based on mean flow
-velocity (m/s), water depth (m) substrate index (-) and the sum of the
-number of relevant types of cover in the evaluated microhabitats (i.e.,
-pixels or cells from the hydraulic simulation). The package includes
-functions to prepare the input data. Additionally, the package includes
-data on a typical output from a hydraulic simulation and field survey.
-In particular, it includes data on velocity and depth for 40 simulated
-flows and the substrate composition and cover availability in the 400-m
-reach of the Serpis River Basin (Eastern Iberian Peninsula) studied by
-Muñoz-Mas et all (2024). The data and subsequent analyses are intended
-to show the capabilities of the package and do not imply the species are
-present in this reach of the Serpis River or along its water course.
+Habitat suitability predictions are carried out with
+`PredictHabitatSuitability` and are based on mean flow velocity (m/s),
+water depth (m) substrate index (-) and the sum of the number of
+relevant types of cover in the evaluated microhabitats (i.e., pixels or
+cells from the hydraulic simulation). The package includes functions to
+prepare the input data (i.e., `SubstrateIndex`). Additionally, the
+package includes data on a typical output from a hydraulic simulation
+and field survey. In particular, it includes data on velocity and depth
+for 40 simulated flows and the substrate composition and cover
+availability in the 400-m reach of the Serpis River (Eastern Iberian
+Peninsula) studied by Muñoz-Mas et all. (2024). The data and subsequent
+analyses are intended to show the capabilities of the package and do not
+imply the species are present in this reach of the Serpis River or along
+its water course. For simplicity the data are stored in for separated
+files that can be loaded to the workspace using the `data` function as
+follows:
 
 </div>
 
@@ -702,21 +719,23 @@ summary(Cover.example.df[,-c(1:2)])
 
 <br/>
 
+    #> Warning: package 'sf' was built under R version 4.3.3
+    #> Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE
+
+<img src="man/figures/README-plot example velocity and depth-1.png" width="100%" />
+
 <div style="text-align: justify;">
 
-Most of the considered cover type were present in the study site. Among
-the ten types only, leaves, algae, roots, and sand were absent. The most
-abundant cove types were woody debris and logs and shade which covered
-most of the margins. Rock were the most abundan instream cover,
-especialy in the transition zone sbetween pools, whereas the remianing
+Among the ten types used to develop the microhabitat suitability models,
+in this river reach leaves, algae, roots, and sand were absent. The most
+abundant cover types were logs and woody debris (wood) and shade which
+covered most of the margins. Rock was the most abundant instream cover,
+especially in the transition zone between pools, whereas the remaining
 cover types were only present in small patches.
 
 </div>
 
 <br/>
-
-    #> Warning: package 'sf' was built under R version 4.3.3
-    #> Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE
 
 <img src="man/figures/README-plot cover-1.png" width="100%" />
 
@@ -1073,17 +1092,19 @@ pool with the highest suitability (i.e., 1). These models are base
 
 <img src="man/figures/README-compareplot figure-1.png" width="100%" height="110%" />
 
-**Figure 2** - Maps depicting the predicted microhabitat suitability for
+**Figure 4** - Maps depicting the predicted microhabitat suitability for
 *Cobitis paludica* small in a reach of the Serpis River (Jucar River
-Basin District). The maps show the predictions for 0.5 m<sup>3</sup>/s.
-The figure depicts the predictions from seven different models: Fuzzy
-Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature
-(EKorL) for Summer and Winter. It also depcits the predictions carried
-out with the Generalised Additive Model (GAM), Habitat Suitability
-Curves (HSCs), Artificial Neural Network (NNET), Random forests (RF) and
-Support Vector Machine (SVM). All these models were developed pooling
-data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers.
-Currently, these models are valid for every season (*All*).
+Basin District - JRBD). The maps show the predictions for 0.5
+m<sup>3</sup>/s. The figure depicts the predictions from seven different
+models. The Fuzzy Rule-Based Systems (FRBSs) were obtained from
+expert-knowledge and literature (EKorL) and they are valid for Summer
+(warm period) and Winter (cold period) respectively. The figure also
+depicts the predictions carried out with the Generalised Additive Model
+(GAM), Habitat Suitability Curves (HSCs), Artificial Neural Network
+(NNET), Random forests (RF) and Support Vector Machine (SVM). All these
+models were developed pooling data from the Estena (Guadiana) and Yeguas
+(Guadalquivir) rivers. Currently, these models are valid for every
+season (*All*).
 
 <br/>
 
