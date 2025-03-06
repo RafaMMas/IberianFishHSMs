@@ -425,9 +425,9 @@ Size <- paste0(" - ", Selected.size)
 
 ```
 
-```{r pairplot, fig.width = 6, out.width = "100%", fig.height = 7, dpi=800}
+```{r pairplot, fig.width = 5, out.width = "100%", fig.height = 6, dpi=800}
 
-pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 8, 2.5), cex.labels = 0.75, lwd = 0.5)
+pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 8, 2.5), cex.labels = 0.75, lwd = 0.5, cex = 0.75)
 
 title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -2, adj = 0.5, cex.main = 1.75)
 
@@ -489,7 +489,7 @@ The different models assign the highest suitability to the downstream pool (uppe
 
 <br/>
 
-```{r compareplot figure, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 14, out.height = "110%", dpi=800}
+```{r compareplot figure, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
 
 library(sf)
 

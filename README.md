@@ -1026,7 +1026,7 @@ summary(Predictions)
 
 ``` r
 
-pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 8, 2.5), cex.labels = 0.75, lwd = 0.5)
+pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 8, 2.5), cex.labels = 0.75, lwd = 0.5, cex = 0.75)
 
 title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -2, adj = 0.5, cex.main = 1.75)
 ```
@@ -1111,7 +1111,7 @@ pool with the highest suitability (i.e., 1). These models are base
 
 <br/>
 
-<img src="man/figures/README-compareplot figure-1.png" width="100%" height="110%" />
+<img src="man/figures/README-compareplot figure-1.png" width="100%" height="100%" />
 
 **Figure 6** - Maps depicting the predicted microhabitat suitability for
 *Cobitis paludica* small in a reach of the Serpis River (Jucar River
