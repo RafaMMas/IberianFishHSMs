@@ -387,11 +387,11 @@ Axis(side = 2, cex.axis = 0.5)
 
 par(op1)
 
-op1 <- par(mar = c(4, 3, 9, 5))
+op1 <- par(mar = c(4, 3, 9, 11))
 
-plot(rep(0,100), seq(0, 8, length=100), pch = 15, cex=2, col = Colors.substrate.index, ann = F, bty = "n", axes = FALSE, xaxs = "i", yaxs = "i")
+plot(rep(0, 100), seq(0, 8, length = 100), pch = 15, cex = 2.5, col = Colors.substrate.index, ann = F, bty = "n", axes = FALSE, xaxs = "i", yaxs = "i")
 Axis(side = 4, las = 1)
-mtext(side=4, "Substrate index (-)", las = 0, line = 2.5)
+mtext(side = 4, "Substrate index (-)", las = 0, line = 2.75)
 
 plot.new()
 
