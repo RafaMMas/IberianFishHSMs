@@ -303,7 +303,7 @@ Among the ten types used to develop the microhabitat suitability models, in this
 
 <br/>
 
-``` {r plot cover, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
+``` {r plot cover, echo = FALSE, warning=FALSE, fig.width = 9, fig.height = 10, out.height = "100%", dpi=800}
 
 library(sf)
 
@@ -425,7 +425,7 @@ Size <- paste0(" - ", Selected.size)
 
 ```
 
-```{r pairplot, fig.width = 5, out.width = "100%", fig.height = 6, dpi=800}
+```{r pairplot, fig.width = 5, out.width = "100%", fig.height = 5.5, dpi=800}
 
 pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.75, lwd = 0.5, cex = 0.75, cex.axis = 0.85)
 
