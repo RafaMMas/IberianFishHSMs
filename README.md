@@ -723,6 +723,11 @@ summary(Cover.example.df[,-c(1:2)])
 
 <img src="man/figures/README-plot example velocity and depth-1.png" width="100%" />
 
+**Figure 3** - Velocity (m/s) and depth (m) distribution in the Serpis
+River (Jucar River Basin District) for four different modelled flow
+rates (m<sup>3</sup>/s). included in the `Velocity.example.df` and
+`Velocity.example.df` respectively.
+
 <div style="text-align: justify;">
 
 Among the ten types used to develop the microhabitat suitability models,
@@ -738,7 +743,7 @@ cover types were only present in small patches.
 
 <img src="man/figures/README-plot cover-1.png" width="100%" />
 
-**Figure 3** - Distribution of each cover type along the reach of the
+**Figure 4** - Distribution of each cover type along the reach of the
 Serpis River (Jucar River Basin District). The models were developed
 considering ten types of cover (refuge/shelter): Leaves, Algae, Roots,
 Aquatic vegetation, Reeds (emerging vegetation), Woody debris and logs,
@@ -1091,7 +1096,7 @@ pool with the highest suitability (i.e., 1). These models are base
 
 <img src="man/figures/README-compareplot figure-1.png" width="100%" height="110%" />
 
-**Figure 4** - Maps depicting the predicted microhabitat suitability for
+**Figure 5** - Maps depicting the predicted microhabitat suitability for
 *Cobitis paludica* small in a reach of the Serpis River (Jucar River
 Basin District - JRBD). The maps show the predictions for 0.5
 m<sup>3</sup>/s. The figure depicts the predictions from seven different
@@ -1189,7 +1194,7 @@ Peano, M Pulido-Velazquez, and F Martínez-Capel. 2024.
 River Basin (Spain): An evaluation considering agricultural benefits,
 environmental flows, and invasive fishes</span>.” *Ecological
 Indicators* 161: 111979.
-https://doi.org/<https://doi.org/10.1016/j.ecolind.2024.111979>.
+<https://doi.org/10.1016/j.ecolind.2024.111979>.
 
 </div>
 
