@@ -39,8 +39,8 @@ the package includes further sets of HSCs and Fuzzy Rule-Based Systems
 both the literature and expert knowledge collected through online
 surveys. The authors extend their gratitude to the respondents for their
 valuable contributions. The package also provides functions for
-evaluating habitat suitability based on hydraulic simulations, as well
-as tools for visualizing modelled microhabitat preferences and
+evaluating microhabitat suitability based on hydraulic simulations, as
+well as tools for visualizing modelled microhabitat preferences and
 suitability. A detailed example showcasing the package’s capabilities is
 included in the manual. In total, the package comprises 797 microhabitat
 suitability models, covering 43 species across up to 4 size classes
@@ -621,11 +621,11 @@ package `pdp` (Greenwell 2017).
 
 <br/>
 
-### PredictHabitatSuitability - Habitat suitability predictions
+### PredictHabitatSuitability - Microhabitat suitability predictions
 
 <div style="text-align: justify;">
 
-Habitat suitability predictions are carried out with
+Microhabitat suitability predictions are carried out with
 `PredictHabitatSuitability`. They are based on mean flow velocity (m/s),
 water depth (m) substrate index (-) and the sum of the number of
 relevant types of cover in the evaluated microhabitats (i.e., pixels or
