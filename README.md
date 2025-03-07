@@ -9,10 +9,6 @@
 
 </div>
 
-<div style="clear: both;">
-
-</div>
-
 <br/>
 
 <br/>
@@ -1037,12 +1033,24 @@ summary(Predictions)
 
 ``` r
 
-pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.75, lwd = 0.5, cex = 0.75, cex.axis = 0.85)
+pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.7, lwd = 0.5, cex = 0.75, cex.axis = 0.85)
 
 title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -3, adj = 0.5, cex.main = 1.5)
 ```
 
 <img src="man/figures/README-pairplot-1.png" width="100%" />
+
+**Figure 6** - Paired plots comparing the predicted suitability for
+*Cobitis paludica* small employing the default available models. The
+comparison includes, Fuzzy Rule-Based Systems (FRBSs) obtained from
+expert-knowledge and literature (EKorL) and valid during Summer (warm
+period) and Winter (cold period). I addition, it also includes
+Generalised Additive Model (GAM), Habitat Suitability Curves (HSCs),
+Artificial Neural Network (NNET), Random forests (RF) and Support Vector
+Machine (SVM). All these models were developed pooling data from the
+Estena (Guadiana) and Yeguas (Guadalquivir) rivers. Currently, these
+models are valid for every season (*All*). The names and main
+characteristics of the models appear in the diagonal of the figure.
 
 <br/>
 
@@ -1124,7 +1132,7 @@ pool with the highest suitability (i.e., 1). These models are base
 
 <img src="man/figures/README-compareplot figure-1.png" width="100%" height="100%" />
 
-**Figure 6** - Maps depicting the predicted microhabitat suitability for
+**Figure 7** - Maps depicting the predicted microhabitat suitability for
 *Cobitis paludica* small in a reach of the Serpis River (Jucar River
 Basin District - JRBD). The maps show the predictions for 0.5
 m<sup>3</sup>/s. The figure depicts the predictions from seven different
