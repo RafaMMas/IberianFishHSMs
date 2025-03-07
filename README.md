@@ -860,6 +860,8 @@ setting the arguments `Selected.species` to `"Cobitis paludica"` and the
 
 </div>
 
+<br/>
+
 ``` r
 
 Selected.species <- "Cobitis paludica"
@@ -1003,9 +1005,20 @@ from `ListModels` and data on Velocity, Depth, Substrate index and cover
 availability. `PredictHabitatSuitability` expects data to be a *R*
 `data.frame` with the following columns, which must be named as follows
 to ensure each model finds the necessary info to aggregate the relevant
-cover types and carry out the evaluation: 1. “Velocity” 2. “Depth” 3.
-“Leaves” 4. “Algae” 5. “Root” 6. “Aquatic.vegetation” 7. “Reed” 8.
-“Wood” 9. “Sand” 10. “Rock” 11. “Cave” 12. “Shade”
+cover types and carry out the evaluation:
+
+1.  “Velocity”
+2.  “Depth”
+3.  “Leaves”
+4.  “Algae”
+5.  “Root”
+6.  “Aquatic.vegetation”
+7.  “Reed”
+8.  “Wood”
+9.  “Sand”
+10. “Rock”
+11. “Cave”
+12. “Shade”
 
 If any cover type is absent the entire column can be set to zero but it
 must be present in the dataset. Once the dataset it prepared and the
@@ -1025,6 +1038,8 @@ Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.5,
 Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, 
                                          data = Hydraulics, HSC.aggregation = "geometric")
 ```
+
+<br/>
 
 <div style="text-align: justify;">
 
@@ -1104,6 +1119,8 @@ summary(Predictions)
 #>  NA's   :1407
 ```
 
+<br/>
+
 <div style="text-align: justify;">
 
 By using the `pairs` it is possible to see the differences between each
@@ -1111,8 +1128,6 @@ pair of predictions, the variable interactions, dependenceies and the
 compensatory nature of the different models.
 
 </div>
-
-<br/>
 
 ``` r
 

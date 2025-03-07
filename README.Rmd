@@ -426,6 +426,8 @@ par(op)
 In the example, we selected the default available models for Southern Iberian spined-loach (*Cobitis paludica*) large. For this species and size class there are seven models obtained from expert-knowldge and empirical data collected in the Estena (Guadiana) and Yeguas (Guadalquivir) rivers. The default available models include two Fuzzy Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature (EKorL), one for Summer (warm period) and Winter (cold period). The set also includes a Generalised Additive Model (GAM), aset of Habitat Suitability Curves (HSCs), an Artificial Neural Network (NNET), Random forests (RF) and Support Vector Machine (SVM). All these models were trained employing the data collected in the Estena and Yeguas rivers. The data were collected during spring and summer and currently these models are the best option to evaluate the microhabitat suitability at any season. To select the models, we employed the function `ListModels` setting the arguments `Selected.species` to `"Cobitis paludica"` and the `Selected.size` to `"Large"`.
 </div>
 
+<br/>
+
 ```{r select model for evaluation}
 
 Selected.species <- "Cobitis paludica"
@@ -437,6 +439,7 @@ Selected.size <- "Large"
 
 <div style="text-align: justify;">
 `PredictHabitatSuitability` allows evlauating the microhabitat suitbility of every patch, pixel or cell from field surveys of hydraulic simulations. The main argument of the function are the selected models from `ListModels` and data on Velocity, Depth, Substrate index and cover availability. `PredictHabitatSuitability` expects data to be a *R* `data.frame` with the following columns, which must be named as follows to ensure each model finds the necessary info to aggregate the relevant cover types and carry out the evaluation:
+
 1. "Velocity"
 2. "Depth"
 3. "Leaves"
@@ -468,6 +471,8 @@ Predictions <- PredictHabitatSuitability(Selected.models = Selected.models,
 
 ```
 
+<br/>
+
 <div style="text-align: justify;">
 
 The summary of the predictions show that most of the models predicted suitability values along the entire feasible range from 0 to 1, but the statistics indicate differences among models. For example, the Fuzzy Rule-Based Systems (FRBSs) for summer indicates a mean suitability around 0.62 and an inferior value for winter (0.49). The higher value is similar to that obtained with the Habitat Suitability Curves (HSCs). The mean suitability with the Random forests model (RF) is markedly lower as it only achieved 0.35, and it is similar to that obtained with the Artificial Neural Network (NNET). By contrast, the mean suitbaility obtained with the remaining models is close to 0.5. 
@@ -496,14 +501,13 @@ Colors.pair.plot <-Colors.suitability[round(apply(Predictions, 1, mean)*100, 0)]
 
 ```
 
+<br/>
 
 <div style="text-align: justify;">
 
 By using the `pairs` it is possible to see the differences between each pair of predictions, the variable interactions, dependenceies and the compensatory nature of the different models.
 
 </div>
-
-<br/>
 
 ```{r pairplot, fig.width = 5, out.width = "100%", fig.height = 5.5, dpi=800}
 
