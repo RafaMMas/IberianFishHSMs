@@ -306,7 +306,7 @@ par(op)
 
 ```
 
-**Figure 3** - Velocity (m/s) and depth (m) distribution in the Serpis River (Jucar River Basin District) for four different modelled flow rates (m<sup>3</sup>/s). included in the `Velocity.example.df` and `Velocity.example.df` respectively. 
+**Figure 3** - Velocity (m/s) and depth (m) distribution in the Serpis River (Jucar River Basin District) for four different modelled flow rates (m<sup>3</sup>/s) included in the `Velocity.example.df` and `Depth.example.df` respectively. 
 
 <div style="text-align: justify;">
 Among the ten types used to develop the microhabitat suitability models, in this river reach leaves, algae, roots, and sand were absent. The most abundant cover types were logs and woody debris (wood) and shade which covered most of the margins. Rock was the most abundant instream cover, especially in the transition zone between pools, whereas the remaining cover types were only present in small patches.

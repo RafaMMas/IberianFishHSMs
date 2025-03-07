@@ -730,8 +730,8 @@ flows: Q = 0.5, 2.2, 2.7, and 21 m<sup>3</sup>/s. <br/>
 
 **Figure 3** - Velocity (m/s) and depth (m) distribution in the Serpis
 River (Jucar River Basin District) for four different modelled flow
-rates (m<sup>3</sup>/s). included in the `Velocity.example.df` and
-`Velocity.example.df` respectively.
+rates (m<sup>3</sup>/s) included in the `Velocity.example.df` and
+`Depth.example.df` respectively.
 
 <div style="text-align: justify;">
 
