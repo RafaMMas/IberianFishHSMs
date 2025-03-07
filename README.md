@@ -1104,11 +1104,12 @@ models.
 
 <div style="text-align: justify;">
 
-The coordinates included in the data included in `IberianFishHSMs`
-allows plotting the microhabitat suitability predicted with each
-selected model employing functions from `sf`. First, it is necessary to
+The coordinates in the data included in `IberianFishHSMs` allows mapping
+the microhabitat suitability predicted with each selected model
+employing functions from the *R* package `sf`. First, it is necessary to
 create a point object with the coordinates and the desired colour
-sequence. In this case ranging from to . Then, a loop iterativelly
+sequence. In this case ranging from <span style="color: red;">red</span>
+to <span style="color: blue;">blue</span>. Then, a loop iterativelly
 plotting thedifferent maps is carried out and the figure tile is added.
 
 </div>
@@ -1167,10 +1168,12 @@ to aggregate the suitability obtained from each independent microhabitat
 suitability curve. The Artificial Neural Network (NNET) only considered
 suitable a fringe along the right margin and some specific spots in the
 opposite margin. The Random forest model (RF) only predicted as suitable
-the deeper parts and, based on this model predictions, both margins were
-evaluated as unsuitable. The predictions of the Support Vector Machine
-(SVM) were similar but, this technique evalauted the deeper parts of the
-pool with the highest suitability (i.e., 1). These models are base
+the deeper parts of this pool but, based on this model predictions, both
+margins would be unsuitable. The predictions of the Support Vector
+Machine (SVM) were similar but, this technique evaluated the deeper
+parts of the pool with the highest suitability (i.e., 1). These models
+are base on the ensemble prediction of ten SVMs and it indicates the ten
+models predict these microhabitat as *present*.
 
 </div>
 
@@ -1179,7 +1182,7 @@ pool with the highest suitability (i.e., 1). These models are base
 <img src="man/figures/README-compareplot figure-1.png" width="100%" height="100%" />
 
 **Figure 7** - Maps depicting the predicted microhabitat suitability for
-*Cobitis paludica* small in a reach of the Serpis River (Jucar River
+*Cobitis paludica* large in a reach of the Serpis River (Jucar River
 Basin District - JRBD). The maps show the predictions for 0.5
 m<sup>3</sup>/s. The figure depicts the predictions from seven different
 models. The Fuzzy Rule-Based Systems (FRBSs) were obtained from
