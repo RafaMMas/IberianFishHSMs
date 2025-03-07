@@ -425,7 +425,24 @@ Selected.size <- "Large"
 (Selected.models <- ListModels(Species = Selected.species, Size = Selected.size)) ## example determining the selected models 
 ```
 
+<div style="text-align: justify;">
+`PredictHabitatSuitability` allows evlauating the microhabitat suitbility of every patch, pixel or cell from field surveys of hydraulic simulations. The main argument of the function are the selected models from `ListModels` and data on Velocity, Depth, Substrate index and cover availability. `PredictHabitatSuitability` expects data to be a *R* `data.frame` with the following columns, which must be named as follows to ensure each model finds the necessary info to aggregate the relevant cover types and carry out the evaluation:
+1. "Velocity"
+2. "Depth"
+3. "Leaves"
+4. "Algae"
+5. "Root"
+6. "Aquatic.vegetation"
+7. "Reed"
+8. "Wood"
+9. "Sand"
+10. "Rock"
+11. "Cave"
+12. "Shade" 
 
+If any cover type is absent the entire column can be set to zero but it must be present in the dataset.
+
+</div>
 
 ```{r}
 Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.5,
