@@ -722,9 +722,9 @@ summary(Substrate.index.example.df[,-c(1:2)])
 In this reach of the Serpis River the water flows northward (upwards).
 The reach presents a series of small and relatively shallow pools
 connected throw rapid waters (i.e., rapid/runs). The bigger pool is
-located at the downstream part of the reach.
-
-<br/>
+located at the downstream part of the reach. The following figure shows
+the distribution of the velocity (m/s) and depth (m) for four simulated
+flows: Q = 0.5, 2.2, 2.7, and 21 m<sup>3</sup>/s. <br/>
 
 <img src="man/figures/README-depth and velocity figure-1.png" width="100%" height="100%" />
 
