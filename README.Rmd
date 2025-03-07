@@ -257,7 +257,7 @@ In this reach of the Serpis River the water flows northward (upwards). The reach
 
 <br/>
 
-```{r depth and velocity figure, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
+```{r depth and velocity figure, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
 
 library(sf)
 
@@ -315,7 +315,7 @@ Among the ten types used to develop the microhabitat suitability models, in this
 
 <br/>
 
-``` {r plot cover, echo = FALSE, warning=FALSE, fig.width = 9, fig.height = 10, out.height = "100%", dpi=800}
+``` {r plot cover, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 9, fig.height = 10, out.height = "100%", dpi=800}
 
 library(sf)
 
@@ -334,7 +334,7 @@ for(i in 1:ncol(Cover.example.df[,-c(1:2)]))
      xlab = "X", ylab = "Y")
   Axis(side = 1, cex.axis = 0.5)
   Axis(side = 2, cex.axis = 0.5) 
-  title(colnames(Cover.example.df[,-c(1:2)])[i], font.main = 1, line = -0.5, cex.main = 1, adj = 0.7)
+  title(colnames(Cover.example.df[,-c(1:2)])[i], font.main = 1, line = -1, cex.main = 1.5, adj = 0.7)
 }
 
 par(op)
@@ -367,12 +367,12 @@ Substrate.index <- SubstrateIndex(Substrate.index.example.df, check.completeness
 <br/>
 
 <div style="text-align: justify;">
-The substrate index ranges from 0 fines/silt to 8 bedrock. In the example site in the Serpis River
-
+The substrate index ranges from 0 fines/silt to 8 bedrock. In the example site of the Serpis River the upstream pools and rapids (bottom part of the figure) present coarse substrates, cobble (6), boulders (7) and even part were bedrock (8) dominate. The finer substrates are located at the beginning of the big pool adn the lateral margins of the reach. 
 </div>
+
 <br/>
 
-```{r substrate index map, echo = FALSE, eval = TRUE, fig.width = 8, fig.height = 5, out.height = "110%", dpi=800}
+```{r substrate index map, echo = FALSE, warning = FALSE, message = FALSE, eval = TRUE, fig.width = 8, fig.height = 5, out.height = "110%", dpi=800}
 
 library(sf)
 
@@ -412,6 +412,10 @@ par(op)
 
 **Figure 5** - Substrate composition (substrate index) along the reach of the Serpis River (Jucar River Basin District). The percentages (%) of the different substrate types are stored in `Cover.example.df`.
 
+<div style="text-align: justify;">
+In the exmple, we selected the default available models for Southern Iberian spined-loach (*Cobitis paludica*) large. For this species and size class there are seven models obtained from expert-knowldge and empirical data collectes in the Estena (Guadiana) and Yeguas (Guadalquivir) rivers. The default available models include two Fuzzy Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature (EKorL), one for Summer (warm period) and Winter (cold period). The set also includes a Generalised Additive Model (GAM), aset of Habitat Suitability Curves (HSCs), an Artificial Neural Network (NNET), Random forests (RF) and Support Vector Machine (SVM). All these models were trained employing the data collected in the Estena and Yeguas rivers. The data were collected during spring and summer and currently these models are the best option to evlaute the microhabitat suitability at any season. To select the models, we employed the function `ListModels` setting the arguments `Selected.species` to `"Cobitis paludica"` and the `Selected.size` to `"Large"`.
+</div>
+
 ```{r select model for evaluation}
 
 Selected.species <- "Cobitis paludica"
@@ -420,6 +424,8 @@ Selected.size <- "Large"
   
 (Selected.models <- ListModels(Species = Selected.species, Size = Selected.size)) ## example determining the selected models 
 ```
+
+
 
 ```{r}
 Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.5,
@@ -490,7 +496,7 @@ The coordinates included in the data included in `IberianFishHSMs` allows plotti
 
 <br/>
 
-```{r compareplot code, eval = FALSE, fig.width = 8, fig.height = 10, out.height = "110%", dpi=800}
+```{r compareplot code, eval = FALSE, warning = FALSE, message = FALSE, fig.width = 8, fig.height = 10, out.height = "110%", dpi=800}
 
 library(sf)
 
@@ -530,7 +536,7 @@ The different models assign the highest suitability to the downstream pool (uppe
 
 <br/>
 
-```{r compareplot figure, echo = FALSE, warning=FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
+```{r compareplot figure, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
 
 library(sf)
 

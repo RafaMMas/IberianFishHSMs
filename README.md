@@ -726,8 +726,6 @@ located at the downstream part of the reach.
 
 <br/>
 
-    #> Linking to GEOS 3.11.2, GDAL 3.8.2, PROJ 9.3.1; sf_use_s2() is TRUE
-
 <img src="man/figures/README-depth and velocity figure-1.png" width="100%" height="100%" />
 
 **Figure 3** - Velocity (m/s) and depth (m) distribution in the Serpis
@@ -815,7 +813,11 @@ Substrate.index <- SubstrateIndex(Substrate.index.example.df, check.completeness
 <div style="text-align: justify;">
 
 The substrate index ranges from 0 fines/silt to 8 bedrock. In the
-example site in the Serpis River
+example site of the Serpis River the upstream pools and rapids (bottom
+part of the figure) present coarse substrates, cobble (6), boulders (7)
+and even part were bedrock (8) dominate. The finer substrates are
+located at the beginning of the big pool adn the lateral margins of the
+reach.
 
 </div>
 
@@ -826,6 +828,27 @@ example site in the Serpis River
 **Figure 5** - Substrate composition (substrate index) along the reach
 of the Serpis River (Jucar River Basin District). The percentages (%) of
 the different substrate types are stored in `Cover.example.df`.
+
+<div style="text-align: justify;">
+
+In the exmple, we selected the default available models for Southern
+Iberian spined-loach (*Cobitis paludica*) large. For this species and
+size class there are seven models obtained from expert-knowldge and
+empirical data collectes in the Estena (Guadiana) and Yeguas
+(Guadalquivir) rivers. The default available models include two Fuzzy
+Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature
+(EKorL), one for Summer (warm period) and Winter (cold period). The set
+also includes a Generalised Additive Model (GAM), aset of Habitat
+Suitability Curves (HSCs), an Artificial Neural Network (NNET), Random
+forests (RF) and Support Vector Machine (SVM). All these models were
+trained employing the data collected in the Estena and Yeguas rivers.
+The data were collected during spring and summer and currently these
+models are the best option to evlaute the microhabitat suitability at
+any season. To select the models, we employed the function `ListModels`
+setting the arguments `Selected.species` to `"Cobitis paludica"` and the
+`Selected.size` to `"Large"`.
+
+</div>
 
 ``` r
 
