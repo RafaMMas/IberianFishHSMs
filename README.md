@@ -603,11 +603,12 @@ spline functions of a Generalised Additive Model (GAM) for brown trout
 library(mgcv)
 #> Loading required package: nlme
 #> This is mgcv 1.9-0. For overview type 'help("mgcv-package")'.
-par(mar = c(4,4,1,1), bty = "n")
+par(mar = c(4, 4, 1, 1), bty = "n")
 plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
 ```
 
 <img src="man/figures/README-GAMplot-1.png" width="100%" height="80%" />
+
 **Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta*
 Large obtained with data collected in the Curueño River (Douro) and
 valid all year round.

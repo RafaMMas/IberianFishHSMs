@@ -7,10 +7,9 @@
 #' @export
 #'
 #' @import e1071
-PredictSVMensemble.mean.votes <- function(object, newdata)
-{
-  Predictions <- sapply(object, function(c.svm){
-    return(as.numeric(predict(c.svm, newdata, probability = FALSE))-1)
+PredictSVMensemble.mean.votes <- function(object, newdata) {
+  Predictions <- sapply(object, function(c.svm) {
+    return(as.numeric(predict(c.svm, newdata, probability = FALSE)) - 1)
   })
   rowMeans(Predictions)
 }
@@ -26,19 +25,20 @@ PredictSVMensemble.mean.votes <- function(object, newdata)
 #' @export
 #'
 #' @import e1071
-PredictSVMensemble <- function(object, newdata, probability = FALSE)
-{
-  if(probability){
-    Predictions <- sapply(object, function(c.svm){
-      return(attr(predict(c.svm, newdata, probability = probability), "probabilities")[,2])
+PredictSVMensemble <- function(object, newdata, probability = FALSE) {
+  if (probability) {
+    Predictions <- sapply(object, function(c.svm) {
+      return(attr(predict(c.svm, newdata, probability = probability), "probabilities")[, 2])
     })
     rowMeans(Predictions)
   } else {
-    Predictions <- sapply(object, function(c.svm){
+    Predictions <- sapply(object, function(c.svm) {
       return(factor(predict(c.svm, newdata, probability = probability)))
     })
     # factor(apply(Predictions, 1, function(x){c(0, 1)[which.max(table(factor(x, levels = c(0, 1))))]}), levels = c(0, 1))
-    apply(Predictions, 1, function(x){c(0, 1)[which.max(table(factor(x, levels = c(0, 1))))]})
+    apply(Predictions, 1, function(x) {
+      c(0, 1)[which.max(table(factor(x, levels = c(0, 1))))]
+    })
   }
 }
 
@@ -52,11 +52,9 @@ PredictSVMensemble <- function(object, newdata, probability = FALSE)
 #' @export
 #'
 #' @import e1071
-PredictSVMensemble.probability <- function(object, newdata)
-{
-  Predictions <- sapply(object, function(c.svm){
-    return(attr(predict(c.svm, newdata, probability = TRUE),"probabilities")[,2])
+PredictSVMensemble.probability <- function(object, newdata) {
+  Predictions <- sapply(object, function(c.svm) {
+    return(attr(predict(c.svm, newdata, probability = TRUE), "probabilities")[, 2])
   })
   rowMeans(Predictions)
 }
-

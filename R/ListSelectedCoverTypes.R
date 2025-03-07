@@ -27,8 +27,7 @@
 #' ListSelectedCoverTypes(Species = "Squalius alburnoides")
 #'
 #' @export
-ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Model.type = NULL,	Sampled.season = NULL,	Valid.season = NULL,	Data.origin = NULL, Default = TRUE)
-{
+ListSelectedCoverTypes <- function(Species = NULL, Size = NULL, River = NULL, Model.type = NULL, Sampled.season = NULL, Valid.season = NULL, Data.origin = NULL, Default = TRUE) {
   # Initialize an empty list to store conditions
   conditions <- list()
 
@@ -47,13 +46,13 @@ ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Mo
     Current.summary.table <- Models.summary.table[Reduce(`&`, conditions), ]
   }
 
-  if(nrow(Current.summary.table) == 0)
+  if (nrow(Current.summary.table) == 0) {
     stop("There are no models with the selected characteristics.")
+  }
 
   Codes <- Current.summary.table$Code
 
-  data.frame(Current.summary.table[,1:2, drop = FALSE], t(sapply(Codes, function(current.model){
-
+  data.frame(Current.summary.table[, 1:2, drop = FALSE], t(sapply(Codes, function(current.model) {
     file_path <- system.file("extradata", paste0(current.model, ".rds"), package = "IberianFishHSMs")
 
     c.model <- readRDS(file_path)
@@ -61,4 +60,3 @@ ListSelectedCoverTypes <- function(Species = NULL,	Size = NULL,	River = NULL,	Mo
     c.model$Selected.cover.types
   })))
 }
-

@@ -23,27 +23,23 @@
 #'
 #' @export
 SubstrateIndex <- function(Substrate, check.completeness = TRUE) {
+  if (any(!c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock") %in% colnames(Substrate))) {
+    stop("Substrate does not contain the expected columns and/or names are misspelled")
+  }
 
-  if(any(!c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock") %in% colnames(Substrate)))
-    {
-      stop("Substrate does not contain the expected columns and/or names are misspelled")
-    }
-
-  if(check.completeness)
-  {
-    Substrate.index <- apply(Substrate[,c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock")], 1, function(x){
+  if (check.completeness) {
+    Substrate.index <- apply(Substrate[, c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock")], 1, function(x) {
       sum(x)
     })
 
-    if(any(Substrate.index != 100) | any(is.na(Substrate.index)))
-    {
+    if (any(Substrate.index != 100) | any(is.na(Substrate.index))) {
       stop("Please, check data. There could be errors.")
     }
   }
 
-  Substrate.index <- apply(Substrate[,c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock")], 1, function(x){
-      sum(x*c(3:8))
-  })/100
+  Substrate.index <- apply(Substrate[, c("Sand", "Fine.gravel", "Gravel", "Cobbles", "Boulders", "Bed.rock")], 1, function(x) {
+    sum(x * c(3:8))
+  }) / 100
 
   return(data.frame(Substrate.index = Substrate.index))
 }

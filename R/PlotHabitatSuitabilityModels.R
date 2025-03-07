@@ -26,42 +26,42 @@
 #'
 #' @import nnet
 #' @import ranger
-PlotHabitatSuitabilityModels <- function(Selected.model = NULL, data = NULL, n.points = 50, Quantiles = TRUE, Layout = c(2, 2), HSC.aggregation = "geometric"){
-
-  if(is.null(data))
-  {
+PlotHabitatSuitabilityModels <- function(Selected.model = NULL, data = NULL, n.points = 50, Quantiles = TRUE, Layout = c(2, 2), HSC.aggregation = "geometric") {
+  if (is.null(data)) {
     set.seed(99999)
-    data <- data.frame(Velocity = runif(99, 0, 2), Depth = runif(99, 0, 3), Substrate.index = runif(99, 0, 8) , Cover = round(runif(99, 0, 6)))
+    data <- data.frame(Velocity = runif(99, 0, 2), Depth = runif(99, 0, 3), Substrate.index = runif(99, 0, 8), Cover = round(runif(99, 0, 6)))
   }
 
   Labels <- setNames(c("Velocity (m/s)", "Depth (m)", "Substrate index (-)", "# of selected cover types"), c("Velocity", "Depth", "Substrate.index", "Cover"))
 
-  op <- par(mfrow = Layout, oma = c(0.5,0.5,2,0.5), mar = c(4,4.5,1,1), cex.lab = 1.5)
+  op <- par(mfrow = Layout, oma = c(0.5, 0.5, 2, 0.5), mar = c(4, 4.5, 1, 1), cex.lab = 1.5)
 
-  for(c.variable in c("Velocity", "Depth", "Substrate.index", "Cover"))
+  for (c.variable in c("Velocity", "Depth", "Substrate.index", "Cover"))
   {
-    Sequence <- seq(min(data[,c.variable]), max(data[,c.variable]), length = min(n.points, length(unique(data[,c.variable]))))
+    Sequence <- seq(min(data[, c.variable]), max(data[, c.variable]), length = min(n.points, length(unique(data[, c.variable]))))
     c.data <- data
 
     PDP.predictions <- NULL
 
-    for(c.value in Sequence)
+    for (c.value in Sequence)
     {
-      c.data[,c.variable] <- c.value
+      c.data[, c.variable] <- c.value
       c.prediction <- PredictSuitabilityPlot(Selected.model = Selected.model, data = c.data, HSC.aggregation = HSC.aggregation)
       PDP.predictions <- rbind(PDP.predictions, c(mean(c.prediction), quantile(c.prediction, prob = seq(0, 1, by = 0.05))))
     }
 
-    PDP.predictions <- setNames(data.frame(Sequence, PDP.predictions), c(c.variable, "mean", paste0("q.", seq(0, 1, by=0.05))))
+    PDP.predictions <- setNames(data.frame(Sequence, PDP.predictions), c(c.variable, "mean", paste0("q.", seq(0, 1, by = 0.05))))
 
-    if(Quantiles)
-    {
-      matplot(x = PDP.predictions[,c.variable], PDP.predictions[,-c(1:2)],
-              type = "l", col = colorRampPalette(c("red2", "darkorange", "gold", "green2", "dodgerblue"))(21), ylim = c(0, 1), las = 1, lty = 1, bty = "n", xlab = Labels[c.variable], ylab = "Suitability")
+    if (Quantiles) {
+      matplot(
+        x = PDP.predictions[, c.variable], PDP.predictions[, -c(1:2)],
+        type = "l", col = colorRampPalette(c("red2", "darkorange", "gold", "green2", "dodgerblue"))(21), ylim = c(0, 1), las = 1, lty = 1, bty = "n", xlab = Labels[c.variable], ylab = "Suitability"
+      )
     } else {
-      matplot(x = PDP.predictions[,c.variable], PDP.predictions[,"mean"],
-              type = "l", col = "black", ylim = c(0, 1), las = 1, lty = 1, bty = "n", xlab = Labels[c.variable], ylab = "Suitability")
-
+      matplot(
+        x = PDP.predictions[, c.variable], PDP.predictions[, "mean"],
+        type = "l", col = "black", ylim = c(0, 1), las = 1, lty = 1, bty = "n", xlab = Labels[c.variable], ylab = "Suitability"
+      )
     }
   }
 
@@ -83,67 +83,46 @@ PlotHabitatSuitabilityModels <- function(Selected.model = NULL, data = NULL, n.p
 #'
 #' @import nnet
 #' @import ranger
-PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggregation = "geometric"){
-
-  Habitat.assessment <- sapply(Selected.model, function(current.model){
-
+PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggregation = "geometric") {
+  Habitat.assessment <- sapply(Selected.model, function(current.model) {
     file_path <- system.file("extradata", paste0(current.model, ".rds"), package = "IberianFishHSMs")
 
     c.model <- readRDS(file_path)
 
-    microhabitat.characteristics <- data.frame(data[,c("Velocity", "Depth", "Substrate.index", "Cover")])
+    microhabitat.characteristics <- data.frame(data[, c("Velocity", "Depth", "Substrate.index", "Cover")])
 
-    if(c.model$Model.type == "FRBS"){
-
+    if (c.model$Model.type == "FRBS") {
       PredictFRBS(FRBS = c.model$Model, Data = microhabitat.characteristics)
-
-    } else if(c.model$Model.type == "GAM"){
-
+    } else if (c.model$Model.type == "GAM") {
       mgcv::predict.gam(object = c.model$Model, newdata = microhabitat.characteristics, type = "response")
-
-    } else if(c.model$Model.type == "HSC"){
-
-      Partial.suitabilities <- sapply(1:4, function(i){
-        PIMF.NA(pattern = microhabitat.characteristics[,c.model$Model$Variable][,i], parameters = unlist(c.model$Model[i,letters[1:4]]))
+    } else if (c.model$Model.type == "HSC") {
+      Partial.suitabilities <- sapply(1:4, function(i) {
+        PIMF.NA(pattern = microhabitat.characteristics[, c.model$Model$Variable][, i], parameters = unlist(c.model$Model[i, letters[1:4]]))
       })
 
-      apply(Partial.suitabilities, 1, function(x){
-        if(HSC.aggregation == "geometric"){
-          prod(x)^(1/4) ## default
-        } else if(HSC.aggregation == "prod"){
+      apply(Partial.suitabilities, 1, function(x) {
+        if (HSC.aggregation == "geometric") {
+          prod(x)^(1 / 4) ## default
+        } else if (HSC.aggregation == "prod") {
           prod(x)
-        } else if(HSC.aggregation == "min"){
+        } else if (HSC.aggregation == "min") {
           min(x)
-        } else if(HSC.aggregation == "arithmetic"){
+        } else if (HSC.aggregation == "arithmetic") {
           mean(x)
         }
       })
-
-    } else if(c.model$Model.type == "NNET"){
-
+    } else if (c.model$Model.type == "NNET") {
       as.vector(predict(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
-
-    } else if(c.model$Model.type == "RF"){
-
-      Predictions <- rep(NA,nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
-      Predictions[complete.cases(microhabitat.characteristics)] <- predict(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics),])$predictions[,2]
-      Predictions
-
-    } else {
-
+    } else if (c.model$Model.type == "RF") {
       Predictions <- rep(NA, nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
-      Predictions[complete.cases(microhabitat.characteristics)] <- PredictSVMensemble.mean.votes(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),]) # PredictSVMensemble(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),], probability = FALSE)
+      Predictions[complete.cases(microhabitat.characteristics)] <- predict(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics), ])$predictions[, 2]
       Predictions
-
+    } else {
+      Predictions <- rep(NA, nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
+      Predictions[complete.cases(microhabitat.characteristics)] <- PredictSVMensemble.mean.votes(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics), ]) # PredictSVMensemble(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),], probability = FALSE)
+      Predictions
     }
   })
 
   Habitat.assessment
-
 }
-
-
-
-
-
-

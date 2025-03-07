@@ -8,11 +8,12 @@
 #' @export
 #'
 #' @import nnet
-PredictNNETensemble <- function(object, newdata, type = "raw")
-{
-  out <- apply(sapply(object, function(c.object){predict(object = c.object, newdata = newdata, type = "raw")}), 1, mean)
-  if(type == "class"){
-    out <- factor(cut(out, breaks = c(0, 0.5, 1),labels = c(0, 1), include.lowest = T), levels = c(0, 1))
+PredictNNETensemble <- function(object, newdata, type = "raw") {
+  out <- apply(sapply(object, function(c.object) {
+    predict(object = c.object, newdata = newdata, type = "raw")
+  }), 1, mean)
+  if (type == "class") {
+    out <- factor(cut(out, breaks = c(0, 0.5, 1), labels = c(0, 1), include.lowest = T), levels = c(0, 1))
   }
   return(out)
 }
