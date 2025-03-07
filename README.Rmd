@@ -445,11 +445,28 @@ colnames(Predictions) <- gsub(x = colnames(Predictions), pattern = "\\.", replac
 Species <- Selected.species
 Size <- paste0(" - ", Selected.size)
 
+Colors.suitability <- colorRampPalette(c("red2", "darkorange", "gold", "green2", "dodgerblue"))(100)
+
+Colors.pair.plot <- c()
+
+for(j in 1:ncol(Predictions))
+{
+  for(i in 1:ncol(Predictions))
+  {
+    if(i != j)
+    {
+      Colors.pair.plot <- c(Colors.pair.plot, Colors.suitability[round(apply(Predictions[,c(j,i)], 1, mean)*100, 0)])
+    }
+  }
+}
+
+Colors.pair.plot <-Colors.suitability[round(apply(Predictions, 1, mean)*100, 0)]
+
 ```
 
 ```{r pairplot, fig.width = 5, out.width = "100%", fig.height = 5.5, dpi=800}
 
-pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.7, lwd = 0.5, cex = 0.75, cex.axis = 0.85)
+pairs(Predictions, col = Colors.pair.plot, oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.6, lwd = 0.5, cex = 0.35, cex.axis = 0.65, mgp = c(0,0.25,0), gap = 0 , tck = -0.05, xlim = c(0, 1), ylim = c(0, 1), las = 1)
 
 title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -3, adj = 0.5, cex.main = 1.5)
 

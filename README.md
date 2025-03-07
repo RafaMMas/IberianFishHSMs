@@ -1033,7 +1033,7 @@ summary(Predictions)
 
 ``` r
 
-pairs(Predictions, col = "red4", oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.7, lwd = 0.5, cex = 0.75, cex.axis = 0.85)
+pairs(Predictions, col = Colors.pair.plot, oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.6, lwd = 0.5, cex = 0.35, cex.axis = 0.65, mgp = c(0,0.25,0), gap = 0 , tck = -0.05, xlim = c(0, 1), ylim = c(0, 1), las = 1)
 
 title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -3, adj = 0.5, cex.main = 1.5)
 ```
@@ -1044,13 +1044,14 @@ title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Speci
 *Cobitis paludica* small employing the default available models. The
 comparison includes, Fuzzy Rule-Based Systems (FRBSs) obtained from
 expert-knowledge and literature (EKorL) and valid during Summer (warm
-period) and Winter (cold period). I addition, it also includes
-Generalised Additive Model (GAM), Habitat Suitability Curves (HSCs),
-Artificial Neural Network (NNET), Random forests (RF) and Support Vector
-Machine (SVM). All these models were developed pooling data from the
-Estena (Guadiana) and Yeguas (Guadalquivir) rivers. Currently, these
-models are valid for every season (*All*). The names and main
-characteristics of the models appear in the diagonal of the figure.
+period) and Winter (cold period). In addition, it also the results
+obtained with the Generalised Additive Model (GAM), Habitat Suitability
+Curves (HSCs), Artificial Neural Network (NNET), Random forests (RF) and
+Support Vector Machine (SVM). All these models were developed pooling
+data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers.
+Currently, these models are valid for every season (*All*). The names
+and main characteristics of the models appear in the diagonal of the
+figure.
 
 <br/>
 
