@@ -436,6 +436,8 @@ microhabitat suitability during Spring, Summer, and Autumn. The
 different coloured lines depict the quantiles of the predictions along
 the range of the studied variable.
 
+<br/>
+
 <div style="text-align: justify;">
 
 This function generates partial dependence-like plots for microhabitat
@@ -605,10 +607,10 @@ par(mar = c(4,4,1,1), bty = "n")
 plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
 ```
 
-<img src="man/figures/README-GAMplot-1.png" width="100%" /> **Figure
-2** - Plot of the Generalised Additive Model for *Salmo trutta* Large
-obtained with data collected in the Curueño River (Douro) and valid all
-year round.
+<img src="man/figures/README-GAMplot-1.png" width="100%" height="80%" />
+**Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta*
+Large obtained with data collected in the Curueño River (Douro) and
+valid all year round.
 
 <div style="text-align: justify;">
 
@@ -736,6 +738,8 @@ River (Jucar River Basin District) for four different modelled flow
 rates (m<sup>3</sup>/s) included in the `Velocity.example.df` and
 `Depth.example.df` respectively.
 
+<br/>
+
 <div style="text-align: justify;">
 
 Among the ten types used to develop the microhabitat suitability models,
@@ -831,6 +835,8 @@ reach.
 **Figure 5** - Substrate composition (substrate index) along the reach
 of the Serpis River (Jucar River Basin District). The percentages (%) of
 the different substrate types are stored in `Cover.example.df`.
+
+<br/>
 
 <div style="text-align: justify;">
 
@@ -1109,7 +1115,7 @@ compensatory nature of the different models.
 
 ``` r
 
-pairs(Predictions, col = Colors.pair.plot, oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.6, lwd = 0.5, cex = 0.35, cex.axis = 0.65, mgp = c(0,0.25,0), gap = 0 , tck = -0.05, xlim = c(0, 1), ylim = c(0, 1), las = 1)
+pairs(Predictions, col = Colors.pair.plot, oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.6, lwd = 0.5, cex = 0.35, cex.axis = 0.65, mgp = c(0,0.25,0), gap = 0 , tck = -0.05, xlim = c(0, 1), ylim = c(0, 1), las = 2)
 
 title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -3, adj = 0.5, cex.main = 1.5)
 ```

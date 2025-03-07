@@ -189,6 +189,8 @@ PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 
 **Figure 1** - Sensitivity analysis (i.e., partial dependence-like plots) for *Pseudochondrostoma polylepis* large. The figure shows the results for the Fuzzy Rule-Based System (FRBS) to evaluate the microhabitat suitability during Spring, Summer, and Autumn. The different coloured lines depict the quantiles of the predictions along the range of the studied variable. 
 
+<br/>
+
 <div style="text-align: justify;">
 This function generates partial dependence-like plots for microhabitat suitability models based on the provided data and selected model [@Friedman2001]. Partial dependence plots are created by varying one variable over its range of values while averaging the model's predictions over all the other features. In this case, the quantiles of these predictions are plotted. This method isolates the effect of that single variable on the outcome and thus determining the overall effect. The function allows employing a user defined dataset to test specific combinations of variable values. The function allows plotting the mean effect by setting `Quantiles` to `FALSE`. 
 </div>
@@ -220,7 +222,7 @@ As indicated at the beginning of this manual, each group of models was developed
 Therefore, once a specific model has been loaded, it is possible to harness the capabilities of each specific package to, for example, plot directly the selected model. The following code shows an example using the function `plot` from `mgcv` to visualise the effects of the smooth spline functions of a Generalised Additive Model (GAM) for brown trout (*Salmo trutta*) large obtained with data collected in the Curueño River (Douro) and valid all year round.  
 </div>
 
-```{r GAMplot, fig.width = 6, fig.height = 4.5, dpi=800}
+```{r GAMplot, fig.width = 6, fig.height = 4.5, out.height = "80%", dpi=800}
 library(mgcv)
 par(mar = c(4,4,1,1), bty = "n")
 plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
@@ -311,6 +313,8 @@ par(op)
 ```
 
 **Figure 3** - Velocity (m/s) and depth (m) distribution in the Serpis River (Jucar River Basin District) for four different modelled flow rates (m<sup>3</sup>/s) included in the `Velocity.example.df` and `Depth.example.df` respectively. 
+
+<br/>
 
 <div style="text-align: justify;">
 Among the ten types used to develop the microhabitat suitability models, in this river reach leaves, algae, roots, and sand were absent. The most abundant cover types were logs and woody debris (wood) and shade which covered most of the margins. Rock was the most abundant instream cover, especially in the transition zone between pools, whereas the remaining cover types were only present in small patches.
@@ -415,6 +419,8 @@ par(op)
 
 **Figure 5** - Substrate composition (substrate index) along the reach of the Serpis River (Jucar River Basin District). The percentages (%) of the different substrate types are stored in `Cover.example.df`.
 
+<br/>
+
 <div style="text-align: justify;">
 In the exmple, we selected the default available models for Southern Iberian spined-loach (*Cobitis paludica*) large. For this species and size class there are seven models obtained from expert-knowldge and empirical data collectes in the Estena (Guadiana) and Yeguas (Guadalquivir) rivers. The default available models include two Fuzzy Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature (EKorL), one for Summer (warm period) and Winter (cold period). The set also includes a Generalised Additive Model (GAM), aset of Habitat Suitability Curves (HSCs), an Artificial Neural Network (NNET), Random forests (RF) and Support Vector Machine (SVM). All these models were trained employing the data collected in the Estena and Yeguas rivers. The data were collected during spring and summer and currently these models are the best option to evlaute the microhabitat suitability at any season. To select the models, we employed the function `ListModels` setting the arguments `Selected.species` to `"Cobitis paludica"` and the `Selected.size` to `"Large"`.
 </div>
@@ -485,19 +491,6 @@ Size <- paste0(" - ", Selected.size)
 
 Colors.suitability <- colorRampPalette(c("red2", "darkorange", "gold", "green2", "dodgerblue"))(100)
 
-Colors.pair.plot <- c()
-
-for(j in 1:ncol(Predictions))
-{
-  for(i in 1:ncol(Predictions))
-  {
-    if(i != j)
-    {
-      Colors.pair.plot <- c(Colors.pair.plot, Colors.suitability[round(apply(Predictions[,c(j,i)], 1, mean)*100, 0)])
-    }
-  }
-}
-
 Colors.pair.plot <-Colors.suitability[round(apply(Predictions, 1, mean)*100, 0)]
 
 ```
@@ -513,7 +506,7 @@ By using the `pairs` it is possible to see the differences between each pair of 
 
 ```{r pairplot, fig.width = 5, out.width = "100%", fig.height = 5.5, dpi=800}
 
-pairs(Predictions, col = Colors.pair.plot, oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.6, lwd = 0.5, cex = 0.35, cex.axis = 0.65, mgp = c(0,0.25,0), gap = 0 , tck = -0.05, xlim = c(0, 1), ylim = c(0, 1), las = 1)
+pairs(Predictions, col = Colors.pair.plot, oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.6, lwd = 0.5, cex = 0.35, cex.axis = 0.65, mgp = c(0,0.25,0), gap = 0 , tck = -0.05, xlim = c(0, 1), ylim = c(0, 1), las = 2)
 
 title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -3, adj = 0.5, cex.main = 1.5)
 
