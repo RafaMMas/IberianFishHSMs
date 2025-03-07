@@ -841,10 +841,10 @@ the different substrate types are stored in `Cover.example.df`.
 
 <div style="text-align: justify;">
 
-In the exmple, we selected the default available models for Southern
+In the example, we selected the default available models for Southern
 Iberian spined-loach (*Cobitis paludica*) large. For this species and
 size class there are seven models obtained from expert-knowldge and
-empirical data collectes in the Estena (Guadiana) and Yeguas
+empirical data collected in the Estena (Guadiana) and Yeguas
 (Guadalquivir) rivers. The default available models include two Fuzzy
 Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature
 (EKorL), one for Summer (warm period) and Winter (cold period). The set
@@ -853,7 +853,7 @@ Suitability Curves (HSCs), an Artificial Neural Network (NNET), Random
 forests (RF) and Support Vector Machine (SVM). All these models were
 trained employing the data collected in the Estena and Yeguas rivers.
 The data were collected during spring and summer and currently these
-models are the best option to evlaute the microhabitat suitability at
+models are the best option to evaluate the microhabitat suitability at
 any season. To select the models, we employed the function `ListModels`
 setting the arguments `Selected.species` to `"Cobitis paludica"` and the
 `Selected.size` to `"Large"`.
