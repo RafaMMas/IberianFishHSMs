@@ -626,7 +626,7 @@ package `pdp` (Greenwell 2017).
 <div style="text-align: justify;">
 
 Habitat suitability predictions are carried out with
-`PredictHabitatSuitability` and are based on mean flow velocity (m/s),
+`PredictHabitatSuitability`. They are based on mean flow velocity (m/s),
 water depth (m) substrate index (-) and the sum of the number of
 relevant types of cover in the evaluated microhabitats (i.e., pixels or
 cells from the hydraulic simulation). The package includes functions to
@@ -724,7 +724,10 @@ The reach presents a series of small and relatively shallow pools
 connected throw rapid waters (i.e., rapid/runs). The bigger pool is
 located at the downstream part of the reach. The following figure shows
 the distribution of the velocity (m/s) and depth (m) for four simulated
-flows: Q = 0.5, 2.2, 2.7, and 21 m<sup>3</sup>/s. <br/>
+flows: Q = 0.5, 2.2, 2.7, and 21 m<sup>3</sup>/s. The maximum simulated
+velocity was 1.8 m/s and the maximum depth of 2.4 m.
+
+<br/>
 
 <img src="man/figures/README-depth and velocity figure-1.png" width="100%" height="100%" />
 
@@ -743,8 +746,6 @@ especially in the transition zone between pools, whereas the remaining
 cover types were only present in small patches.
 
 </div>
-
-<br/>
 
 <img src="man/figures/README-plot cover-1.png" width="100%" height="100%" />
 
@@ -769,6 +770,8 @@ Muñoz-Mas et al. (2017). The package includes some examples to
 illustrate the structure of the input files.
 
 </div>
+
+<br/>
 
 ``` r
 data(Substrate.index.example.df)

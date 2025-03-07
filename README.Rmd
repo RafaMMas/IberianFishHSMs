@@ -2,9 +2,6 @@
 output: github_document
 
 bibliography: references.bib
-
-template:
-  extra_css: pkgdown/extra.css
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -239,7 +236,7 @@ The different option to, for example, plot each models depend on each specific p
 ### PredictHabitatSuitability - Habitat suitability predictions
 
 <div style="text-align: justify;">
-Habitat suitability predictions are carried out with `PredictHabitatSuitability` and are based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluated microhabitats (i.e., pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data (i.e., `SubstrateIndex`). Additionally, the package includes data on a typical output from a hydraulic simulation and the data on substrate and cover distribution and availability from the field survey carried out in concert of the bathymetry. In particular, it includes data on velocity and depth for 40 simulated flows and the substrate composition and cover availability in the 400-m reach of the Serpis River (Eastern Iberian Peninsula) studied by Muñoz-Mas et all. [-@Munoz-Mas2024]. The data and subsequent analyses are intended to show the capabilities of the package and do not imply the species are present in this reach of the Serpis River or along its water course. For simplicity the data are stored in four separated files that can be loaded to the workspace using the function `data` as follows:
+Habitat suitability predictions are carried out with `PredictHabitatSuitability`. They are based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluated microhabitats (i.e., pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data (i.e., `SubstrateIndex`). Additionally, the package includes data on a typical output from a hydraulic simulation and the data on substrate and cover distribution and availability from the field survey carried out in concert of the bathymetry. In particular, it includes data on velocity and depth for 40 simulated flows and the substrate composition and cover availability in the 400-m reach of the Serpis River (Eastern Iberian Peninsula) studied by Muñoz-Mas et all. [-@Munoz-Mas2024]. The data and subsequent analyses are intended to show the capabilities of the package and do not imply the species are present in this reach of the Serpis River or along its water course. For simplicity the data are stored in four separated files that can be loaded to the workspace using the function `data` as follows:
 </div>
 
 <br/>
@@ -259,7 +256,8 @@ summary(Substrate.index.example.df[,-c(1:2)])
 
 <br/>
 
-In this reach of the Serpis River the water flows northward (upwards). The reach presents a series of small and relatively shallow pools connected throw rapid waters (i.e., rapid/runs). The bigger pool is located at the downstream part of the reach. The following figure shows the distribution of the velocity (m/s) and depth (m) for four simulated flows: Q = 0.5, 2.2, 2.7, and 21 m<sup>3</sup>/s.
+In this reach of the Serpis River the water flows northward (upwards). The reach presents a series of small and relatively shallow pools connected throw rapid waters (i.e., rapid/runs). The bigger pool is located at the downstream part of the reach. The following figure shows the distribution of the velocity (m/s) and depth (m) for four simulated flows: Q = 0.5, 2.2, 2.7, and 21 m<sup>3</sup>/s. The maximum simulated velocity was 1.8 m/s and the maximum depth of 2.4 m.
+
 <br/>
 
 ```{r depth and velocity figure, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 8, fig.height = 10, out.height = "100%", dpi=800}
@@ -318,8 +316,6 @@ par(op)
 Among the ten types used to develop the microhabitat suitability models, in this river reach leaves, algae, roots, and sand were absent. The most abundant cover types were logs and woody debris (wood) and shade which covered most of the margins. Rock was the most abundant instream cover, especially in the transition zone between pools, whereas the remaining cover types were only present in small patches.
 </div>
 
-<br/>
-
 ``` {r plot cover, echo = FALSE, warning = FALSE, message = FALSE, fig.width = 9, fig.height = 10, out.height = "100%", dpi=800}
 
 library(sf)
@@ -357,6 +353,8 @@ par(op)
 <div style="text-align: justify;">
 The function `SubstrateIndex` computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%). The substrate classes originally used corresponded to a simplification of the the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand (62 µm > Ø ≤ 2 mm), fine gravel (2 > Ø ≤ 8 mm), gravel (8 > Ø ≤ 64 mm), cobbles (64 > Ø ≤ 256 mm), boulders (Ø > 256 mm) and bedrock [see e.g., @Munoz-Mas2018 or @Munoz-Mas2017]. The package includes some examples to illustrate the structure of the input files.
 </div>
+
+<br/>
 
 ```{r SubstrateIndex, echo = TRUE}
 data(Substrate.index.example.df)
