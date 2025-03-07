@@ -15,6 +15,12 @@ knitr::opts_chunk$set(
 )
 ```
 
+<style>
+p {
+  text-align: justify;
+}
+</style>
+
 <br/>
 
 ```{r, eval = F, echo = F, fig.align='right'}
@@ -28,6 +34,9 @@ knitr::opts_chunk$set(
 </div>
 
 <div style="clear: both;"></div>
+
+<p align="justify">  
+  
   
 ```
 
@@ -45,9 +54,11 @@ knitr::opts_chunk$set(
 
 # IberianFishHSMs 
 
-<p align="justify">
+<div style="text-align: justify;">
+
 **IberianFishHSMs**: A comprehensive compilation of models and tools designed to assess habitat suitability at the microhabitat scale for Iberian freshwater fish species. The modeling approaches include a variety of techniques, such as Habitat Suitability Curves (HSCs) [@Waters1976], Artificial Neural Networks (Multilayer Perceptron ensembles, ANN-MLPs) [@Hansen1990], Random Forests (RFs) [@Breiman2001], Generalised Additive Models (GAMs) [@Hastie1990], and Support Vector Machines (SVMs) [@Vapnik1995; @Cortes1995], all based on empirical data gathered from several river basins across the Iberian Peninsula. The HSCs have been validated by an expert panel, who contributed to the development of the package. Additionally, the package includes further sets of HSCs and Fuzzy Rule-Based Systems (FRBSs) [@Zadeh1965; @Takagi1985], which were developed from both the literature and expert knowledge collected through online surveys. The authors extend their gratitude to the respondents for their valuable contributions. The package also provides functions for evaluating habitat suitability based on hydraulic simulations, as well as tools for visualizing modelled microhabitat preferences and suitability. A detailed example showcasing the package’s capabilities is included in the manual. In total, the package comprises 797 microhabitat suitability models, covering 43 species across up to 4 size classes (Large, Medium, Small, Very Small) and spawning/nesting suitability (available for brown trout Salmo trutta and Atlantic salmon Salmo salar). The development of these microhabitat suitability models leverages the functions and features of the following packages:
-</p>
+
+</div>
 
 - Habitat Suitability Curves (HSCs): `FuzzyFishHS` [github link](https://github.com/RafaMMas/FuzzyFishHS)
 - Artificial Neural Networks (Multilayer Perceptron ensembles, ANN-MLPs): `nnet` [CRAN link](https://cran.r-project.org/web/packages/nnet/index.html)
