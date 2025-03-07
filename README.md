@@ -21,8 +21,7 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 
 # IberianFishHSMs
 
-<div style="text-align: justify;">
-
+<p align="justify">
 **IberianFishHSMs**: A comprehensive compilation of models and tools
 designed to assess habitat suitability at the microhabitat scale for
 Iberian freshwater fish species. The modeling approaches include a
@@ -48,8 +47,7 @@ suitability models, covering 43 species across up to 4 size classes
 (available for brown trout Salmo trutta and Atlantic salmon Salmo
 salar). The development of these microhabitat suitability models
 leverages the functions and features of the following packages:
-
-</div>
+</p>
 
 - Habitat Suitability Curves (HSCs): `FuzzyFishHS` [github
   link](https://github.com/RafaMMas/FuzzyFishHS)
