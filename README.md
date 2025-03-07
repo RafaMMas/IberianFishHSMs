@@ -1161,9 +1161,9 @@ the microhabitat suitability predicted with each selected model
 employing functions from the *R* package `sf`. First, it is necessary to
 create a point object with the coordinates and the desired colour
 sequence. In this case ranging from ${\textsf{\color{red}red}}$,
-${\textsf{\color{orange}orange}}$, ${\textsf{\color{gold}gold}}$ to
-${\textsf{\color{green}green}}$ and${\textsf{\color{blue}blue}}$
-following the typical colour pallete to assess the ecological status.
+${\textsf{\color{orange}orange}}$ and ${\textsf{\color{gold}gold}}$ to
+${\textsf{\color{green}green}}$ and ${\textsf{\color{blue}blue}}$
+following the typical colour palette to assess the ecological status.
 Then, a loop iteratively plotting the different maps is carried out and
 the figure title is added.
 
