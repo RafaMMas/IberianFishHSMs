@@ -1001,9 +1001,13 @@ cover types and carry out the evaluation: 1. “Velocity” 2. “Depth” 3.
 “Wood” 9. “Sand” 10. “Rock” 11. “Cave” 12. “Shade”
 
 If any cover type is absent the entire column can be set to zero but it
-must be present in the dataset.
+must be present in the dataset. Once the dataset it prepared and the
+models are selected, using `ListModels`, the micrhabitat suitbaility can
+be predicted with `PredictHabitatSuitability`.
 
 </div>
+
+<br/>
 
 ``` r
 Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.5,
@@ -1011,8 +1015,26 @@ Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.5,
                          Substrate.index = Substrate.index,
                          Cover.example.df[,-c(1:2)])
 
-Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, data = Hydraulics, HSC.aggregation = "geometric")
+Predictions <- PredictHabitatSuitability(Selected.models = Selected.models, 
+                                         data = Hydraulics, HSC.aggregation = "geometric")
 ```
+
+<div style="text-align: justify;">
+
+The summary of the predictions show that most of the models predicted
+suitability values along the entire feasible range from 0 to 1, but the
+statistics indicate differences among models. For example, the Fuzzy
+Rule-Based Systems (FRBSs) for summer indicates a mean suitability
+around 0.62 and an inferior value for winter (0.49). The higher value is
+similar to that obtained with the Habitat Suitability Curves (HSCs). The
+mean suitability with the Random forests model (RF) is markedly lower as
+it only achieved 0.35, and it is similar to that obtained with the
+Artificial Neural Network (NNET). By contrast, the mean suitbaility
+obtained with the remaining models is close to 0.5.
+
+</div>
+
+<br/>
 
 ``` r
 
@@ -1075,6 +1097,16 @@ summary(Predictions)
 #>  NA's   :1407
 ```
 
+<div style="text-align: justify;">
+
+By using the `pairs` it is possible to see the differences between each
+pair of predictions, the variable interactions, dependenceies and the
+compensatory nature of the different models.
+
+</div>
+
+<br/>
+
 ``` r
 
 pairs(Predictions, col = Colors.pair.plot, oma = c(2.5, 2.5, 7, 2.5), cex.labels = 0.6, lwd = 0.5, cex = 0.35, cex.axis = 0.65, mgp = c(0,0.25,0), gap = 0 , tck = -0.05, xlim = c(0, 1), ylim = c(0, 1), las = 1)
@@ -1085,7 +1117,7 @@ title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Speci
 <img src="man/figures/README-pairplot-1.png" width="100%" />
 
 **Figure 6** - Paired plots comparing the predicted suitability for
-*Cobitis paludica* small employing the default available models. The
+*Cobitis paludica* large employing the default available models. The
 comparison includes, Fuzzy Rule-Based Systems (FRBSs) obtained from
 expert-knowledge and literature (EKorL) and valid during Summer (warm
 period) and Winter (cold period). In addition, it also the results
@@ -1100,17 +1132,15 @@ models.
 
 <br/>
 
-<br/>
-
 <div style="text-align: justify;">
 
 The coordinates in the data included in `IberianFishHSMs` allows mapping
 the microhabitat suitability predicted with each selected model
 employing functions from the *R* package `sf`. First, it is necessary to
 create a point object with the coordinates and the desired colour
-sequence. In this case ranging from {red} to {blue}. Then, a loop
-iterativelly plotting thedifferent maps is carried out and the figure
-tile is added.
+sequence. In this case ranging from $$${\color{red}red}$$\$ to
+$$${\color{blue}blue}$$\$. Then, a loop iteratively plotting the
+different maps is carried out and the figure title is added.
 
 </div>
 
@@ -1131,7 +1161,8 @@ op <- par(mfrow = c(2, 4),
 for(i in 1:ncol(Predictions))
 {
   plot(st_geometry(Coordinates), pch = 15, cex = 0.5, bty = "n", 
-     col = Colors.suitability[cut(Predictions[,i], breaks = seq(0, 1, length = 101), labels = 1:100, include.lowest = T)], 
+     col = Colors.suitability[cut(Predictions[,i],
+                                  breaks = seq(0, 1, length = 101), labels = 1:100, include.lowest = T)], 
      xlab = "X", ylab = "Y")
   Axis(side = 1, cex.axis = 0.5)
   Axis(side = 2, cex.axis = 0.5) 
@@ -1142,7 +1173,8 @@ par(op)
 
 Species <- Selected.species
 Size <- paste0(" - ", Selected.size)
-title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Species = Species, Size = Size)), outer = T, line = -1, adj = 0.5, cex.main = 2)
+title(substitute(expr = paste(italic(Species), Size, sep =" "), 
+                 env = list(Species = Species, Size = Size)), outer = T, line = -1, adj = 0.5, cex.main = 2)
 
 par(op)
 ```
