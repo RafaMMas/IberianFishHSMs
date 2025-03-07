@@ -1051,7 +1051,8 @@ Support Vector Machine (SVM). All these models were developed pooling
 data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers.
 Currently, these models are valid for every season (*All*). The names
 and main characteristics of the models appear in the diagonal of the
-figure.
+figure. Dot colors correspond to the mean/ensemble prediction across
+models.
 
 <br/>
 
