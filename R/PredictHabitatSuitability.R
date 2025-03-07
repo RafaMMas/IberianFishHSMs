@@ -64,7 +64,7 @@ Habitat.assessment <- sapply(Selected.models$Codes, function(current.model){
 
   if(c.model$Model.type == "FRBS"){
 
-    PREDICT.FRBS(FRBS = c.model$Model, Data = microhabitat.characteristics)
+    PredictFRBS(FRBS = c.model$Model, Data = microhabitat.characteristics)
 
   } else if(c.model$Model.type == "GAM"){
 
