@@ -60,7 +60,7 @@ PIMF.NA <- function (pattern, parameters)
 #' @return matrix with the membership of each datum to each fuzzy rule obtained using the function FUZZIFY.FRBS.Fast and the predicted habitat suitability in the last column
 #' @export
 #'
-PREDICT.FRBS <- function (Data, FRBS)
+PredictFRBS <- function (Data, FRBS)
 {
   Data <- sapply(colnames(FRBS$Range), function(i) {
       pmax(pmin(Data[,i], FRBS$Range[2,i]), FRBS$Range[1,i])

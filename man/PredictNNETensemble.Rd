@@ -10,6 +10,8 @@ PredictNNETensemble(object, newdata, type = "raw")
 \item{object}{Ensemble of Artificial Neural Networks - Multilayer Perceptrons (NNets) as a list}
 
 \item{newdata}{data frame with four columns: Velocity, Depth, Substrate.index and Cover}
+
+\item{type}{string "raw" or "class" determining the kind of output suitability between 0 and 1 or present ("0") or absent ("1")}
 }
 \value{
 predicted suitability or class

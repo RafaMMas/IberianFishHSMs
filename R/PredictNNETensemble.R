@@ -2,7 +2,7 @@
 #'
 #' @param object Ensemble of Artificial Neural Networks - Multilayer Perceptrons (NNets) as a list
 #' @param newdata data frame with four columns: Velocity, Depth, Substrate.index and Cover
-#' @type string "raw" or "class" determining the kind of output suitability between 0 and 1 or present ("0") or absent ("1")
+#' @param type string "raw" or "class" determining the kind of output suitability between 0 and 1 or present ("0") or absent ("1")
 #'
 #' @returns predicted suitability or class
 #' @export
