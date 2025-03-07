@@ -19,7 +19,6 @@ knitr::opts_chunk$set(
 p {
   text-align: justify;
 }
-</style>
 
 <br/>
 
@@ -596,5 +595,8 @@ par(op)
 **Figure 7** - Maps depicting the predicted microhabitat suitability for *Cobitis paludica* small in a reach of the Serpis River (Jucar River Basin District - JRBD). The maps show the predictions for 0.5 m<sup>3</sup>/s. The figure depicts the predictions from seven different models. The Fuzzy Rule-Based Systems (FRBSs) were obtained from expert-knowledge and literature (EKorL) and they are valid for Summer (warm period) and Winter (cold period) respectively. The figure also depicts the predictions carried out with the Generalised Additive Model (GAM), Habitat Suitability Curves (HSCs), Artificial Neural Network (NNET), Random forests (RF) and Support Vector Machine (SVM). All these models were developed pooling data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers. Currently, these models are valid for every season (*All*).
 
 <br/>
+
+</style>
+
 
 ## Bibliography
