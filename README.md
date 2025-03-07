@@ -616,9 +616,9 @@ valid all year round.
 <div style="text-align: justify;">
 
 The different option to, for example, plot each models depend on each
-specific package and in some cases suchs the SVMs obtained with `e1071`
-require indirect approaches for plotting. For instance, using the *R*
-package `pdp` (Greenwell 2017).
+specific package and in some cases, such as the SVMs obtained with
+`e1071`, it require indirect approaches for plotting. For example, using
+the *R* package `pdp` (Greenwell 2017).
 
 </div>
 
