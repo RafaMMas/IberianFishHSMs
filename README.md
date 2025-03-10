@@ -24,8 +24,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 <div style="text-align: justify;">
 
 **IberianFishHSMs**: A comprehensive compilation of models and tools
-designed to assess habitat suitability at the microhabitat scale for
-Iberian freshwater fish species. The modeling approaches include a
+designed to assess the habitat suitability at the microhabitat scale for
+Iberian freshwater fish species. The modelling approaches include a
 variety of techniques, such as Habitat Suitability Curves (HSCs) (Waters
 1976), Artificial Neural Networks (Multilayer Perceptron ensembles,
 ANN-MLPs) (Hansen and Salamon 1990), Random Forests (RFs) (Breiman
@@ -421,8 +421,8 @@ employing the function `PlotHabitatSuitabilityModels` as follows:
 
 ## Pseudochondrostoma.polylepis, large, FRBS for Spring, Summer, and Autumn
 
-(Selected.model <- ListModels(Species = "Pseudochondrostoma polylepis", verbose = FALSE)$Codes[1])
-#> [1] "ABEIO"
+(Selected.model <- ListModels(Species = "Cobitis paludica", verbose = FALSE)$Codes[7])
+#> [1] "ABCMN"
 
 PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 ```
