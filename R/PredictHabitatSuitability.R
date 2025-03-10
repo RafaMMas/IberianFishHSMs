@@ -90,7 +90,7 @@ Habitat.assessment <- sapply(Selected.models$Codes, function(current.model){
 
   } else if(c.model$Model.type == "NNET"){
 
-    as.vector(predict(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
+    as.vector(PredictNNETensemble(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
 
   } else if(c.model$Model.type == "RF"){
 
