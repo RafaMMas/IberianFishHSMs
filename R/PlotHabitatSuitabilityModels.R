@@ -112,7 +112,7 @@ PredictSuitabilityPlot <- function(Selected.model = NULL, data = NULL, HSC.aggre
         }
       })
     } else if (c.model$Model.type == "NNET") {
-      as.vector(predict(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
+      as.vector(PredictNNETensemble(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
     } else if (c.model$Model.type == "RF") {
       Predictions <- rep(NA, nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
       Predictions[complete.cases(microhabitat.characteristics)] <- predict(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics), ])$predictions[, 2]
