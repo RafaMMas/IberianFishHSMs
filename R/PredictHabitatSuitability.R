@@ -122,9 +122,9 @@ setNames(as.data.frame(Habitat.assessment), Selected.models$Models)
 #'
 #' (Selected.model <- ListModels(Species = "Salmo trutta", verbose = FALSE)$Codes[1])
 #'
-#' Load.and.print.model(Selected.model = Selected.model)
+#' LoadAndPrintModel(Selected.model = Selected.model)
 #'
-Load.and.print.model <- function(Selected.model = NULL){
+LoadAndPrintModel <- function(Selected.model = NULL){
       file_path <- system.file("extradata", paste0(Selected.model, ".rds"), package = "IberianFishHSMs")
       c.model <- readRDS(file_path)
       print(c.model)
