@@ -2,7 +2,7 @@
 
 export(ListModels)
 export(ListSelectedCoverTypes)
-export(Load.and.print.model)
+export(LoadAndPrintModel)
 export(PIMF.NA)
 export(PlotHabitatSuitabilityModels)
 export(PredictFRBS)
