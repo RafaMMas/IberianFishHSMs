@@ -261,33 +261,33 @@ Selected.models$Current.summary.table[,16:23]
 #>     True.positive False.positive True.negative False.negative Sensitivity
 #> 603            24            215           681              0       1.000
 #> 604            NA             NA            NA             NA          NA
-#> 605            24            106           790              0       1.000
+#> 605            24            142           754              0       1.000
 #> 606            24            106           790              0       1.000
 #> 607            22            157           739              2       0.917
 #> 608            70            218           621             11       0.864
 #> 609            NA             NA            NA             NA          NA
-#> 610            75            197           642              6       0.926
+#> 610            75            209           630              6       0.926
 #> 611            75            197           642              6       0.926
 #> 612            68            200           639             13       0.840
 #> 613           275            210           325            110       0.714
 #> 614            NA             NA            NA             NA          NA
-#> 615           286            211           324             99       0.743
+#> 615           328            262           273             57       0.852
 #> 616           286            211           324             99       0.743
 #> 617           262            179           356            123       0.681
 #>     Specificity   TSS Balanced.accuracy
 #> 603       0.760 0.760             0.880
 #> 604          NA    NA                NA
-#> 605       0.882 0.882             0.941
+#> 605       0.842 0.842             0.921
 #> 606       0.882 0.882             0.941
 #> 607       0.825 0.741             0.871
 #> 608       0.740 0.604             0.802
 #> 609          NA    NA                NA
-#> 610       0.765 0.691             0.846
+#> 610       0.751 0.677             0.838
 #> 611       0.765 0.691             0.846
 #> 612       0.762 0.601             0.801
 #> 613       0.607 0.322             0.661
 #> 614          NA    NA                NA
-#> 615       0.606 0.348             0.674
+#> 615       0.510 0.362             0.681
 #> 616       0.606 0.348             0.674
 #> 617       0.665 0.346             0.673
 
@@ -358,23 +358,23 @@ explicitly.
 
 ListSelectedCoverTypes(Species = "Salmo trutta")
 #>      Code                                Model Leaves Algae  Root
-#> 603 ABELZ   Salmo.trutta.GAM.Large.Curueno.All   TRUE FALSE  TRUE
+#> 603 ABELZ   Salmo.trutta.GAM.Large.Curueno.All  FALSE FALSE  TRUE
 #> 604 ABEMQ   Salmo.trutta.HSC.Large.Curueno.All  FALSE FALSE  TRUE
-#> 605 ABEMV  Salmo.trutta.NNET.Large.Curueno.All   TRUE FALSE  TRUE
+#> 605 ABEMV  Salmo.trutta.NNET.Large.Curueno.All   TRUE  TRUE  TRUE
 #> 606 ABEMZ    Salmo.trutta.RF.Large.Curueno.All  FALSE FALSE  TRUE
 #> 607 ABENR   Salmo.trutta.SVM.Large.Curueno.All   TRUE FALSE  TRUE
 #> 608 ABEMN  Salmo.trutta.GAM.Medium.Curueno.All   TRUE FALSE FALSE
 #> 609 ABEMR  Salmo.trutta.HSC.Medium.Curueno.All  FALSE FALSE  TRUE
-#> 610 ABEMW Salmo.trutta.NNET.Medium.Curueno.All  FALSE FALSE FALSE
+#> 610 ABEMW Salmo.trutta.NNET.Medium.Curueno.All   TRUE FALSE FALSE
 #> 611 ABENO   Salmo.trutta.RF.Medium.Curueno.All  FALSE FALSE FALSE
 #> 612 ABENS  Salmo.trutta.SVM.Medium.Curueno.All  FALSE  TRUE FALSE
 #> 613 ABEMO   Salmo.trutta.GAM.Small.Curueno.All  FALSE FALSE FALSE
 #> 614 ABEMS   Salmo.trutta.HSC.Small.Curueno.All  FALSE FALSE  TRUE
-#> 615 ABEMX  Salmo.trutta.NNET.Small.Curueno.All  FALSE FALSE  TRUE
+#> 615 ABEMX  Salmo.trutta.NNET.Small.Curueno.All   TRUE FALSE FALSE
 #> 616 ABENP    Salmo.trutta.RF.Small.Curueno.All   TRUE FALSE  TRUE
 #> 617 ABENT   Salmo.trutta.SVM.Small.Curueno.All   TRUE  TRUE FALSE
 #>     Aquatic.vegetation  Reed  Wood  Sand  Rock  Cave Shade
-#> 603               TRUE FALSE FALSE FALSE  TRUE  TRUE  TRUE
+#> 603              FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE
 #> 604               TRUE  TRUE  TRUE FALSE  TRUE  TRUE  TRUE
 #> 605               TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE
 #> 606               TRUE FALSE FALSE FALSE FALSE FALSE  TRUE
@@ -386,7 +386,7 @@ ListSelectedCoverTypes(Species = "Salmo trutta")
 #> 612              FALSE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
 #> 613               TRUE  TRUE FALSE FALSE  TRUE  TRUE  TRUE
 #> 614               TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE
-#> 615               TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE
+#> 615              FALSE  TRUE FALSE  TRUE  TRUE  TRUE  TRUE
 #> 616               TRUE FALSE FALSE  TRUE  TRUE  TRUE  TRUE
 #> 617              FALSE  TRUE  TRUE  TRUE  TRUE  TRUE FALSE
 ```
@@ -498,11 +498,11 @@ to an *R* object, as well as printing this model.
 (Selected.model <- LoadAndPrintModel(Selected.model = Selected.model$Codes[1]))
 #> $Selected.cover.types
 #>             Leaves              Algae               Root Aquatic.vegetation 
-#>               TRUE              FALSE               TRUE               TRUE 
+#>              FALSE              FALSE               TRUE              FALSE 
 #>               Reed               Wood               Sand               Rock 
-#>              FALSE              FALSE              FALSE               TRUE 
+#>               TRUE              FALSE              FALSE              FALSE 
 #>               Cave              Shade 
-#>               TRUE               TRUE 
+#>              FALSE               TRUE 
 #> 
 #> $Model.type
 #> [1] "GAM"
@@ -518,26 +518,26 @@ to an *R* object, as well as printing this model.
 #> 
 #> Coefficients:
 #>          (Intercept)            s(Depth).1            s(Depth).2  
-#>              1.28199               5.31493              12.54161  
+#>              2.31520               1.96298               9.60726  
 #>           s(Depth).3         s(Velocity).1         s(Velocity).2  
-#>             12.44123               0.08129               1.14827  
+#>              7.68611              -1.00821               1.19962  
 #>        s(Velocity).3  s(Substrate.index).1  s(Substrate.index).2  
-#>              2.00335              -1.70746              -2.38911  
+#>             -1.42586              -0.98002              -1.18741  
 #> s(Substrate.index).3            s(Cover).1            s(Cover).2  
-#>             -9.81859               2.96345               5.10960  
+#>             -3.28058               2.30230               3.68337  
 #>           s(Cover).3  
-#>              4.24585  
+#>              0.09132  
 #> 
-#> Degrees of Freedom: 939 Total (i.e. Null);  928.0187 Residual
-#> Null Deviance:       3891 
-#> Residual Deviance: 1617  AIC: 1639
+#> Degrees of Freedom: 969 Total (i.e. Null);  957.1045 Residual
+#> Null Deviance:       4149 
+#> Residual Deviance: 1731  AIC: 1667
 #> $Selected.cover.types
 #>             Leaves              Algae               Root Aquatic.vegetation 
-#>               TRUE              FALSE               TRUE               TRUE 
+#>              FALSE              FALSE               TRUE              FALSE 
 #>               Reed               Wood               Sand               Rock 
-#>              FALSE              FALSE              FALSE               TRUE 
+#>               TRUE              FALSE              FALSE              FALSE 
 #>               Cave              Shade 
-#>               TRUE               TRUE 
+#>              FALSE               TRUE 
 #> 
 #> $Model.type
 #> [1] "GAM"
@@ -553,19 +553,19 @@ to an *R* object, as well as printing this model.
 #> 
 #> Coefficients:
 #>          (Intercept)            s(Depth).1            s(Depth).2  
-#>              1.28199               5.31493              12.54161  
+#>              2.31520               1.96298               9.60726  
 #>           s(Depth).3         s(Velocity).1         s(Velocity).2  
-#>             12.44123               0.08129               1.14827  
+#>              7.68611              -1.00821               1.19962  
 #>        s(Velocity).3  s(Substrate.index).1  s(Substrate.index).2  
-#>              2.00335              -1.70746              -2.38911  
+#>             -1.42586              -0.98002              -1.18741  
 #> s(Substrate.index).3            s(Cover).1            s(Cover).2  
-#>             -9.81859               2.96345               5.10960  
+#>             -3.28058               2.30230               3.68337  
 #>           s(Cover).3  
-#>              4.24585  
+#>              0.09132  
 #> 
-#> Degrees of Freedom: 939 Total (i.e. Null);  928.0187 Residual
-#> Null Deviance:       3891 
-#> Residual Deviance: 1617  AIC: 1639
+#> Degrees of Freedom: 969 Total (i.e. Null);  957.1045 Residual
+#> Null Deviance:       4149 
+#> Residual Deviance: 1731  AIC: 1667
 ```
 
 <br/>
@@ -601,8 +601,9 @@ spline functions of a Generalised Additive Model (GAM) for brown trout
 
 ``` r
 library(mgcv)
+#> Warning: package 'mgcv' was built under R version 4.1.3
 #> Loading required package: nlme
-#> This is mgcv 1.9-0. For overview type 'help("mgcv-package")'.
+#> This is mgcv 1.8-42. For overview type 'help("mgcv-package")'.
 par(mar = c(4, 4, 1, 1), bty = "n")
 plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
 ```
@@ -906,7 +907,7 @@ Selected.size <- "Large"
 #> 139          NA         NA                       7            NA             NA
 #> 161          43       1950                      NA            39           1200
 #> 162          43       1953                      NA            NA             NA
-#> 163          43       1950                      NA            38            959
+#> 163          43       1950                      NA            40            831
 #> 164          43       1950                      NA            38            959
 #> 165          43       1950                      NA            36            678
 #>     True.negative False.negative Sensitivity Specificity   TSS
@@ -914,7 +915,7 @@ Selected.size <- "Large"
 #> 139            NA             NA          NA          NA    NA
 #> 161           750              4       0.907       0.385 0.292
 #> 162            NA             NA          NA          NA    NA
-#> 163           991              5       0.884       0.508 0.392
+#> 163          1119              3       0.930       0.574 0.504
 #> 164           991              5       0.884       0.508 0.392
 #> 165          1272              7       0.837       0.652 0.490
 #>     Balanced.accuracy
@@ -922,7 +923,7 @@ Selected.size <- "Large"
 #> 139                NA
 #> 161             0.646
 #> 162                NA
-#> 163             0.696
+#> 163             0.752
 #> 164             0.696
 #> 165             0.745
 #> $Current.summary.table
@@ -963,7 +964,7 @@ Selected.size <- "Large"
 #> 139          NA         NA                       7            NA             NA
 #> 161          43       1950                      NA            39           1200
 #> 162          43       1953                      NA            NA             NA
-#> 163          43       1950                      NA            38            959
+#> 163          43       1950                      NA            40            831
 #> 164          43       1950                      NA            38            959
 #> 165          43       1950                      NA            36            678
 #>     True.negative False.negative Sensitivity Specificity   TSS
@@ -971,7 +972,7 @@ Selected.size <- "Large"
 #> 139            NA             NA          NA          NA    NA
 #> 161           750              4       0.907       0.385 0.292
 #> 162            NA             NA          NA          NA    NA
-#> 163           991              5       0.884       0.508 0.392
+#> 163          1119              3       0.930       0.574 0.504
 #> 164           991              5       0.884       0.508 0.392
 #> 165          1272              7       0.837       0.652 0.490
 #>     Balanced.accuracy
@@ -979,7 +980,7 @@ Selected.size <- "Large"
 #> 139                NA
 #> 161             0.646
 #> 162                NA
-#> 163             0.696
+#> 163             0.752
 #> 164             0.696
 #> 165             0.745
 #> 
@@ -1094,12 +1095,12 @@ summary(Predictions)
 #>  Max.   :0.9939                                  
 #>  NA's   :1407                                    
 #>  Cobitis.paludica.NNET.Large.Estena.and.Yeguas.All
-#>  Min.   :0.0000                                   
-#>  1st Qu.:0.1107                                   
-#>  Median :0.4074                                   
-#>  Mean   :0.3620                                   
-#>  3rd Qu.:0.5315                                   
-#>  Max.   :0.9797                                   
+#>  Min.   :0.0021                                   
+#>  1st Qu.:0.0566                                   
+#>  Median :0.1082                                   
+#>  Mean   :0.1820                                   
+#>  3rd Qu.:0.2464                                   
+#>  Max.   :0.9719                                   
 #>  NA's   :1407                                     
 #>  Cobitis.paludica.RF.Large.Estena.and.Yeguas.All
 #>  Min.   :0.0000                                 
