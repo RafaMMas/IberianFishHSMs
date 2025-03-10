@@ -1,6 +1,6 @@
 #' Function to determine the microhabitat suitability with the selected models
 #'
-#' This function uses the output of \code{ListModels} to load the selected models and evaluate a dataset with the
+#'This function uses the output of \code{ListModels} to load the selected models and evaluate a dataset with the
 #'
 #' @param Selected.models output of \code{ListModels}
 #' @param data A data frame with the velocity, depth, substrate and cover to be evaluated. \code{data} must contain the following colums to work properly:
@@ -33,79 +33,87 @@
 #'
 #' Substrate.index <- SubstrateIndex(Substrate.index.example.df, check.completeness = FALSE)
 #'
-#' Selected.species <- "Cobitis paludica" #'
+#' Selected.species <- "Cobitis paludica"#'
 #' Selected.size <- "Large"
 #' (Selected.models <- ListModels(Species = Selected.species, Size = Selected.size))
 #'
-#' Hydraulics <- data.frame(
-#'   Velocity = Velocity.example.df$Velocity.0.05,
-#'   Depth = Depth.example.df$Depth.0.05,
-#'   Substrate.index = Substrate.index,
-#'   Cover.example.df[, -c(1:2)]
-#' )
+#'Hydraulics <- data.frame(Velocity = Velocity.example.df$Velocity.0.05,
+#'Depth = Depth.example.df$Depth.0.05,
+#'Substrate.index = Substrate.index,
+#'Cover.example.df[,-c(1:2)])
 #'
-#' Predictions <- PredictHabitatSuitability(
-#'   Selected.models = Selected.models,
-#'   data = Hydraulics, HSC.aggregation = "geometric"
-#' )
+#'Predictions <- PredictHabitatSuitability(Selected.models = Selected.models,
+#'data = Hydraulics, HSC.aggregation = "geometric")
 #'
-#' summary(Predictions)
+#'summary(Predictions)
 #'
 #' @import nnet
 #' @import e1071
 #' @import ranger
-PredictHabitatSuitability <- function(Selected.models = NULL, data = NULL, HSC.aggregation = "geometric") { # , probability = TRUE
+PredictHabitatSuitability <- function(Selected.models = NULL, data = NULL, HSC.aggregation = "geometric"){ # , probability = TRUE
 
-  Habitat.assessment <- sapply(Selected.models$Codes, function(current.model) {
-    file_path <- system.file("extradata", paste0(current.model, ".rds"), package = "IberianFishHSMs")
+Habitat.assessment <- sapply(Selected.models$Codes, function(current.model){
 
-    c.model <- readRDS(file_path)
+  file_path <- system.file("extradata", paste0(current.model, ".rds"), package = "IberianFishHSMs")
 
-    Cover <- rowSums(data[, names(c.model$Selected.cover.types)][, c.model$Selected.cover.types, drop = F])
+  c.model <- readRDS(file_path)
 
-    microhabitat.characteristics <- data.frame(data[, c("Velocity", "Depth", "Substrate.index")], Cover)
+  Cover <- rowSums(data[,names(c.model$Selected.cover.types)][,c.model$Selected.cover.types, drop=F])
 
-    if (c.model$Model.type == "FRBS") {
-      PredictFRBS(FRBS = c.model$Model, Data = microhabitat.characteristics)
-    } else if (c.model$Model.type == "GAM") {
-      mgcv::predict.gam(object = c.model$Model, newdata = microhabitat.characteristics, type = "response")
-    } else if (c.model$Model.type == "HSC") {
-      Partial.suitabilities <- sapply(1:4, function(i) {
-        PIMF.NA(pattern = microhabitat.characteristics[, c.model$Model$Variable][, i], parameters = unlist(c.model$Model[i, letters[1:4]]))
-      })
+  microhabitat.characteristics <- data.frame(data[,c("Velocity", "Depth", "Substrate.index")], Cover)
 
-      apply(Partial.suitabilities, 1, function(x) {
-        if (HSC.aggregation == "geometric") {
-          prod(x)^(1 / 4) ## default
-        } else if (HSC.aggregation == "prod") {
+  if(c.model$Model.type == "FRBS"){
+
+    PREDICT.FRBS(FRBS = c.model$Model, Data = microhabitat.characteristics)
+
+  } else if(c.model$Model.type == "GAM"){
+
+    mgcv::predict.gam(object = c.model$Model, newdata = microhabitat.characteristics, type = "response")
+
+  } else if(c.model$Model.type == "HSC"){
+
+    Partial.suitabilities <- sapply(1:4, function(i){
+      PIMF.NA(pattern = microhabitat.characteristics[,c.model$Model$Variable][,i], parameters = unlist(c.model$Model[i,letters[1:4]]))
+    })
+
+    apply(Partial.suitabilities, 1, function(x){
+      if(HSC.aggregation == "geometric"){
+        prod(x)^(1/4) ## default
+      } else if(HSC.aggregation == "prod"){
           prod(x)
-        } else if (HSC.aggregation == "min") {
+      } else if(HSC.aggregation == "min"){
           min(x)
-        } else if (HSC.aggregation == "arithmetic") {
+      } else if(HSC.aggregation == "arithmetic"){
           mean(x)
         }
-      })
-    } else if (c.model$Model.type == "NNET") {
-      as.vector(predict(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
-    } else if (c.model$Model.type == "RF") {
-      Predictions <- rep(NA, nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
-      Predictions[complete.cases(microhabitat.characteristics)] <- predict(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics), ])$predictions[, 2]
-      Predictions
-    } else {
-      Predictions <- rep(NA, nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
-      Predictions[complete.cases(microhabitat.characteristics)] <- PredictSVMensemble.mean.votes(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics), ]) # PredictSVMensemble(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),], probability = FALSE)
-      Predictions
-    }
-  })
+    })
 
-  setNames(as.data.frame(Habitat.assessment), Selected.models$Models)
+  } else if(c.model$Model.type == "NNET"){
+
+    as.vector(predict(object = c.model$Model, newdata = microhabitat.characteristics, type = "raw"))
+
+  } else if(c.model$Model.type == "RF"){
+
+    Predictions <- rep(NA,nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
+    Predictions[complete.cases(microhabitat.characteristics)] <- predict(object = c.model$Model, data = microhabitat.characteristics[complete.cases(microhabitat.characteristics),])$predictions[,2]
+    Predictions
+
+  } else {
+
+    Predictions <- rep(NA, nrow(microhabitat.characteristics)) ## This allows predicting datasets with NAs and returning NAs
+    Predictions[complete.cases(microhabitat.characteristics)] <- PredictSVMensemble.mean.votes(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),]) # PredictSVMensemble(object = c.model$Model, newdata = microhabitat.characteristics[complete.cases(microhabitat.characteristics),], probability = FALSE)
+    Predictions
+
+  }
+})
+
+setNames(as.data.frame(Habitat.assessment), Selected.models$Models)
+
 }
 
 #' Load and prints the selected model
 #'
 #' @param Selected.model A character string or object representing the selected habitat suitability model. It should be among the `Codes` obtained with `ListModels` Default is `NULL`.
-#'
-#' @param verbose Logical. If `TRUE`, the model is printed. Defaul = FALSE.
 #'
 #' @returns List containing the selected cover types (`Selected.cover.types`), the model type (`Model.type`) and the model itself (`Model`).
 #' @export
@@ -114,13 +122,19 @@ PredictHabitatSuitability <- function(Selected.models = NULL, data = NULL, HSC.a
 #'
 #' (Selected.model <- ListModels(Species = "Salmo trutta", verbose = FALSE)$Codes[1])
 #'
-#' LoadAndPrintModel(Selected.model = Selected.model)
+#' Load.and.print.model(Selected.model = Selected.model)
 #'
-LoadAndPrintModel <- function(Selected.model = NULL, verbose = TRUE) {
-  file_path <- system.file("extradata", paste0(Selected.model, ".rds"), package = "IberianFishHSMs")
-  c.model <- readRDS(file_path)
-  if (verbose) {
-    print(c.model)
-  }
-  c.model
+Load.and.print.model <- function(Selected.model = NULL){
+      file_path <- system.file("extradata", paste0(Selected.model, ".rds"), package = "IberianFishHSMs")
+      c.model <- readRDS(file_path)
+      print(c.model)
+      c.model
 }
+
+
+
+
+
+
+
+
