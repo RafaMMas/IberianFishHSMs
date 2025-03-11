@@ -621,8 +621,8 @@ valid all year round.
 
 The different option to, for example, plot each models depend on each
 specific package and in some cases, such as the SVMs obtained with
-`e1071`, it require indirect approaches for plotting. For example, using
-the *R* package `pdp` (Greenwell 2017).
+`e1071`, it will require indirect approaches for plotting. For example,
+using the *R* package `pdp` (Greenwell 2017).
 
 </div>
 
@@ -632,23 +632,24 @@ the *R* package `pdp` (Greenwell 2017).
 
 <div style="text-align: justify;">
 
-Microhabitat suitability predictions are carried out with
-`PredictHabitatSuitability`. They are based on mean flow velocity (m/s),
-water depth (m) substrate index (-) and the sum of the number of
-relevant types of cover in the evaluated microhabitats (i.e., pixels or
-cells from the hydraulic simulation). The package includes functions to
-prepare the input data (i.e., `SubstrateIndex`). Additionally, the
-package includes data on a typical output from a hydraulic simulation
-and the data on substrate and cover distribution and availability from
-the field survey carried out in concert of the bathymetry. In
-particular, it includes data on velocity and depth for 40 simulated
-flows and the substrate composition and cover availability in the 400-m
-reach of the Serpis River (Eastern Iberian Peninsula) studied by
-Muñoz-Mas et all. (2024). The data and subsequent analyses are intended
-to show the capabilities of the package and do not imply the species are
-present in this reach of the Serpis River or along its water course. For
-simplicity the data are stored in four separated files that can be
-loaded to the workspace using the function `data` as follows:
+Microhabitat suitability predictions are carried out employing the
+function `PredictHabitatSuitability`. They are based on mean flow
+velocity (m/s), water depth (m) substrate index (-) and the sum of the
+number of relevant types of cover in the evaluated microhabitats (i.e.,
+pixels or cells from the hydraulic simulation). The package includes
+functions to prepare the input data (i.e., `SubstrateIndex`).
+Additionally, the package includes data on a typical output from a
+hydraulic simulation and the data on substrate and cover distribution
+and availability from the field survey carried out in concert of the
+bathymetry. In particular, it includes data on velocity and depth for 40
+simulated flows and the substrate composition and cover availability in
+the 400-m reach of the Serpis River (Eastern Iberian Peninsula) studied
+by Muñoz-Mas et all. (2024). The data and subsequent analyses are
+intended to show the capabilities of the package and do not imply the
+species are present in this reach of the Serpis River or along its water
+course. For simplicity the data are stored in four separated files that
+can be accessed and loaded to the workspace using the function `data` as
+follows:
 
 </div>
 
@@ -747,12 +748,13 @@ rates (m<sup>3</sup>/s) included in the `Velocity.example.df` and
 
 <div style="text-align: justify;">
 
-Among the ten types used to develop the microhabitat suitability models,
-in this river reach leaves, algae, roots, and sand were absent. The most
-abundant cover types were logs and woody debris (wood) and shade which
-covered most of the margins. Rock was the most abundant instream cover,
-especially in the transition zone between pools, whereas the remaining
-cover types were only present in small patches.
+Among the ten types of cover recorded and used to develop the
+microhabitat suitability models, in this river reach leaves, algae,
+roots, and sand were absent. The most abundant cover types were logs and
+woody debris (wood) and shade which covered most of the margins. Rock
+was the most abundant instream cover, especially in the transition zone
+between pools, whereas the remaining cover types were only present in
+small patches.
 
 </div>
 
@@ -761,9 +763,9 @@ cover types were only present in small patches.
 **Figure 4** - Distribution of each cover type along the reach of the
 Serpis River (Jucar River Basin District). The models were developed
 considering ten types of cover (refuge/shelter): Leaves, Algae, Roots,
-Aquatic vegetation, Reeds (emerging vegetation), Woody debris and logs,
-Sand, Rocks, Caves, and Shade, which are included (but no necessarily
-present) in the `Cover.example.df`.
+Aquatic vegetation, Reeds (emerging vegetation/helophytes), Woody debris
+and logs, Sand, Rocks, Caves, and Shade, which are included (but no
+necessarily present) in the `Cover.example.df`.
 
 <br/>
 
@@ -824,11 +826,11 @@ Substrate.index <- SubstrateIndex(Substrate.index.example.df, check.completeness
 
 <div style="text-align: justify;">
 
-The substrate index ranges from 0 fines/silt to 8 bedrock. In the
+The substrate index ranges from 0, fines/silt, to 8, bedrock. In the
 example site of the Serpis River the upstream pools and rapids (bottom
 part of the figure) present coarse substrates, cobble (6), boulders (7)
-and even part were bedrock (8) dominate. The finer substrates are
-located at the beginning of the big pool adn the lateral margins of the
+and even parts were bedrock (8) dominated. The finer substrates were
+located at the beginning of the big pool and the lateral margins of the
 reach.
 
 </div>
@@ -838,8 +840,9 @@ reach.
 <img src="man/figures/README-substrate index map-1.png" width="100%" height="110%" />
 
 **Figure 5** - Substrate composition (substrate index) along the reach
-of the Serpis River (Jucar River Basin District). The percentages (%) of
-the different substrate types are stored in `Cover.example.df`.
+of the Serpis River (Jucar River Basin District). The substrate index
+ranges from 0, fines/silt, to 8, bedrock. The percentages (%) of the
+different substrate types are stored in `Cover.example.df`.
 
 <br/>
 
@@ -847,12 +850,12 @@ the different substrate types are stored in `Cover.example.df`.
 
 In the example, we selected the default available models for Southern
 Iberian spined-loach (*Cobitis paludica*) large. For this species and
-size class there are seven models obtained from expert-knowldge and
+size class there are seven models obtained from expert-knowledge and
 empirical data collected in the Estena (Guadiana) and Yeguas
 (Guadalquivir) rivers. The default available models include two Fuzzy
 Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature
 (EKorL), one for Summer (warm period) and Winter (cold period). The set
-also includes a Generalised Additive Model (GAM), aset of Habitat
+also includes a Generalised Additive Model (GAM), a set of Habitat
 Suitability Curves (HSCs), an Artificial Neural Network (NNET), Random
 forests (RF) and Support Vector Machine (SVM). All these models were
 trained employing the data collected in the Estena and Yeguas rivers.
