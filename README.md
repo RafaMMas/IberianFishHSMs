@@ -1027,10 +1027,10 @@ the relevant cover types and carry out the evaluation:
 11. “Cave”
 12. “Shade”
 
-**If any cover type is absent the entire column can be set to zero, but
-it must be present in the dataset**. Once the dataset it prepared, and
-the models are selected using `ListModels`, the microhabitat suitability
-can be predicted with `PredictHabitatSuitability`.
+**If any cover type is absent the entire column should be set to zero,
+but it must be present in the dataset**. Once the dataset it prepared,
+and the models are selected using `ListModels`, the microhabitat
+suitability can be predicted with `PredictHabitatSuitability`.
 
 </div>
 
@@ -1056,9 +1056,9 @@ statistics indicate differences among models. For example, the Fuzzy
 Rule-Based Systems (FRBSs) for summer indicates a mean suitability
 around 0.62 and an inferior value for winter (0.49). The higher value is
 similar to that obtained with the Habitat Suitability Curves (HSCs). The
-mean suitability with the Random forests model (RF) is markedly lower as
-it only achieved 0.35, and it is similar to that obtained with the
-Artificial Neural Network (NNET). By contrast, the mean suitbaility
+mean suitability obtained with the Artificial Neural Network (NNET) is
+markedly lower as it only achieved 0.18, whereas the mean suitability
+from Random forests (RF) was of 0.35. By contrast, the mean suitbaility
 obtained with the remaining models is close to 0.5.
 
 </div>
@@ -1131,8 +1131,15 @@ summary(Predictions)
 <div style="text-align: justify;">
 
 By using the `pairs` it is possible to see the differences between each
-pair of predictions, the variable interactions, dependenceies and the
-compensatory nature of the different models.
+pair of predictions, the variable interactions, dependencies (The Fuzzy
+Rule-Based Systems, FRBSs, are based on the Expert-Knowledge-based
+Habitat Suitability Curves/Criteria, HSCs) and the compensatory nature
+of the different models. Colour code in the following figure ranges from
+${\textsf{\color{red}red}}$, ${\textsf{\color{orange}orange}}$ and
+${\textsf{\color{gold}gold}}$ to ${\textsf{\color{green}green}}$ and
+${\textsf{\color{blue}blue}}$ following the typical colour palette to
+assess the ecological status. The associated suitability is based on the
+the mean/ensemble prediction across models.
 
 </div>
 
@@ -1149,15 +1156,15 @@ title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Speci
 *Cobitis paludica* large employing the default available models. The
 comparison includes, Fuzzy Rule-Based Systems (FRBSs) obtained from
 expert-knowledge and literature (EKorL) and valid during Summer (warm
-period) and Winter (cold period). In addition, it also the results
-obtained with the Generalised Additive Model (GAM), Habitat Suitability
-Curves (HSCs), Artificial Neural Network (NNET), Random forests (RF) and
-Support Vector Machine (SVM). All these models were developed pooling
-data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers.
-Currently, these models are valid for every season (*All*). The names
-and main characteristics of the models appear in the diagonal of the
-figure. Dot colors correspond to the mean/ensemble prediction across
-models.
+period) and Winter (cold period). In addition, it also compares the
+results obtained with the Generalised Additive Model (GAM), Habitat
+Suitability Curves (HSCs), Artificial Neural Network (NNET), Random
+forests (RF) and Support Vector Machine (SVM). All these models were
+developed pooling data from the Estena (Guadiana) and Yeguas
+(Guadalquivir) rivers. Currently, these models are valid for every
+season (*All*). The names and main characteristics of the models appear
+in the diagonal of the figure. Dot colours correspond to the
+mean/ensemble prediction across models.
 
 <br/>
 
@@ -1167,12 +1174,11 @@ The coordinates in the data included in `IberianFishHSMs` allows mapping
 the microhabitat suitability predicted with each selected model
 employing functions from the *R* package `sf`. First, it is necessary to
 create a point object with the coordinates and the desired colour
-sequence. In this case ranging from ${\textsf{\color{red}red}}$,
+sequence. In this case also ranging from ${\textsf{\color{red}red}}$,
 ${\textsf{\color{orange}orange}}$ and ${\textsf{\color{gold}gold}}$ to
-${\textsf{\color{green}green}}$ and ${\textsf{\color{blue}blue}}$
-following the typical colour palette to assess the ecological status.
-Then, a loop iteratively plotting the different maps is carried out and
-the figure title is added.
+${\textsf{\color{green}green}}$ and ${\textsf{\color{blue}blue}}$. Then,
+a loop plotting iteratively the different maps is carried out and the
+figure title is added.
 
 </div>
 
@@ -1230,14 +1236,14 @@ pools were unsuitable with the GAM and largely suitable with the HSCs.
 The latter highlights the compensatory nature of the geometric mean used
 to aggregate the suitability obtained from each independent microhabitat
 suitability curve. The Artificial Neural Network (NNET) only considered
-suitable a fringe along the right margin and some specific spots in the
-opposite margin. The Random forest model (RF) only predicted as suitable
-the deeper parts of this pool but, based on this model predictions, both
-margins would be unsuitable. The predictions of the Support Vector
-Machine (SVM) were similar but, this technique evaluated the deeper
-parts of the pool with the highest suitability (i.e., 1). These models
-are base on the ensemble prediction of ten SVMs and it indicates the ten
-models predict these microhabitat as *present*.
+suitable very specifi areas of the study site. The Random forest model
+(RF) only predicted as suitable the deeper parts of this pool but, based
+on this model predictions, both margins would be unsuitable. The
+predictions of the Support Vector Machine (SVM) were similar but, this
+technique evaluated the deeper parts of the pool with the highest
+suitability (i.e., 1). These models are base on the ensemble prediction
+of ten SVMs and it indicates the ten models predict these microhabitat
+as *present*.
 
 </div>
 

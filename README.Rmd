@@ -453,7 +453,7 @@ Selected.size <- "Large"
 11. "Cave"
 12. "Shade" 
 
-**If any cover type is absent the entire column can be set to zero, but it must be present in the dataset**.
+**If any cover type is absent the entire column should be set to zero, but it must be present in the dataset**.
 Once the dataset it prepared, and the models are selected using `ListModels`, the microhabitat suitability can be predicted with `PredictHabitatSuitability`.
  
 </div>
@@ -475,7 +475,7 @@ Predictions <- PredictHabitatSuitability(Selected.models = Selected.models,
 
 <div style="text-align: justify;">
 
-The summary of the predictions show that most of the models predicted suitability values along the entire feasible range from 0 to 1, but the statistics indicate differences among models. For example, the Fuzzy Rule-Based Systems (FRBSs) for summer indicates a mean suitability around 0.62 and an inferior value for winter (0.49). The higher value is similar to that obtained with the Habitat Suitability Curves (HSCs). The mean suitability with the Random forests model (RF) is markedly lower as it only achieved 0.35, and it is similar to that obtained with the Artificial Neural Network (NNET). By contrast, the mean suitbaility obtained with the remaining models is close to 0.5. 
+The summary of the predictions show that most of the models predicted suitability values along the entire feasible range from 0 to 1, but the statistics indicate differences among models. For example, the Fuzzy Rule-Based Systems (FRBSs) for summer indicates a mean suitability around 0.62 and an inferior value for winter (0.49). The higher value is similar to that obtained with the Habitat Suitability Curves (HSCs). The mean suitability obtained with the Artificial Neural Network (NNET) is markedly lower as it only achieved 0.18, whereas the mean suitability from Random forests (RF) was of 0.35. By contrast, the mean suitbaility obtained with the remaining models is close to 0.5. 
 
 </div>
 
@@ -505,7 +505,7 @@ Colors.pair.plot <-Colors.suitability[round(apply(Predictions, 1, mean)*100, 0)]
 
 <div style="text-align: justify;">
 
-By using the `pairs` it is possible to see the differences between each pair of predictions, the variable interactions, dependenceies and the compensatory nature of the different models.
+By using the `pairs` it is possible to see the differences between each pair of predictions, the variable interactions, dependencies (The Fuzzy Rule-Based Systems, FRBSs, are based on the Expert-Knowledge-based Habitat Suitability Curves/Criteria, HSCs) and the compensatory nature of the different models. Colour code in the following figure ranges from ${\textsf{\color{red}red}}$, ${\textsf{\color{orange}orange}}$ and ${\textsf{\color{gold}gold}}$ to ${\textsf{\color{green}green}}$ and ${\textsf{\color{blue}blue}}$ following the typical colour palette to assess the ecological status. The associated suitability is based on the the mean/ensemble prediction across models. 
 
 </div>
 
@@ -517,7 +517,7 @@ title(substitute(expr = paste(italic(Species), Size, sep =" "), env = list(Speci
 
 ```
 
-**Figure 6** - Paired plots comparing the predicted suitability for *Cobitis paludica* large employing the default available models. The comparison includes, Fuzzy Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature (EKorL) and valid during Summer (warm period) and Winter (cold period). In addition, it also the results obtained with the Generalised Additive Model (GAM), Habitat Suitability Curves (HSCs), Artificial Neural Network (NNET), Random forests (RF) and Support Vector Machine (SVM). All these models were developed pooling data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers. Currently, these models are valid for every season (*All*). The names and main characteristics of the models appear in the diagonal of the figure. Dot colors correspond to the mean/ensemble prediction across models.
+**Figure 6** - Paired plots comparing the predicted suitability for *Cobitis paludica* large employing the default available models. The comparison includes, Fuzzy Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature (EKorL) and valid during Summer (warm period) and Winter (cold period). In addition, it also compares the results obtained with the Generalised Additive Model (GAM), Habitat Suitability Curves (HSCs), Artificial Neural Network (NNET), Random forests (RF) and Support Vector Machine (SVM). All these models were developed pooling data from the Estena (Guadiana) and Yeguas (Guadalquivir) rivers. Currently, these models are valid for every season (*All*). The names and main characteristics of the models appear in the diagonal of the figure. Dot colours correspond to the mean/ensemble prediction across models.
 
 ```{r maps names, echo = FALSE}
 
@@ -528,7 +528,7 @@ colnames(Predictions) <- gsub(x = colnames(Predictions), pattern = "\n", replace
 <br/>
 
 <div style="text-align: justify;">
-The coordinates in the data included in `IberianFishHSMs` allows mapping the microhabitat suitability predicted with each selected model employing functions from the *R* package `sf`. First, it is necessary to create a point object with the coordinates and the desired colour sequence. In this case ranging from ${\textsf{\color{red}red}}$, ${\textsf{\color{orange}orange}}$ and ${\textsf{\color{gold}gold}}$ to ${\textsf{\color{green}green}}$ and ${\textsf{\color{blue}blue}}$ following the typical colour palette to assess the ecological status. Then, a loop iteratively plotting the different maps is carried out and the figure title is added. 
+The coordinates in the data included in `IberianFishHSMs` allows mapping the microhabitat suitability predicted with each selected model employing functions from the *R* package `sf`. First, it is necessary to create a point object with the coordinates and the desired colour sequence. In this case also ranging from ${\textsf{\color{red}red}}$, ${\textsf{\color{orange}orange}}$ and ${\textsf{\color{gold}gold}}$ to ${\textsf{\color{green}green}}$ and ${\textsf{\color{blue}blue}}$. Then, a loop plotting iteratively the different maps is carried out and the figure title is added. 
 </div>
 
 <br/>
@@ -570,7 +570,7 @@ par(op)
 <br/>
 
 <div style="text-align: justify;">
-The different models assign the highest suitability to the downstream pool (upper part of the map). However, the maps developed employing the preceding code reveal the differences among the microhabitat suitability models. The Fuzzy Rule-Based Systems (FRBSs) assign large suitability to the deeper areas and the shores of the pools comprised within the hydraulic model. Both of them predicted as unsuitable the rapids connecting them but the FRBSs for Winter is more restrictive than the one for Summer and predicts as suitable only the deeper parts of these pools. The Generalised Additive Model (GAM) and the Habitat Suitability Curves (HSCs) predicted high suitability in the deeper part of the upstream pool and particularly to the shores, but the upstream smaller pools were unsuitable with the GAM and largely suitable with the HSCs. The latter highlights the compensatory nature of the geometric mean used to aggregate the suitability obtained from each independent microhabitat suitability curve. The Artificial Neural Network (NNET) only considered suitable a fringe along the right margin and some specific spots in the opposite margin. The Random forest model (RF) only predicted as suitable the deeper parts of this pool but, based on this model predictions, both margins would be unsuitable. The predictions of the Support Vector Machine (SVM) were similar but, this technique evaluated the deeper parts of the pool with the highest suitability (i.e., 1). These models are base on the ensemble prediction of ten SVMs and it indicates the ten models predict these microhabitat as *present*.
+The different models assign the highest suitability to the downstream pool (upper part of the map). However, the maps developed employing the preceding code reveal the differences among the microhabitat suitability models. The Fuzzy Rule-Based Systems (FRBSs) assign large suitability to the deeper areas and the shores of the pools comprised within the hydraulic model. Both of them predicted as unsuitable the rapids connecting them but the FRBSs for Winter is more restrictive than the one for Summer and predicts as suitable only the deeper parts of these pools. The Generalised Additive Model (GAM) and the Habitat Suitability Curves (HSCs) predicted high suitability in the deeper part of the upstream pool and particularly to the shores, but the upstream smaller pools were unsuitable with the GAM and largely suitable with the HSCs. The latter highlights the compensatory nature of the geometric mean used to aggregate the suitability obtained from each independent microhabitat suitability curve. The Artificial Neural Network (NNET) only considered suitable very specifi areas of the study site. The Random forest model (RF) only predicted as suitable the deeper parts of this pool but, based on this model predictions, both margins would be unsuitable. The predictions of the Support Vector Machine (SVM) were similar but, this technique evaluated the deeper parts of the pool with the highest suitability (i.e., 1). These models are base on the ensemble prediction of ten SVMs and it indicates the ten models predict these microhabitat as *present*.
 </div>
 
 <br/>
