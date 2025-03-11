@@ -858,12 +858,12 @@ Rule-Based Systems (FRBSs) obtained from expert-knowledge and literature
 also includes a Generalised Additive Model (GAM), a set of Habitat
 Suitability Curves (HSCs), an Artificial Neural Network (NNET), Random
 forests (RF) and Support Vector Machine (SVM). All these models were
-trained employing the data collected in the Estena and Yeguas rivers.
-The data were collected during spring and summer and currently these
-models are the best option to evaluate the microhabitat suitability at
-any season. To select the models, we employed the function `ListModels`
-setting the arguments `Selected.species` to `"Cobitis paludica"` and the
-`Selected.size` to `"Large"`.
+trained using data collected from the Estena and Yeguas rivers during
+the spring and summer. Currently, these models represent the best option
+for evaluating microhabitat suitability across any season. To select the
+models, we employed the function `ListModels` setting the arguments
+`Selected.species` to `"Cobitis paludica"` and the `Selected.size` to
+`"Large"`.
 
 </div>
 
@@ -1005,14 +1005,14 @@ Selected.size <- "Large"
 
 <div style="text-align: justify;">
 
-`PredictHabitatSuitability` allows evlauating the microhabitat
-suitbility of every patch, pixel or cell from field surveys of hydraulic
-simulations. The main argument of the function are the selected models
-from `ListModels` and data on Velocity, Depth, Substrate index and cover
-availability. `PredictHabitatSuitability` expects data to be a *R*
-`data.frame` with the following columns, which must be named as follows
-to ensure each model finds the necessary info to aggregate the relevant
-cover types and carry out the evaluation:
+`PredictHabitatSuitability` allows evaluating the microhabitat
+suitability of every patch, pixel or cell from field surveys and/or
+hydraulic simulations. The main argument of the function are the
+selected models from `ListModels` and data on Velocity, Depth, Substrate
+index and Cover availability. `PredictHabitatSuitability` expects data
+to be a *R* `data.frame` with the following columns, which must be named
+as follows to ensure each model finds the necessary info to aggregate
+the relevant cover types and carry out the evaluation:
 
 1.  “Velocity”
 2.  “Depth”
@@ -1027,10 +1027,10 @@ cover types and carry out the evaluation:
 11. “Cave”
 12. “Shade”
 
-If any cover type is absent the entire column can be set to zero but it
-must be present in the dataset. Once the dataset it prepared and the
-models are selected, using `ListModels`, the micrhabitat suitbaility can
-be predicted with `PredictHabitatSuitability`.
+**If any cover type is absent the entire column can be set to zero, but
+it must be present in the dataset**. Once the dataset it prepared, and
+the models are selected using `ListModels`, the microhabitat suitability
+can be predicted with `PredictHabitatSuitability`.
 
 </div>
 
@@ -1248,13 +1248,13 @@ models predict these microhabitat as *present*.
 **Figure 7** - Maps depicting the predicted microhabitat suitability for
 *Cobitis paludica* large in a reach of the Serpis River (Jucar River
 Basin District - JRBD). The maps show the predictions for 0.5
-m<sup>3</sup>/s. The figure depicts the predictions from seven different
+m<sup>3</sup>/s employing seven different microhabitat suitability
 models. The Fuzzy Rule-Based Systems (FRBSs) were obtained from
 expert-knowledge and literature (EKorL) and they are valid for Summer
 (warm period) and Winter (cold period) respectively. The figure also
 depicts the predictions carried out with the Generalised Additive Model
 (GAM), Habitat Suitability Curves (HSCs), Artificial Neural Network
-(NNET), Random forests (RF) and Support Vector Machine (SVM). All these
+(NNET), Random forest (RF) and Support Vector Machine (SVM). All these
 models were developed pooling data from the Estena (Guadiana) and Yeguas
 (Guadalquivir) rivers. Currently, these models are valid for every
 season (*All*).
