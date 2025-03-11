@@ -43,10 +43,11 @@ evaluating the microhabitat suitability based on hydraulic simulations,
 as well as tools for visualizing the modelled microhabitat preferences
 and suitability. A detailed example showcasing the package’s
 capabilities is included in the following manual. In total, the package
-comprises 797 microhabitat suitability models, covering 43 species
+comprises 797 microhabitat suitability models, covering 41 species
 across up to 4 size classes (Large, Medium, Small, Very Small) and
 spawning/nesting suitability (available for brown trout *Salmo trutta*
-and Atlantic salmon *Salmo salar*). The development of these
+and Atlantic salmon *Salmo salar*). The package also includes several
+generic models for fry (Cyprinidae). The development of these
 microhabitat suitability models leverage the functions and features of
 the following packages:
 
