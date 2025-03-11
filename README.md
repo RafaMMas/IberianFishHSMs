@@ -175,17 +175,17 @@ associated to each microhabitat (i.e., patch, pixel or cell). The output
 of this function also renders a summary of their main characteristics,
 including sample sizes, and several performance criteria for those
 models optimised through cross-validation. The argument *Default* =
-*TRUE* renders those models recommended by the expert panel who
+*TRUE* provides those models recommended by the expert panel who
 co-authored the package. These models are, consequently, the best option
 among the available models, but the additional models have been included
 to allow site-specific studies. The following example shows the default
 output for brown trout (*Salmo trutta*). From columns \#1 to \#15 the
-general general characteristics are described. Columns \#16 to \#23
-include the aforementioned performance indices. The output of this
-function is a three-elements list. The last two elements are names and
-codes. Names summarises the characteristics of each model in the table
-and, as indicated above, codes are used to internally call the odels
-compiled in the package.
+general characteristics are described. Columns \#16 to \#23 include the
+aforementioned performance indices. The output of this function is a
+three-elements list. The last two elements are the models’ names and
+codes. These names summarise the characteristics of each model in the
+table and, as indicated above, codes are used to internally call the
+models compiled in the package.
 
 </div>
 
@@ -324,8 +324,8 @@ Selected.models[2:3]
 
 `ListModels` output values can be use directly within
 `PredictHabitatSuitability` to carry out habitat evaluations. In
-particular, `$Codes` are the names used to store and call internally the
-available microhabitat suitability models.
+particular, `$Codes` contains the names used to store and internally
+call the available microhabitat suitability models.
 
 </div>
 
@@ -335,26 +335,26 @@ available microhabitat suitability models.
 
 <div style="text-align: justify;">
 
-There exist an interaction between training data and the selected
-modelling technique, which can vary the effect of the predictor
-variables and/or their importance (Eugster, Leisch, and Strobl 2014). By
-means of cross-validation, during the development of the microhabitat
-suitability models, we carried out a variable selection approach
-discarding those cover types that not improved model performance for
-Machine Learning (i.e., ANN-MLPs, RFs, SVMs) and statistical approaches
-(i.e., GAMs) and an analogous approach was followed during the
-development of the Habitat Suitability Curves/Criteria (HSCs) and Fuzzy
-Rule-based Systems (FRBSs). This approach lead to different sets of
-relevant cover types in each model, although the core of relevant cover
-types is expected to coincide. The function `ListSelectedCoverTypes`
-allows inspecting the selected cover types for each model. This will
-allow practitioner to discards some models when they are deemed
-inadequate. Likewise, the queries can be categorized by *Species*,
-*Size*, *River*, *Model.type*, *Sampled.season*, *Valid.season*, and/or
-*Data.origin*. When evaluating the microhabitat suitability,
-`PredictHabitatSuitability` selects and aggregates the appropriate cover
-types internally. Therefore, this function does not need to be called
-explicitly.
+An interaction exists between the training data and the selected
+modeling technique, which can influence the effect and/or importance of
+predictor variables (Eugster, Leisch, and Strobl 2014). Through
+cross-validation, we performed a variable selection process during the
+development of microhabitat suitability models, discarding those cover
+types that did not improve model performance. This approach was applied
+to both Machine Learning models (i.e., ANN-MLPs, RFs, SVMs) and
+statistical methods (i.e., GAMs). A similar procedure was followed in
+the development of the Habitat Suitability Curves/Criteria (HSCs) and
+Fuzzy Rule-Based Systems (FRBSs). This approach lead to different sets
+of relevant cover types in each model, although a core group of
+important cover types is expected to be shared across models. The
+function `ListSelectedCoverTypes` allows inspecting the selected cover
+types for each model. This will enable practitioners to discard some
+models when they are deemed inadequate. Likewise, the queries can be
+categorized by *Species*, *Size*, *River*, *Model.type*,
+*Sampled.season*, *Valid.season*, and/or *Data.origin*. When evaluating
+the microhabitat suitability, `PredictHabitatSuitability` selects and
+aggregates the appropriate cover types internally. Therefore, this
+function does not need to be called explicitly.
 
 </div>
 
@@ -401,23 +401,22 @@ ListSelectedCoverTypes(Species = "Salmo trutta")
 
 <div style="text-align: justify;">
 
-The package includes a number of models (i.e., 797) and species (i.e.,
-43) of several size classes and activities. Among other things, the
-available models vary by modelling technique, sampling site and the
-aggregation of data from different sites and rivers. The variable
-`Default` obtained with `ListModels` indicates which models are
-recommended because it was considered they performed and generalised
-better and/or were developed with data covering a large range of the
-microhabitat variables. Nevertheless, users can select other models when
-they consider it preferable. For example, when they are going to
-evaluate the microhabitat suitability in the basin where data for an
-alternative model were collected. In addition to
-`ListSelectedCoverTypes`, users can carry out sensitivity analyses to
-compare the predictions of the different available models and select the
-one that better adjust to their interests and specific knowledge. This
-allows inspecting their performance before selecting any alternative
-model or set of models. The sensitivity analysis can be carried out
-employing the function `PlotHabitatSuitabilityModels` as follows:
+The package includes a number of models (797) and species (41) across
+various size classes and activities. Among other factors, the available
+models differ in modeLling technique, sampling site, and the aggregation
+of data from different locations and rivers. The ARGUMENT `Default`, in
+`ListModels`, indicates which models are recommended based on their
+performance, generalization ability, and/or development using data that
+cover a broad range of microhabitat variables. However, users can select
+alternative models when preferred—for example, when evaluating
+microhabitat suitability in a basin where data for a different model
+were collected. In addition to `ListSelectedCoverTypes`, users can
+conduct sensitivity analyses to compare the predictions of different
+models and choose the one that best aligns with their needs and
+expertise. This process allows users to assess model performance before
+selecting an alternative model or a set of models. Sensitivity analysis
+can be performed using the `PlotHabitatSuitabilityModels` function as
+follows:
 
 </div>
 
@@ -425,8 +424,8 @@ employing the function `PlotHabitatSuitabilityModels` as follows:
 
 ## Pseudochondrostoma.polylepis, large, FRBS for Spring, Summer, and Autumn
 
-(Selected.model <- ListModels(Species = "Cobitis paludica", verbose = FALSE)$Codes[7])
-#> [1] "ABCMN"
+(Selected.model <- ListModels(Species = "Pseudochondrostoma polylepis", verbose = FALSE)$Codes[1])
+#> [1] "ABEIO"
 
 PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 ```
@@ -436,9 +435,9 @@ PlotHabitatSuitabilityModels(Selected.model = Selected.model, Quantiles = TRUE)
 **Figure 1** - Sensitivity analysis (i.e., partial dependence-like
 plots) for *Pseudochondrostoma polylepis* large. The figure shows the
 results for the Fuzzy Rule-Based System (FRBS) to evaluate the
-microhabitat suitability during Spring, Summer, and Autumn. The
-different coloured lines depict the quantiles of the predictions along
-the range of the studied variable.
+microhabitat suitability during Spring, Summer, and Autumn (warm
+period). The different coloured lines depict the quantiles of the
+predictions along the range of the studied variable.
 
 <br/>
 
