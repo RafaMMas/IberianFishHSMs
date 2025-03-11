@@ -37,17 +37,18 @@ panel, who contributed to the development of the package. Additionally,
 the package includes further sets of HSCs and Fuzzy Rule-Based Systems
 (FRBSs) (Zadeh 1965; Takagi and Sugeno 1985), which were developed from
 both the literature and expert knowledge collected through online
-surveys. The authors extend their gratitude to the respondents for their
-valuable contributions. The package also provides functions for
-evaluating microhabitat suitability based on hydraulic simulations, as
-well as tools for visualizing modelled microhabitat preferences and
-suitability. A detailed example showcasing the package’s capabilities is
-included in the manual. In total, the package comprises 797 microhabitat
-suitability models, covering 43 species across up to 4 size classes
-(Large, Medium, Small, Very Small) and spawning/nesting suitability
-(available for brown trout Salmo trutta and Atlantic salmon Salmo
-salar). The development of these microhabitat suitability models
-leverages the functions and features of the following packages:
+surveys. The authors express their gratitude to the respondents for
+their valuable contributions. The package also provides functions for
+evaluating the microhabitat suitability based on hydraulic simulations,
+as well as tools for visualizing the modelled microhabitat preferences
+and suitability. A detailed example showcasing the package’s
+capabilities is included in the following manual. In total, the package
+comprises 797 microhabitat suitability models, covering 43 species
+across up to 4 size classes (Large, Medium, Small, Very Small) and
+spawning/nesting suitability (available for brown trout *Salmo trutta*
+and Atlantic salmon *Salmo salar*). The development of these
+microhabitat suitability models leverage the functions and features of
+the following packages:
 
 </div>
 
@@ -86,16 +87,18 @@ This package was developed by:
 
 <div style="text-align: justify;">
 
-<sup>1</sup> Tragsatec, Carrer Ramon Gordillo 7 - 46010 València, Spain.
-<sup>2</sup> <sup>3</sup> GRECO, Institute of Aquatic Ecology,
-University of Girona, E-17071 Girona. <sup>4</sup> Laboratorio de
-Hidrobiologia, Departamento de Zoología, Genetica y Antropología Física.
-Facultad de Biología. Universidad de Santiago de Compostela, 15782
-Santiago de Compostela, Spain. <sup>5</sup> Icthios Gestión Ambiental
-SL. <info@icthios.es>. <sup>6</sup> ECOHIDRÁULICA, S.L. C/ Villamanín
-16, Madrid 28011. <sup>7</sup> Institut d’Investigació per a la Gestió
-Integrada de Zones Costaneres (IGIC), Universitat Politècnica de
-València, C/Paranimf, 1, 46730 Gandia, València, Spain. <sup>8</sup>
+<sup>1</sup> Tragsatec, Carrer Ramon Gordillo 7 - 46010 València,
+Valencian Country, Spain. <sup>2</sup> ETS Ingenieros de Montes,
+Universidad Politécnica de Madrid, Madrid, Spain. <sup>3</sup> GRECO,
+Institute of Aquatic Ecology, University of Girona, E-17071 Girona.
+<sup>4</sup> Laboratorio de Hidrobiologia, Departamento de Zoología,
+Genetica y Antropología Física. Facultad de Biología. Universidad de
+Santiago de Compostela, 15782 Santiago de Compostela, Spain.
+<sup>5</sup> Icthios Gestión Ambiental SL. <info@icthios.es>.
+<sup>6</sup> ECOHIDRÁULICA, S.L. C/ Villamanín 16, Madrid 28011.
+<sup>7</sup> Institut d’Investigació per a la Gestió Integrada de Zones
+Costaneres (IGIC), Universitat Politècnica de València, C/Paranimf, 1,
+46730 Gandia, València, Valencian Country, Spain. <sup>8</sup>
 Departamento de Zoología y Antropología Física. 30100. Universidad de
 Murcia. Murcia. <sup>9</sup> Dpto. de Ciencias Integradas. Universidad
 de Huelva. <sup>10</sup> Forest Research Centre, Associate Laboratory
