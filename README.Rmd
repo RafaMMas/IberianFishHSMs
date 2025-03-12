@@ -120,7 +120,7 @@ devtools::install_github("RafaMMas/IberianFishHSMs")
 
 ## Example
 <div style="text-align: justify;">
-The following example illustrates the capabilities of IberianFishHSMs and the general workflow for predicting microhabitat suitability using outputs from hydraulic simulations and field data. Field data includes the substrate and cover (shelter) distribution across the study site, by patch, pixel or cell. The data used in this example is available from the package and has been adapted from he data published in Muñoz-Mas et al. [-@Munoz-Mas2024].
+The following example illustrates the capabilities of IberianFishHSMs and the general workflow for predicting microhabitat suitability using outputs from hydraulic simulations and field data. Field data includes the substrate and cover (shelter) distribution across the study site, by patch, pixel or cell. The data used in this example is available from the package and has been adapted from the data published in Muñoz-Mas et al. [-@Munoz-Mas2024].
 </div>
 
 ```{r load package, echo = TRUE}
@@ -160,7 +160,7 @@ Selected.models[2:3]
 ### ListSelectedCoverTypes - List selected cover types in each microhabitat suitability model
 
 <div style="text-align: justify;">
-An interaction exists between the training data and the selected modeling technique, which can influence the effect and/or importance of predictor variables [@Eugster2014]. Through cross-validation, we performed a variable selection process during the development of microhabitat suitability models, discarding those cover types that did not improve model performance. This approach was applied to both Machine Learning models (i.e., ANN-MLPs, RFs, SVMs) and statistical methods (i.e., GAMs). A similar procedure was followed in the development of the Habitat Suitability Curves/Criteria (HSCs) and Fuzzy Rule-Based Systems (FRBSs). This approach lead to different sets of relevant cover types in each model, although a core group of important cover types is expected to be shared across models. The function `ListSelectedCoverTypes` allows inspecting the selected cover types for each model. This will enable practitioners to discard some models when they are deemed inadequate. Likewise, the queries can be categorized by *Species*, *Size*, *River*, *Model.type*, *Sampled.season*, *Valid.season*, and/or *Data.origin*. When evaluating the microhabitat suitability, `PredictHabitatSuitability` selects and aggregates the appropriate cover types internally. Therefore, this function does not need to be called explicitly.
+An interaction exists between the training data and the selected modeling technique, which can influence the effect and/or importance of predictor variables [@Eugster2014]. Through cross-validation, we performed a variable selection process during the development of microhabitat suitability models, discarding those cover types that did not improve model performance. This approach was applied to both Machine Learning models (i.e., ANN-MLPs, RFs, SVMs) and statistical methods (i.e., GAMs). A similar procedure was followed in the development of the Habitat Suitability Curves/Criteria (HSCs) and Fuzzy Rule-Based Systems (FRBSs). This approach leads to different sets of relevant cover types in each model, although a core group of important cover types is expected to be shared across models. The function `ListSelectedCoverTypes` allows inspecting the selected cover types for each model. This will enable practitioners to discard some models when they are deemed inadequate. Likewise, the queries can be categorized by *Species*, *Size*, *River*, *Model.type*, *Sampled.season*, *Valid.season*, and/or *Data.origin*. When evaluating the microhabitat suitability, `PredictHabitatSuitability` selects and aggregates the appropriate cover types internally. Therefore, this function does not need to be called explicitly.
 </div>
 
 ```{r ListSelectedCoverTypes, echo = TRUE}
@@ -231,7 +231,7 @@ plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
 **Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta* Large obtained with data collected in the Curueño River (Douro) and valid all year round.
 
 <div style="text-align: justify;">
-The different option to, for example, plot each models depend on each specific package and in some cases, such as the SVMs obtained with `e1071`, it will require indirect approaches for plotting. For example, using the *R* package `pdp` [@RJ-2017-016].
+The different options to, for example, plot each model depend on each specific package and in some cases, such as the SVMs obtained with `e1071`, it will require indirect approaches for plotting. For example, using the *R* package `pdp` [@RJ-2017-016].
 </div>
 
 <br/>
@@ -239,7 +239,7 @@ The different option to, for example, plot each models depend on each specific p
 ### PredictHabitatSuitability - Microhabitat suitability predictions
 
 <div style="text-align: justify;">
-Microhabitat suitability predictions are carried out employing the function `PredictHabitatSuitability`. They are based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluated microhabitats (i.e., pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data (i.e., `SubstrateIndex`). Additionally, the package includes data on a typical output from a hydraulic simulation and the data on substrate and cover distribution and availability from the field survey carried out in concert of the bathymetry. In particular, it includes data on velocity and depth for 40 simulated flows and the substrate composition and cover availability in the 400-m reach of the Serpis River (Eastern Iberian Peninsula) studied by Muñoz-Mas et all. [-@Munoz-Mas2024]. The data and subsequent analyses are intended to show the capabilities of the package and do not imply the species are present in this reach of the Serpis River or along its water course. For simplicity the data are stored in four separated files that can be accessed and loaded to the workspace using the function `data` as follows:
+Microhabitat suitability predictions are carried out employing the function `PredictHabitatSuitability`. They are based on mean flow velocity (m/s), water depth (m) substrate index (-) and the sum of the number of relevant types of cover in the evaluated microhabitats (i.e., pixels or cells from the hydraulic simulation). The package includes functions to prepare the input data (i.e., `SubstrateIndex`). Additionally, the package includes data on a typical output from a hydraulic simulation and the data on substrate and cover distribution and availability from the field survey carried out in concert of the bathymetry. In particular, it includes data on velocity and depth for 40 simulated flows and the substrate composition and cover availability in the 400-m reach of the Serpis River (Eastern Iberian Peninsula) studied by Muñoz-Mas et al. [-@Munoz-Mas2024]. The data and subsequent analyses are intended to show the capabilities of the package and do not imply the species are present in this reach of the Serpis River or along its water course. For simplicity the data are stored in four separated files that can be accessed and loaded to the workspace using the function `data` as follows:
 </div>
 
 <br/>
@@ -356,7 +356,7 @@ par(op)
 <br/>
 
 <div style="text-align: justify;">
-The function `SubstrateIndex` computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%). The substrate classes originally used corresponded to a simplification of the the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand (62 µm > Ø ≤ 2 mm), fine gravel (2 > Ø ≤ 8 mm), gravel (8 > Ø ≤ 64 mm), cobbles (64 > Ø ≤ 256 mm), boulders (Ø > 256 mm) and bedrock [see e.g., @Munoz-Mas2018 or @Munoz-Mas2017]. The package includes some examples to illustrate the structure of the input files.
+The function `SubstrateIndex` computes the substrate index as a weighted aggregation of the percentage of different granulometry classes (%). The substrate classes originally used corresponded to a simplification of the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand (62 µm > Ø ≤ 2 mm), fine gravel (2 > Ø ≤ 8 mm), gravel (8 > Ø ≤ 64 mm), cobbles (64 > Ø ≤ 256 mm), boulders (Ø > 256 mm) and bedrock [see e.g., @Munoz-Mas2018 or @Munoz-Mas2017]. The package includes some examples to illustrate the structure of the input files.
 </div>
 
 <br/>

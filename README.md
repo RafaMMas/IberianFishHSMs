@@ -151,7 +151,7 @@ and the general workflow for predicting microhabitat suitability using
 outputs from hydraulic simulations and field data. Field data includes
 the substrate and cover (shelter) distribution across the study site, by
 patch, pixel or cell. The data used in this example is available from
-the package and has been adapted from he data published in Muñoz-Mas et
+the package and has been adapted from the data published in Muñoz-Mas et
 al. (2024).
 
 </div>
@@ -344,7 +344,7 @@ types that did not improve model performance. This approach was applied
 to both Machine Learning models (i.e., ANN-MLPs, RFs, SVMs) and
 statistical methods (i.e., GAMs). A similar procedure was followed in
 the development of the Habitat Suitability Curves/Criteria (HSCs) and
-Fuzzy Rule-Based Systems (FRBSs). This approach lead to different sets
+Fuzzy Rule-Based Systems (FRBSs). This approach leads to different sets
 of relevant cover types in each model, although a core group of
 important cover types is expected to be shared across models. The
 function `ListSelectedCoverTypes` allows inspecting the selected cover
@@ -619,7 +619,7 @@ valid all year round.
 
 <div style="text-align: justify;">
 
-The different option to, for example, plot each models depend on each
+The different options to, for example, plot each model depend on each
 specific package and in some cases, such as the SVMs obtained with
 `e1071`, it will require indirect approaches for plotting. For example,
 using the *R* package `pdp` (Greenwell 2017).
@@ -644,7 +644,7 @@ and availability from the field survey carried out in concert of the
 bathymetry. In particular, it includes data on velocity and depth for 40
 simulated flows and the substrate composition and cover availability in
 the 400-m reach of the Serpis River (Eastern Iberian Peninsula) studied
-by Muñoz-Mas et all. (2024). The data and subsequent analyses are
+by Muñoz-Mas et al. (2024). The data and subsequent analyses are
 intended to show the capabilities of the package and do not imply the
 species are present in this reach of the Serpis River or along its water
 course. For simplicity the data are stored in four separated files that
@@ -774,9 +774,9 @@ necessarily present) in the `Cover.example.df`.
 The function `SubstrateIndex` computes the substrate index as a weighted
 aggregation of the percentage of different granulometry classes (%). The
 substrate classes originally used corresponded to a simplification of
-the the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm),
-sand (62 µm \> Ø ≤ 2 mm), fine gravel (2 \> Ø ≤ 8 mm), gravel (8 \> Ø ≤
-64 mm), cobbles (64 \> Ø ≤ 256 mm), boulders (Ø \> 256 mm) and bedrock
+the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand
+(62 µm \> Ø ≤ 2 mm), fine gravel (2 \> Ø ≤ 8 mm), gravel (8 \> Ø ≤ 64
+mm), cobbles (64 \> Ø ≤ 256 mm), boulders (Ø \> 256 mm) and bedrock
 Muñoz-Mas et al. (2017). The package includes some examples to
 illustrate the structure of the input files.
 
@@ -1289,7 +1289,7 @@ networks</span>.” *Machine Learning* 20 (3): 273–97.
 
 <div id="ref-Eugster2014" class="csl-entry">
 
-Eugster, Manuel J. A., Friedrich Leisch, and Carolin Strobl. 2014.
+Eugster, M J A, F Leisch, and C Strobl. 2014.
 “<span class="nocase">(Psycho-)analysis of benchmark experiments: a
 formal framework for investigating the relationship between data sets
 and learning algorithms</span>.” *Computational Statistics & Data
@@ -1308,7 +1308,7 @@ Statistics* 29 (5): 1189–1232. <https://doi.org/10.1214/aos/1013203451>.
 
 <div id="ref-RJ-2017-016" class="csl-entry">
 
-Greenwell, Brandon M. 2017. “<span class="nocase">pdp: An R Package for
+Greenwell, B M. 2017. “<span class="nocase">pdp: An R Package for
 Constructing Partial Dependence Plots</span>.” *The R Journal* 9 (1):
 421–36. <https://doi.org/10.32614/RJ-2017-016>.
 
@@ -1316,10 +1316,9 @@ Constructing Partial Dependence Plots</span>.” *The R Journal* 9 (1):
 
 <div id="ref-Hansen1990" class="csl-entry">
 
-Hansen, Lars Kai, and Peter Salamon. 1990. “<span class="nocase">Neural
-network ensembles</span>.” *IEEE Transactions on Pattern Analysis and
-Machine Intelligence* 12 (10): 993–1001.
-<https://doi.org/10.1109/34.58871>.
+Hansen, L K, and P Salamon. 1990. “<span class="nocase">Neural network
+ensembles</span>.” *IEEE Transactions on Pattern Analysis and Machine
+Intelligence* 12 (10): 993–1001. <https://doi.org/10.1109/34.58871>.
 
 </div>
 
@@ -1332,11 +1331,11 @@ Edited by Chapman and Hall/CRC. London, (UK): Chapman & Hall/CRC.
 
 <div id="ref-Munoz-Mas2017" class="csl-entry">
 
-Muñoz-Mas, R, Rui Manuel Soares Costa, Francisco Martínez-Capel, and
-Juan Diego Alcaraz-Hernández. 2017. “<span class="nocase">Microhabitat
-competition between Iberian fish species and the endangered
-J<span class="nocase">ú</span>car nase (Parachondrostoma arrigonis
-Steindachner, 1866)</span>.” *Journal of Ecohydraulics* 0 (0): 1–23.
+Muñoz-Mas, R, R M S Costa, F Martínez-Capel, and J D Alcaraz-Hernández.
+2017. “<span class="nocase">Microhabitat competition between Iberian
+fish species and the endangered J<span class="nocase">ú</span>car nase
+(Parachondrostoma arrigonis Steindachner, 1866)</span>.” *Journal of
+Ecohydraulics* 0 (0): 1–23.
 <https://doi.org/10.1080/24705357.2016.1276417>.
 
 </div>
