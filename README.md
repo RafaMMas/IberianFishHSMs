@@ -103,9 +103,9 @@ Costaneres (IGIC), Universitat Politècnica de València, C/Paranimf, 1,
 Departamento de Zoología y Antropología Física. 30100. Universidad de
 Murcia. Murcia. <sup>9</sup> Dpto. de Ciencias Integradas. Universidad
 de Huelva. <sup>10</sup> Forest Research Centre, Associate Laboratory
-TERRA, School of Agriculture, University of Lisbon. <sup>11</sup>
-Universidad de Navarra, Instituto de Biodiversidad y Medioambiente
-(BIOMA), 31008 Pamplona, Navarra, Spain.
+TERRA, School of Agriculture, University of Lisbon, Portugal.
+<sup>11</sup> Universidad de Navarra, Instituto de Biodiversidad y
+Medioambiente (BIOMA), 31008 Pamplona, Navarra, Spain.
 
 </div>
 
@@ -169,23 +169,23 @@ library(IberianFishHSMs)
 `ListModels` allows inspecting the available models. The queries can be
 categorized by *Species*, *Size*, *River*, *Model.type*,
 *Sampled.season*, *Valid.season*, and/or *Data.origin*. This function
-also provides de *Codes* to internally call the microhabitat suitability
-models during the habitat evaluation to obtain the suitability
-associated to each microhabitat (i.e., patch, pixel or cell). The output
-of this function also renders a summary of their main characteristics,
-including sample sizes, and several performance criteria for those
-models optimised through cross-validation. The argument *Default* =
-*TRUE* provides those models recommended by the expert panel who
-co-authored the package. These models are, consequently, the best option
-among the available models, but the additional models have been included
-to allow site-specific studies. The following example shows the default
-output for brown trout (*Salmo trutta*). From columns \#1 to \#15 the
-general characteristics are described. Columns \#16 to \#23 include the
-aforementioned performance indices. The output of this function is a
-three-elements list. The last two elements are the models’ names and
-codes. These names summarise the characteristics of each model in the
-table and, as indicated above, codes are used to internally call the
-models compiled in the package.
+also provides the *Codes* to internally call the microhabitat
+suitability models during the habitat evaluation to obtain the
+suitability associated to each microhabitat (i.e., patch, pixel or
+cell). The output of this function also renders a summary of their main
+characteristics, including sample sizes, and several performance
+criteria for those models optimised through cross-validation. The
+argument *Default* = *TRUE* provides those models recommended by the
+expert panel who co-authored the package. These models are,
+consequently, the best option among the available models, but the
+additional models have been included to allow site-specific studies. The
+following example shows the default output for brown trout (*Salmo
+trutta*). From columns \#1 to \#15 the general characteristics are
+described. Columns \#16 to \#23 include the aforementioned performance
+indices. The output of this function is a three-elements list. The last
+two elements are the models’ names and codes. These names summarise the
+characteristics of each model in the table and, as indicated above,
+codes are used to internally call the models compiled in the package.
 
 </div>
 
@@ -322,7 +322,7 @@ Selected.models[2:3]
 
 <div style="text-align: justify;">
 
-`ListModels` output values can be use directly within
+`ListModels` output values can be used directly within
 `PredictHabitatSuitability` to carry out habitat evaluations. In
 particular, `$Codes` contains the names used to store and internally
 call the available microhabitat suitability models.
@@ -403,7 +403,7 @@ ListSelectedCoverTypes(Species = "Salmo trutta")
 
 The package includes a number of models (797) and species (41) across
 various size classes and activities. Among other factors, the available
-models differ in modeLling technique, sampling site, and the aggregation
+models differ in modelling technique, sampling site, and the aggregation
 of data from different locations and rivers. The ARGUMENT `Default`, in
 `ListModels`, indicates which models are recommended based on their
 performance, generalization ability, and/or development using data that
@@ -615,11 +615,12 @@ plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
 
 **Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta*
 Large obtained with data collected in the Curueño River (Douro) and
-valid all year round.
+valid all year round. Blue band represents the 95% confidence intervals
+of smooth terms.
 
 <div style="text-align: justify;">
 
-The different options to, for example, plot each model depend on each
+The different options to, for example, plot each model depends on each
 specific package and in some cases, such as the SVMs obtained with
 `e1071`, it will require indirect approaches for plotting. For example,
 using the *R* package `pdp` (Greenwell 2017).
@@ -729,7 +730,7 @@ summary(Substrate.index.example.df[,-c(1:2)])
 
 In this reach of the Serpis River the water flows northward (upwards).
 The reach presents a series of small and relatively shallow pools
-connected throw rapid waters (i.e., rapid/runs). The bigger pool is
+connected through rapid waters (i.e., rapid/runs). The largest pool is
 located at the downstream part of the reach. The following figure shows
 the distribution of the velocity (m/s) and depth (m) for four simulated
 flows: Q = 0.5, 2.2, 2.7, and 21 m<sup>3</sup>/s. The maximum simulated
@@ -1059,7 +1060,7 @@ similar to that obtained with the Habitat Suitability Curves (HSCs). The
 mean suitability obtained with the Artificial Neural Network (NNET) is
 markedly lower as it only achieved 0.18, whereas the mean suitability
 from Random forests (RF) was of 0.35. By contrast, the mean suitability
-obtained with the remaining models is close to 0.5.
+obtained with the remaining models is close to 0.50.
 
 </div>
 
