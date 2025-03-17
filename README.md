@@ -776,9 +776,10 @@ aggregation of the percentage of different granulometry classes (%). The
 substrate classes originally used corresponded to a simplification of
 the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand
 (62 µm \> Ø ≤ 2 mm), fine gravel (2 \> Ø ≤ 8 mm), gravel (8 \> Ø ≤ 64
-mm), cobbles (64 \> Ø ≤ 256 mm), boulders (Ø \> 256 mm) and bedrock
-Muñoz-Mas et al. (2017). The package includes some examples to
-illustrate the structure of the input files.
+mm), cobbles (64 \> Ø ≤ 256 mm), boulders (Ø \> 256 mm) and bedrock (see
+e.g., (Muñoz-Mas et al. (2018)) or (Muñoz-Mas et al. (2017)). The
+package includes some examples to illustrate the structure of the input
+files.
 
 </div>
 
@@ -1007,7 +1008,7 @@ Selected.size <- "Large"
 
 `PredictHabitatSuitability` allows evaluating the microhabitat
 suitability of every patch, pixel or cell from field surveys and/or
-hydraulic simulations. The main argument of the function are the
+hydraulic simulations. The main arguments of the function are the
 selected models from `ListModels` and data on Velocity, Depth, Substrate
 index and Cover availability. `PredictHabitatSuitability` expects data
 to be a *R* `data.frame` with the following columns, which must be named
@@ -1028,7 +1029,7 @@ the relevant cover types and carry out the evaluation:
 12. “Shade”
 
 **If any cover type is absent the entire column should be set to zero,
-but it must be present in the dataset**. Once the dataset it prepared,
+but it must be present in the dataset**. Once the dataset is prepared,
 and the models are selected using `ListModels`, the microhabitat
 suitability can be predicted with `PredictHabitatSuitability`.
 
@@ -1058,7 +1059,7 @@ around 0.62 and an inferior value for winter (0.49). The higher value is
 similar to that obtained with the Habitat Suitability Curves (HSCs). The
 mean suitability obtained with the Artificial Neural Network (NNET) is
 markedly lower as it only achieved 0.18, whereas the mean suitability
-from Random forests (RF) was of 0.35. By contrast, the mean suitbaility
+from Random forests (RF) was of 0.35. By contrast, the mean suitability
 obtained with the remaining models is close to 0.5.
 
 </div>
@@ -1139,7 +1140,7 @@ ${\textsf{\color{red}red}}$, ${\textsf{\color{orange}orange}}$ and
 ${\textsf{\color{gold}gold}}$ to ${\textsf{\color{green}green}}$ and
 ${\textsf{\color{blue}blue}}$ following the typical colour palette to
 assess the ecological status. The associated suitability is based on the
-the mean/ensemble prediction across models.
+mean/ensemble prediction across models.
 
 </div>
 
@@ -1236,12 +1237,12 @@ pools were unsuitable with the GAM and largely suitable with the HSCs.
 The latter highlights the compensatory nature of the geometric mean used
 to aggregate the suitability obtained from each independent microhabitat
 suitability curve. The Artificial Neural Network (NNET) only considered
-suitable very specifi areas of the study site. The Random forest model
+suitable very specific areas of the study site. The Random forest model
 (RF) only predicted as suitable the deeper parts of this pool but, based
 on this model predictions, both margins would be unsuitable. The
-predictions of the Support Vector Machine (SVM) were similar but, this
+predictions of the Support Vector Machine (SVM) were similar but this
 technique evaluated the deeper parts of the pool with the highest
-suitability (i.e., 1). These models are base on the ensemble prediction
+suitability (i.e., 1). These models are based on the ensemble prediction
 of ten SVMs and it indicates the ten models predict these microhabitat
 as *present*.
 
@@ -1261,9 +1262,9 @@ expert-knowledge and literature (EKorL) and they are valid for Summer
 depicts the predictions carried out with the Generalised Additive Model
 (GAM), Habitat Suitability Curves (HSCs), Artificial Neural Network
 (NNET), Random forest (RF) and Support Vector Machine (SVM). All these
-models were developed pooling data from the Estena (Guadiana) and Yeguas
-(Guadalquivir) rivers. Currently, these models are valid for every
-season (*All*).
+models were developed by pooling data from the Estena (Guadiana) and
+Yeguas (Guadalquivir) rivers. Currently, these models are valid for
+every season (*All*).
 
 <br/>
 
