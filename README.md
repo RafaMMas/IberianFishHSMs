@@ -615,7 +615,7 @@ plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
 
 **Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta*
 Large obtained with data collected in the Curueño River (Douro) and
-valid all year round. ${\textsf{\color{blue}Blue}}$ band represents the
+valid all year round. ${\textsf{\color{blue}Blue}}$ bands represents the
 95% confidence intervals of each smooth term.
 
 <div style="text-align: justify;">
