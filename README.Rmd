@@ -231,7 +231,7 @@ par(mar = c(4, 4, 1, 1), bty = "n")
 plot.gam(Selected.model$Model, pages = 1, shade=TRUE, shade.col = "dodgerblue")
 ```
 
-**Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta* Large obtained with data collected in the Curueño River (Douro) and valid all year round. Blue band represents the 95% confidence intervals of smooth terms.
+**Figure 2** - Plot of the Generalised Additive Model for *Salmo trutta* Large obtained with data collected in the Curueño River (Douro) and valid all year round. ${\textsf{\color{blue}Blue}}$ band represents the 95% confidence intervals of each smooth term.
 
 <div style="text-align: justify;">
 The different options to, for example, plot each model depends on each specific package and in some cases, such as the SVMs obtained with `e1071`, it will require indirect approaches for plotting. For example, using the *R* package `pdp` [@RJ-2017-016].
