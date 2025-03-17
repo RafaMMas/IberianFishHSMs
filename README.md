@@ -777,8 +777,10 @@ substrate classes originally used corresponded to a simplification of
 the American Geophysical Union size scale, namely silt (Ø ≤ 62 µm), sand
 (62 µm \> Ø ≤ 2 mm), fine gravel (2 \> Ø ≤ 8 mm), gravel (8 \> Ø ≤ 64
 mm), cobbles (64 \> Ø ≤ 256 mm), boulders (Ø \> 256 mm) and bedrock (see
-e.g., Muñoz-Mas et al. (2018) or Muñoz-Mas et al. (2017). The package
-includes some examples to illustrate the structure of the input files.
+e.g., (ref:invisible)(Muñoz-Mas et al. 2018) Muñoz-Mas et al. 2018 or
+(ref:invisible)(Muñoz-Mas et al. 2017) Muñoz-Mas et al. 2017). The
+package includes some examples to illustrate the structure of the input
+files.
 
 </div>
 
