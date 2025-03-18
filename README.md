@@ -843,7 +843,7 @@ reach.
 **Figure 5** - Substrate composition (substrate index) along the reach
 of the Serpis River (Jucar River Basin District). The substrate index
 ranges from 0, fines/silt, to 8, bedrock. The percentages (%) of the
-different substrate types are stored in `Cover.example.df`.
+different substrate types are stored in `Substrate.index.example.df`.
 
 <br/>
 
