@@ -1,8 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-<br/>
-
 <div style="text-align: left;">
 
 <img src="man/figures/logo_tragsatec_SEPI_MITECO.2.png" alt="Banner" style="max-height: 75px;"/>
