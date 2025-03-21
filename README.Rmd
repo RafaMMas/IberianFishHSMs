@@ -38,7 +38,7 @@ knitr::opts_chunk$set(
 ```
 
 <div style="text-align: left;">
-  <img src="man/figures/logo_tragsatec_SEPI_MITECO.png" alt="Banner" style="max-height: 75px;"/>
+  <img src="man/figures/logo_tragsatec_SEPI_MITECO.2.png" alt="Banner" style="max-height: 75px;"/>
 </div>
 
 <br/>
@@ -98,7 +98,7 @@ This package was developed by:
 
 <br/>
 
-## Funding
+## Acknowledgements
 
 <div style="text-align: justify;">
 `IberianFishHSMs` was funded and commissioned to TRAGSATEC - SEPI by the Ministry for the Ecological Transition and the Demographic Challenge (MITECO) (Spanish Government). The data collection and development of the package were carried out as part of the project titled *Actualización y/o creación de curvas de idoneidad del hábitat físico para diversas especies acuáticas y ribereñas*, which was conducted under the framework of the *Servicio técnico para el desarrollo de modelos numéricos integrados e impulso a la restauración fluvial en las distintas demarcaciones hidrográficas intercomunitarias* (21.804-0047/0411).
